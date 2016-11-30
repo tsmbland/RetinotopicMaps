@@ -183,7 +183,7 @@ def update_weight():
 
 averagemarkerchange = 1
 iterations = 0
-while iterations < Iterations:
+while iterations < surgeryIterations:
     Qtm = np.dot(Wpt, normalisedCpm)
 
     for t in range(td):

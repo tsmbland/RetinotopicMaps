@@ -33,7 +33,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 500  # number of weight iterations
+Iterations = 10  # number of weight iterations
 
 ################### VARIABLES ###################
 nR = NR  # present number of retinal cells (pre-surgery)
