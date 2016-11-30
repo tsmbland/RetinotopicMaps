@@ -181,7 +181,7 @@ def update_weight():
 
 averagemarkerchange = 1
 iterations = 0
-while iterations < surgeryIterations:
+while iterations < Iterations:
     Qtm = np.dot(Wpt, normalisedCpm)
 
     for t in range(td):
@@ -225,7 +225,7 @@ initialconnections()
 
 averagemarkerchange = 1
 iterations = 0
-while iterations < Iterations:
+while iterations < surgeryIterations:
     Qtm = np.dot(Wpt, normalisedCpm)
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
