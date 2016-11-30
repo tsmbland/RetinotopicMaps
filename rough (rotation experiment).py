@@ -33,12 +33,12 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 100  # number of weight iterations
+Iterations = 2000  # number of weight iterations
 
 # Surgery
 Tflipmin = 20
 Tflipmax = 70
-surgeryIterations = 0
+surgeryIterations = 1600
 
 ################### VARIABLES ###################
 nR = NR  # present number of retinal cells (pre-surgery)
@@ -222,6 +222,9 @@ normalisedCtm = normalise(Ctm)
 ################## RECONNECTIONS ######################
 
 initialconnections()
+Wptflipped = np.flipud(Wpt[Tflipmin-1:Tflipmax, :])
+Wpt[Tflipmin-1:Tflipmax, :] = Wptflipped
+
 
 averagemarkerchange = 1
 iterations = 0

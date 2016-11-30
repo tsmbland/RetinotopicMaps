@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BASE MODEL.py" afterPath="$PROJECT_DIR$/BASE MODEL.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MISMATCH SURGERY.py" afterPath="$PROJECT_DIR$/MISMATCH SURGERY.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rough (rotation experiment).py" afterPath="$PROJECT_DIR$/rough (rotation experiment).py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="BASE MODEL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+            <state relative-caret-position="15">
+              <caret line="44" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -40,7 +38,7 @@
       <file leaf-file-name="Time Dependence.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Time Dependence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="270">
               <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -49,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MISMATCH SURGERY.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MISMATCH SURGERY.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="3420">
+              <caret line="232" column="36" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -74,7 +72,7 @@
       <file leaf-file-name="MAP PRECISION.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="375">
               <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
@@ -84,19 +82,21 @@
       <file leaf-file-name="rough (rotation experiment).py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rough (rotation experiment).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+            <state relative-caret-position="510">
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rough.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rough.py">
+      <file leaf-file-name="Scatter plot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scatter plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="525">
+              <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,10 +142,10 @@
         <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/rough 2.py" />
         <option value="$PROJECT_DIR$/rough2.py" />
         <option value="$PROJECT_DIR$/2D Retina.py" />
-        <option value="$PROJECT_DIR$/rough.py" />
         <option value="$PROJECT_DIR$/BASE MODEL.py" />
         <option value="$PROJECT_DIR$/MISMATCH SURGERY.py" />
         <option value="$PROJECT_DIR$/rough (rotation experiment).py" />
+        <option value="$PROJECT_DIR$/rough.py" />
       </list>
     </option>
   </component>
@@ -178,6 +178,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -198,8 +200,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,7 +208,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python.rough (rotation experiment)">
+  <component name="RunManager" selected="Python.rough">
     <configuration default="false" name="2D Retina" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -273,6 +273,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Willshawvon_der_Walsburg_1979" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rough (rotation experiment).py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rough" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Willshawvon_der_Walsburg_1979" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scatter plot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -428,19 +445,21 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
       <item index="1" class="java.lang.String" itemvalue="Python.2D Retina" />
       <item index="2" class="java.lang.String" itemvalue="Python.BASE MODEL" />
       <item index="3" class="java.lang.String" itemvalue="Python.MAP PRECISION" />
       <item index="4" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.rough" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.BASE MODEL" />
-        <item index="2" class="java.lang.String" itemvalue="Python.MAP PRECISION" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2D Retina" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.rough" />
+        <item index="1" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.BASE MODEL" />
+        <item index="3" class="java.lang.String" itemvalue="Python.MAP PRECISION" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2D Retina" />
       </list>
     </recent_temporary>
   </component>
@@ -468,7 +487,21 @@
       <option name="project" value="LOCAL" />
       <updated>1480287925356</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="corrected surgeryIterations">
+      <created>1480464949758</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1480464949758</updated>
+    </task>
+    <task id="LOCAL-00003" summary="actually corrected surgeryIterations">
+      <created>1480465067942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480465067942</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -535,7 +568,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="changed iterations" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed iterations" />
+    <MESSAGE value="corrected surgeryIterations" />
+    <MESSAGE value="actually corrected surgeryIterations" />
+    <option name="LAST_COMMIT_MESSAGE" value="actually corrected surgeryIterations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -646,27 +681,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rough.py">
+    <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+        <state relative-caret-position="375">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Time Dependence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="270">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -684,27 +709,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
+    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="3420">
+          <caret line="232" column="36" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="44" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="215" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rough (rotation experiment).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+        <state relative-caret-position="510">
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
+    <entry file="file://$PROJECT_DIR$/Scatter plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="525">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
