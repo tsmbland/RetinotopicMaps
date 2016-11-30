@@ -33,7 +33,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 500  # number of weight iterations
+Iterations = 2000  # number of weight iterations
 
 ################### VARIABLES ###################
 nR = NR  # present number of retinal cells (pre-surgery)
@@ -179,9 +179,18 @@ def update_weight():
 #averagemarkerchange = 1
 iterations = 0
 plotcount = 1
-while iterations < Iterations:
-    Qtm = np.dot(Wpt, normalisedCpm)
+while iterations <= Iterations:
 
+    if iterations % 100 == 0 or iterations == 0:
+        plt.subplot(3, 7, plotcount)
+        plot = np.swapaxes(Wpt, 0, 1)
+        plt.pcolormesh(plot, cmap='Greys')
+        plt.ylabel('Presynaptic Cell Number')
+        plt.xlabel('Postsynaptic Cell Number')
+        plt.title('%d iterations' %(iterations))
+        plotcount += 1
+
+    Qtm = np.dot(Wpt, normalisedCpm)
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
         #averagemarkerchange = sum(sum(deltaconc)) / sum(sum(Ctm)) * 100
@@ -190,15 +199,6 @@ while iterations < Iterations:
     update_weight()
     iterations += 1
 
-    if iterations % 100 == 0:
-        plt.subplot(3, 2, plotcount)
-        plot = np.swapaxes(Wpt, 0, 1)
-        plt.pcolormesh(plot, cmap='Greys')
-        plt.ylabel('Presynaptic Cell Number')
-        plt.xlabel('Postsynaptic Cell Number')
-        plt.title(iterations)
-        plotcount += 1
-
 
 ####################### END #########################
 
@@ -206,6 +206,6 @@ end = time.time()
 elapsed = end - start
 print('Time elapsed: ', elapsed, 'seconds')
 
-params = {'font.size': '10'}
+params = {'font.size': '8'}
 plt.rcParams.update(params)
 plt.show()
