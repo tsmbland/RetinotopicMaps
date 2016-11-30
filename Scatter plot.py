@@ -214,8 +214,8 @@ def tabulate_weight_matrix():
 
 
 plt.subplot(2, 1, 2)
-weighttable = tabulate_weight_matrix()
-plt.scatter(weighttable[:, 1], weighttable[:, 0], s=(weighttable[:, 2])*20, marker='s', c='k')
+plot = tabulate_weight_matrix()
+plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c='k')
 plt.ylabel('Presynaptic Cell Number')
 plt.xlabel('Postsynaptic Cell Number')
 plt.xlim([0,80])
