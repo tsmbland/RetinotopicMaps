@@ -33,12 +33,12 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 2000  # number of weight iterations
+Iterations = 1000  # number of weight iterations
 
 # Surgery
 Tflipmin = 20
 Tflipmax = 70
-surgeryIterations = 1600
+surgeryIterations = 500
 
 ################### VARIABLES ###################
 nR = NR  # present number of retinal cells (pre-surgery)
@@ -194,21 +194,13 @@ while iterations < Iterations:
 
 ##################### PLOT 1 #########################
 
-params = {'font.size': '10'}
-plt.rcParams.update(params)
-
-plt.subplot(2, 2, 1)
-for m in range(M):
-    plt.plot(range(1, nT + 1), Ctm[0:nT, m])
-plt.ylabel('Marker Concentration')
-plt.xticks([], [])
-plt.title('Pre-Surgery')
-
-plt.subplot(2, 2, 3)
+plotcount = 1
+plt.subplot(2, 4, plotcount)
 plot3 = np.swapaxes(Wpt, 0, 1)
 plt.pcolormesh(plot3, cmap='Greys')
 plt.ylabel('Presynaptic Cell Number')
 plt.xlabel('Postsynaptic Cell Number')
+plt.title('Pre-Surgery')
 
 ###################### SURGERY #######################
 
@@ -228,7 +220,21 @@ Wpt[Tflipmin-1:Tflipmax, :] = Wptflipped
 
 averagemarkerchange = 1
 iterations = 0
-while iterations < surgeryIterations:
+while iterations <= surgeryIterations:
+
+    if iterations % 100 == 0 or iterations == 0:
+        plotcount += 1
+        plt.subplot(2, 4, plotcount)
+        plot = np.swapaxes(Wpt, 0, 1)
+        plt.pcolormesh(plot, cmap='Greys')
+        plt.ylabel('Presynaptic Cell Number')
+        plt.xlabel('Postsynaptic Cell Number')
+        tectalcells = np.array(range(nT + 1))
+        tectalcells[Tflipmin:Tflipmax + 1] = np.flipud(tectalcells[Tflipmin:Tflipmax + 1])
+        plt.xticks(range(0, nT + 1, 10), tectalcells[range(0, nT + 1, 10)])
+        plt.title('%d iterations' %(iterations))
+
+
     Qtm = np.dot(Wpt, normalisedCpm)
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
@@ -238,22 +244,6 @@ while iterations < surgeryIterations:
     update_weight()
     iterations += 1
 
-###################### PLOT 2 #######################
-plt.subplot(2, 2, 2)
-for m in range(M):
-    plt.plot(range(1, nT + 1), Ctm[0:nT, m])
-plt.title('Post-Surgery')
-plt.xticks([], [])
-
-plt.subplot(2, 2, 4)
-plot4 = np.swapaxes(Wpt, 0, 1)
-plt.pcolormesh(plot4, cmap='Greys')
-plt.xlabel('Postsynaptic Cell Number')
-tectalcells = np.array(range(nT + 1))
-tectalcells[Tflipmin:Tflipmax+1] = np.flipud(tectalcells[Tflipmin:Tflipmax+1])
-plt.xticks(range(0, nT + 1, 10), tectalcells[range(0, nT+1, 10)])
-
-
 
 ####################### END #########################
 
@@ -261,4 +251,6 @@ end = time.time()
 elapsed = end - start
 print('Time elapsed: ', elapsed, 'seconds')
 
+params = {'font.size': '10'}
+plt.rcParams.update(params)
 plt.show()
