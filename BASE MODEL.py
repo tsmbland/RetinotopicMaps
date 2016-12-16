@@ -39,43 +39,54 @@ Iterations = 500  # number of weight iterations
 nR = NR  # present number of retinal cells (pre-surgery)
 nT = NT  # present number of tectal cells (pre-surgery)
 
-Wpt = np.zeros([nT, nR])  # synaptic strength between a presynaptic cell and a postsynaptic cell
-Qpm = np.zeros([nR, M])  # presence of marker sources along retina
-Qtm = np.zeros([nT, M])  # axonal flow of molecules into postsymaptic cells
-Cpm = np.zeros([nR, M])  # concentration of a molecule in a presynaptic cell
-Ctm = np.zeros([nT, M])  # concentration of a molecule in a postsynaptic cell
-normalisedCpm = np.zeros([nR, M])  # normalised (by marker conc.) marker concentration  in a presynaptic cell
-normalisedCtm = np.zeros([nT, M])  # normalised (by marker conc.) marker concentration in a postsynaptic cell
+Wpt = np.zeros([nT+2, nR+2])  # synaptic strength between a presynaptic cell and a postsynaptic cell
+Qpm = np.zeros([nR+2, M])  # presence of marker sources along retina
+Qtm = np.zeros([nT+2, M])  # axonal flow of molecules into postsymaptic cells
+Cpm = np.zeros([nR+2, M])  # concentration of a molecule in a presynaptic cell
+Ctm = np.zeros([nT+2, M])  # concentration of a molecule in a postsynaptic cell
+normalisedCpm = np.zeros([nR+2, M])  # normalised (by marker conc.) marker concentration  in a presynaptic cell
+normalisedCtm = np.zeros([nT+2, M])  # normalised (by marker conc.) marker concentration in a postsynaptic cell
 
 ################## RETINA #####################
 
 
 # MARKER LOCATIONS
 markerspacing = nR / (M - 1)
-location = 0
+location = 1
 for m in range(M - 1):
     Qpm[location, m] = Q
     location += markerspacing
-Qpm[nR - 1, M - 1] = Q
+Qpm[nR, M - 1] = Q
 
 
 # PRESYNAPTIC CONCENTRATIONS
 def conc_change(concmatrix, layer):
+
+    # Matrix size
+    length = len(concmatrix[:, 0]) - 2
+
+    # Neuron map
+    nm = np.zeros([length + 2])
+    nm[1:-1] = 1
+
+    # Neighbour Count
+    nc = np.zeros([length + 2])
+    for cell in range(1, length + 1):
+            nc[cell] = nm[cell-1] + nm[cell+1]
+
+    # Qmatrix
     if layer == 'presynaptic':
         Qmatrix = Qpm
     elif layer == 'tectal':
         Qmatrix = Qtm
 
-    length = len(concmatrix[:, 0])
-    concchange = np.zeros([length, M])
+    # Conc change
+    concchange = np.zeros([length+2, M])
     for m in range(M):
-        concchange[0, m] = (-a * concmatrix[0, m] + d * (-concmatrix[0, m] + concmatrix[1, m]) + Qmatrix[0, m])
-        concchange[length - 1, m] = (
-            -a * concmatrix[length - 1, m] + d * (concmatrix[length - 2, m] - concmatrix[length - 1, m]) + Qmatrix[
-                length - 1, m])
-        for cell in range(1, length - 1):
+        for cell in range(1, length + 1):
             concchange[cell, m] = (-a * concmatrix[cell, m] + d * (
-                concmatrix[cell - 1, m] - 2 * concmatrix[cell, m] + concmatrix[cell + 1, m]) + Qmatrix[cell, m])
+                concmatrix[cell - 1, m] - nc[cell] * concmatrix[cell, m] + concmatrix[cell + 1, m]) + Qmatrix[cell, m])
+
     return concchange
 
 
@@ -88,23 +99,22 @@ while averagemarkerchange > stab:
 
 # NORMALISED PRESYNAPTIC CONCENTRATIONS
 def normalise(concmatrix):
-    length = len(concmatrix[:, 0])
-    normalised = np.zeros([length, M])
-    markersum = np.zeros([length])
-    for p in range(length):
-        markersum[p] = sum(concmatrix[p, :])
+    length = len(concmatrix[:, 0]) - 2
+    normalised = np.zeros([length + 2, M])
+    markersum = np.zeros([length + 2])
+    for cell in range(1, length + 1):
+        markersum[cell] = sum(concmatrix[cell, :])
 
     for m in range(M):
-        for p in range(length):
-            normalised[p, m] = concmatrix[p, m] / markersum[p]
-            if normalised[p, m] < E:
-                normalised[p, m] = 0
+        for cell in range(1, length + 1):
+            normalised[cell, m] = concmatrix[cell, m] / markersum[cell]
+            if normalised[cell, m] < E:
+                normalised[cell, m] = 0
 
     return normalised
 
 
 normalisedCpm = normalise(Cpm)
-
 
 
 
@@ -117,7 +127,7 @@ def initialconnections():
     arrangement = np.zeros([NL])
     arrangement[0:n0] = initialstrength
 
-    for p in range(nR):
+    for p in range(1,nR+1):
         if np.ceil(p * ((NT - NL) / NR) + NL) < nT:
             random.shuffle(arrangement)
             Wpt[np.ceil(p * ((NT - NL) / NR)): np.ceil(p * ((NT - NL) / NR) + NL), p] = arrangement
@@ -134,47 +144,51 @@ initialconnections()
 # ITERATIONS
 
 def update_weight():
+
     # SYNAPTIC WEIGHT
-    for p in range(nR):
+    for p in range(1, nR+1):
         totalSp = 0
         connections = 0
-        deltaWsum = np.zeros([nR])
-        deltaWpt = np.zeros([nT, nR])
-        Spt = np.zeros([nT, nR])
-        meanSp = np.zeros([nR])
+        deltaWsum = np.zeros([nR+2])
+        deltaWpt = np.zeros([nT+2, nR+2])
+        Spt = np.zeros([nT+2, nR+2])
+        meanSp = np.zeros([nR+2])
 
-        for tectal in range(nT):
-            # calculate similarity
-            #Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
+        for tectal in range(1, nT+1):
+
+            # Calculate similarity
+                #Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
             for m in range(M):
                 Spt[tectal, p] += min(normalisedCpm[p, m], normalisedCtm[tectal, m])
 
+            # Count connections
             if Wpt[tectal, p] > 0:
                 totalSp += Spt[tectal, p]
                 connections += 1
-        # calculate mean similarity
+
+        # Calculate mean similarity
         meanSp[p] = (totalSp / connections) - k
 
-        for tectal in range(nT):
-            # calculate deltaW
+        for tectal in range(1, nT+1):
+
+            # Calculate deltaW
             deltaWpt[tectal, p] = h * (Spt[tectal, p] - meanSp[p])
-            # calculate deltaWsum
+
+            # Calculate deltaWsum
             if Wpt[tectal, p] > 0:
                 deltaWsum[p] += deltaWpt[tectal, p]
 
-        for tectal in range(nT):
-            # calculate new W
+        for tectal in range(1, nT+1):
+
+            # Calculate new W
             Wpt[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * W / (W + deltaWsum[p])
+
             # REMOVE SYNAPSES
             if Wpt[tectal, p] < elim * W:
                 Wpt[tectal, p] = 0
 
         # ADD NEW SYNAPSES
-        if Wpt[0, p] == 0 and Wpt[1, p] > 0.02 * W:
-            Wpt[0, p] = 0.01 * W
-        if Wpt[nT - 1, p] == 0 and Wpt[nT - 2, p] > 0.02 * W:
-            Wpt[nT - 1, p] = 0.01 * W
-        for tectal in range(1, nT - 1):
+        for tectal in range(1, nT + 1):
             if Wpt[tectal, p] == 0 and (Wpt[tectal + 1, p] > 0.02 * W or Wpt[tectal - 1, p] > 0.02 * W):
                 Wpt[tectal, p] = 0.01 * W
 
@@ -199,12 +213,13 @@ plt.rcParams.update(params)
 
 plt.subplot(2, 1, 1)
 for m in range(M):
-    plt.plot(range(1, nT + 1), Ctm[0:nT, m])
+    plt.plot(range(1, nT + 1), Ctm[1:nT+1, m])
 plt.ylabel('Marker Concentration')
 plt.xticks([], [])
 
 plt.subplot(2, 1, 2)
 plot3 = np.swapaxes(Wpt, 0, 1)
+plot3 = plot3[1:nT+1, 1:nR+1]
 plt.pcolormesh(plot3, cmap='Greys')
 plt.ylabel('Presynaptic Cell Number')
 plt.xlabel('Postsynaptic Cell Number')
