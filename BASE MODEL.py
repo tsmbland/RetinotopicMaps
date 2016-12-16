@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 import time
-import scipy.spatial
 
 start = time.time()
 
@@ -33,7 +32,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 500  # number of weight iterations
+Iterations = 50  # number of weight iterations
 
 ################### VARIABLES ###################
 nR = NR  # present number of retinal cells (pre-surgery)
@@ -157,7 +156,6 @@ def update_weight():
         for tectal in range(1, nT+1):
 
             # Calculate similarity
-                #Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
             for m in range(M):
                 Spt[tectal, p] += min(normalisedCpm[p, m], normalisedCtm[tectal, m])
 
@@ -193,18 +191,14 @@ def update_weight():
                 Wpt[tectal, p] = 0.01 * W
 
 
-averagemarkerchange = 1
-iterations = 0
-while iterations < Iterations:
+for iterations in range(Iterations):
     Qtm = np.dot(Wpt, normalisedCpm)
 
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
-        #averagemarkerchange = sum(sum(deltaconc)) / sum(sum(Ctm)) * 100
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm)
     update_weight()
-    iterations += 1
 
 ##################### PLOT 1 #########################
 
@@ -217,12 +211,24 @@ for m in range(M):
 plt.ylabel('Marker Concentration')
 plt.xticks([], [])
 
+def tabulate_weight_matrix():
+    table = np.zeros([nR*nT, 3])
+    row = 0
+    for p in range(1, nR+1):
+        for tectal in range(1, nT+1):
+            table[row, 0] = p
+            table[row, 1] = tectal
+            table[row, 2] = Wpt[p, tectal]
+            row += 1
+    return table
+
 plt.subplot(2, 1, 2)
-plot3 = np.swapaxes(Wpt, 0, 1)
-plot3 = plot3[1:nT+1, 1:nR+1]
-plt.pcolormesh(plot3, cmap='Greys')
+plot = tabulate_weight_matrix()
+plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c='k')
 plt.ylabel('Presynaptic Cell Number')
 plt.xlabel('Postsynaptic Cell Number')
+plt.xlim([0, 80])
+plt.ylim([0, 80])
 
 ####################### END #########################
 
