@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scatter plot.py" afterPath="$PROJECT_DIR$/Scatter plot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TECTAL ROTATION.py" afterPath="$PROJECT_DIR$/TECTAL ROTATION.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2D Retina.py" afterPath="$PROJECT_DIR$/2D Retina.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="Time Dependence.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Time Dependence.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="2790">
               <caret line="190" column="22" selection-start-line="183" selection-start-column="4" selection-end-line="190" selection-end-column="22" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -51,18 +51,18 @@
       <file leaf-file-name="MISMATCH SURGERY.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
+            <state relative-caret-position="3312">
               <caret line="232" column="36" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2D Retina.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2D Retina.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2D Retina.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="1860">
+              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -80,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TECTAL ROTATION.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TECTAL ROTATION.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TECTAL ROTATION.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
+            <state relative-caret-position="348">
               <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding />
             </state>
@@ -93,9 +93,11 @@
       <file leaf-file-name="rough.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rough.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#4#22#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,14 +154,14 @@
         <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/BASE MODEL.py" />
         <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/rough 2.py" />
         <option value="$PROJECT_DIR$/rough2.py" />
-        <option value="$PROJECT_DIR$/2D Retina.py" />
         <option value="$PROJECT_DIR$/BASE MODEL.py" />
         <option value="$PROJECT_DIR$/MISMATCH SURGERY.py" />
         <option value="$PROJECT_DIR$/rough (rotation experiment).py" />
         <option value="$PROJECT_DIR$/Time Dependence.py" />
         <option value="$PROJECT_DIR$/Scatter plot.py" />
-        <option value="$PROJECT_DIR$/rough.py" />
         <option value="$PROJECT_DIR$/TECTAL ROTATION.py" />
+        <option value="$PROJECT_DIR$/rough.py" />
+        <option value="$PROJECT_DIR$/2D Retina.py" />
       </list>
     </option>
   </component>
@@ -192,6 +194,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -212,51 +216,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python.rough (rotation experiment)">
-    <configuration default="false" name="BASE MODEL" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/BASE MODEL.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MAP PRECISION" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MAP PRECISION.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.2D Retina">
     <configuration default="false" name="rough (rotation experiment)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -304,6 +272,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Willshawvon_der_Walsburg_1979" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Time Dependence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="rough (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Willshawvon_der_Walsburg_1979" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rough.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="2D Retina" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Willshawvon_der_Walsburg_1979" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2D Retina.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -461,19 +463,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.BASE MODEL" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MAP PRECISION" />
-      <item index="3" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.rough" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Time Dependence" />
+      <item index="1" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.rough" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Time Dependence" />
+      <item index="4" class="java.lang.String" itemvalue="Python.rough (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Python.2D Retina" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.rough" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Time Dependence" />
-        <item index="3" class="java.lang.String" itemvalue="Python.BASE MODEL" />
-        <item index="4" class="java.lang.String" itemvalue="Python.MAP PRECISION" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2D Retina" />
+        <item index="1" class="java.lang.String" itemvalue="Python.rough (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.rough" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Time Dependence" />
       </list>
     </recent_temporary>
   </component>
@@ -543,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480526877300</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="tectal rotations time dependence">
+      <created>1480638365007</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1480638365007</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -614,7 +623,8 @@
     <MESSAGE value="actually corrected surgeryIterations" />
     <MESSAGE value="got scatter plot working" />
     <MESSAGE value="fixed time dependence" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed time dependence" />
+    <MESSAGE value="tectal rotations time dependence" />
+    <option name="LAST_COMMIT_MESSAGE" value="tectal rotations time dependence" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -724,16 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2D Retina.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -754,29 +754,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="232" column="36" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rough.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Time Dependence.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="2790">
           <caret line="190" column="22" selection-start-line="183" selection-start-column="4" selection-end-line="190" selection-end-column="22" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3312">
+          <caret line="232" column="36" selection-start-line="232" selection-start-column="36" selection-end-line="232" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,9 +782,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TECTAL ROTATION.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
+        <state relative-caret-position="348">
           <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rough.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#4#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Retina.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1860">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
