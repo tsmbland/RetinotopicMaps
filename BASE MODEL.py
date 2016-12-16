@@ -33,7 +33,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 10  # number of weight iterations
+Iterations = 500  # number of weight iterations
 
 ################### VARIABLES ###################
 nR = NR  # present number of retinal cells (pre-surgery)
@@ -145,7 +145,10 @@ def update_weight():
 
         for tectal in range(nT):
             # calculate similarity
-            Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
+            #Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
+            for m in range(M):
+                Spt[tectal, p] += min(normalisedCpm[p, m], normalisedCtm[tectal, m])
+
             if Wpt[tectal, p] > 0:
                 totalSp += Spt[tectal, p]
                 connections += 1
