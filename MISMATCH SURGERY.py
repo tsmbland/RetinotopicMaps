@@ -150,7 +150,10 @@ def update_weight():
 
         for tectal in range(nT):
             # calculate similarity
-            Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
+            # Spt[tectal, p] = 1 - scipy.spatial.distance.cosine(normalisedCpm[p, :], normalisedCtm[tectal, :])
+            for m in range(M):
+                Spt[tectal, p] += min(normalisedCpm[p, m], normalisedCtm[tectal, m])
+
             if Wpt[tectal, p] > 0:
                 totalSp += Spt[tectal, p]
                 connections += 1
