@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="Change plot to scatter plot (+">
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Scatter plot.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BASE MODEL.py" afterPath="$PROJECT_DIR$/BASE MODEL.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MAP PRECISION.py" afterPath="$PROJECT_DIR$/MAP PRECISION.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MISMATCH SURGERY.py" afterPath="$PROJECT_DIR$/MISMATCH SURGERY.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,23 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BASE MODEL.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BASE MODEL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rough.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rough.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2712">
-              <caret line="35" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="244" selection-end-column="10" />
+            <state relative-caret-position="3390">
+              <caret line="226" column="33" selection-start-line="226" selection-start-column="33" selection-end-line="226" selection-end-column="33" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -50,8 +41,8 @@
       <file leaf-file-name="2D Retina.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2D Retina.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="83" column="110" selection-start-line="71" selection-start-column="4" selection-end-line="83" selection-end-column="110" />
+            <state relative-caret-position="315">
+              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -59,21 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MISMATCH SURGERY.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MISMATCH SURGERY.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="257" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scatter plot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scatter plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="223" column="17" selection-start-line="223" selection-start-column="17" selection-end-line="223" selection-end-column="17" />
+            <state relative-caret-position="4665">
+              <caret line="311" column="10" selection-start-line="311" selection-start-column="10" selection-end-line="311" selection-end-column="10" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -84,7 +65,7 @@
       <file leaf-file-name="TECTAL ROTATION.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TECTAL ROTATION.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
+            <state relative-caret-position="-777">
               <caret line="152" column="84" selection-start-line="152" selection-start-column="84" selection-end-line="152" selection-end-column="84" />
               <folding />
             </state>
@@ -94,8 +75,8 @@
       <file leaf-file-name="MAP PRECISION.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="151" column="84" selection-start-line="151" selection-start-column="84" selection-end-line="151" selection-end-column="84" />
+            <state relative-caret-position="390">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -142,14 +123,16 @@
         <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/rough 2.py" />
         <option value="$PROJECT_DIR$/rough2.py" />
         <option value="$PROJECT_DIR$/rough (rotation experiment).py" />
-        <option value="$PROJECT_DIR$/2D Retina.py" />
         <option value="$PROJECT_DIR$/Time Dependence.py" />
-        <option value="$PROJECT_DIR$/MISMATCH SURGERY.py" />
-        <option value="$PROJECT_DIR$/MAP PRECISION.py" />
         <option value="$PROJECT_DIR$/TECTAL ROTATION.py" />
-        <option value="$PROJECT_DIR$/rough.py" />
         <option value="$PROJECT_DIR$/Scatter plot.py" />
+        <option value="$PROJECT_DIR$/2D Retina.py" />
+        <option value="$PROJECT_DIR$/MAP PRECISION.py" />
+        <option value="$PROJECT_DIR$/Old code/Base model without padding.py" />
+        <option value="$PROJECT_DIR$/Old code/Scatter plot.py" />
         <option value="$PROJECT_DIR$/BASE MODEL.py" />
+        <option value="$PROJECT_DIR$/MISMATCH SURGERY.py" />
+        <option value="$PROJECT_DIR$/rough.py" />
       </list>
     </option>
   </component>
@@ -212,41 +195,12 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python.BASE MODEL">
-    <configuration default="false" name="rough (rotation experiment)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TECTAL ROTATION.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="rough (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Base model without padding.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Old code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.rough">
     <configuration default="false" name="BASE MODEL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -264,23 +218,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Scatter plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scatter plot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="rough" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -293,7 +230,58 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rough.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Old code/Mismatch surgery wo padding.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MISMATCH SURGERY" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Willshawvon_der_Walsburg_1979" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MISMATCH SURGERY.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Scatter plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Old code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Willshawvon_der_Walsburg_1979" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Old code/Scatter plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Base model without padding" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Old code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Willshawvon_der_Walsburg_1979" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Old code/Base model without padding.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -451,19 +439,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.rough (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.BASE MODEL" />
+      <item index="1" class="java.lang.String" itemvalue="Python.BASE MODEL" />
+      <item index="2" class="java.lang.String" itemvalue="Python.rough" />
+      <item index="3" class="java.lang.String" itemvalue="Python.MISMATCH SURGERY" />
       <item index="4" class="java.lang.String" itemvalue="Python.Scatter plot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.rough" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Base model without padding" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.BASE MODEL" />
-        <item index="1" class="java.lang.String" itemvalue="Python.rough" />
-        <item index="2" class="java.lang.String" itemvalue="Python.rough (2)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Scatter plot" />
-        <item index="4" class="java.lang.String" itemvalue="Python.rough (rotation experiment)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.rough" />
+        <item index="1" class="java.lang.String" itemvalue="Python.BASE MODEL" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Scatter plot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Base model without padding" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MISMATCH SURGERY" />
       </list>
     </recent_temporary>
   </component>
@@ -568,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481903204194</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Change plot to scatter plot (+general tidy)">
+      <created>1481907441136</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1481907441136</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -663,7 +658,8 @@
     <MESSAGE value="Boundary conditions with zeros padding for 2D retina" />
     <MESSAGE value="Simplify similarity function (min function from paper)" />
     <MESSAGE value="Add zeros padding" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add zeros padding" />
+    <MESSAGE value="Change plot to scatter plot (+general tidy)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change plot to scatter plot (+general tidy)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -672,27 +668,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="157" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="144" column="21" selection-start-line="144" selection-start-column="21" selection-end-line="144" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/SURGERY.py" />
     <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/old map precision functions.py" />
     <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -769,68 +744,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2175">
           <caret line="149" column="84" selection-start-line="149" selection-start-column="84" selection-end-line="149" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base model without padding.py" />
+    <entry file="file://$PROJECT_DIR$/Scatter plot.py" />
+    <entry file="file://$PROJECT_DIR$/Old code/BASE MODEL (old).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
+    <entry file="file://$PROJECT_DIR$/Old code/Base model without padding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="151" column="84" selection-start-line="151" selection-start-column="84" selection-end-line="151" selection-end-column="84" />
-          <folding />
+        <state relative-caret-position="435">
+          <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Old code/Scatter plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TECTAL ROTATION.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
+        <state relative-caret-position="-777">
           <caret line="152" column="84" selection-start-line="152" selection-start-column="84" selection-end-line="152" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base model without padding.py">
+    <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="217" column="10" selection-start-line="217" selection-start-column="10" selection-end-line="217" selection-end-column="10" />
+        <state relative-caret-position="390">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
+    <entry file="file://$PROJECT_DIR$/Old code/Mismatch surgery wo padding.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="217" column="0" selection-start-line="217" selection-start-column="0" selection-end-line="257" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D Retina.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="83" column="110" selection-start-line="71" selection-start-column="4" selection-end-line="83" selection-end-column="110" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rough.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2712">
-          <caret line="35" column="15" selection-start-line="0" selection-start-column="0" selection-end-line="244" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scatter plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="223" column="17" selection-start-line="223" selection-start-column="17" selection-end-line="223" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -839,8 +807,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
+        <state relative-caret-position="3390">
+          <caret line="226" column="33" selection-start-line="226" selection-start-column="33" selection-end-line="226" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Retina.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4665">
+          <caret line="311" column="10" selection-start-line="311" selection-start-column="10" selection-end-line="311" selection-end-column="10" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
