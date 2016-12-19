@@ -32,7 +32,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 2000  # number of weight iterations
+Iterations = 500  # number of weight iterations
 
 
 ###############  VARIABLES ###################
@@ -161,20 +161,29 @@ for p in range(rmin, rmax + 1):
     initialconnections(p)
 
 
+# INITIAL CONCENTRATIONS
+Qtm = np.dot(Wpt, normalisedCpm)
+for t in range(td):
+    deltaconc = conc_change(Ctm, 'tectal')
+    Ctm += (deltaconc * deltat)
+normalisedCtm = normalise(Ctm, 'tectal')
+
+
 # ITERATIONS
 
-def update_weight():
-
+def weight_change():
     # SYNAPTIC WEIGHT
-    for p in range(rmin, rmax+1):
+
+    newweight = np.zeros([NT + 2, NR + 2])
+    for p in range(rmin, rmax + 1):
         totalSp = 0
         connections = 0
-        deltaWsum = np.zeros([NR+2])
-        deltaWpt = np.zeros([NT+2, NR+2])
-        Spt = np.zeros([NT+2, NR+2])
-        meanSp = np.zeros([NR+2])
+        deltaWsum = np.zeros([NR + 2])
+        deltaWpt = np.zeros([NT + 2, NR + 2])
+        Spt = np.zeros([NT + 2, NR + 2])
+        meanSp = np.zeros([NR + 2])
 
-        for tectal in range(tmin, tmax+1):
+        for tectal in range(tmin, tmax + 1):
 
             # Calculate similarity
             for m in range(M):
@@ -188,7 +197,7 @@ def update_weight():
         # Calculate mean similarity
         meanSp[p] = (totalSp / connections) - k
 
-        for tectal in range(tmin, tmax+1):
+        for tectal in range(tmin, tmax + 1):
 
             # Calculate deltaW
             deltaWpt[tectal, p] = h * (Spt[tectal, p] - meanSp[p])
@@ -197,29 +206,38 @@ def update_weight():
             if Wpt[tectal, p] > 0:
                 deltaWsum[p] += deltaWpt[tectal, p]
 
-        for tectal in range(tmin, tmax+1):
+        for tectal in range(tmin, tmax + 1):
 
             # Calculate new W
-            Wpt[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * W / (W + deltaWsum[p])
+            newweight[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * W / (W + deltaWsum[p])
 
             # REMOVE SYNAPSES
             if Wpt[tectal, p] < elim * W:
-                Wpt[tectal, p] = 0
+                newweight[tectal, p] = 0
 
         # ADD NEW SYNAPSES
         for tectal in range(tmin, tmax + 1):
             if Wpt[tectal, p] == 0 and (Wpt[tectal + 1, p] > 0.02 * W or Wpt[tectal - 1, p] > 0.02 * W):
-                Wpt[tectal, p] = 0.01 * W
+                newweight[tectal, p] = 0.01 * W
+
+    # CALCULATE WEIGHT CHANGE
+    weightchange = newweight - Wpt
+    return weightchange
 
 
 def tabulate_weight_matrix():
-    table = np.zeros([nR*nT, 3])
+    table = np.zeros([nR * nT, 4])
     row = 0
-    for p in range(rmin, rmax+1):
-        for tectal in range(tmin, tmax+1):
+    deltaw = weight_change()
+    for p in range(rmin, rmax + 1):
+        for tectal in range(tmin, tmax + 1):
             table[row, 0] = p
             table[row, 1] = tectal
             table[row, 2] = Wpt[tectal, p]
+            if deltaw[tectal, p] >= 0:
+                table[row, 3] = 1
+            else:
+                table[row, 3] = 0
             row += 1
     return table
 
@@ -230,7 +248,9 @@ for iterations in range(Iterations+1):
     if iterations % 100 == 0 or iterations == 0:
         plt.subplot(3, 7, plotcount)
         plot = tabulate_weight_matrix()
-        plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c='k')
+        plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c=(plot[:, 3]), cmap='Greys',
+                    edgecolors='k')
+        plt.clim(0, 1)
         plt.ylabel('Presynaptic Cell Number')
         plt.xlabel('Postsynaptic Cell Number')
         plt.xlim([tmin - 1, tmax])
@@ -239,12 +259,14 @@ for iterations in range(Iterations+1):
         plotcount += 1
 
 
+    deltaW = weight_change()
+    Wpt += deltaW
+
     Qtm = np.dot(Wpt, normalisedCpm)
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm, 'tectal')
-    update_weight()
 
 
 

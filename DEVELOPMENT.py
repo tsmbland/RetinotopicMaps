@@ -32,7 +32,7 @@ Wmax = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 5000  # number of weight iterations
+Iterations = 1000  # number of weight iterations
 
 ###############  VARIABLES ###################
 rmin = 31
@@ -163,10 +163,21 @@ for p in range(rmin, rmax + 1):
     initialconnections(p)
 
 
+# INITIAL CONCENTRATIONS
+Qtm = np.dot(Wpt, normalisedCpm)
+for t in range(td):
+    deltaconc = conc_change(Ctm, 'tectal')
+    Ctm += (deltaconc * deltat)
+normalisedCtm = normalise(Ctm, 'tectal')
+
+
+
 # ITERATIONS
 
-def update_weight():
+def weight_change():
     # SYNAPTIC WEIGHT
+
+    newweight = np.zeros([NT + 2, NR + 2])
     for p in range(rmin, rmax + 1):
         totalSp = 0
         connections = 0
@@ -201,26 +212,35 @@ def update_weight():
         for tectal in range(tmin, tmax + 1):
 
             # Calculate new W
-            Wpt[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * Wtot[p] / (Wtot[p] + deltaWsum[p])
+            newweight[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * Wtot[p] / (Wtot[p] + deltaWsum[p])
 
             # REMOVE SYNAPSES
             if Wpt[tectal, p] < elim * Wtot[p]:
-                Wpt[tectal, p] = 0
+                newweight[tectal, p] = 0
 
         # ADD NEW SYNAPSES
         for tectal in range(tmin, tmax + 1):
             if Wpt[tectal, p] == 0 and (Wpt[tectal + 1, p] > 0.02 * Wtot[p] or Wpt[tectal - 1, p] > 0.02 * Wtot[p]):
-                Wpt[tectal, p] = 0.01 * Wtot[p]
+                newweight[tectal, p] = 0.01 * Wtot[p]
+
+    # CALCULATE WEIGHT CHANGE
+    weightchange = newweight - Wpt
+    return weightchange
 
 
 def tabulate_weight_matrix():
-    table = np.zeros([nR * nT, 3])
+    table = np.zeros([nR * nT, 4])
     row = 0
+    deltaw = weight_change()
     for p in range(rmin, rmax + 1):
         for tectal in range(tmin, tmax + 1):
             table[row, 0] = p
             table[row, 1] = tectal
             table[row, 2] = Wpt[tectal, p]
+            if deltaw[tectal, p] >= 0:
+                table[row, 3] = 1
+            else:
+                table[row, 3] = 0
             row += 1
     return table
 
@@ -229,16 +249,22 @@ plotcount = 1
 for iterations in range(Iterations + 1):
 
     # Plot
-    if iterations % 500 == 0:
+    if iterations % 100 == 0:
         plt.subplot(2, 6, plotcount)
         plot = tabulate_weight_matrix()
-        plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c='k')
+        plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c=(plot[:, 3]), cmap='Greys',
+                    edgecolors='k')
+        plt.clim(0, 1)
         plt.ylabel('Presynaptic Cell Number')
         plt.xlabel('Postsynaptic Cell Number')
         plt.xlim([tmin - 1, tmax])
         plt.ylim([rmin - 1, rmax])
         plt.title('%d iterations' % (iterations))
         plotcount += 1
+
+    # Update Weight
+    deltaW = weight_change()
+    Wpt += deltaW
 
     # Resize Layers
     if iterations % 30 == 0 and iterations != 0:
@@ -251,6 +277,12 @@ for iterations in range(Iterations + 1):
         nR = rmax - rmin + 1
         nT = tmax - tmin + 1
 
+    # Update Presynaptic Concentrations
+    for t in range(td):
+        deltaconc = conc_change(Cpm, 'presynaptic')
+        Cpm += (deltaconc * deltat)
+    normalisedCpm = normalise(Cpm, 'presynaptic')
+
     # Update Wmax
     for p in range(rmin, rmax + 1):
         if Wtot[p] < Wmax:
@@ -261,12 +293,6 @@ for iterations in range(Iterations + 1):
         initialconnections(rmin)
         initialconnections(rmax)
 
-    # Update Presynaptic Concentrations
-    for t in range(td):
-        deltaconc = conc_change(Cpm, 'presynaptic')
-        Cpm += (deltaconc * deltat)
-    normalisedCpm = normalise(Cpm, 'presynaptic')
-
     # Update Qtm
     Qtm = np.dot(Wpt, normalisedCpm)
 
@@ -276,8 +302,6 @@ for iterations in range(Iterations + 1):
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm, 'tectal')
 
-    # Update Weight
-    update_weight()
 
 ####################### END #########################
 

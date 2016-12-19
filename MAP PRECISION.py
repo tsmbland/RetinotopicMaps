@@ -1,5 +1,3 @@
-##### MEAN RECEPTIVE FIELD OF CONTINUOUS MAPS SHOULD BE 1
-
 import numpy as np
 import matplotlib.pyplot as plt
 import random
@@ -162,10 +160,20 @@ for p in range(rmin, rmax + 1):
     initialconnections(p)
 
 
+# INITIAL CONCENTRATIONS
+Qtm = np.dot(Wpt, normalisedCpm)
+for t in range(td):
+    deltaconc = conc_change(Ctm, 'tectal')
+    Ctm += (deltaconc * deltat)
+normalisedCtm = normalise(Ctm, 'tectal')
+
+
 # ITERATIONS
 
-def update_weight():
+def weight_change():
     # SYNAPTIC WEIGHT
+
+    newweight = np.zeros([NT + 2, NR + 2])
     for p in range(rmin, rmax + 1):
         totalSp = 0
         connections = 0
@@ -200,16 +208,20 @@ def update_weight():
         for tectal in range(tmin, tmax + 1):
 
             # Calculate new W
-            Wpt[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * W / (W + deltaWsum[p])
+            newweight[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * W / (W + deltaWsum[p])
 
             # REMOVE SYNAPSES
             if Wpt[tectal, p] < elim * W:
-                Wpt[tectal, p] = 0
+                newweight[tectal, p] = 0
 
         # ADD NEW SYNAPSES
         for tectal in range(tmin, tmax + 1):
             if Wpt[tectal, p] == 0 and (Wpt[tectal + 1, p] > 0.02 * W or Wpt[tectal - 1, p] > 0.02 * W):
-                Wpt[tectal, p] = 0.01 * W
+                newweight[tectal, p] = 0.01 * W
+
+    # CALCULATE WEIGHT CHANGE
+    weightchange = newweight - Wpt
+    return weightchange
 
 
 def field_size():
@@ -255,34 +267,41 @@ def field_separation():
 
 
 for iterations in range(Iterations):
+    deltaW = weight_change()
+    Wpt += deltaW
+    fieldsize.append(field_size())
+    fieldseparation.append(field_separation())
+
     Qtm = np.dot(Wpt, normalisedCpm)
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm, 'tectal')
-    update_weight()
-
-    fieldsize.append(field_size())
-    fieldseparation.append(field_separation())
 
 
 ##################### PLOTS  #########################
 
 def tabulate_weight_matrix():
-    table = np.zeros([nR * nT, 3])
+    table = np.zeros([nR * nT, 4])
     row = 0
+    deltaw = weight_change()
     for p in range(rmin, rmax + 1):
         for tectal in range(tmin, tmax + 1):
             table[row, 0] = p
             table[row, 1] = tectal
             table[row, 2] = Wpt[tectal, p]
+            if deltaw[tectal, p] >= 0:
+                table[row, 3] = 1
+            else:
+                table[row, 3] = 0
             row += 1
     return table
 
 
 plt.subplot(2, 2, (2, 4))
 plot = tabulate_weight_matrix()
-plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c='k')
+plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c=(plot[:, 3]), cmap='Greys', edgecolors='k')
+plt.clim(0, 1)
 plt.ylabel('Presynaptic Cell Number')
 plt.xlabel('Postsynaptic Cell Number')
 plt.xlim([tmin - 1, tmax])
