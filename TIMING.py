@@ -32,7 +32,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 500  # number of weight iterations
+Iterations = 2000  # number of weight iterations
 
 
 ###############  VARIABLES ###################
