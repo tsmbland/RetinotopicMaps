@@ -4,7 +4,6 @@
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Map duplication.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2D Retina.py" afterPath="$PROJECT_DIR$/2D Retina.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +23,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BASE MODEL.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BASE MODEL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
@@ -72,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map duplication.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Map duplication.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Map duplication.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -688,7 +687,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482428652347</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Initial connections and normalisation working">
+      <created>1482428685948</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1482428685948</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView">
@@ -794,7 +800,8 @@
     <MESSAGE value="Colour coded scatter plot for all + other minor fixes" />
     <MESSAGE value="." />
     <MESSAGE value="Changes to plot layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes to plot layout" />
+    <MESSAGE value="Initial connections and normalisation working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial connections and normalisation working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -961,16 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Map duplication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rough2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
@@ -995,6 +992,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="15" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Map duplication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
