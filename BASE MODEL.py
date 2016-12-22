@@ -156,7 +156,6 @@ def initialconnections(p):
 for p in range(rmin, rmax + 1):
     initialconnections(p)
 
-
 # INITIAL CONCENTRATIONS
 Qtm = np.dot(Wpt, normalisedCpm)
 for t in range(td):
@@ -233,7 +232,7 @@ for iterations in range(Iterations):
 
 ##################### PLOT A #########################
 
-plt.subplot(2, 1, 1)
+plt.subplot2grid((int(1.5*NR), NT), (0, 0), rowspan=int(0.5*NR), colspan=NT)
 for m in range(M):
     plt.plot(range(tmin, tmax + 1), Ctm[tmin:tmax + 1, m])
 plt.ylabel('Marker Concentration')
@@ -257,7 +256,7 @@ def tabulate_weight_matrix():
     return table
 
 
-plt.subplot(2, 1, 2)
+plt.subplot2grid((int(1.5*NR), NT), (int(0.5*NR), 0), rowspan=NR, colspan=NT)
 plot = tabulate_weight_matrix()
 plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c=(plot[:, 3]), cmap='Greys', edgecolors='k')
 plt.clim(0, 1)
@@ -274,4 +273,5 @@ print('Time elapsed: ', elapsed, 'seconds')
 
 params = {'font.size': '10'}
 plt.rcParams.update(params)
+plt.tight_layout()
 plt.show()
