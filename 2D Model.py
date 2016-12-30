@@ -40,7 +40,7 @@ Iterations = 100  # number of weight iterations
 
 # Plot
 Rplotdim = 1  # retina dimension plotted (1 or 2)
-Rplotslice = NRdim1 // 2  # slice location in other dimension
+Rplotslice = NRdim2 // 2  # slice location in the other dimension
 Tplotdim = 1
 Tplotslice = NTdim2 // 2
 
@@ -70,6 +70,8 @@ normalisedCpm = np.zeros(
     [M, NRdim1 + 2, NRdim2 + 2])  # normalised (by marker conc.) marker concentration  in a presynaptic cell
 normalisedCtm = np.zeros(
     [M, NTdim1 + 2, NTdim2 + 2])  # normalised (by marker conc.) marker concentration in a postsynaptic cell
+
+fieldseparation = []
 
 ################## RETINA #####################
 
@@ -259,11 +261,11 @@ for rdim1 in range(rmindim1, rmaxdim1 + 1):
 # INITIAL CONCENTRATIONS
 def updateQtm():
     Qtm[:, :, :] = 0
-    for m in range(M):
-        for tdim1 in range(tmindim1, tmaxdim1 + 1):
-            for tdim2 in range(tmindim2, tmaxdim2 + 1):
-                for rdim1 in range(rmindim1, rmaxdim1 + 1):
-                    for rdim2 in range(rmindim2, rmaxdim2 + 1):
+    for tdim1 in range(tmindim1, tmaxdim1 + 1):
+        for tdim2 in range(tmindim2, tmaxdim2 + 1):
+            for rdim1 in range(rmindim1, rmaxdim1 + 1):
+                for rdim2 in range(rmindim2, rmaxdim2 + 1):
+                    for m in range(M):
                         Qtm[m, tdim1, tdim2] += normalisedCpm[m, rdim1, rdim2] * Wpt[tdim1, tdim2, rdim1, rdim2]
 
 
@@ -367,27 +369,42 @@ def field_centre():
 
 
 def field_separation():
+    fieldseparation = []
     for tdim1 in range(tmindim1, tmaxdim1 + 1):
         for tdim2 in range(tmindim2, tmaxdim2 + 1):
             if fieldcentre[0, tdim1, tdim2] != 0 and fieldcentre[1, tdim1, tdim2] != 0:
-                pass
-                # then this tectal cell has a field centre
-                # look for nearest cells that don't have filed centres of zero
-                # calculate field centre distance in both dimensions
-                # find euclidian distance
+                if fieldcentre[0, tdim1 + 1, tdim2] != 0 and fieldcentre[1, tdim1 + 1, tdim2] != 0:
+                    fieldseparation.append(
+                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1 + 1, tdim2]) ** 2 + (
+                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1 + 1, tdim2]) ** 2))
+                if fieldcentre[0, tdim1 - 1, tdim2] != 0 and fieldcentre[1, tdim1 - 1, tdim2] != 0:
+                    fieldseparation.append(
+                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1 - 1, tdim2]) ** 2 + (
+                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1 - 1, tdim2]) ** 2))
+                if fieldcentre[0, tdim1, tdim2 + 1] != 0 and fieldcentre[1, tdim1, tdim2 + 1] != 0:
+                    fieldseparation.append(
+                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1, tdim2 + 1]) ** 2 + (
+                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1, tdim2 + 1]) ** 2))
+                if fieldcentre[0, tdim1, tdim2 - 1] != 0 and fieldcentre[1, tdim1, tdim2 - 1] != 0:
+                    fieldseparation.append(
+                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1, tdim2 - 1]) ** 2 + (
+                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1, tdim2 - 1]) ** 2))
+
+    meanfieldseparation = sum(fieldseparation) / len(fieldseparation)
+    return meanfieldseparation
 
 
 for iterations in range(Iterations):
     deltaW = weight_change()
     Wpt += deltaW
+    fieldcentre = field_centre()
+    fieldseparation.append(field_separation())
 
     updateQtm()
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm, 'tectal')
-
-fieldcentre = field_centre()
 
 ##################### PLOT #######################
 if Rplotdim == 1:
@@ -411,12 +428,6 @@ elif Tplotdim == 2:
     tplotmindim2 = tplotmin = tmindim2
     tplotmaxdim2 = tplotmax = tmaxdim2
 
-plt.subplot(3, 1, 1)
-for m in range(M):
-    plt.plot(range(tplotmin, tplotmax + 1), Ctm[m, tplotmindim1:tplotmaxdim1 + 1, tplotmindim2:tplotmaxdim2 + 1])
-plt.ylabel('Marker Concentration')
-plt.xticks([], [])
-
 
 def tabulate_weight_matrix():
     table = np.zeros([(rplotmax - rplotmin + 1) * (tplotmax - tplotmin + 1), 6])
@@ -439,18 +450,38 @@ def tabulate_weight_matrix():
     return table
 
 
-plt.subplot(3, 1, 2)
+plt.subplot(2, 2, 1)
+plt.title('Tectal Marker Concentrations')
+for m in range(M):
+    plt.plot(range(tplotmin, tplotmax + 1), Ctm[m, tplotmindim1:tplotmaxdim1 + 1, tplotmindim2:tplotmaxdim2 + 1])
+plt.ylabel('Marker Concentration')
+plt.xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
+
+plt.subplot(2, 2, 3)
+plt.title('Synaptic Weight Map')
 plot = tabulate_weight_matrix()
-plt.scatter(plot[:, Tplotdim - 1], plot[:, Rplotdim + 1], s=(plot[:, 4]) * 40, marker='s', c=(plot[:, 5]), cmap='Greys',
+plt.scatter(plot[:, Tplotdim - 1], plot[:, Rplotdim + 1], s=(plot[:, 4]) * 100, marker='s', c=(plot[:, 5]),
+            cmap='Greys',
             edgecolors='k')
 plt.ylabel('Retinal Cell Number (Dimension %d)' % (Rplotdim))
 plt.xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
 plt.xlim([tplotmin - 1, tplotmax])
 plt.ylim([rplotmin - 1, rplotmax])
 
-plt.subplot(3, 1, 3)
+plt.subplot(2, 2, 2)
+plt.title('Receptive Field Locations')
 plt.scatter(fieldcentre[0, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1],
-            fieldcentre[1, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1], c='k')
+            fieldcentre[1, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1], c='k', s=10)
+plt.xlabel('Retinal Cell Number Dimension 1')
+plt.ylabel('Retinal Cell Number Dimension 2')
+plt.xlim([tmindim1, tmaxdim1])
+plt.ylim([rmindim1, rmaxdim1])
+
+plt.subplot(2, 2, 4)
+plt.title('Receptive Field Separation')
+plt.plot(range(1, Iterations + 1), fieldseparation)
+plt.ylabel('Mean Receptive Field Separation')
+plt.xlabel('Time')
 
 ###################### END ########################
 end = time.time()

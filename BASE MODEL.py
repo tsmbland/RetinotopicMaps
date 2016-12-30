@@ -24,15 +24,15 @@ n0 = 8  # number of initial random contact
 NL = 60  # sets initial bias
 
 # Tectal concentrations
-deltat = 1  # time step
-td = 5  # number of concentration iterations per weight iteration
+deltat = 0.1  # time step
+td = 50  # number of concentration iterations per weight iteration
 
 # Synaptic modification
 W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 500  # number of weight iterations
+Iterations = 100  # number of weight iterations
 
 ###############  VARIABLES ###################
 rmin = 1
@@ -99,7 +99,7 @@ def conc_change(concmatrix, layer):
 averagemarkerchange = 1
 while averagemarkerchange > stab:
     deltaconc = conc_change(Cpm, 'presynaptic')
-    averagemarkerchange = sum(sum(deltaconc)) / sum(sum(Cpm)) * 100
+    averagemarkerchange = (sum(sum(deltaconc)) / sum(sum(Cpm))) * 100
     Cpm += (deltaconc * deltat)
 
 
@@ -173,46 +173,45 @@ def weight_change():
     for p in range(rmin, rmax + 1):
         totalSp = 0
         connections = 0
-        deltaWsum = np.zeros([NR + 2])
-        deltaWpt = np.zeros([NT + 2, NR + 2])
-        Spt = np.zeros([NT + 2, NR + 2])
-        meanSp = np.zeros([NR + 2])
+        deltaWsum = 0
+        deltaWpt = np.zeros([NT + 2])
+        Spt = np.zeros([NT + 2])
 
         for tectal in range(tmin, tmax + 1):
 
             # Calculate similarity
             for m in range(M):
-                Spt[tectal, p] += min(normalisedCpm[p, m], normalisedCtm[tectal, m])
+                Spt[tectal] += min(normalisedCpm[p, m], normalisedCtm[tectal, m])
 
             # Count connections
             if Wpt[tectal, p] > 0:
-                totalSp += Spt[tectal, p]
+                totalSp += Spt[tectal]
                 connections += 1
 
         # Calculate mean similarity
-        meanSp[p] = (totalSp / connections) - k
+        meanSp = (totalSp / connections) - k
 
         for tectal in range(tmin, tmax + 1):
 
             # Calculate deltaW
-            deltaWpt[tectal, p] = h * (Spt[tectal, p] - meanSp[p])
+            deltaWpt[tectal] = h * (Spt[tectal] - meanSp)
 
             # Calculate deltaWsum
             if Wpt[tectal, p] > 0:
-                deltaWsum[p] += deltaWpt[tectal, p]
+                deltaWsum += deltaWpt[tectal]
 
         for tectal in range(tmin, tmax + 1):
 
             # Calculate new W
-            newweight[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal, p]) * W / (W + deltaWsum[p])
+            newweight[tectal, p] = (Wpt[tectal, p] + deltaWpt[tectal]) * W / (W + deltaWsum)
 
             # REMOVE SYNAPSES
-            if Wpt[tectal, p] < elim * W:
+            if newweight[tectal, p] < elim * W:
                 newweight[tectal, p] = 0
 
         # ADD NEW SYNAPSES
         for tectal in range(tmin, tmax + 1):
-            if Wpt[tectal, p] == 0 and (Wpt[tectal + 1, p] > 0.02 * W or Wpt[tectal - 1, p] > 0.02 * W):
+            if newweight[tectal, p] == 0 and (newweight[tectal + 1, p] > 0.02 * W or newweight[tectal - 1, p] > 0.02 * W):
                 newweight[tectal, p] = 0.01 * W
 
     # CALCULATE WEIGHT CHANGE
