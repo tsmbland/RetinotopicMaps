@@ -2,18 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 import time
+import sys
 
 start = time.time()
 
 #################### PARAMETERS #####################
 
 # General
-NRdim1 = 20  # initial number of retinal cells
-NRdim2 = 20
-NTdim1 = 20  # initial number of tectal cells
-NTdim2 = 20
-Mdim1 = 3  # number of markers
-Mdim2 = 3
+NRdim1 = 10  # initial number of retinal cells
+NRdim2 = 10
+NTdim1 = 10  # initial number of tectal cells
+NTdim2 = 10
+Mdim1 = 2  # number of markers
+Mdim2 = 2
 
 # Presynaptic concentrations
 a = 0.006  # (or 0.003) #decay constant
@@ -23,9 +24,9 @@ Q = 100  # release of markers from source
 stab = 0.1  # retinal stability threshold
 
 # Establishment of initial contacts
-n0 = 30  # number of initial random contact
-NLdim1 = 15  # sets initial bias
-NLdim2 = 15
+n0 = 7  # number of initial random contact
+NLdim1 = 7  # sets initial bias
+NLdim2 = 7
 
 # Tectal concentrations
 deltat = 0.1  # time step
@@ -71,7 +72,8 @@ normalisedCpm = np.zeros(
 normalisedCtm = np.zeros(
     [M, NTdim1 + 2, NTdim2 + 2])  # normalised (by marker conc.) marker concentration in a postsynaptic cell
 
-fieldseparation = []
+Fieldcentre = np.zeros([2, NTdim1 + 2, NTdim2 + 2])
+Fieldseparation = []
 
 ################## RETINA #####################
 
@@ -369,42 +371,53 @@ def field_centre():
 
 
 def field_separation():
-    fieldseparation = []
-    for tdim1 in range(tmindim1, tmaxdim1 + 1):
-        for tdim2 in range(tmindim2, tmaxdim2 + 1):
-            if fieldcentre[0, tdim1, tdim2] != 0 and fieldcentre[1, tdim1, tdim2] != 0:
-                if fieldcentre[0, tdim1 + 1, tdim2] != 0 and fieldcentre[1, tdim1 + 1, tdim2] != 0:
-                    fieldseparation.append(
-                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1 + 1, tdim2]) ** 2 + (
-                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1 + 1, tdim2]) ** 2))
-                if fieldcentre[0, tdim1 - 1, tdim2] != 0 and fieldcentre[1, tdim1 - 1, tdim2] != 0:
-                    fieldseparation.append(
-                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1 - 1, tdim2]) ** 2 + (
-                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1 - 1, tdim2]) ** 2))
-                if fieldcentre[0, tdim1, tdim2 + 1] != 0 and fieldcentre[1, tdim1, tdim2 + 1] != 0:
-                    fieldseparation.append(
-                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1, tdim2 + 1]) ** 2 + (
-                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1, tdim2 + 1]) ** 2))
-                if fieldcentre[0, tdim1, tdim2 - 1] != 0 and fieldcentre[1, tdim1, tdim2 - 1] != 0:
-                    fieldseparation.append(
-                        np.sqrt((fieldcentre[0, tdim1, tdim2] - fieldcentre[0, tdim1, tdim2 - 1]) ** 2 + (
-                            fieldcentre[1, tdim1, tdim2] - fieldcentre[1, tdim1, tdim2 - 1]) ** 2))
+    totaldistance = 0
+    count = 0
 
-    meanfieldseparation = sum(fieldseparation) / len(fieldseparation)
-    return meanfieldseparation
+    # Field distance with closest neighbours in dim2
+    for tdim1 in range(tmindim1, tmaxdim1 + 1):
+        fieldlistdim1 = []
+        fieldlistdim2 = []
+        for tdim2 in range(tmindim2, tmaxdim2 + 1):
+            if Fieldcentre[0, tdim1, tdim2] != 0 and Fieldcentre[1, tdim1, tdim2] != 0:
+                fieldlistdim1.append(Fieldcentre[0, tdim1, tdim2])
+                fieldlistdim2.append(Fieldcentre[1, tdim1, tdim2])
+        for fieldcell in range(len(fieldlistdim1) - 1):
+            totaldistance += np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
+                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
+            count += 1
+
+    # Field distance with closest neighbours in dim1
+    for tdim2 in range(tmindim2, tmaxdim2 + 1):
+        fieldlistdim1 = []
+        fieldlistdim2 = []
+        for tdim1 in range(tmindim1, tmaxdim1 + 1):
+            if Fieldcentre[0, tdim1, tdim2] != 0 and Fieldcentre[1, tdim1, tdim2] != 0:
+                fieldlistdim1.append(Fieldcentre[0, tdim1, tdim2])
+                fieldlistdim2.append(Fieldcentre[1, tdim1, tdim2])
+        for fieldcell in range(len(fieldlistdim1) - 1):
+            totaldistance += np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
+                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
+            count += 1
+
+    meanseparation = totaldistance/count
+    return meanseparation
 
 
 for iterations in range(Iterations):
+    sys.stdout.write('\r%i percent' % ((iterations)*100/Iterations))
+    sys.stdout.flush()
     deltaW = weight_change()
     Wpt += deltaW
-    fieldcentre = field_centre()
-    fieldseparation.append(field_separation())
+    Fieldcentre = field_centre()
+    Fieldseparation.append(field_separation())
 
     updateQtm()
     for t in range(td):
         deltaconc = conc_change(Ctm, 'tectal')
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm, 'tectal')
+
 
 ##################### PLOT #######################
 if Rplotdim == 1:
@@ -470,8 +483,8 @@ plt.ylim([rplotmin - 1, rplotmax])
 
 plt.subplot(2, 2, 2)
 plt.title('Receptive Field Locations')
-plt.scatter(fieldcentre[0, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1],
-            fieldcentre[1, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1], c='k', s=10)
+plt.scatter(Fieldcentre[0, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1],
+            Fieldcentre[1, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1], c='k', s=10)
 plt.xlabel('Retinal Cell Number Dimension 1')
 plt.ylabel('Retinal Cell Number Dimension 2')
 plt.xlim([tmindim1, tmaxdim1])
@@ -479,14 +492,15 @@ plt.ylim([rmindim1, rmaxdim1])
 
 plt.subplot(2, 2, 4)
 plt.title('Receptive Field Separation')
-plt.plot(range(1, Iterations + 1), fieldseparation)
+plt.plot(range(1, Iterations + 1), Fieldseparation)
 plt.ylabel('Mean Receptive Field Separation')
 plt.xlabel('Time')
 
 ###################### END ########################
+sys.stdout.write('\rFinished')
 end = time.time()
 elapsed = end - start
-print('Time elapsed: ', elapsed, 'seconds')
+print('\nTime elapsed: ', elapsed, 'seconds')
 
 params = {'font.size': '10'}
 plt.rcParams.update(params)
