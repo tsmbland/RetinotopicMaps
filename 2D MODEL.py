@@ -9,12 +9,12 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-NRdim1 = 10  # initial number of retinal cells
-NRdim2 = 10
-NTdim1 = 10  # initial number of tectal cells
-NTdim2 = 10
-Mdim1 = 2  # number of markers
-Mdim2 = 2
+NRdim1 = 20  # initial number of retinal cells
+NRdim2 = 20
+NTdim1 = 20  # initial number of tectal cells
+NTdim2 = 20
+Mdim1 = 3  # number of markers
+Mdim2 = 3
 
 # Presynaptic concentrations
 a = 0.006  # (or 0.003) #decay constant
@@ -24,9 +24,9 @@ Q = 100  # release of markers from source
 stab = 0.1  # retinal stability threshold
 
 # Establishment of initial contacts
-n0 = 7  # number of initial random contact
-NLdim1 = 7  # sets initial bias
-NLdim2 = 7
+n0 = 30  # number of initial random contact
+NLdim1 = 15  # sets initial bias
+NLdim2 = 15
 
 # Tectal concentrations
 deltat = 0.1  # time step
@@ -37,13 +37,14 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 100  # number of weight iterations
+Iterations = 1  # number of weight iterations
 
 # Plot
 Rplotdim = 1  # retina dimension plotted (1 or 2)
 Rplotslice = NRdim2 // 2  # slice location in the other dimension
 Tplotdim = 1
 Tplotslice = NTdim2 // 2
+Precisiontstep = 10  # time step for precision value update
 
 ################### VARIABLES ###################
 rmindim1 = 1
@@ -74,6 +75,8 @@ normalisedCtm = np.zeros(
 
 Fieldcentre = np.zeros([2, NTdim1 + 2, NTdim2 + 2])
 Fieldseparation = []
+Fieldsize = []
+Time = []
 
 ################## RETINA #####################
 
@@ -400,17 +403,67 @@ def field_separation():
                 fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
             count += 1
 
-    meanseparation = totaldistance/count
+    meanseparation = totaldistance / count
     return meanseparation
 
 
-for iterations in range(Iterations):
-    sys.stdout.write('\r%i percent' % ((iterations)*100/Iterations))
-    sys.stdout.flush()
+def field_size():
+    totalarea = 0
+    count = 0
+    for tdim1 in range(tmindim1, tmaxdim1 + 1):
+        for tdim2 in range(tmindim2, tmaxdim2 + 1):
+
+            area = 0
+            # Scanning in dim1
+            for rdim2 in range(rmindim2, rmaxdim2 + 1):
+                width = 0
+                rdim1 = 0
+                weight = 0
+                while weight == 0 and rdim1 < nRdim1:
+                    weight = Wpt[tdim1, tdim2, rdim1, rdim2]
+                    rdim1 += 1
+                min = rdim1 - 1
+                if weight != 0:
+                    rdim1 = rmaxdim1
+                    weight = 0
+                    while weight == 0:
+                        weight = Wpt[tdim1, tdim2, rdim1, rdim2]
+                        rdim1 -= 1
+                    max = rdim1 + 1
+                    width = max - min
+                area += width
+
+            # Scanning in dim2
+            for rdim1 in range(rmindim1, rmaxdim1 + 1):
+                width = 0
+                rdim2 = 0
+                weight = 0
+                while weight == 0 and rdim2 < nRdim2:
+                    weight = Wpt[tdim1, tdim2, rdim1, rdim2]
+                    rdim2 += 1
+                min = rdim2 - 1
+                if weight != 0:
+                    rdim2 = rmaxdim2
+                    weight = 0
+                    while weight == 0:
+                        weight = Wpt[tdim1, tdim2, rdim1, rdim2]
+                        rdim2 -= 1
+                    max = rdim2 + 1
+                    width = max - min
+                area += width
+
+            # Field size estimation
+            totalarea += area / 2
+            count += 1
+
+    # Mean field size estimation
+    meanarea = totalarea / count
+    return meanarea
+
+
+for iteration in range(1, Iterations + 1):
     deltaW = weight_change()
     Wpt += deltaW
-    Fieldcentre = field_centre()
-    Fieldseparation.append(field_separation())
 
     updateQtm()
     for t in range(td):
@@ -418,6 +471,14 @@ for iterations in range(Iterations):
         Ctm += (deltaconc * deltat)
     normalisedCtm = normalise(Ctm, 'tectal')
 
+    if iteration % Precisiontstep == 0 or iteration == Iterations or iteration == 1:
+        Fieldcentre = field_centre()
+        Fieldseparation.append(field_separation())
+        Fieldsize.append(field_size())
+        Time.append(iteration)
+
+    sys.stdout.write('\r%i percent' % (iteration * 100 / Iterations))
+    sys.stdout.flush()
 
 ##################### PLOT #######################
 if Rplotdim == 1:
@@ -463,41 +524,68 @@ def tabulate_weight_matrix():
     return table
 
 
-plt.subplot(2, 2, 1)
+def tabulate_field_centre():
+    table = np.zeros([nTdim1 * nTdim2, 4])
+    row = 0
+    for tdim1 in range(tmindim1, tmaxdim1 + 1):
+        for tdim2 in range(tmindim2, tmaxdim2 + 1):
+            table[row, 0] = tdim1
+            table[row, 1] = tdim2
+            table[row, 2] = Fieldcentre[0, tdim1, tdim2]
+            table[row, 3] = Fieldcentre[1, tdim1, tdim2]
+            row += 1
+    return table
+
+
+plt.subplot(2, 3, 1)
 plt.title('Tectal Marker Concentrations')
-for m in range(M):
-    plt.plot(range(tplotmin, tplotmax + 1), Ctm[m, tplotmindim1:tplotmaxdim1 + 1, tplotmindim2:tplotmaxdim2 + 1])
+if Tplotdim == 1:
+    for m in range(M):
+        plt.plot(range(tplotmin, tplotmax + 1), Ctm[m, tplotmin:tplotmax + 1, Tplotslice])
+elif Tplotdim == 2:
+    for m in range(M):
+        plt.plot(range(tplotmin, tplotmax + 1), Ctm[m, Tplotslice, tplotmin:tplotmax + 1])
+
 plt.ylabel('Marker Concentration')
 plt.xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
+plt.xlim([tplotmin, tplotmax])
+plt.ylim([rplotmin, rplotmax])
 
-plt.subplot(2, 2, 3)
+plt.subplot(2, 3, 4)
 plt.title('Synaptic Weight Map')
 plot = tabulate_weight_matrix()
 plt.scatter(plot[:, Tplotdim - 1], plot[:, Rplotdim + 1], s=(plot[:, 4]) * 100, marker='s', c=(plot[:, 5]),
             cmap='Greys',
             edgecolors='k')
+plt.clim(0, 1)
 plt.ylabel('Retinal Cell Number (Dimension %d)' % (Rplotdim))
 plt.xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
-plt.xlim([tplotmin - 1, tplotmax])
-plt.ylim([rplotmin - 1, rplotmax])
+plt.xlim([tplotmin, tplotmax])
+plt.ylim([rplotmin, rplotmax])
 
-plt.subplot(2, 2, 2)
+plt.subplot(2, 3, 2)
 plt.title('Receptive Field Locations')
-plt.scatter(Fieldcentre[0, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1],
-            Fieldcentre[1, tmindim1:tmaxdim1 + 1, tmindim2:tmaxdim2 + 1], c='k', s=10)
+plot = tabulate_field_centre()
+plt.scatter(plot[:, 2], plot[:, 3], c=(plot[:, 0] / plot[:, 1]), s=10, edgecolors='none')
+plt.clim(0.1, 10)
 plt.xlabel('Retinal Cell Number Dimension 1')
 plt.ylabel('Retinal Cell Number Dimension 2')
 plt.xlim([tmindim1, tmaxdim1])
 plt.ylim([rmindim1, rmaxdim1])
 
-plt.subplot(2, 2, 4)
+plt.subplot(2, 3, 3)
 plt.title('Receptive Field Separation')
-plt.plot(range(1, Iterations + 1), Fieldseparation)
+plt.plot(Time, Fieldseparation)
 plt.ylabel('Mean Receptive Field Separation')
 plt.xlabel('Time')
 
+plt.subplot(2, 3, 6)
+plt.title('Receptive Field Size')
+plt.plot(Time, Fieldsize)
+plt.ylabel('Mean Receptive Field Area')
+plt.xlabel('Time')
+
 ###################### END ########################
-sys.stdout.write('\rFinished')
 end = time.time()
 elapsed = end - start
 print('\nTime elapsed: ', elapsed, 'seconds')

@@ -24,8 +24,8 @@ n0 = 8  # number of initial random contact
 NL = 60  # sets initial bias
 
 # Tectal concentrations
-deltat = 0.1  # time step
-td = 50  # number of concentration iterations per weight iteration
+deltat = 1  # time step
+td = 5  # number of concentration iterations per weight iteration
 
 # Synaptic modification
 W = 1  # total strength available to each presynaptic fibre
