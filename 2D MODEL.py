@@ -37,7 +37,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 1  # number of weight iterations
+Iterations = 100  # number of weight iterations
 
 # Plot
 Rplotdim = 1  # retina dimension plotted (1 or 2)
@@ -76,6 +76,7 @@ normalisedCtm = np.zeros(
 Fieldcentre = np.zeros([2, NTdim1 + 2, NTdim2 + 2])
 Fieldseparation = []
 Fieldsize = []
+Orientation = []
 Time = []
 
 ################## RETINA #####################
@@ -373,6 +374,24 @@ def field_centre():
     return fieldcentre
 
 
+def orientation():
+    # Gives mean distance between actual field centre and optimal field centre
+    totaldistance = 0
+    count = 0
+
+    for tdim1 in range(tmindim1, tmaxdim1 + 1):
+        for tdim2 in range(tmindim2, tmaxdim2 + 1):
+            if Fieldcentre[0, tdim1, tdim2] != 0 and Fieldcentre[1, tdim1, tdim2] != 0:
+                totaldistance += np.sqrt(
+                    (Fieldcentre[0, tdim1, tdim2] - tdim1) ** 2 + (Fieldcentre[1, tdim1, tdim2] - tdim2) ** 2)
+                count += 1
+
+    meandistance = totaldistance / count
+
+    return meandistance
+
+
+
 def field_separation():
     totaldistance = 0
     count = 0
@@ -475,6 +494,7 @@ for iteration in range(1, Iterations + 1):
         Fieldcentre = field_centre()
         Fieldseparation.append(field_separation())
         Fieldsize.append(field_size())
+        Orientation.append(orientation())
         Time.append(iteration)
 
     sys.stdout.write('\r%i percent' % (iteration * 100 / Iterations))
@@ -551,7 +571,7 @@ plt.xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
 plt.xlim([tplotmin, tplotmax])
 plt.ylim([rplotmin, rplotmax])
 
-plt.subplot(2, 3, 4)
+plt.subplot(2, 3, 2)
 plt.title('Synaptic Weight Map')
 plot = tabulate_weight_matrix()
 plt.scatter(plot[:, Tplotdim - 1], plot[:, Rplotdim + 1], s=(plot[:, 4]) * 100, marker='s', c=(plot[:, 5]),
@@ -563,7 +583,7 @@ plt.xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
 plt.xlim([tplotmin, tplotmax])
 plt.ylim([rplotmin, rplotmax])
 
-plt.subplot(2, 3, 2)
+plt.subplot(2, 3, 3)
 plt.title('Receptive Field Locations')
 plot = tabulate_field_centre()
 plt.scatter(plot[:, 2], plot[:, 3], c=(plot[:, 0] / plot[:, 1]), s=10, edgecolors='none')
@@ -573,16 +593,22 @@ plt.ylabel('Retinal Cell Number Dimension 2')
 plt.xlim([tmindim1, tmaxdim1])
 plt.ylim([rmindim1, rmaxdim1])
 
-plt.subplot(2, 3, 3)
+plt.subplot(2, 3, 4)
 plt.title('Receptive Field Separation')
 plt.plot(Time, Fieldseparation)
 plt.ylabel('Mean Receptive Field Separation')
 plt.xlabel('Time')
 
-plt.subplot(2, 3, 6)
+plt.subplot(2, 3, 5)
 plt.title('Receptive Field Size')
 plt.plot(Time, Fieldsize)
 plt.ylabel('Mean Receptive Field Area')
+plt.xlabel('Time')
+
+plt.subplot(2, 3, 6)
+plt.title('Orientation')
+plt.plot(Time, Orientation)
+plt.ylabel('Oreintation')
 plt.xlabel('Time')
 
 ###################### END ########################

@@ -32,7 +32,7 @@ W = 1  # total strength available to each presynaptic fibre
 h = 0.01  # ???
 k = 0.03  # ???
 elim = 0.005  # elimination threshold
-Iterations = 500  # number of weight iterations
+Iterations = 1000  # number of weight iterations
 
 ###############  VARIABLES ###################
 rmin = 1
@@ -50,8 +50,9 @@ Ctm = np.zeros([NT + 2, M])  # concentration of a molecule in a postsynaptic cel
 normalisedCpm = np.zeros([NR + 2, M])  # normalised (by marker conc.) marker concentration  in a presynaptic cell
 normalisedCtm = np.zeros([NT + 2, M])  # normalised (by marker conc.) marker concentration in a postsynaptic cell
 
-fieldsize = []
-fieldseparation = []
+Fieldsize = []
+Fieldseparation = []
+Orientation = []
 
 ################## RETINA #####################
 
@@ -159,7 +160,6 @@ def initialconnections(p):
 for p in range(rmin, rmax + 1):
     initialconnections(p)
 
-
 # INITIAL CONCENTRATIONS
 Qtm = np.dot(Wpt, normalisedCpm)
 for t in range(td):
@@ -215,7 +215,8 @@ def weight_change():
 
         # ADD NEW SYNAPSES
         for tectal in range(tmin, tmax + 1):
-            if newweight[tectal, p] == 0 and (newweight[tectal + 1, p] > 0.02 * W or newweight[tectal - 1, p] > 0.02 * W):
+            if newweight[tectal, p] == 0 and (
+                            newweight[tectal + 1, p] > 0.02 * W or newweight[tectal - 1, p] > 0.02 * W):
                 newweight[tectal, p] = 0.01 * W
 
     # CALCULATE WEIGHT CHANGE
@@ -265,11 +266,28 @@ def field_separation():
     return meanseparation
 
 
+def orientation():
+    distance = []  # distance between actual field centre and optimal field centre
+    for tectal in range(tmin, tmax + 1):
+        total = 0
+        weightsum = 0
+        for p in range(rmin, rmax + 1):
+            total += p * Wpt[tectal, p]
+            weightsum += Wpt[tectal, p]
+        if total != 0:
+            distance.append(abs((total / weightsum) - tectal))
+
+    meandistance = sum(distance) / len(distance)
+
+    return meandistance
+
+
 for iterations in range(Iterations):
     deltaW = weight_change()
     Wpt += deltaW
-    fieldsize.append(field_size())
-    fieldseparation.append(field_separation())
+    Fieldsize.append(field_size())
+    Fieldseparation.append(field_separation())
+    Orientation.append(orientation())
 
     Qtm = np.dot(Wpt, normalisedCpm)
     for t in range(td):
@@ -297,7 +315,7 @@ def tabulate_weight_matrix():
     return table
 
 
-plt.subplot(2, 2, (2, 4))
+plt.subplot(2, 2, 1)
 plot = tabulate_weight_matrix()
 plt.scatter(plot[:, 1], plot[:, 0], s=(plot[:, 2]) * 20, marker='s', c=(plot[:, 3]), cmap='Greys', edgecolors='k')
 plt.clim(0, 1)
@@ -306,14 +324,19 @@ plt.xlabel('Postsynaptic Cell Number')
 plt.xlim([tmin - 1, tmax])
 plt.ylim([rmin - 1, rmax])
 
-plt.subplot(2, 2, 1)
-plt.plot(range(1, Iterations + 1), fieldsize)
+plt.subplot(2, 2, 2)
+plt.plot(range(1, Iterations + 1), Fieldsize)
 plt.ylabel('Mean Receptive Field Size')
 plt.xticks([], [])
 
 plt.subplot(2, 2, 3)
-plt.plot(range(1, Iterations + 1), fieldseparation)
+plt.plot(range(1, Iterations + 1), Fieldseparation)
 plt.ylabel('Mean Receptive Field Separation')
+plt.xlabel('Time')
+
+plt.subplot(2, 2, 4)
+plt.plot(range(1, Iterations + 1), Orientation)
+plt.ylabel('Orientation')
 plt.xlabel('Time')
 
 ####################### END #########################
@@ -325,4 +348,3 @@ print('Time elapsed: ', elapsed, 'seconds')
 params = {'font.size': '10'}
 plt.rcParams.update(params)
 plt.show()
-
