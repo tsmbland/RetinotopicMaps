@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006 v2.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2D MODEL.py" afterPath="$PROJECT_DIR$/2D MODEL.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MAP PRECISION.py" afterPath="$PROJECT_DIR$/MAP PRECISION.py" />
@@ -48,7 +47,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2006.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2006.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2006.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -60,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2006 v2.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2006 v2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2006 v2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -698,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483988812759</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="sort of version of the 2006 model. Many similarities with 1979 model (eg. sprouting and synapse removal, biased initial connections). Not working properly though, probably a problem with some of the parameters as many were not given in the paper and have had to be guessed, or carried through from the 1979 model">
+      <created>1484411706351</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1484411706351</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -784,7 +790,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed time dependence" />
     <MESSAGE value="tectal rotations time dependence" />
     <MESSAGE value="Boundary conditions with zeros padding for 2D retina" />
     <MESSAGE value="Simplify similarity function (min function from paper)" />
@@ -809,7 +814,8 @@
     <MESSAGE value="field separation function improved" />
     <MESSAGE value="field size measure added, colour coded field centre plot" />
     <MESSAGE value="added orientation measure" />
-    <option name="LAST_COMMIT_MESSAGE" value="added orientation measure" />
+    <MESSAGE value="sort of version of the 2006 model. Many similarities with 1979 model (eg. sprouting and synapse removal, biased initial connections). Not working properly though, probably a problem with some of the parameters as many were not given in the paper and have had to be guessed, or carried through from the 1979 model" />
+    <option name="LAST_COMMIT_MESSAGE" value="sort of version of the 2006 model. Many similarities with 1979 model (eg. sprouting and synapse removal, biased initial connections). Not working properly though, probably a problem with some of the parameters as many were not given in the paper and have had to be guessed, or carried through from the 1979 model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -993,16 +999,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006 v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="469" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2D MODEL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1017,6 +1013,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006 v2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="469" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
