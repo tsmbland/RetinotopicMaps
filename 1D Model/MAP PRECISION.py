@@ -275,7 +275,7 @@ def orientation():
             total += p * Wpt[tectal, p]
             weightsum += Wpt[tectal, p]
         if total != 0:
-            distance.append(abs((total / weightsum) - tectal))
+            distance.append(abs((total / weightsum) - (nR * tectal / nT)))
 
     meandistance = sum(distance) / len(distance)
 

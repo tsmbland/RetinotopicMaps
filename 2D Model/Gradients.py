@@ -8,26 +8,39 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-NRdim1 = 20  # initial number of retinal cells
-NRdim2 = 20
-NTdim1 = 20  # initial number of tectal cells
-NTdim2 = 20
-Mdim1 = 3  # number of markers
-Mdim2 = 3
+Iterations = 50  # number of weight iterations
+NRdim1 = 30  # initial number of retinal cells
+NRdim2 = 30
+NTdim1 = 30  # initial number of tectal cells
+NTdim2 = 30
 
-# Presynaptic concentrations
+# Retinal Gradients
+M = 2
+y0Rdim1 = 20  # conc in cell 0
+ymRdim1 = 100  # conc in cell NRdim1
+ynRdim1 = 500  # conc in cell NRdim1/2
+y0Rdim2 = 20
+ymRdim2 = 100
+ynRdim2 = 500
+
+# Tectal Gradients
+y0Tdim1 = 0  # conc in cell 0
+ymTdim1 = 0  # conc in cell NTdim1
+ynTdim1 = 0  # conc in cell NTdim1/2
+y0Tdim2 = 0
+ymTdim2 = 0
+ynTdim2 = 0
+
+# Establishment of initial contacts
+n0 = 7  # number of initial random contact
+NLdim1 = 25  # sets initial bias
+NLdim2 = 25
+
+# Tectal concentrations
 a = 0.006  # (or 0.003) #decay constant
 d = 0.3  # diffusion length constant
 E = 0.01  # concentration elimination threshold
-Q = 100.  # release of markers from source
 stab = 0.1  # retinal stability threshold
-
-# Establishment of initial contacts
-n0 = 10  # number of initial random contact
-NLdim1 = 15  # sets initial bias
-NLdim2 = 15
-
-# Tectal concentrations
 deltat = 0.5  # time step
 td = 10  # number of concentration iterations per weight iteration
 
@@ -39,7 +52,6 @@ elim = 0.005  # elimination threshold
 newW = 0.01  # weight of new synapses
 sprout = 0.02  # sprouting threshold
 
-Iterations = 500  # number of weight iterations
 
 ################### VARIABLES ###################
 
@@ -56,12 +68,10 @@ nRdim1 = rmaxdim1 - rmindim1 + 1  # present number of retinal cells (pre-surgery
 nRdim2 = rmaxdim2 - rmindim2 + 1
 nTdim1 = tmaxdim1 - tmindim1 + 1  # present number of tectal cells (pre-surgery)
 nTdim2 = tmaxdim2 - tmindim2 + 1
-M = Mdim1 * Mdim2
 
 Wpt = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2, NRdim1 + 2,
                 NRdim2 + 2])  # synaptic strength between a presynaptic cell and a postsynaptic cell
 
-Qpm = np.zeros([M, NRdim1 + 2, NRdim2 + 2])  # presence of marker sources along retina
 Qtm = np.zeros([M, NTdim1 + 2, NTdim2 + 2])  # axonal flow of molecules into postsymaptic cells
 
 Cpm = np.zeros([M, NRdim1 + 2, NRdim2 + 2])  # concentration of a molecule in a presynaptic cell
@@ -78,6 +88,48 @@ currentiteration = 0
 
 
 ################### FUNCTIONS #####################
+
+def setRetinalGradients():
+
+    # Dim1
+    if ynRdim1 != 0:
+        aRdim1 = ((ymRdim1 - y0Rdim1) ** 2) / (ynRdim1 - 2 * ymRdim1 + y0Rdim1)
+        bRdim1 = np.log((ynRdim1 - y0Rdim1) / aRdim1 + 1) / NRdim1
+        cRdim1 = y0Rdim1 - aRdim1
+
+        for rdim1 in range(1, NRdim1+1):
+            Cpm[0, rdim1, 1:NTdim2+1] = aRdim1 * np.exp(bRdim1 * rdim1) + cRdim1
+
+    # Dim2
+    if ynRdim2 != 0:
+        aRdim2 = ((ymRdim2 - y0Rdim2) ** 2) / (ynRdim2 - 2 * ymRdim2 + y0Rdim2)
+        bRdim2 = np.log((ynRdim2 - y0Rdim2) / aRdim2 + 1) / NRdim2
+        cRdim2 = y0Rdim2 - aRdim2
+
+        for rdim2 in range(1, NRdim2+1):
+            Cpm[1, 1:NTdim1+1, rdim2] = aRdim2 * np.exp(bRdim2 * rdim2) + cRdim2
+
+
+def setTectalGradients():
+
+    # Dim1
+    if ynTdim1 != 0:
+        aTdim1 = ((ymTdim1 - y0Tdim1) ** 2) / (ynTdim1 - 2 * ymTdim1 + y0Tdim1)
+        bTdim1 = np.log((ynTdim1 - y0Tdim1) / aTdim1 + 1) / NTdim1
+        cTdim1 = y0Tdim1 - aTdim1
+
+        for tdim1 in range(1, NTdim1 + 1):
+            Ctm[0, tdim1, 1:NTdim2 + 1] = aTdim1 * np.exp(bTdim1 * tdim1) + cTdim1
+
+    # Dim2
+    if ynTdim2 != 0:
+        aTdim2 = ((ymTdim2 - y0Tdim2) ** 2) / (ynTdim2 - 2 * ymTdim2 + y0Tdim2)
+        bTdim2 = np.log((ynTdim2 - y0Tdim2) / aTdim2 + 1) / NTdim2
+        cTdim2 = y0Tdim2 - aTdim2
+
+        for tdim2 in range(1, NTdim2 + 1):
+            Ctm[1, 1:NTdim1+1, tdim2] = aTdim2 * np.exp(bTdim2 * tdim2) + cTdim2
+
 
 def updateNc():
     # Presynaptic neuron map
@@ -297,44 +349,8 @@ def addsynapses():
 
 ######################## ALGORITHM ##########################
 
-# MARKER LOCATIONS
-
-if Mdim1 > 1:
-    markerspacingdim1 = NRdim1 / (Mdim1 - 1)
-else:
-    markerspacingdim1 = 0
-if Mdim2 > 1:
-    markerspacingdim2 = NRdim2 / (Mdim2 - 1)
-else:
-    markerspacingdim2 = 0
-
-m = 0
-locationdim1 = 1
-locationdim2 = 1
-for mdim2 in range(Mdim2 - 1):
-    for mdim1 in range(Mdim1 - 1):
-        Qpm[m, locationdim1, locationdim2] = Q
-        locationdim1 += markerspacingdim1
-        m += 1
-    Qpm[m, NRdim1, locationdim2] = Q
-    locationdim1 = 1
-    locationdim2 += markerspacingdim2
-    m += 1
-
-for mdim1 in range(Mdim1 - 1):
-    Qpm[m, locationdim1, NRdim2] = Q
-    locationdim1 += markerspacingdim1
-    m += 1
-Qpm[m, NRdim1, NRdim2] = Q
-
-# PRESYNAPTIC CONCENTRATIONS
-
-updateNc()
-averagemarkerchange = 1
-while averagemarkerchange > stab:
-    deltaconc = conc_change(Cpm, 'presynaptic')
-    averagemarkerchange = (sum(sum(sum(deltaconc))) / sum(sum(sum(Cpm)))) * 100
-    Cpm += (deltaconc * deltat)
+# GRADIENTS
+setRetinalGradients()
 normalisedCpm = normalise(Cpm, 'presynaptic')
 
 # INITIAL CONNECTIONS
@@ -345,7 +361,9 @@ for rdim1 in range(rmindim1, rmaxdim1 + 1):
 
 # INITIAL CONCENTRATIONS
 
+updateNc()
 updateQtm()
+setTectalGradients()
 for t in range(td):
     deltaconc = conc_change(Ctm, 'tectal')
     Ctm += (deltaconc * deltat)

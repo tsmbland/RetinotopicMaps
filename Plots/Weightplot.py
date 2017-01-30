@@ -1,17 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
+import sys
 
 ####################### IMPORT DATA ######################
 
-Weightmatrix = np.load('Weightmatrix.npy')
+Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 
 ######################## PLOT OPTIONS #####################
 
 Rplotdim = 1  # retina dimension plotted (1 or 2)
-Rplotslice = 1  # (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
+Rplotslice = (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
 Tplotdim = 1
-Tplotslice = 1  # (len(Weightmatrix[0, 0, :, 0, 0]) - 2) // 2
+Tplotslice = (len(Weightmatrix[0, 0, :, 0, 0]) - 2) // 2
 
 ######################## TABLE #########################
 if Rplotdim == 1:
@@ -55,6 +56,9 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0])-1):
                         table[iteration, row, 5] = 0
                     row += 1
 
+    sys.stdout.write('\rProcessing data... %i percent' % (iteration * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
+    sys.stdout.flush()
+
 ########################## PLOT ##########################
 
 fig = plt.figure()
@@ -92,6 +96,8 @@ def update(val):
 weightplot(0)
 
 ####################### END ########################
+sys.stdout.write('\rComplete!')
+sys.stdout.flush()
 params = {'font.size': '10'}
 plt.rcParams.update(params)
 sframe.on_changed(update)

@@ -6,7 +6,7 @@ start = time.time()
 
 ##################### IMPORT DATA ########################
 
-Weightmatrix = np.load('Weightmatrix.npy')
+Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 
 ###################### FIELD CENTRES ######################
 Fieldcentres = np.zeros(
@@ -30,6 +30,7 @@ def field_centre(i):
 
     Fieldcentres[0, i, :, :] = totaldim1 / weightsumdim1
     Fieldcentres[1, i, :, :] = totaldim2 / weightsumdim2
+    Fieldcentres[:, i, :, :] = np.nan_to_num(Fieldcentres[:, i, :, :])
 
 
 for i in range(len(Weightmatrix[:, 0, 0, 0, 0])):
@@ -39,7 +40,7 @@ for i in range(len(Weightmatrix[:, 0, 0, 0, 0])):
 
 ##################### EXPORT DATA ###################
 
-np.save('Fieldcentres', Fieldcentres)
+np.save('../Temporary Data/Fieldcentres', Fieldcentres)
 
 ###################### END ########################
 sys.stdout.write('\rComplete!')

@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2DModel/Fieldcentres.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2DModel/Fieldplot.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2DModel/Model.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2DModel/Precisionplot.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2DModel/Weightplot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006 v2.py" afterPath="$PROJECT_DIR$/2006 v2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.py" afterPath="$PROJECT_DIR$/2006.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2D MODEL.py" afterPath="$PROJECT_DIR$/2D MODEL.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MAP PRECISION.py" afterPath="$PROJECT_DIR$/MAP PRECISION.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2006 Model/2006 Model.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2D Model/Gradients.py" />
+      <change type="DELETED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2006 v2.py" afterPath="" />
+      <change type="DELETED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2006.py" afterPath="" />
+      <change type="DELETED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2D MODEL.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/.name" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/.name" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/Willshawvon_der_Walsburg_1979.iml" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/Retinotopic Maps.iml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/modules.xml" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/vcs.xml" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/workspace.xml" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2DModel/Fieldcentres.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Fieldcentres.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2DModel/Fieldplot.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Fieldplot.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2DModel/Model.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2D Model/Model.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2DModel/Precisionplot.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Precisionplot.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2DModel/Weightplot.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Weightplot.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/BASE MODEL.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/BASE MODEL.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/DEVELOPMENT.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/DEVELOPMENT.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/MAP PRECISION.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/MAP PRECISION.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/MISMATCH SURGERY.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/MISMATCH SURGERY.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Map duplication.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/Map duplication.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/TECTAL ROTATION.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/TECTAL ROTATION.py" />
+      <change type="MOVED" beforePath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/TIMING.py" afterPath="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/TIMING.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,25 +44,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Model.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2DModel/Model.py">
+        <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2D Model/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3850">
-              <caret line="275" column="40" selection-start-line="275" selection-start-column="40" selection-end-line="275" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Weightplot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2DModel/Weightplot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1372">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -65,62 +63,62 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/MISMATCH SURGERY.py" />
-        <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/2D Retina.py" />
-        <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/BASE MODEL.py" />
-        <option value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/rough 2.py" />
-        <option value="$PROJECT_DIR$/rough (rotation experiment).py" />
-        <option value="$PROJECT_DIR$/Scatter plot.py" />
-        <option value="$PROJECT_DIR$/Old code/Base model without padding.py" />
-        <option value="$PROJECT_DIR$/Old code/Scatter plot.py" />
-        <option value="$PROJECT_DIR$/rough 2.py" />
-        <option value="$PROJECT_DIR$/Development.py" />
-        <option value="$PROJECT_DIR$/TECTAL ROTATION.py" />
-        <option value="$PROJECT_DIR$/Time Dependence.py" />
-        <option value="$PROJECT_DIR$/DEVELOPMENT.py" />
-        <option value="$PROJECT_DIR$/TIMING.py" />
-        <option value="$PROJECT_DIR$/Map duplication.py" />
-        <option value="$PROJECT_DIR$/MISMATCH SURGERY.py" />
-        <option value="$PROJECT_DIR$/2D Retina.py" />
-        <option value="$PROJECT_DIR$/2D Model.py" />
-        <option value="$PROJECT_DIR$/MAP PRECISION.py" />
-        <option value="$PROJECT_DIR$/rough4.py" />
-        <option value="$PROJECT_DIR$/rough3.py" />
-        <option value="$PROJECT_DIR$/rough2.py" />
-        <option value="$PROJECT_DIR$/2006 alt.py" />
-        <option value="$PROJECT_DIR$/2006 v2.py" />
-        <option value="$PROJECT_DIR$/2006.py" />
-        <option value="$PROJECT_DIR$/Old code/1979 model adapted for Ephrins.py" />
-        <option value="$PROJECT_DIR$/BASE MODEL.py" />
-        <option value="$PROJECT_DIR$/2D Model Functions.py" />
-        <option value="$PROJECT_DIR$/2D Model Algorithm.py" />
-        <option value="$PROJECT_DIR$/2DModel/ParametersVarialblesFunctions.py" />
-        <option value="$PROJECT_DIR$/2DModel/Parameters.py" />
-        <option value="$PROJECT_DIR$/2DModel/Functions.py" />
-        <option value="$PROJECT_DIR$/2DModel/Base Algorithm.py" />
-        <option value="$PROJECT_DIR$/2DModel/rough2.py" />
-        <option value="$PROJECT_DIR$/2D MODEL.py" />
-        <option value="$PROJECT_DIR$/2DModel/rough.py" />
-        <option value="$PROJECT_DIR$/2DModel/orientationplot.py" />
-        <option value="$PROJECT_DIR$/2DModel/systemsmatchplot.py" />
-        <option value="$PROJECT_DIR$/2DModel/2D Model.py" />
-        <option value="$PROJECT_DIR$/2DModel/modelasfunction.py" />
-        <option value="$PROJECT_DIR$/2DModel/interactiveplot2.py" />
-        <option value="$PROJECT_DIR$/2DModel/interactiveplot1.py" />
-        <option value="$PROJECT_DIR$/2DModel/precisionplot.py" />
-        <option value="$PROJECT_DIR$/2DModel/Fieldplot.py" />
-        <option value="$PROJECT_DIR$/2DModel/Precisionplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/MAP PRECISION.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/rough4.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/rough3.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/rough2.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006 alt.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006 v2.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/Old code/1979 model adapted for Ephrins.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/BASE MODEL.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model Functions.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model Algorithm.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/ParametersVarialblesFunctions.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Parameters.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Functions.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Base Algorithm.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/rough2.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D MODEL.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/orientationplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/systemsmatchplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/2D Model.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/modelasfunction.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/interactiveplot2.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/interactiveplot1.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/precisionplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Fieldplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Precisionplot.py" />
         <option value="$USER_HOME$/Model.py" />
-        <option value="$PROJECT_DIR$/2DModel/Model(old).py" />
-        <option value="$PROJECT_DIR$/2DModel/Model.py" />
-        <option value="$PROJECT_DIR$/2DModel/Fieldcentres.py" />
-        <option value="$PROJECT_DIR$/2DModel/Weightplot.py" />
-        <option value="$PROJECT_DIR$/rough.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Model(old).py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Model.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Fieldcentres.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/rough.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Weightplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/rough.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Saved Data/Gradients.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Gradients.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Precisionplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006 Model/rough.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Weightplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Fieldplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Fieldcentres.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/Model.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006 Model/2006 tidy (work in progress).py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/Plots/Weightplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Weightplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Fieldplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/2006 tidy (work in progress).py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/rough.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Fieldcentres.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Precisionplot.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/2006 Model.py" />
+        <option value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2D Model/Model.py" />
       </list>
     </option>
   </component>
@@ -153,137 +151,177 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Willshawvon_der_Walsburg_1979" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Willshawvon_der_Walsburg_1979" />
+              <option name="myItemId" value="Retinotopic Maps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Willshaw:von_der_Malsburg_1979" />
+              <option name="myItemId" value="Retinotopic Maps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Willshawvon_der_Walsburg_1979" />
+              <option name="myItemId" value="Retinotopic Maps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Willshaw:von_der_Malsburg_1979" />
+              <option name="myItemId" value="Retinotopic Maps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="2DModel" />
+              <option name="myItemId" value="Plots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2D Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2006 Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1D Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Model.py" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Old code" />
+      <recent name="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code" />
+      <recent name="$USER_HOME$/Documents/Uni Work/4th Year/Project" />
+      <recent name="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/Saved Data" />
+      <recent name="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Old code" />
+      <recent name="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/Plots" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.rough">
-    <configuration default="false" name="modelasfunction" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Fieldcentres">
+    <configuration default="false" name="2006 tidy (work in progress)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2DModel" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2DModel/Model.py" />
+      <module name="Retinotopic Maps" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/2006 Model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="interactiveplot2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Fieldplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2DModel" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2DModel/Weightplot.py" />
+      <module name="Retinotopic Maps" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Fieldplot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Model (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Fieldcentres" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Model.py" />
+      <module name="Retinotopic Maps" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Fieldcentres.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Model(old)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Precisionplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2DModel" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2DModel/Model(old).py" />
+      <module name="Retinotopic Maps" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Precisionplot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="rough" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Weightplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rough.py" />
+      <module name="Retinotopic Maps" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/Plots/Weightplot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -429,31 +467,31 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Willshawvon_der_Walsburg_1979" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/Model.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/Model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.modelasfunction" />
-      <item index="2" class="java.lang.String" itemvalue="Python.interactiveplot2" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Model (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Model(old)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.rough" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2006 tidy (work in progress)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Fieldplot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Fieldcentres" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Precisionplot" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Weightplot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.rough" />
-        <item index="1" class="java.lang.String" itemvalue="Python.interactiveplot2" />
-        <item index="2" class="java.lang.String" itemvalue="Python.modelasfunction" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Model(old)" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Model (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Fieldcentres" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Weightplot" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Precisionplot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Fieldplot" />
+        <item index="4" class="java.lang.String" itemvalue="Python.2006 tidy (work in progress)" />
       </list>
     </recent_temporary>
   </component>
@@ -712,7 +750,14 @@
       <option name="project" value="LOCAL" />
       <updated>1484411829224</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Set up seperate scripts for 2D Model for model and plots. Tidied up code and some improvements (e.g fewer nested loops)">
+      <created>1485710544394</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1485710544394</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView">
@@ -730,11 +775,11 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.117553614" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.19539317" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.8824464" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.80460685" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
@@ -798,7 +843,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Boundary conditions with zeros padding for 2D retina" />
     <MESSAGE value="Simplify similarity function (min function from paper)" />
     <MESSAGE value="Add zeros padding" />
     <MESSAGE value="Change plot to scatter plot (+general tidy)" />
@@ -823,7 +867,8 @@
     <MESSAGE value="added orientation measure" />
     <MESSAGE value="sort of version of the 2006 model. Many similarities with 1979 model (eg. sprouting and synapse removal, biased initial connections). Not working properly though, probably a problem with some of the parameters as many were not given in the paper and have had to be guessed, or carried through from the 1979 model" />
     <MESSAGE value="another version of the 2006 model. This one is more similar to the one in the paper (eg. no sprouting/synapse removal, synaptic weights represent probabiltiy of connection). No biased initial connections but initial tectal gradients. Also not working properly for similar reasons!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="another version of the 2006 model. This one is more similar to the one in the paper (eg. no sprouting/synapse removal, synaptic weights represent probabiltiy of connection). No biased initial connections but initial tectal gradients. Also not working properly for similar reasons!!!" />
+    <MESSAGE value="Set up seperate scripts for 2D Model for model and plots. Tidied up code and some improvements (e.g fewer nested loops)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up seperate scripts for 2D Model for model and plots. Tidied up code and some improvements (e.g fewer nested loops)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -832,163 +877,145 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/postsynaptic_plan.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/Model (new matrices).py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/Model (old matrices).py" />
-    <entry file="file://$PROJECT_DIR$/TIMING.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/Model.py" />
-    <entry file="file://$PROJECT_DIR$/../Dynamic models in biology/Exercise10_1_extension_parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-483">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/Parallel Model.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/SurgeryFunctions.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/ifthisworksitwillbereallycool.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/SURGERY2.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/SURGERY.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/old map precision functions.py" />
-    <entry file="file://$PROJECT_DIR$/../Willshaw:von_der_Walsburg_1979/Base model with exception handling.py" />
-    <entry file="file://$PROJECT_DIR$/../Dynamic models in biology/Exercise 10 2D (exception handling).py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/Parallel Model.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/SurgeryFunctions.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/ifthisworksitwillbereallycool.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/SURGERY2.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/SURGERY.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/old map precision functions.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Walsburg_1979/Base model with exception handling.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Dynamic models in biology/Exercise 10 2D (exception handling).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Dynamic models in biology/Exercise 10 2D.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Dynamic models in biology/Exercise 10 2D.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Dynamic models in biology/Exercise10.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Dynamic models in biology/Exercise10.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2D retina listed boundary conditions.py" />
-    <entry file="file://$PROJECT_DIR$/Base model without padding.py" />
-    <entry file="file://$PROJECT_DIR$/Scatter plot.py" />
-    <entry file="file://$PROJECT_DIR$/Old code/BASE MODEL (old).py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D retina listed boundary conditions.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/Base model without padding.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/Scatter plot.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/BASE MODEL (old).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/Scatter plot.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/Scatter plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/Mismatch surgery wo padding.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/Mismatch surgery wo padding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/Tectal rotation without padding.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/Tectal rotation without padding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/map precision wo padding.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/map precision wo padding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/Base wo scatter colour.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/Base wo scatter colour.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MISMATCH SURGERY.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/MISMATCH SURGERY.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4410">
           <caret line="297" column="19" selection-start-line="297" selection-start-column="19" selection-end-line="297" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Map duplication.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/Map duplication.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TECTAL ROTATION.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/TECTAL ROTATION.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3780">
           <caret line="255" column="33" selection-start-line="255" selection-start-column="33" selection-end-line="255" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DEVELOPMENT.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/DEVELOPMENT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/Base model without padding.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/Base model without padding.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2307">
           <caret line="35" column="14" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MAP PRECISION.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/MAP PRECISION.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4170">
           <caret line="281" column="23" selection-start-line="281" selection-start-column="23" selection-end-line="281" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TIMING.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/TIMING.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rough4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/1979 model adapted for Ephrins.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/rough4.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/1979 model adapted for Ephrins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BASE MODEL.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/1D Model/BASE MODEL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model Algorithm.py" />
-    <entry file="file://$PROJECT_DIR$/2D Model Functions.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model Algorithm.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model Functions.py" />
     <entry file="file://$USER_HOME$/Desktop/2D MODEL.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
@@ -996,7 +1023,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/systemsmatchplot.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/systemsmatchplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
@@ -1004,77 +1031,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/originalmodel.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006 v2.py" />
+    <entry file="file://$USER_HOME$/Model.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/Model(old).py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D MODEL.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/rough.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2006.py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2DModel/2006 tidy (work in progress).py" />
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Willshaw:von_der_Malsburg_1979/2D Model/originalmodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6765">
+        <state relative-caret-position="393">
           <caret line="451" column="25" selection-start-line="451" selection-start-column="25" selection-end-line="451" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006 v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1395">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/Precisionplot.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/2006.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="61" column="61" selection-start-line="61" selection-start-column="61" selection-end-line="61" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/Fieldplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="0" selection-start-column="18" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="423">
+          <caret line="387" column="19" selection-start-line="370" selection-start-column="0" selection-end-line="387" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4677">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/Model(old).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="237" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="381" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D MODEL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4802">
-          <caret line="347" column="50" selection-start-line="347" selection-start-column="50" selection-end-line="347" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/Fieldcentres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rough.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Python/Retinotopic Maps/2006 Model/rough.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1082,31 +1062,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/Weightplot.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Old code/2D MODEL (original, with plots).py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1372">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="765">
+          <caret line="411" column="13" selection-start-line="411" selection-start-column="13" selection-end-line="411" selection-end-column="13" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Fieldcentres.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3287">
-          <caret line="399" column="0" selection-start-line="399" selection-start-column="0" selection-end-line="409" selection-end-column="66" />
+        <state relative-caret-position="90">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2DModel/Model.py">
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Fieldplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3850">
-          <caret line="275" column="40" selection-start-line="275" selection-start-column="40" selection-end-line="275" selection-end-column="40" />
+        <state relative-caret-position="375">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Precisionplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2006 Model/2006 Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/Plots/Weightplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2D Model/Gradients.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5505">
+          <caret line="374" column="4" selection-start-line="374" selection-start-column="4" selection-end-line="374" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Uni Work/4th Year/Project/Code/Retinotopic Maps/2D Model/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
