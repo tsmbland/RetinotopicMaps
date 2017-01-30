@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="many changes to everything...">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Map precision 1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Map precision 2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Map precision 3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Surgery 1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Surgery 2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Surgery 3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/BASE MODEL (old).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/Model (old matrices).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/SURGERY (old).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/SURGERY2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/SurgeryFunctions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/Tonotopicity.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/alternative conc_change function.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/old map precision functions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/oldSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/rough (exception handling).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Plots/Fieldcentres.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Plots/Fieldplot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Plots/Precisionplot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Plots/Weightplot.py" afterPath="" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="Figures/" />
+    <ignored path="Old code/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +172,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Figures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="2D Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -213,8 +209,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Old code" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
@@ -751,7 +747,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485807569136</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary=".">
+      <created>1485810106014</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1485810106014</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -847,7 +850,6 @@
     <MESSAGE value="Working development model" />
     <MESSAGE value="Minor fixes for all" />
     <MESSAGE value="Colour coded scatter plot for all + other minor fixes" />
-    <MESSAGE value="." />
     <MESSAGE value="Changes to plot layout" />
     <MESSAGE value="Initial connections and normalisation working" />
     <MESSAGE value="Map duplication working  (sort of...)" />
@@ -862,7 +864,8 @@
     <MESSAGE value="another version of the 2006 model. This one is more similar to the one in the paper (eg. no sprouting/synapse removal, synaptic weights represent probabiltiy of connection). No biased initial connections but initial tectal gradients. Also not working properly for similar reasons!!!" />
     <MESSAGE value="Set up seperate scripts for 2D Model for model and plots. Tidied up code and some improvements (e.g fewer nested loops)" />
     <MESSAGE value="many changes to everything..." />
-    <option name="LAST_COMMIT_MESSAGE" value="many changes to everything..." />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
