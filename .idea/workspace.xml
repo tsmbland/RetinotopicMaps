@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment=".">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Map precision 1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Map precision 2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Map precision 3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Surgery 1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Surgery 2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Figures/Surgery 3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/BASE MODEL (old).py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/Model (old matrices).py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/SURGERY (old).py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/SURGERY2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/SurgeryFunctions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/Tonotopicity.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/alternative conc_change function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/old map precision functions.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/oldSurgery.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Old code/rough (exception handling).py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
@@ -172,20 +188,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Figures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="2D Model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -210,7 +212,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Old code" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
@@ -754,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485810106014</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary=".">
+      <created>1485810587383</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1485810587383</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1016,9 +1025,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="411" column="13" selection-start-line="411" selection-start-column="13" selection-end-line="411" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
