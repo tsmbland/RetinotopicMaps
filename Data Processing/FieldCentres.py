@@ -14,19 +14,22 @@ Fieldcentres = np.zeros(
 
 
 def field_centre(i):
+    synapses = np.array(np.nonzero(Weightmatrix[i, :, :, :, :]))
+
     totaldim1 = np.zeros([len(Weightmatrix[0, :, 0, 0, 0]), len(Weightmatrix[0, 0, :, 0, 0])])
     totaldim2 = np.zeros([len(Weightmatrix[0, :, 0, 0, 0]), len(Weightmatrix[0, 0, :, 0, 0])])
     weightsumdim1 = np.zeros([len(Weightmatrix[0, :, 0, 0, 0]), len(Weightmatrix[0, 0, :, 0, 0])])
     weightsumdim2 = np.zeros([len(Weightmatrix[0, :, 0, 0, 0]), len(Weightmatrix[0, 0, :, 0, 0])])
 
-    for tdim1 in range(len(Weightmatrix[0, :, 0, 0, 0])):
-        for tdim2 in range(len(Weightmatrix[0, 0, :, 0, 0])):
-            weightsumdim1[tdim1, tdim2] = sum(sum(Weightmatrix[i, tdim1, tdim2, :, :]))
-            weightsumdim2[tdim1, tdim2] = sum(sum(Weightmatrix[i, tdim1, tdim2, :, :]))
-            for rdim1 in range(len(Weightmatrix[0, 0, 0, :, 0])):
-                for rdim2 in range(len(Weightmatrix[0, 0, 0, 0, :])):
-                    totaldim1[tdim1, tdim2] += rdim1 * Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
-                    totaldim2[tdim1, tdim2] += rdim2 * Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
+    for synapse in range(int(len(synapses[0, :]))):
+        tdim1 = synapses[0, synapse]
+        tdim2 = synapses[1, synapse]
+        rdim1 = synapses[2, synapse]
+        rdim2 = synapses[3, synapse]
+        weightsumdim1[tdim1, tdim2] += Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
+        weightsumdim2[tdim1, tdim2] += Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
+        totaldim1[tdim1, tdim2] += rdim1 * Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
+        totaldim2[tdim1, tdim2] += rdim2 * Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
 
     Fieldcentres[0, i, :, :] = totaldim1 / weightsumdim1
     Fieldcentres[1, i, :, :] = totaldim2 / weightsumdim2
