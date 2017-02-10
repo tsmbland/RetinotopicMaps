@@ -17,11 +17,10 @@ plt.xlabel('Time')
 plt.subplot(1, 2, 2)
 plt.title('Receptive Field Size')
 plt.plot(Fieldsize)
-plt.ylabel('Mean Receptive Field Area')
+plt.ylabel('Mean Receptive Field Diameter')
 plt.xlabel('Time')
 
 ###################### END ########################
-print('\nTime elapsed: ', elapsed, 'seconds')
 params = {'font.size': '10'}
 plt.rcParams.update(params)
 plt.show()

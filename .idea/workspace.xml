@@ -6,8 +6,8 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/BASE MODEL.py" afterPath="$PROJECT_DIR$/1D Model/1D Model.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/2D Model/Gradients.py" afterPath="$PROJECT_DIR$/2D Model/2D Model (Gradients).py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/2D Model/Model.py" afterPath="$PROJECT_DIR$/2D Model/2D Model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Plots/Fieldcentres.py" afterPath="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionPlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FieldCentres.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FieldCentres.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data Processing/FieldCentres.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
@@ -51,23 +51,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FieldPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plots/FieldPlot.py">
+      <file leaf-file-name="MapPrecision.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="33">
+              <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpectedFieldCentres.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/ExpectedFieldCentres.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
+      <file leaf-file-name="StandardAlgorithm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/StandardAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,8 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2DModel/rough.py" />
-        <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2D Model/Saved Data/Gradients.py" />
         <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2D Model/Gradients.py" />
         <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2D Model/Precisionplot.py" />
         <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2006 Model/rough.py" />
@@ -133,12 +155,14 @@
         <option value="$PROJECT_DIR$/Plots/ExpectedFieldCentres.py" />
         <option value="$PROJECT_DIR$/2D Model (Tidy)/ExpectedFieldCentres.py" />
         <option value="$PROJECT_DIR$/Data Processing/rough.py" />
-        <option value="$PROJECT_DIR$/2D Model (Tidy)/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/2D Model (Tidy)/StandardAlgorithm.py" />
         <option value="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
-        <option value="$PROJECT_DIR$/2D Model (Tidy)/Functions.py" />
-        <option value="$PROJECT_DIR$/2D Model (Tidy)/MismatchSurgery.py" />
         <option value="$PROJECT_DIR$/Plots/ConcPlot.py" />
+        <option value="$PROJECT_DIR$/2D Model (Tidy)/Functions.py" />
+        <option value="$PROJECT_DIR$/2D Model (Tidy)/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/2D Model (Tidy)/MismatchSurgery.py" />
+        <option value="$PROJECT_DIR$/2D Model (Tidy)/NoSurgery.py" />
+        <option value="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
+        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
       </list>
     </option>
   </component>
@@ -294,7 +318,7 @@
       <recent name="$PROJECT_DIR$/../Python/Retinotopic Maps/2006 Model/Saved Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ConcPlot">
+  <component name="RunManager" selected="Python.PrecisionPlot">
     <configuration default="false" name="Algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,23 +332,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Retinotopic Maps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2D Model (Tidy)/StandardAlgorithm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Weightplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/WeightPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -363,7 +370,24 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="ConcPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MapPrecision" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Processing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Retinotopic Maps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PrecisionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -375,7 +399,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/ConcPlot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -534,18 +558,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
       <item index="1" class="java.lang.String" itemvalue="Python.Algorithm" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Weightplot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.FieldPlot" />
-      <item index="4" class="java.lang.String" itemvalue="Python.FieldCentres" />
-      <item index="5" class="java.lang.String" itemvalue="Python.ConcPlot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.FieldPlot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.FieldCentres" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MapPrecision" />
+      <item index="5" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ConcPlot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.FieldPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.FieldCentres" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Weightplot" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="0" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MapPrecision" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="3" class="java.lang.String" itemvalue="Python.FieldPlot" />
+        <item index="4" class="java.lang.String" itemvalue="Python.FieldCentres" />
       </list>
     </recent_temporary>
   </component>
@@ -853,7 +877,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486739992349</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="field centres algorithm much faster">
+      <created>1486740064782</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1486740064782</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView">
@@ -939,7 +970,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Padding + scatter plot" />
     <MESSAGE value="Fix scatter plot + general tidy" />
     <MESSAGE value="Tectal rotation with padding + scatter" />
     <MESSAGE value="Map precision with padding + scatter" />
@@ -964,7 +994,8 @@
     <MESSAGE value="." />
     <MESSAGE value="added julia code" />
     <MESSAGE value="added concentration plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="added concentration plot" />
+    <MESSAGE value="field centres algorithm much faster" />
+    <option name="LAST_COMMIT_MESSAGE" value="field centres algorithm much faster" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1049,6 +1080,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,17 +1092,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1D Model/rough2.py" />
-    <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="119" column="18" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2D Model/2D Model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3609">
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,14 +1108,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="297" column="19" selection-start-line="297" selection-start-column="19" selection-end-line="297" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/ExpectedFieldCentres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,52 +1137,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="128" column="25" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/NoSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/MismatchSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/StandardAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1172,16 +1152,6 @@
         <state relative-caret-position="423">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1200,6 +1170,70 @@
         <state relative-caret-position="540">
           <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/ExpectedFieldCentres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/MismatchSurgery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/NoSurgery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/StandardAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
