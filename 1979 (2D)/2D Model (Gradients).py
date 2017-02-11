@@ -8,33 +8,33 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-Iterations = 50  # number of weight iterations
-NRdim1 = 30  # initial number of retinal cells
-NRdim2 = 30
-NTdim1 = 30  # initial number of tectal cells
-NTdim2 = 30
+Iterations = 500  # number of weight iterations
+NRdim1 = 20  # initial number of retinal cells
+NRdim2 = 20
+NTdim1 = 20  # initial number of tectal cells
+NTdim2 = 20
 
 # Retinal Gradients
 M = 2
-y0Rdim1 = 20  # conc in cell 0
-ymRdim1 = 100  # conc in cell NRdim1
+y0Rdim1 = 100  # conc in cell 0
+ymRdim1 = 250  # conc in cell NRdim1
 ynRdim1 = 500  # conc in cell NRdim1/2
-y0Rdim2 = 20
-ymRdim2 = 100
+y0Rdim2 = 100
+ymRdim2 = 250
 ynRdim2 = 500
 
 # Tectal Gradients
-y0Tdim1 = 0  # conc in cell 0
-ymTdim1 = 0  # conc in cell NTdim1
-ynTdim1 = 0  # conc in cell NTdim1/2
-y0Tdim2 = 0
-ymTdim2 = 0
-ynTdim2 = 0
+y0Tdim1 = 100  # conc in cell 0
+ymTdim1 = 250  # conc in cell NTdim1
+ynTdim1 = 500  # conc in cell NTdim1/2
+y0Tdim2 = 100
+ymTdim2 = 250
+ynTdim2 = 500
 
 # Establishment of initial contacts
-n0 = 7  # number of initial random contact
-NLdim1 = 25  # sets initial bias
-NLdim2 = 25
+n0 = 10  # number of initial random contact
+NLdim1 = 20  # sets initial bias
+NLdim2 = 20
 
 # Tectal concentrations
 a = 0.006  # (or 0.003) #decay constant
@@ -388,7 +388,9 @@ for iteration in range(1, Iterations + 1):
 
 #################### EXPORT DATA #################
 
-np.save('Weightmatrix', Wpt)
+np.save('../Temporary Data/Weightmatrix', Wpt)
+np.save('../Temporary Data/Retinal Concentrations', Cpm)
+np.save('../Temporary Data/Tectal Concentrations', Ctm)
 
 ###################### END ########################
 
