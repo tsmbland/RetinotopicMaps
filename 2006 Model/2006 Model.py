@@ -45,7 +45,6 @@ elim = 0.005  # elimination threshold
 deltatw = 0.1  # deltaW time step
 tw = 1  # weight iterations per iteration
 
-
 ################### VARIABLES ###################
 rmindim1 = 1
 rmaxdim1 = NRdim1
@@ -61,19 +60,29 @@ nRdim2 = rmaxdim2 - rmindim2 + 1
 nTdim1 = tmaxdim1 - tmindim1 + 1  # present number of tectal cells (pre-surgery)
 nTdim2 = tmaxdim2 - tmindim2 + 1
 
-Wpt = np.zeros([Iterations*tw + 1, NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # synaptic strength matrix
+Wpt = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # synaptic strength matrix
 Spt = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # similarity
 Cra = np.zeros([NRdim1 + 2, NRdim2 + 2])
 Crb = np.zeros([NRdim1 + 2, NRdim2 + 2])  # concentration of EphrinA/B in a retinal cell
-Cta = np.zeros([NTdim1 + 2, NTdim2 + 2])
-Ctb = np.zeros([NTdim1 + 2, NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
+Cta = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2])
+Ctb = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
 Ita = np.zeros([NTdim1 + 2, NTdim2 + 2])
 Itb = np.zeros([NTdim1 + 2, NTdim2 + 2])  # induced label in a tectal cell
 
 Nct = np.zeros([NTdim1 + 2, NTdim2 + 2])  # neighbour count for a tectal cell
 
+Currentiteration = 0
+
 
 ####################### FUNCTIONS ###################
+
+def initialconnections():
+    for rdim1 in range(rmindim1, rmaxdim1 + 1):
+        for rdim2 in range(rmindim2, rmaxdim2 + 1):
+            for tdim1 in range(tmindim1, tmaxdim1 + 1):
+                for tdim2 in range(tmindim2, tmaxdim2 + 1):
+                    Wpt[0, tdim1, tdim2, rdim1, rdim2] = np.random.uniform(0, 0.0001)
+
 
 def setRetinalGradients():
     # Dim1
@@ -103,7 +112,7 @@ def setTectalGradients():
         cTdim1 = y0Tdim1 - aTdim1
 
         for tdim1 in range(1, NTdim1 + 1):
-            Cta[tdim1, 1:NTdim2 + 1] = aTdim1 * np.exp(bTdim1 * tdim1) + cTdim1
+            Cta[0, tdim1, 1:NTdim2 + 1] = aTdim1 * np.exp(bTdim1 * tdim1) + cTdim1
 
     # Dim2
     if ynTdim2 != 0:
@@ -112,7 +121,7 @@ def setTectalGradients():
         cTdim2 = y0Tdim2 - aTdim2
 
         for tdim2 in range(1, NTdim2 + 1):
-            Ctb[1:NTdim1 + 1, tdim2] = aTdim2 * np.exp(bTdim2 * tdim2) + cTdim2
+            Ctb[0, 1:NTdim1 + 1, tdim2] = aTdim2 * np.exp(bTdim2 * tdim2) + cTdim2
 
 
 def updateNct():
@@ -133,25 +142,29 @@ def updateI():
 
     for tdim1 in range(tmindim1, tmaxdim1 + 1):
         for tdim2 in range(tmindim2, tmaxdim2 + 1):
-            wtotal[tdim1, tdim2] = sum(sum(Wpt[currentiteration, tdim1, tdim2, :, :]))
-            Ita[tdim1, tdim2] = sum(sum(Wpt[currentiteration, tdim1, tdim2, :, :] * Cra[:, :])) / wtotal[tdim1, tdim2]
-            Itb[tdim1, tdim2] = sum(sum(Wpt[currentiteration, tdim1, tdim2, :, :] * Crb[:, :])) / wtotal[tdim1, tdim2]
+            wtotal[tdim1, tdim2] = sum(sum(Wpt[Currentiteration, tdim1, tdim2, :, :]))
+            Ita[tdim1, tdim2] = sum(sum(Wpt[Currentiteration, tdim1, tdim2, :, :] * Cra[:, :])) / wtotal[tdim1, tdim2]
+            Itb[tdim1, tdim2] = sum(sum(Wpt[Currentiteration, tdim1, tdim2, :, :] * Crb[:, :])) / wtotal[tdim1, tdim2]
 
 
-def concchangeCta():
-    deltacta = np.zeros([NTdim1 + 2, NTdim2 + 2])
-    for tdim1 in range(tmindim1, tmaxdim1 + 1):
-        for tdim2 in range(tmindim2, tmaxdim2 + 1):
-            deltacta[tdim1, tdim2] = alpha * (1 - Ita[tdim1, tdim2] * Cta[tdim1, tdim2])
-    return deltacta
+def updateCta():
+    if Currentiteration > 0:
+        Cta[Currentiteration, :, :] = Cta[Currentiteration - 1, :, :]
+    for t in range(tc):
+        for tdim1 in range(tmindim1, tmaxdim1 + 1):
+            for tdim2 in range(tmindim2, tmaxdim2 + 1):
+                Cta[Currentiteration, tdim1, tdim2] += (alpha * (
+                1 - Ita[tdim1, tdim2] * Cta[Currentiteration, tdim1, tdim2])) * deltatc
 
 
-def concchangeCtb():
-    deltactb = np.zeros([NTdim1 + 2, NTdim2 + 2])
-    for tdim1 in range(tmindim1, tmaxdim1 + 1):
-        for tdim2 in range(tmindim2, tmaxdim2 + 1):
-            deltactb[tdim1, tdim2] = alpha * (Itb[tdim1, tdim2] - Ctb[tdim1, tdim2])
-    return deltactb
+def updateCtb():
+    if Currentiteration > 0:
+        Ctb[Currentiteration, :, :] = Ctb[Currentiteration - 1, :, :]
+    for t in range(tc):
+        for tdim1 in range(tmindim1, tmaxdim1 + 1):
+            for tdim2 in range(tmindim2, tmaxdim2 + 1):
+                Ctb[Currentiteration, tdim1, tdim2] += (alpha * (
+                Itb[tdim1, tdim2] - Ctb[Currentiteration, tdim1, tdim2])) * deltatc
 
 
 def updateSpt():
@@ -161,74 +174,56 @@ def updateSpt():
             for tdim1 in range(tmindim1, tmaxdim1 + 1):
                 for tdim2 in range(tmindim2, tmaxdim2 + 1):
                     # Calculate distance
-                    dist[tdim1, tdim2, rdim1, rdim2] = ((Cra[rdim1, rdim2] * Cta[tdim1, tdim2] - 1) ** 2) + ((Crb[
-                                                                                                                  rdim1, rdim2] -
-                                                                                                              Ctb[
-                                                                                                                  tdim1, tdim2]) ** 2)
+                    dist[tdim1, tdim2, rdim1, rdim2] = ((Cra[rdim1, rdim2] * Cta[
+                        Currentiteration, tdim1, tdim2] - 1) ** 2) + (
+                                                       (Crb[rdim1, rdim2] - Ctb[Currentiteration, tdim1, tdim2]) ** 2)
 
                     # Calculate similarity
                     Spt[tdim1, tdim2, rdim1, rdim2] = np.exp(-dist[tdim1, tdim2, rdim1, rdim2] / (2 * kappa ** 2))
 
 
-def weightchange():
-    deltaWpt = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])
-    denominator = np.zeros([NRdim1 + 2, NRdim2 + 2])
-    numerator = Wpt[currentiteration - 1, :, :, :, :] + deltatw * gamma * Spt
+def updateWpt():
+    Wpt[Currentiteration, :, :, :, :] = Wpt[Currentiteration - 1, :, :, :, :]
+    for t in range(tw):
+        numerator = Wpt[Currentiteration - 1, :, :, :, :] + deltatw * gamma * Spt
+        denominator = np.zeros([NRdim1 + 2, NRdim2 + 2])
+        for rdim1 in range(rmindim1, rmaxdim1 + 1):
+            for rdim2 in range(rmindim2, rmaxdim2 + 1):
+                denominator[rdim1, rdim2] = sum(
+                    sum((Wpt[Currentiteration - 1, :, :, rdim1, rdim2] + deltatw * gamma * Spt[
+                                                                                           :, :,
+                                                                                           rdim1,
+                                                                                           rdim2])))
+                Wpt[Currentiteration, :, :, rdim1, rdim2] = numerator[:, :, rdim1, rdim2] / denominator[rdim1, rdim2]
 
-    for rdim1 in range(rmindim1, rmaxdim1 + 1):
-        for rdim2 in range(rmindim2, rmaxdim2 + 1):
-            denominator[rdim1, rdim2] = sum(sum((Wpt[currentiteration - 1, :, :, rdim1, rdim2] + deltatw * gamma * Spt[
-                                                                                                                   :, :,
-                                                                                                                   rdim1,
-                                                                                                                   rdim2])))
-            deltaWpt[:, :, rdim1, rdim2] = numerator[:, :, rdim1, rdim2] / denominator[rdim1, rdim2]
-
-    deltaWpt -= Wpt[currentiteration - 1, :, :, :, :]
-    return deltaWpt
 
 
 ######################## ALGORITM #######################
-currentiteration = 0
+
 
 # Set Gradients
 setRetinalGradients()
 setTectalGradients()
 
 # Initial Connections
-
-
-for rdim1 in range(rmindim1, rmaxdim1 + 1):
-    for rdim2 in range(rmindim2, rmaxdim2 + 1):
-        for tdim1 in range(tmindim1, tmaxdim1 + 1):
-            for tdim2 in range(tmindim2, tmaxdim2 + 1):
-                Wpt[0, tdim1, tdim2, rdim1, rdim2] = np.random.uniform(0, 0.0001)
+initialconnections()
 
 # Initial Tectal Concentrations
 updateNct()
 updateI()
-for t in range(tc):
-    deltaCta = concchangeCta()
-    deltaCtb = concchangeCtb()
-    Cta += (deltaCta * deltatc)
-    Ctb += (deltaCtb * deltatc)
+updateCta()
+updateCtb()
 
 # Iterations
 for iteration in range(Iterations):
+    Currentiteration += 1
 
-    # Weight Change
     updateSpt()
-    for t in range(tw):
-        currentiteration += 1
-        deltaW = weightchange()
-        Wpt[currentiteration, :, :, :, :] = Wpt[currentiteration - 1, :, :, :, :] + (deltatw * deltaW)
+    updateWpt()
 
-    # Concentration Change
     updateI()
-    for t in range(tc):
-        deltaCta = concchangeCta()
-        deltaCtb = concchangeCtb()
-        Cta += (deltaCta * deltatc)
-        Ctb += (deltaCtb * deltatc)
+    updateCta()
+    updateCtb()
 
     sys.stdout.write('\r%i percent' % (iteration * 100 / Iterations))
     sys.stdout.flush()
