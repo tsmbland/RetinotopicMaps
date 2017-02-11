@@ -52,10 +52,6 @@ tmaxdim1 = NTdim1
 tmindim2 = 1
 tmaxdim2 = NTdim2
 
-nRdim1 = rmaxdim1 - rmindim1 + 1  # present number of retinal cells (pre-surgery)
-nRdim2 = rmaxdim2 - rmindim2 + 1
-nTdim1 = tmaxdim1 - tmindim1 + 1  # present number of tectal cells (pre-surgery)
-nTdim2 = tmaxdim2 - tmindim2 + 1
 
 Wpt = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # synaptic strength matrix
 Spt = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # similarity
@@ -65,12 +61,9 @@ Cta = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2])
 Ctb = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
 Ita = np.zeros([NTdim1 + 2, NTdim2 + 2])
 Itb = np.zeros([NTdim1 + 2, NTdim2 + 2])  # induced label in a tectal cell
-
 Nct = np.zeros([NTdim1 + 2, NTdim2 + 2])  # neighbour count for a tectal cell
 
 Currentiteration = 0
-
-
 ####################### FUNCTIONS ###################
 
 def initialconnections():

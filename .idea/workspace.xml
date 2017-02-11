@@ -42,9 +42,11 @@
       <file leaf-file-name="2006 Model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2006 Model/2006 Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-              <folding />
+            <state relative-caret-position="720">
+              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -266,7 +268,7 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
-  <component name="RunManager" selected="Python.FieldPlot">
+  <component name="RunManager" selected="Python.2006 Model">
     <configuration default="false" name="StandardAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -513,9 +515,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.FieldPlot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.FieldCentres" />
-        <item index="2" class="java.lang.String" itemvalue="Python.2006 Model" />
+        <item index="0" class="java.lang.String" itemvalue="Python.2006 Model" />
+        <item index="1" class="java.lang.String" itemvalue="Python.FieldPlot" />
+        <item index="2" class="java.lang.String" itemvalue="Python.FieldCentres" />
         <item index="3" class="java.lang.String" itemvalue="Python.WeightPlot" />
         <item index="4" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
       </list>
@@ -846,7 +848,21 @@
       <option name="project" value="LOCAL" />
       <updated>1486824970092</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="tidier code">
+      <created>1486831319424</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1486831319424</updated>
+    </task>
+    <task id="LOCAL-00046" summary="tidier code">
+      <created>1486831421913</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1486831421913</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView">
@@ -932,7 +948,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Map precision with padding + scatter" />
     <MESSAGE value="Time dependence with padding + scatter" />
     <MESSAGE value="Working development model" />
     <MESSAGE value="Minor fixes for all" />
@@ -957,7 +972,8 @@
     <MESSAGE value="field centres algorithm much faster" />
     <MESSAGE value="changed field size measure from area to diameter" />
     <MESSAGE value="large speed increase and tidier code" />
-    <option name="LAST_COMMIT_MESSAGE" value="large speed increase and tidier code" />
+    <MESSAGE value="tidier code" />
+    <option name="LAST_COMMIT_MESSAGE" value="tidier code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1189,9 +1205,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2006 Model/2006 Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="720">
+          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
