@@ -8,7 +8,7 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-Iterations = 200  # number of weight iterations
+Iterations = 100  # number of weight iterations
 NRdim1 = 20  # initial number of retinal cells
 NRdim2 = 20
 NTdim1 = 20  # initial number of tectal cells
@@ -154,7 +154,7 @@ def updatetectalconcs():
                             m, Currentiteration, dim1 + 1, dim2] +
                         Ctm[m, Currentiteration, dim1 - 1, dim2] - NCt[dim1, dim2] * Ctm[
                             m, Currentiteration, dim1, dim2]) + Qtm[
-                                                                 m, dim1, dim2])
+                                                                 m, dim1, dim2]) * deltat
 
 
 
@@ -204,7 +204,7 @@ def initialconections(rdim1, rdim2):
                 rdim1 * ((NTdim1 - NLdim1) / NRdim1) + NLdim1) + 1,
             int(rdim2 * ((NTdim2 - NLdim2) / NRdim2)) + 1: NTdim2 + 1, rdim1,
             rdim2] = arrangement
-    elif int(rdim2 * ((NTdim2 - NLdim2) / NRdim2) + NLdim2) <= nTdim2:
+    elif int(rdim2 * ((NTdim2 - NLdim2) / NRdim2) + NLdim2) <= Tmaxdim2 - Tmindim2 + 1:
         # Doesn't fit into dim1 but fits into dim2
         arrangement = np.zeros([(NTdim1 - int(rdim1 * ((NTdim1 - NLdim1) / NRdim1))) * NLdim2])
         arrangement[0:n0] = initialstrength
@@ -302,11 +302,11 @@ def addsynapses():
                 Wpt[Currentiteration, synapses[0, synapse] - 1, synapses[1, synapse], synapses[2, synapse], synapses[
                     3, synapse]] = newW * W
             if Wpt[Currentiteration, synapses[0, synapse], synapses[1, synapse] + 1, synapses[2, synapse], synapses[
-                3, synapse]] == 0 and synapses[0, synapse] + 1 <= Tmaxdim2:
+                3, synapse]] == 0 and synapses[1, synapse] + 1 <= Tmaxdim2:
                 Wpt[Currentiteration, synapses[0, synapse], synapses[1, synapse] + 1, synapses[2, synapse], synapses[
                     3, synapse]] = newW * W
             if Wpt[Currentiteration, synapses[0, synapse], synapses[1, synapse] - 1, synapses[2, synapse], synapses[
-                3, synapse]] == 0 and synapses[0, synapse] - 1 >= Tmindim2:
+                3, synapse]] == 0 and synapses[1, synapse] - 1 >= Tmindim2:
                 Wpt[Currentiteration, synapses[0, synapse], synapses[1, synapse] - 1, synapses[2, synapse], synapses[
                     3, synapse]] = newW * W
 
