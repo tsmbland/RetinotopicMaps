@@ -108,7 +108,7 @@ def field_size(i):
 for i in range(len(Weightmatrix[:, 0, 0, 0, 0])):
     field_separation(i)
     field_size(i)
-    sys.stdout.write('\rProcessing data... %i percent' % (i * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
+    sys.stdout.write('\r%i percent' % (i * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
     sys.stdout.flush()
 
 
