@@ -30,8 +30,6 @@ ymTdim2 = 1.5
 ynTdim2 = 3.5
 
 # Tectal concentrations
-a = 0.006  # decay constant
-d = 0.01  # diffusion length constant
 alpha = 0.005
 beta = 0.01
 deltatc = 0.1  # deltaC time step
@@ -41,7 +39,6 @@ tc = 1  # concentration iterations per iteration
 W = 1  # total strength available to each presynaptic fibre
 gamma = 0.1
 kappa = 0.72
-elim = 0.005  # elimination threshold
 deltatw = 0.1  # deltaW time step
 tw = 1  # weight iterations per iteration
 
