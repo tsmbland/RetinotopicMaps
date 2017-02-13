@@ -7,8 +7,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model.py" afterPath="$PROJECT_DIR$/1979 (2D)/2D Model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" afterPath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006/2006 Model.py" afterPath="$PROJECT_DIR$/2006/2006 Model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Processing/FieldCentres.py" afterPath="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Processing/MapPrecision.py" afterPath="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2D Model.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2D Model.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
@@ -40,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapPrecision.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MapPrecision.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -177,20 +175,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Plots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Data Processing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -529,13 +513,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00006" summary="fixed time dependence">
-      <created>1480526860116</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1480526860116</updated>
-    </task>
     <task id="LOCAL-00007" summary="fixed time dependence">
       <created>1480526877300</created>
       <option name="number" value="00007" />
@@ -872,7 +849,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487013590445</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="adapted data processing scripts to be compatible with data with different temporal resolutions">
+      <created>1487013622160</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1487013622160</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TodoView">
@@ -959,7 +943,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Working 2D model" />
     <MESSAGE value="Tidied code, improvements to marker spacing" />
     <MESSAGE value="Changes to plot" />
     <MESSAGE value="field separation function + improvements to plot" />
@@ -984,7 +967,8 @@
     <MESSAGE value="many changes, including more efficient weight change function" />
     <MESSAGE value="changed file structure" />
     <MESSAGE value="adapted plots to be compatible with data with different temporal resolutions" />
-    <option name="LAST_COMMIT_MESSAGE" value="adapted plots to be compatible with data with different temporal resolutions" />
+    <MESSAGE value="adapted data processing scripts to be compatible with data with different temporal resolutions" />
+    <option name="LAST_COMMIT_MESSAGE" value="adapted data processing scripts to be compatible with data with different temporal resolutions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1171,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006/2006 Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1197,18 +1173,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006/2006 Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding />
         </state>
       </provider>

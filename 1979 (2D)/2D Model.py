@@ -17,7 +17,7 @@ Mdim1 = 3  # number of markers
 Mdim2 = 3
 
 # Establishment of initial contacts
-n0 = 7  # number of initial random contact
+n0 = 10  # number of initial random contact
 NLdim1 = 15  # sets initial bias
 NLdim2 = 15
 
@@ -40,6 +40,9 @@ elim = 0.005  # elimination threshold
 newW = 0.01  # weight of new synapses
 sprout = 0.02  # sprouting threshold
 
+# Output
+TRout = 5  # temporal resoultion of output files
+
 ################### VARIABLES ###################
 
 Rmindim1 = 1
@@ -60,7 +63,7 @@ Qpm = np.zeros([M, NRdim1 + 2, NRdim2 + 2])  # presence of marker sources along 
 Qtm = np.zeros([M, NTdim1 + 2, NTdim2 + 2])  # axonal flow of molecules into postsymaptic cells
 
 Cpm = np.zeros([M, NRdim1 + 2, NRdim2 + 2])  # concentration of a molecule in a presynaptic cell
-Ctm = np.zeros([M, Iterations+1, NTdim1 + 2, NTdim2 + 2])  # concentration of a molecule in a postsynaptic cell
+Ctm = np.zeros([M, Iterations + 1, NTdim1 + 2, NTdim2 + 2])  # concentration of a molecule in a postsynaptic cell
 NormalisedCpm = np.zeros(
     [M, NRdim1 + 2, NRdim2 + 2])  # normalised (by marker conc.) marker concentration  in a presynaptic cell
 NormalisedCtm = np.zeros(
@@ -157,7 +160,6 @@ def updatetectalconcs():
                                                                  m, dim1, dim2]) * deltat
 
 
-
 def normaliseCpm():
     markersum = np.sum(Cpm, axis=0)
     for m in range(M):
@@ -176,8 +178,6 @@ def normaliseCtm():
                 NormalisedCtm[m, dim1, dim2] = Ctm[m, Currentiteration, dim1, dim2] / markersum[dim1, dim2]
                 if NormalisedCtm[m, dim1, dim2] < E:
                     NormalisedCtm[m, dim1, dim2] = 0
-
-
 
 
 def initialconections(rdim1, rdim2):
@@ -317,7 +317,6 @@ def addsynapses():
 
 setmarkerlocations()
 
-
 # PRESYNAPTIC CONCENTRATIONS
 
 updateNc()
@@ -353,9 +352,9 @@ for iteration in range(1, Iterations + 1):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', Wpt)
+np.save('../Temporary Data/Weightmatrix', Wpt[0:Iterations + 2:TRout, :, :, :, :])
 np.save('../Temporary Data/Retinal Concentrations', Cpm)
-np.save('../Temporary Data/Tectal Concentrations', Ctm)
+np.save('../Temporary Data/Tectal Concentrations', Ctm[:, 0:Iterations + 2:TRout, :, :])
 
 ###################### END ########################
 
