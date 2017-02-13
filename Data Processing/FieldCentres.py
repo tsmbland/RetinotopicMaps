@@ -8,6 +8,13 @@ start = time.time()
 
 Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 
+
+###################### OPTIONS #########################
+
+TRin = 5  # temporal resolution of input file
+TRout = TRin  # temporal resolution of output file
+
+
 ###################### FIELD CENTRES ######################
 Fieldcentres = np.zeros(
     [2, len(Weightmatrix[:, 0, 0, 0, 0]), len(Weightmatrix[0, :, 0, 0, 0]), len(Weightmatrix[0, 0, :, 0, 0])])
@@ -36,7 +43,7 @@ def field_centre(i):
     Fieldcentres[:, i, :, :] = np.nan_to_num(Fieldcentres[:, i, :, :])
 
 
-for i in range(len(Weightmatrix[:, 0, 0, 0, 0])):
+for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout//TRin):
     field_centre(i)
     sys.stdout.write('\r%i percent' % (i * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
     sys.stdout.flush()

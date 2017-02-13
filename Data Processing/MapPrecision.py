@@ -9,6 +9,12 @@ Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 Fieldcentres = np.load('../Temporary Data/Fieldcentres.npy')
 
 
+###################### OPTIONS #########################
+
+TRin = 5  # temporal resolution of input file
+TRout = TRin  # temporal resolution of output files
+
+
 ###################### PRECISION MEASURES #####################
 
 Fieldseparation = np.zeros(len(Weightmatrix[:, 0, 0, 0, 0]))
@@ -105,7 +111,7 @@ def field_size(i):
     Fieldsize[i] = meandiameter
 
 
-for i in range(len(Weightmatrix[:, 0, 0, 0, 0])):
+for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout//TRin):
     field_separation(i)
     field_size(i)
     sys.stdout.write('\r%i percent' % (i * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
