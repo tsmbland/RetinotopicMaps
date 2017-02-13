@@ -7,7 +7,7 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-Iterations = 100  # number of weight iterations
+Iterations = 500  # number of weight iterations
 NRdim1 = 20  # initial number of retinal cells
 NRdim2 = 20
 NTdim1 = 20  # initial number of tectal cells
@@ -15,31 +15,34 @@ NTdim2 = 20
 
 # Retinal Gradients
 y0Rdim1 = 0.5  # conc in cell 0
-ymRdim1 = 1.5  # conc in cell NRdim1
-ynRdim1 = 3.5  # conc in cell NRdim1/2
-y0Rdim2 = 0.5
-ymRdim2 = 1.5
-ynRdim2 = 3.5
+ymRdim1 = 1.5  # conc in cell NRdim1/2
+ynRdim1 = 3.5  # conc in cell NRdim1
+y0Rdim2 = 0.1
+ymRdim2 = 0.5
+ynRdim2 = 1.0
 
 # Tectal Gradients
-y0Tdim1 = 0.5  # conc in cell 0
-ymTdim1 = 1.5  # conc in cell NTdim1
-ynTdim1 = 3.5  # conc in cell NTdim1/2
-y0Tdim2 = 0.5
-ymTdim2 = 1.5
-ynTdim2 = 3.5
+y0Tdim1 = 0.1  # conc in cell 0
+ymTdim1 = 0.05  # conc in cell NTdim1/2
+ynTdim1 = 0.01  # conc in cell NTdim1
+y0Tdim2 = 0.01
+ymTdim2 = 0.05
+ynTdim2 = 0.1
 
 # Tectal concentrations
-alpha = 0.005
-beta = 0.01
-deltatc = 0.1  # deltaC time step
+alpha = 0.05
+beta = 0.05
+deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration
 
 # Synaptic modification
 gamma = 0.1
-kappa = 0.72
-deltatw = 0.1  # deltaW time step
+kappa = 0.0504
+deltatw = 1  # deltaW time step
 tw = 1  # weight iterations per iteration
+
+# Output
+TRout = 5  # temporal resoultion of output files
 
 ################### VARIABLES ###################
 Rmindim1 = 1
@@ -63,6 +66,8 @@ Itb = np.zeros([NTdim1 + 2, NTdim2 + 2])  # induced label in a tectal cell
 Nct = np.zeros([NTdim1 + 2, NTdim2 + 2])  # neighbour count for a tectal cell
 
 Currentiteration = 0
+
+
 ####################### FUNCTIONS ###################
 
 def initialconnections():
@@ -131,29 +136,45 @@ def updateI():
 
     for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
         for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-            wtotal[tdim1, tdim2] = sum(sum(Wpt[Currentiteration, tdim1, tdim2, :, :]))
-            Ita[tdim1, tdim2] = sum(sum(Wpt[Currentiteration, tdim1, tdim2, :, :] * Cra[:, :])) / wtotal[tdim1, tdim2]
-            Itb[tdim1, tdim2] = sum(sum(Wpt[Currentiteration, tdim1, tdim2, :, :] * Crb[:, :])) / wtotal[tdim1, tdim2]
+            wtotal[tdim1, tdim2] = sum(sum(Wpt[Currentiteration - 1, tdim1, tdim2, :, :]))
+            Ita[tdim1, tdim2] = sum(sum(Wpt[Currentiteration - 1, tdim1, tdim2, :, :] * Cra[:, :])) / wtotal[
+                tdim1, tdim2]
+            Itb[tdim1, tdim2] = sum(sum(Wpt[Currentiteration - 1, tdim1, tdim2, :, :] * Crb[:, :])) / wtotal[
+                tdim1, tdim2]
+    Ita[:, :] = np.nan_to_num(Ita[:, :])
+    Itb[:, :] = np.nan_to_num(Itb[:, :])
 
 
 def updateCta():
-    if Currentiteration > 0:
-        Cta[Currentiteration, :, :] = Cta[Currentiteration - 1, :, :]
+    Cta[Currentiteration, :, :] = Cta[Currentiteration - 1, :, :]
     for t in range(tc):
         for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
             for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
+                neighbourmean = (
+                    (Cta[Currentiteration, tdim1 + 1, tdim2] + Cta[Currentiteration, tdim1 - 1, tdim2] + Cta[
+                        Currentiteration, tdim1, tdim2 + 1] + Cta[Currentiteration, tdim1, tdim2 - 1]) / Nct[
+                        tdim1, tdim2])
+
                 Cta[Currentiteration, tdim1, tdim2] += (alpha * (
-                1 - Ita[tdim1, tdim2] * Cta[Currentiteration, tdim1, tdim2])) * deltatc
+                    1 - Ita[tdim1, tdim2] * Cta[Currentiteration, tdim1, tdim2]) + beta * (
+                                                            neighbourmean - Cta[
+                                                                Currentiteration, tdim1, tdim2])) * deltatc
 
 
 def updateCtb():
-    if Currentiteration > 0:
-        Ctb[Currentiteration, :, :] = Ctb[Currentiteration - 1, :, :]
+    Ctb[Currentiteration, :, :] = Ctb[Currentiteration - 1, :, :]
     for t in range(tc):
         for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
             for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
+                neighbourmean = (
+                    (Ctb[Currentiteration, tdim1 + 1, tdim2] + Ctb[Currentiteration, tdim1 - 1, tdim2] + Ctb[
+                        Currentiteration, tdim1, tdim2 + 1] + Ctb[Currentiteration, tdim1, tdim2 - 1]) / Nct[
+                        tdim1, tdim2])
+
                 Ctb[Currentiteration, tdim1, tdim2] += (alpha * (
-                Itb[tdim1, tdim2] - Ctb[Currentiteration, tdim1, tdim2])) * deltatc
+                    Itb[tdim1, tdim2] - Ctb[Currentiteration, tdim1, tdim2]) + beta * (
+                                                            neighbourmean - Ctb[
+                                                                Currentiteration, tdim1, tdim2])) * deltatc
 
 
 def updateDpt():
@@ -163,8 +184,9 @@ def updateDpt():
                 for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
                     Dpt[tdim1, tdim2, rdim1, rdim2] = ((Cra[rdim1, rdim2] * Cta[
                         Currentiteration, tdim1, tdim2] - 1) ** 2) + (
-                                                           (Crb[rdim1, rdim2] - Ctb[
-                                                               Currentiteration, tdim1, tdim2]) ** 2)
+                                                          (
+                                                              Crb[rdim1, rdim2] - Ctb[
+                                                                  Currentiteration, tdim1, tdim2]) ** 2)
 
 
 def updateSpt():
@@ -190,34 +212,28 @@ def updateWpt():
                 Wpt[Currentiteration, :, :, rdim1, rdim2] = numerator[:, :, rdim1, rdim2] / denominator[rdim1, rdim2]
 
 
-
 ######################## ALGORITM #######################
 
 
 # Set Gradients
 setRetinalGradients()
 setTectalGradients()
+updateNct()
 
 # Initial Connections
 initialconnections()
-
-# Initial Tectal Concentrations
-updateNct()
-updateI()
-updateCta()
-updateCtb()
 
 # Iterations
 for iteration in range(Iterations):
     Currentiteration += 1
 
-    updateDpt()
-    updateSpt()
-    updateWpt()
-
     updateI()
     updateCta()
     updateCtb()
+
+    updateDpt()
+    updateSpt()
+    updateWpt()
 
     sys.stdout.write('\r%i percent' % (iteration * 100 / Iterations))
     sys.stdout.flush()
@@ -225,6 +241,8 @@ for iteration in range(Iterations):
 #################### EXPORT DATA #################
 
 np.save('../Temporary Data/Weightmatrix', Wpt)
+np.save('../Temporary Data/EphrinA', Cta)
+np.save('../Temporary Data/EphrinB', Ctb)
 
 ###################### END ########################
 
