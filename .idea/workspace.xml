@@ -4,7 +4,6 @@
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="tectal concetrations now dependent on neighbours">
       <change type="DELETED" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" afterPath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,30 +24,7 @@
     <favorites_list name="Willshaw:von_der_Walsburg_1979" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Model.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-222">
-              <caret line="288" column="75" selection-start-line="288" selection-start-column="75" selection-end-line="288" selection-end-column="75" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2D Model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -499,13 +475,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00009" summary="Boundary conditions with zeros padding for 2D retina">
-      <created>1481889439509</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1481889439509</updated>
-    </task>
     <task id="LOCAL-00010" summary="Simplify similarity function (min function from paper)">
       <created>1481892814429</created>
       <option name="number" value="00010" />
@@ -842,7 +811,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487013999330</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="tectal concetrations now dependent on neighbours, some changes to parameters etc..">
+      <created>1487014144214</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1487014144214</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -856,9 +832,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.20492454" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -929,7 +905,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="field separation function + improvements to plot" />
     <MESSAGE value="field separation function improved" />
     <MESSAGE value="field size measure added, colour coded field centre plot" />
     <MESSAGE value="added orientation measure" />
@@ -954,7 +929,8 @@
     <MESSAGE value="adapted data processing scripts to be compatible with data with different temporal resolutions" />
     <MESSAGE value="can now output data with specified temporal resolution" />
     <MESSAGE value="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though..." />
-    <option name="LAST_COMMIT_MESSAGE" value="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though..." />
+    <MESSAGE value="tectal concetrations now dependent on neighbours, some changes to parameters etc.." />
+    <option name="LAST_COMMIT_MESSAGE" value="tectal concetrations now dependent on neighbours, some changes to parameters etc.." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1165,21 +1141,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="332" column="21" selection-start-line="332" selection-start-column="21" selection-end-line="332" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="288" column="75" selection-start-line="288" selection-start-column="75" selection-end-line="288" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
