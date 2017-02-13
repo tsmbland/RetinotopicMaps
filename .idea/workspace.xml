@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="tidier code + various fixes">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/1D Model.jl" afterPath="$PROJECT_DIR$/1979 (1D)/1D Model.jl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/1D Model.py" afterPath="$PROJECT_DIR$/1979 (1D)/1D Model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/DEVELOPMENT.py" afterPath="$PROJECT_DIR$/1979 (1D)/DEVELOPMENT.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/MAP PRECISION.py" afterPath="$PROJECT_DIR$/1979 (1D)/MAP PRECISION.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/MISMATCH SURGERY.py" afterPath="$PROJECT_DIR$/1979 (1D)/MISMATCH SURGERY.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/Map duplication.py" afterPath="$PROJECT_DIR$/1979 (1D)/Map duplication.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/TECTAL ROTATION.py" afterPath="$PROJECT_DIR$/1979 (1D)/TECTAL ROTATION.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1D Model/TIMING.py" afterPath="$PROJECT_DIR$/1979 (1D)/TIMING.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006 Model/2006 Model.py" afterPath="$PROJECT_DIR$/2006/2006 Model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2D Model/2D Model.jl" afterPath="$PROJECT_DIR$/1979 (2D)/2D Model.jl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2D Model/2D Model.py" afterPath="$PROJECT_DIR$/1979 (2D)/2D Model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2D Model/Gradients.py" afterPath="$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Hybrid Model/Model.py" afterPath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Plots/EphrinPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" afterPath="$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model.py" afterPath="$PROJECT_DIR$/1979 (2D)/2D Model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" afterPath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006/2006 Model.py" afterPath="$PROJECT_DIR$/2006/2006 Model.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Processing/FieldCentres.py" afterPath="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Processing/MapPrecision.py" afterPath="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/ConcPlot.py" afterPath="$PROJECT_DIR$/Plots/ConcPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/FieldPlot.py" afterPath="$PROJECT_DIR$/Plots/FieldPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionPlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/WeightPlot.py" afterPath="$PROJECT_DIR$/Plots/WeightPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="1D Model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/1979 (1D)/1D Model.py">
+      <file leaf-file-name="2D Model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2325">
-              <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2D Model (Gradients).py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+            <state relative-caret-position="600">
+              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -72,13 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2D Model/Model.py" />
-        <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/2006 Model/2006 tidy (work in progress).py" />
-        <option value="$PROJECT_DIR$/../Python/Willshaw:von_der_Malsburg_1979/Plots/Weightplot.py" />
-        <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/Plots/Weightplot.py" />
-        <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/Plots/Fieldplot.py" />
-        <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/2006 Model/2006 tidy (work in progress).py" />
-        <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/2006 Model/rough.py" />
         <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/Plots/Fieldcentres.py" />
         <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/Plots/Precisionplot.py" />
         <option value="$PROJECT_DIR$/../Python/Retinotopic Maps/2006 Model/2006 Model.py" />
@@ -106,11 +87,7 @@
         <option value="$PROJECT_DIR$/Plots/ExpectedFieldCentres.py" />
         <option value="$PROJECT_DIR$/2D Model (Tidy)/ExpectedFieldCentres.py" />
         <option value="$PROJECT_DIR$/Data Processing/rough.py" />
-        <option value="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
-        <option value="$PROJECT_DIR$/Plots/ConcPlot.py" />
         <option value="$PROJECT_DIR$/2D Model (Tidy)/Functions.py" />
-        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
-        <option value="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
         <option value="$PROJECT_DIR$/2D Model (Tidy)/parameters.py" />
         <option value="$PROJECT_DIR$/2D Model (Tidy)/functions.py" />
         <option value="$PROJECT_DIR$/2D Model (Tidy)/NoSurgery.py" />
@@ -123,6 +100,17 @@
         <option value="$PROJECT_DIR$/Hybrid Model/Model.py" />
         <option value="$PROJECT_DIR$/2006 Model/2006 Model.py" />
         <option value="$PROJECT_DIR$/1D Model/1D Model.py" />
+        <option value="$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" />
+        <option value="$PROJECT_DIR$/1979 (2D)/2D Model.py" />
+        <option value="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
+        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+        <option value="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
+        <option value="$PROJECT_DIR$/Plots/ConcPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/FieldPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/WeightPlot.py" />
+        <option value="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
+        <option value="$PROJECT_DIR$/2006/2006 Model.py" />
       </list>
     </option>
   </component>
@@ -155,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -174,9 +161,80 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Plots" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Data Processing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2006" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1979,2006 Hybrid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1979 (2D)" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -194,20 +252,20 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
-  <component name="RunManager" selected="Python.1D Model">
-    <configuration default="false" name="FieldCentres" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.PrecisionPlot">
+    <configuration default="false" name="WeightPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Processing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/WeightPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -229,7 +287,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="WeightPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="ConcPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -241,41 +299,41 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/WeightPlot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/ConcPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="2006 Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MapPrecision" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2006 Model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Processing" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2006 Model/2006 Model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="1D Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="PrecisionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/1D Model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1D Model/1D Model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -433,18 +491,18 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.FieldCentres" />
+      <item index="1" class="java.lang.String" itemvalue="Python.WeightPlot" />
       <item index="2" class="java.lang.String" itemvalue="Python.FieldPlot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.WeightPlot" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2006 Model" />
-      <item index="5" class="java.lang.String" itemvalue="Python.1D Model" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ConcPlot" />
+      <item index="4" class="java.lang.String" itemvalue="Python.MapPrecision" />
+      <item index="5" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.1D Model" />
-        <item index="1" class="java.lang.String" itemvalue="Python.FieldPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.FieldCentres" />
-        <item index="3" class="java.lang.String" itemvalue="Python.2006 Model" />
+        <item index="0" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.MapPrecision" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ConcPlot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.FieldPlot" />
         <item index="4" class="java.lang.String" itemvalue="Python.WeightPlot" />
       </list>
     </recent_temporary>
@@ -465,13 +523,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00004" summary="got scatter plot working">
-      <created>1480521356619</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1480521356619</updated>
     </task>
     <task id="LOCAL-00005" summary="got scatter plot working">
       <created>1480521386465</created>
@@ -809,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1486854852785</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="changed file structure">
+      <created>1486855094062</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1486855094062</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -825,12 +883,12 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.20492454" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.8824464" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
@@ -854,7 +912,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.8824464" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -896,7 +954,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Initial connections and normalisation working" />
     <MESSAGE value="Map duplication working  (sort of...)" />
     <MESSAGE value="Working 2D model" />
     <MESSAGE value="Tidied code, improvements to marker spacing" />
@@ -921,7 +978,8 @@
     <MESSAGE value="fixed issue with new synapses function and tectal concs function" />
     <MESSAGE value="tidier process bar" />
     <MESSAGE value="many changes, including more efficient weight change function" />
-    <option name="LAST_COMMIT_MESSAGE" value="many changes, including more efficient weight change function" />
+    <MESSAGE value="changed file structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed file structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -930,14 +988,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/1979 (1D)/Map duplication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Old code/Base model without padding.py" />
     <entry file="file://$PROJECT_DIR$/1979 (1D)/MAP PRECISION.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4170">
@@ -996,27 +1046,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data Processing/rough.py" />
-    <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/FieldPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2D Model (Tidy)/ExpectedFieldCentres.py" />
     <entry file="file://$PROJECT_DIR$/../Old code/2D Model (Tidy)/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1043,13 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/WeightPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="102" column="7" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1082,20 +1104,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1979 (1D)/1D Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2325">
+          <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.jl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Processing/FieldCentres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/EphrinPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/FieldPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/WeightPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2006/2006 Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="720">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -1104,40 +1202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1665">
-          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data Processing/FieldCentres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="27" column="36" selection-start-line="24" selection-start-column="8" selection-end-line="27" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979 (1D)/1D Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+        <state relative-caret-position="600">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding />
         </state>
       </provider>

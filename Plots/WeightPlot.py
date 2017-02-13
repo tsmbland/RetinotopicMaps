@@ -9,6 +9,8 @@ Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 
 ######################## PLOT OPTIONS #####################
 
+TRin = 5  # temporal resolution of input file
+
 Rplotdim = 1  # retina dimension plotted (1 or 2)
 Rplotslice = 1 #(len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
 Tplotdim = 1
@@ -38,7 +40,7 @@ elif Tplotdim == 2:
 
 # Tabulate Weight Matrix
 table = np.zeros([len(Weightmatrix[:, 0, 0, 0, 0]), (rplotmax - rplotmin + 1) * (tplotmax - tplotmin + 1), 6])
-for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0])-1):
+for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
     row = 0
     deltaw = Weightmatrix[iteration + 1, :, :, :, :] - Weightmatrix[iteration, :, :, :, :]
     for rdim1 in range(rplotmindim1, rplotmaxdim1 + 1):
@@ -69,7 +71,7 @@ ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
 ax.set_ylim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
 plt.subplots_adjust(left=0.25, bottom=0.25)
 axframe = plt.axes([0.25, 0.1, 0.65, 0.03])
-sframe = Slider(axframe, 'Iteration', 0, len(Weightmatrix[:, 0, 0, 0, 0]) - 2, valinit=0, valfmt='%d')
+sframe = Slider(axframe, 'Iteration', 0, (len(Weightmatrix[:, 0, 0, 0, 0])) * TRin - TRin - 1, valinit=0, valfmt='%d')
 
 
 def weightplot(i):
@@ -88,10 +90,12 @@ def weightplot(i):
     ax.set_ylabel('Retinal Cell Number (Dimension %d)' % (Rplotdim))
     ax.set_xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
 
+
 def update(val):
     ax.clear()
-    it = np.floor(sframe.val)
+    it = np.floor(sframe.val)//TRin
     weightplot(it)
+
 
 weightplot(0)
 

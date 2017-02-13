@@ -8,8 +8,10 @@ Concmatrix = np.load('../Temporary Data/Tectal Concentrations.npy')
 
 ######################## PLOT OPTIONS #####################
 
+TRin = 5  # temporal resolution of input file
+
 Tplotdim = 1
-Tplotslice = (len(Concmatrix[0, 0, 0, :]) - 2) // 2
+Tplotslice = 1  # (len(Concmatrix[0, 0, 0, :]) - 2) // 2
 
 ####################### PLOT ########################
 ymax = Concmatrix.max()
@@ -29,7 +31,7 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 plt.subplots_adjust(left=0.25, bottom=0.25)
 axframe = plt.axes([0.25, 0.1, 0.65, 0.03])
-sframe = Slider(axframe, 'Iteration', 0, len(Concmatrix[0, :, 0, 0]) - 1, valinit=0, valfmt='%d')
+sframe = Slider(axframe, 'Iteration', 0, len(Concmatrix[0, :, 0, 0]) * TRin - TRin, valinit=0, valfmt='%d')
 
 
 def concplot(i):
@@ -50,7 +52,7 @@ def concplot(i):
 
 def update(val):
     ax.clear()
-    it = np.floor(sframe.val)
+    it = np.floor(sframe.val) // TRin
     concplot(it)
 
 

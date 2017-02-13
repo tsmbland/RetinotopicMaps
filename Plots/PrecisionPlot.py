@@ -6,17 +6,20 @@ import numpy as np
 Fieldsize = np.load('../Temporary Data/Fieldsize.npy')
 Fieldseparation = np.load('../Temporary Data/Fieldseparation.npy')
 
+###################### OPTIONS #######################
+
+TRin = 5  # Temporal resolution of input files
 
 ######################## PLOTS #######################
 plt.subplot(1, 2, 1)
 plt.title('Receptive Field Separation')
-plt.plot(Fieldseparation)
+plt.plot(range(0, len(Fieldseparation) * TRin, TRin), Fieldseparation)
 plt.ylabel('Mean Receptive Field Separation')
 plt.xlabel('Time')
 
 plt.subplot(1, 2, 2)
 plt.title('Receptive Field Size')
-plt.plot(Fieldsize)
+plt.plot(range(0, len(Fieldsize) * TRin, TRin), Fieldsize)
 plt.ylabel('Mean Receptive Field Diameter')
 plt.xlabel('Time')
 
