@@ -5,7 +5,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" afterPath="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006/2006 Model.py" afterPath="$PROJECT_DIR$/2006/2006 Model.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,31 +26,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-222">
+              <caret line="288" column="75" selection-start-line="288" selection-start-column="75" selection-end-line="288" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="2D Model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="600">
               <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2006 Model.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/2006/2006 Model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1632">
-              <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapPrecision.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -121,8 +112,8 @@
         <option value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
         <option value="$PROJECT_DIR$/Plots/FieldPlot.py" />
         <option value="$PROJECT_DIR$/Plots/WeightPlot.py" />
-        <option value="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
         <option value="$PROJECT_DIR$/2006/2006 Model.py" />
+        <option value="$PROJECT_DIR$/1979,2006 Hybrid/Model.py" />
       </list>
     </option>
   </component>
@@ -508,13 +499,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00008" summary="tectal rotations time dependence">
-      <created>1480638365007</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1480638365007</updated>
-    </task>
     <task id="LOCAL-00009" summary="Boundary conditions with zeros padding for 2D retina">
       <created>1481889439509</created>
       <option name="number" value="00009" />
@@ -851,7 +835,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487013696651</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though...">
+      <created>1487013999330</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1487013999330</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -938,7 +929,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Changes to plot" />
     <MESSAGE value="field separation function + improvements to plot" />
     <MESSAGE value="field separation function improved" />
     <MESSAGE value="field size measure added, colour coded field centre plot" />
@@ -963,7 +953,8 @@
     <MESSAGE value="adapted plots to be compatible with data with different temporal resolutions" />
     <MESSAGE value="adapted data processing scripts to be compatible with data with different temporal resolutions" />
     <MESSAGE value="can now output data with specified temporal resolution" />
-    <option name="LAST_COMMIT_MESSAGE" value="can now output data with specified temporal resolution" />
+    <MESSAGE value="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though..." />
+    <option name="LAST_COMMIT_MESSAGE" value="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1142,16 +1133,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data Processing/FieldCentres.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-267">
@@ -1176,6 +1157,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/2006/2006 Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -1184,11 +1173,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006/2006 Model.py">
+    <entry file="file://$PROJECT_DIR$/1979,2006 Hybrid/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1632">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="-222">
+          <caret line="288" column="75" selection-start-line="288" selection-start-column="75" selection-end-line="288" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

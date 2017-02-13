@@ -8,7 +8,7 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-Iterations = 200  # number of weight iterations
+Iterations = 10  # number of weight iterations
 NRdim1 = 20  # initial number of retinal cells
 NRdim2 = 20
 NTdim1 = 20  # initial number of tectal cells
@@ -16,40 +16,43 @@ NTdim2 = 20
 
 # Retinal Gradients
 y0Rdim1 = 0.5  # conc in cell 0
-ymRdim1 = 1.5  # conc in cell NRdim1
-ynRdim1 = 3.5  # conc in cell NRdim1/2
-y0Rdim2 = 0.5
-ymRdim2 = 1.5
-ynRdim2 = 3.5
+ymRdim1 = 1.5  # conc in cell NRdim1/2
+ynRdim1 = 3.5  # conc in cell NRdim1
+y0Rdim2 = 0.1
+ymRdim2 = 0.5
+ynRdim2 = 1.0
 
 # Tectal Gradients
-y0Tdim1 = 3.5  # conc in cell 0
-ymTdim1 = 1.5  # conc in cell NTdim1
-ynTdim1 = 0.5  # conc in cell NTdim1/2
-y0Tdim2 = 0.5
-ymTdim2 = 1.5
-ynTdim2 = 3.5
+y0Tdim1 = 0.  # conc in cell 0
+ymTdim1 = 0.  # conc in cell NTdim1/2
+ynTdim1 = 0.  # conc in cell NTdim1
+y0Tdim2 = 0.
+ymTdim2 = 0.
+ynTdim2 = 0.
 
 # Establishment of initial contacts
 n0 = 10  # number of initial random contact
-NLdim1 = NTdim1  # sets initial bias
-NLdim2 = NTdim2
+NLdim1 = 15  # sets initial bias
+NLdim2 = 15
 
 # Tectal concentrations
-alpha = 0.005
-beta = 0.01
-deltatc = 0.1  # deltaC time step
+alpha = 0.01
+beta = 0.05
+deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration
 
 # Synaptic modification
 W = 1  # total strength available to each presynaptic fibre
-gamma = 0.1
-kappa = 0.72
+gamma = 1000
+kappa = 0.0504
 elim = 0.005  # elimination threshold
 newW = 0.01  # weight of new synapses
 sprout = 0.02  # sprouting threshold
-deltatw = 0.1  # deltaW time step
+deltatw = 1  # deltaW time step
 tw = 1  # weight iterations per iteration
+
+# Output
+TRout = 5  # temporal resoultion of output files
 
 ################### VARIABLES ###################
 Rmindim1 = 1
@@ -192,23 +195,35 @@ def updateI():
 
 
 def updateCta():
-    if Currentiteration > 0:
-        Cta[Currentiteration, :, :] = Cta[Currentiteration - 1, :, :]
+    Cta[Currentiteration, :, :] = Cta[Currentiteration - 1, :, :]
     for t in range(tc):
         for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
             for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
+                neighbourmean = (
+                    (Cta[Currentiteration, tdim1 + 1, tdim2] + Cta[Currentiteration, tdim1 - 1, tdim2] + Cta[
+                        Currentiteration, tdim1, tdim2 + 1] + Cta[Currentiteration, tdim1, tdim2 - 1]) / Nct[
+                        tdim1, tdim2])
+
                 Cta[Currentiteration, tdim1, tdim2] += (alpha * (
-                    1 - Ita[tdim1, tdim2] * Cta[Currentiteration, tdim1, tdim2])) * deltatc
+                    1 - Ita[tdim1, tdim2] * Cta[Currentiteration, tdim1, tdim2]) + beta * (
+                                                            neighbourmean - Cta[
+                                                                Currentiteration, tdim1, tdim2])) * deltatc
 
 
 def updateCtb():
-    if Currentiteration > 0:
-        Ctb[Currentiteration, :, :] = Ctb[Currentiteration - 1, :, :]
+    Ctb[Currentiteration, :, :] = Ctb[Currentiteration - 1, :, :]
     for t in range(tc):
         for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
             for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
+                neighbourmean = (
+                    (Ctb[Currentiteration, tdim1 + 1, tdim2] + Ctb[Currentiteration, tdim1 - 1, tdim2] + Ctb[
+                        Currentiteration, tdim1, tdim2 + 1] + Ctb[Currentiteration, tdim1, tdim2 - 1]) / Nct[
+                        tdim1, tdim2])
+
                 Ctb[Currentiteration, tdim1, tdim2] += (alpha * (
-                    Itb[tdim1, tdim2] - Ctb[Currentiteration, tdim1, tdim2])) * deltatc
+                    Itb[tdim1, tdim2] - Ctb[Currentiteration, tdim1, tdim2]) + beta * (
+                                                            neighbourmean - Ctb[
+                                                                Currentiteration, tdim1, tdim2])) * deltatc
 
 
 def updateWpt():
@@ -223,21 +238,19 @@ def updateWpt():
         tdim2 = synapses[1, synapse]
         rdim1 = synapses[2, synapse]
         rdim2 = synapses[3, synapse]
-        dist[tdim1, tdim2, rdim1, rdim2] = ((Cra[rdim1, rdim2] * Cta[Currentiteration, tdim1, tdim2] - 1) ** 2) + (
-            (Crb[rdim1, rdim2] - Ctb[Currentiteration, tdim1, tdim2]) ** 2)
+        dist[tdim1, tdim2, rdim1, rdim2] = (
+                                               (Cra[rdim1, rdim2] * Cta[
+                                                   Currentiteration, tdim1, tdim2] - 1) ** 2) + (
+                                               (Crb[rdim1, rdim2] - Ctb[Currentiteration, tdim1, tdim2]) ** 2)
         sim[tdim1, tdim2, rdim1, rdim2] = np.exp(-dist[tdim1, tdim2, rdim1, rdim2] / (2 * kappa ** 2))
 
     # Update weight
     for t in range(tw):
-        numerator = Wpt[Currentiteration, :, :, :, :] + deltatw * gamma * sim
+        numerator = W * (Wpt[Currentiteration, :, :, :, :] + deltatw * gamma * sim)
         denominator = np.zeros([NRdim1 + 2, NRdim2 + 2])
         for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
             for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
-                denominator[rdim1, rdim2] = sum(
-                    sum((Wpt[Currentiteration, :, :, rdim1, rdim2] + deltatw * gamma * sim[
-                                                                                       :, :,
-                                                                                       rdim1,
-                                                                                       rdim2])))
+                denominator[rdim1, rdim2] = W + sum(sum(deltatw * gamma * sim[:, :, rdim1, rdim2]))
 
         for synapse in range(int(len(synapses[0, :]))):
             tdim1 = synapses[0, synapse]
@@ -308,7 +321,9 @@ for iteration in range(Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', Wpt)
+np.save('../Temporary Data/Weightmatrix', Wpt[0:Iterations + 2:TRout, :, :, :, :])
+np.save('../Temporary Data/EphrinA', Cta[0:Iterations + 2:TRout, :, :])
+np.save('../Temporary Data/EphrinB', Ctb[0:Iterations + 2:TRout, :, :])
 
 ###################### END ########################
 
