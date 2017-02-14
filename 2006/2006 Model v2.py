@@ -1,3 +1,5 @@
+# 2006/1979 hybrid model
+
 import numpy as np
 import time
 import sys
@@ -8,35 +10,35 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-Iterations = 10  # number of weight iterations
+Iterations = 500  # number of weight iterations
 NRdim1 = 20  # initial number of retinal cells
 NRdim2 = 20
 NTdim1 = 20  # initial number of tectal cells
 NTdim2 = 20
 
 # Retinal Gradients
-y0Rdim1 = 0.5  # conc in cell 0
-ymRdim1 = 1.5  # conc in cell NRdim1/2
+y0Rdim1 = 1.0  # conc in cell 0
+ymRdim1 = 2.0  # conc in cell NRdim1/2
 ynRdim1 = 3.5  # conc in cell NRdim1
 y0Rdim2 = 0.1
 ymRdim2 = 0.5
 ynRdim2 = 1.0
 
 # Tectal Gradients
-y0Tdim1 = 0.  # conc in cell 0
-ymTdim1 = 0.  # conc in cell NTdim1/2
-ynTdim1 = 0.  # conc in cell NTdim1
-y0Tdim2 = 0.
-ymTdim2 = 0.
-ynTdim2 = 0.
+y0Tdim1 = 1.0  # conc in cell 0
+ymTdim1 = 0.5  # conc in cell NTdim1/2
+ynTdim1 = 0.3  # conc in cell NTdim1
+y0Tdim2 = 0.1
+ymTdim2 = 0.5
+ynTdim2 = 1.0
 
 # Establishment of initial contacts
 n0 = 10  # number of initial random contact
-NLdim1 = 15  # sets initial bias
-NLdim2 = 15
+NLdim1 = 20  # sets initial bias
+NLdim2 = 20
 
 # Tectal concentrations
-alpha = 0.01
+alpha = 0.05
 beta = 0.05
 deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration

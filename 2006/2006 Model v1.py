@@ -1,3 +1,5 @@
+# Standard model
+
 import numpy as np
 import time
 import sys
@@ -7,27 +9,27 @@ start = time.time()
 #################### PARAMETERS #####################
 
 # General
-Iterations = 500  # number of weight iterations
+Iterations = 100  # number of weight iterations
 NRdim1 = 20  # initial number of retinal cells
 NRdim2 = 20
 NTdim1 = 20  # initial number of tectal cells
 NTdim2 = 20
 
 # Retinal Gradients
-y0Rdim1 = 0.5  # conc in cell 0
-ymRdim1 = 1.5  # conc in cell NRdim1/2
+y0Rdim1 = 1.0  # conc in cell 0
+ymRdim1 = 2.0  # conc in cell NRdim1/2
 ynRdim1 = 3.5  # conc in cell NRdim1
 y0Rdim2 = 0.1
 ymRdim2 = 0.5
 ynRdim2 = 1.0
 
 # Tectal Gradients
-y0Tdim1 = 0.1  # conc in cell 0
-ymTdim1 = 0.05  # conc in cell NTdim1/2
-ynTdim1 = 0.01  # conc in cell NTdim1
-y0Tdim2 = 0.01
-ymTdim2 = 0.05
-ynTdim2 = 0.1
+y0Tdim1 = 1.0  # conc in cell 0
+ymTdim1 = 0.5  # conc in cell NTdim1/2
+ynTdim1 = 0.3  # conc in cell NTdim1
+y0Tdim2 = 0.1
+ymTdim2 = 0.5
+ynTdim2 = 1.0
 
 # Tectal concentrations
 alpha = 0.05
@@ -240,9 +242,9 @@ for iteration in range(Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', Wpt)
-np.save('../Temporary Data/EphrinA', Cta)
-np.save('../Temporary Data/EphrinB', Ctb)
+np.save('../Temporary Data/Weightmatrix', Wpt[0:Iterations + 2:TRout, :, :, :, :])
+np.save('../Temporary Data/EphrinA', Cta[0:Iterations + 2:TRout, :, :])
+np.save('../Temporary Data/EphrinB', Ctb[0:Iterations + 2:TRout, :, :])
 
 ###################### END ########################
 
