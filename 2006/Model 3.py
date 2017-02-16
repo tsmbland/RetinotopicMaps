@@ -1,4 +1,4 @@
-# Fixed tectal gradients
+# Fixed tectal gradients, flexible relationship (work in progress...)
 
 import numpy as np
 import time
@@ -15,7 +15,7 @@ f.setRetinalGradients()
 f.setTectalGradients()
 
 # Initial Connections
-f.initialconnections1()
+f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
@@ -23,7 +23,9 @@ for iteration in range(f.Iterations):
 
     f.updateDpt()
     f.updateSpt()
-    f.updateWpt1()
+    f.updateWpt()
+
+    f.updatexFieldcentres()
 
     sys.stdout.write('\r%i percent' % (iteration * 100 / f.Iterations))
     sys.stdout.flush()
@@ -33,6 +35,7 @@ for iteration in range(f.Iterations):
 np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
 np.save('../Temporary Data/EphrinA', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
 np.save('../Temporary Data/EphrinB', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
 
