@@ -331,22 +331,26 @@ def updateWeight():
 
     for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
-            synapses = np.array(
-                np.nonzero(Wpt[Currentiteration - 1, :, :, rdim1, rdim2]))
+
+            # Count connections
+            synapses = np.array(np.nonzero(Wpt[Currentiteration - 1, :, :, rdim1, rdim2]))
             connections[rdim1, rdim2] = len(synapses[0, :])
+
+            # Calculate similarity
             for synapse in range(int(connections[rdim1, rdim2])):
                 Spt[synapses[0, synapse], synapses[1, synapse], rdim1, rdim2] = sum(
                     np.minimum(NormalisedCpm[:, rdim1, rdim2],
                                NormalisedCtm[:, synapses[0, synapse], synapses[1, synapse]]))
-            totalSp[rdim1, rdim2] = sum(sum(Spt[:, :, rdim1, rdim2]))
 
             # Calculate mean similarity
+            totalSp[rdim1, rdim2] = sum(sum(Spt[:, :, rdim1, rdim2]))
             meanSp[rdim1, rdim2] = (totalSp[rdim1, rdim2] / connections[rdim1, rdim2]) - k
 
             # Calculate deltaW
             deltaWpt[Tmindim1:Tmaxdim1 + 1, Tmindim2:Tmaxdim2 + 1, rdim1, rdim2] = h * (
                 Spt[Tmindim1:Tmaxdim1 + 1, Tmindim2:Tmaxdim2 + 1, rdim1, rdim2] - meanSp[rdim1, rdim2])
 
+            # Calculate deltaWsum
             for synapse in range(int(connections[rdim1, rdim2])):
                 deltaWsum[rdim1, rdim2] += deltaWpt[synapses[0, synapse], synapses[1, synapse], rdim1, rdim2]
 
@@ -397,12 +401,8 @@ def updatexFieldcentres():
                 Tmaxdim2 - Tmindim2 + 1)
 
 
-count1 = 0
-
-
 def growretina():
     global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
-    global oldmap, newmap, count1
     if Currentiteration % dstep == 0 and Currentiteration != 0:
         # Old map
         oldmap = np.zeros([NRdim1 + 1, NRdim2 + 1])
@@ -427,7 +427,6 @@ def growretina():
             for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
                 if newmap[rdim1, rdim2] - oldmap[rdim1, rdim2] > 0:
                     connections(rdim1, rdim2)
-                    count1 += 1
 
 
 def growtectum():
