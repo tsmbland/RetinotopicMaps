@@ -13,12 +13,11 @@ f.Ctm[:, 0, :, :] = Ctm[:, -1, :, :]
 ################## ALGORITHM ######################
 
 # MISMATCH SURGERY
-f.mismatchsurgery()
+f.typemismatchsurgery()
 
 # INITIAL CONNECTIONS
-for rdim1 in range(f.Rmindim1, f.Rmaxdim1 + 1):
-    for rdim2 in range(f.Rmindim2, f.Rmaxdim2 + 1):
-        f.initialconections(rdim1, rdim2)
+f.setWtot()
+f.initialconnections()
 
 f.updateNc()
 f.normaliseCpm()
@@ -30,9 +29,12 @@ for iteration in range(1, f.Iterations + 1):
     f.updateWeight()
     f.removesynapses()
     f.addsynapses()
+
     f.updateQtm()
     f.updatetectalconcs()
     f.normaliseCtm()
+
+    f.updatexFieldcentres()
 
     sys.stdout.write('\r%i percent' % (iteration * 100 / f.Iterations))
     sys.stdout.flush()
@@ -42,6 +44,7 @@ for iteration in range(1, f.Iterations + 1):
 np.save('../Temporary Data/Weightmatrix2', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
 np.save('../Temporary Data/Retinal Concentrations2', f.Cpm)
 np.save('../Temporary Data/Tectal Concentrations2', f.Ctm[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
 

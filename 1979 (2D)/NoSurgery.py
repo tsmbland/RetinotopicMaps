@@ -13,6 +13,11 @@ Ctm = np.load('../Temporary Data/Tectal Concentrations.npy')
 f.Ctm[:, 0, :, :] = Ctm[:, -1, :, :]
 
 ################## ALGORITHM ######################
+
+# MODEL TYPE
+f.typestandard()
+
+f.setWtot()
 f.updateNc()
 f.normaliseCpm()
 f.normaliseCtm()
@@ -23,9 +28,12 @@ for iteration in range(1, f.Iterations + 1):
     f.updateWeight()
     f.removesynapses()
     f.addsynapses()
+
     f.updateQtm()
     f.updatetectalconcs()
     f.normaliseCtm()
+
+    f.updatexFieldcentres()
 
     sys.stdout.write('\r%i percent' % (iteration * 100 / f.Iterations))
     sys.stdout.flush()

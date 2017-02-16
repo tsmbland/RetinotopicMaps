@@ -9,7 +9,7 @@ start = time.time()
 
 # MODEL TYPE
 
-f.typestandard()
+f.typedevelopment()
 
 # MARKER LOCATIONS
 
@@ -36,9 +36,18 @@ f.normaliseCtm()
 
 for iteration in range(1, f.Iterations + 1):
     f.Currentiteration += 1
+
+    f.updateWtot()
     f.updateWeight()
     f.removesynapses()
     f.addsynapses()
+
+    f.growtectum()
+    f.growretina()
+    f.updateNc()
+
+    f.updateretinalconcs()
+    f.normaliseCpm()
 
     f.updateQtm()
     f.updatetectalconcs()
