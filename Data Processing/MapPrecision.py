@@ -1,24 +1,25 @@
 import numpy as np
 import sys
 import time
+
 start = time.time()
 
 ###################### IMPORT DATA #####################
 
 Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 Fieldcentres = np.load('../Temporary Data/Fieldcentres.npy')
-
+xFieldcentres = np.load('../Temporary Data/xFieldcentres.npy')
 
 ###################### OPTIONS #########################
 
 TRin = 5  # temporal resolution of input file
 TRout = TRin  # temporal resolution of output files
 
-
 ###################### PRECISION MEASURES #####################
 
 Fieldseparation = np.zeros(len(Weightmatrix[:, 0, 0, 0, 0]))
 Fieldsize = np.zeros(len(Weightmatrix[:, 0, 0, 0, 0]))
+Systemsmatch = np.zeros(len(Weightmatrix[:, 0, 0, 0, 0]))
 
 
 def field_separation(i):
@@ -72,7 +73,7 @@ def field_size(i):
                     rdim1 += 1
                 min = rdim1 - 1
                 if weight != 0:
-                    rdim1 = len(Weightmatrix[0, 0, 0, :, 0])-1
+                    rdim1 = len(Weightmatrix[0, 0, 0, :, 0]) - 1
                     weight = 0
                     while weight == 0:
                         weight = Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
@@ -91,7 +92,7 @@ def field_size(i):
                     rdim2 += 1
                 min = rdim2 - 1
                 if weight != 0:
-                    rdim2 = len(Weightmatrix[0, 0, 0, 0, :])-1
+                    rdim2 = len(Weightmatrix[0, 0, 0, 0, :]) - 1
                     weight = 0
                     while weight == 0:
                         weight = Weightmatrix[i, tdim1, tdim2, rdim1, rdim2]
@@ -100,7 +101,7 @@ def field_size(i):
                     width = max - min
                 area += width
 
-            diameter = 2*np.sqrt(area/(2*np.pi))
+            diameter = 2 * np.sqrt(area / (2 * np.pi))
 
             # Field size estimation
             totaldiameter += diameter
@@ -111,17 +112,33 @@ def field_size(i):
     Fieldsize[i] = meandiameter
 
 
-for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout//TRin):
+def systems_match(i):
+    totaldistance = 0
+    count = 0
+
+    for tdim1 in range(len(Weightmatrix[0, :, 0, 0, 0])):
+        for tdim2 in range(len(Weightmatrix[0, 0, :, 0, 0])):
+            if Fieldcentres[0, i, tdim1, tdim2] != 0 and Fieldcentres[1, i, tdim1, tdim2] != 0:
+                totaldistance += np.sqrt((Fieldcentres[0, i, tdim1, tdim2] - xFieldcentres[0, i, tdim1, tdim2]) ** 2 + (
+                Fieldcentres[1, i, tdim1, tdim2] - xFieldcentres[1, i, tdim1, tdim2]) ** 2)
+                count += 1
+
+    meandistance = totaldistance/count
+    Systemsmatch[i] = meandistance
+
+
+for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout // TRin):
     field_separation(i)
     field_size(i)
+    systems_match(i)
     sys.stdout.write('\r%i percent' % (i * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
     sys.stdout.flush()
-
 
 ##################### EXPORT DATA #####################
 
 np.save('../Temporary Data/Fieldsize', Fieldsize)
 np.save('../Temporary Data/Fieldseparation', Fieldseparation)
+np.save('../Temporary Data/Systemsmatch', Systemsmatch)
 
 ###################### END ########################
 sys.stdout.write('\rComplete!')
