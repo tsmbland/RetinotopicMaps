@@ -9,7 +9,7 @@ Systemsmatch = np.load('../Temporary Data/Systemsmatch.npy')
 
 ###################### OPTIONS #######################
 
-TRin = 5  # Temporal resolution of input files
+TRin = 10  # Temporal resolution of input files
 
 ######################## PLOTS #######################
 plt.subplot(1, 3, 1)

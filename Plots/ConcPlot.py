@@ -8,7 +8,7 @@ Concmatrix = np.load('../Temporary Data/Tectal Concentrations.npy')
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 5  # temporal resolution of input file
+TRin = 10  # temporal resolution of input file
 
 Tplotdim = 1
 Tplotslice = 1  # (len(Concmatrix[0, 0, 0, :]) - 2) // 2

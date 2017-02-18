@@ -11,7 +11,7 @@ Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 
 ###################### OPTIONS #########################
 
-TRin = 5  # temporal resolution of input file
+TRin = 10  # temporal resolution of input file
 TRout = TRin  # temporal resolution of output file
 
 

@@ -13,7 +13,7 @@ Fieldcentres = np.load('../Temporary Data/Fieldcentres.npy')
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 5  # temporal resolution of input files
+TRin = 10  # temporal resolution of input files
 
 
 ####################### PLOT ##########################

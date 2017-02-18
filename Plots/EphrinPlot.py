@@ -9,10 +9,10 @@ Ctb = np.load('../Temporary Data/EphrinB.npy')
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 5  # temporal resolution of input files
+TRin = 10  # temporal resolution of input files
 
-EphAslice = (len(Cta[0, 0, :]) - 2) // 2
-EphBslice = (len(Ctb[0, :, 0]) - 2) // 2
+EphAslice = 1 #(len(Cta[0, 0, :]) - 2) // 2
+EphBslice = 1 #(len(Ctb[0, :, 0]) - 2) // 2
 
 ######################### PLOT ############################
 ymax = max(Cta.max(), Ctb.max())

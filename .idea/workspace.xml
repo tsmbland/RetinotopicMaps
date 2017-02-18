@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphA)/Functions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphA)/Mismatch Surgery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphA)/NoSurgery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphB)/Development.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphB)/Functions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphB)/Mismatch Surgery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphB)/NoSurgery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphB)/StandardAlgorithm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979/Development.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979/Mismatch Surgery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2006.1979/NoSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979/Algorithm.py" afterPath="$PROJECT_DIR$/2006.1979/StandardAlgorithm.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/2006/Model 1.py" afterPath="$PROJECT_DIR$/2006/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006/Model 2.py" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphA)/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006/Model 3.py" afterPath="$PROJECT_DIR$/2006.1979 (1D: EphA)/Development.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1979 (2D)/Development.py" afterPath="$PROJECT_DIR$/1979 (2D)/Development.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979/Functions.py" afterPath="$PROJECT_DIR$/2006.1979/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Processing/FieldCentres.py" afterPath="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data Processing/MapPrecision.py" afterPath="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/ConcPlot.py" afterPath="$PROJECT_DIR$/Plots/ConcPlot.py" />
@@ -162,6 +147,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2006" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1979 (2D)" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,13 +472,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Time dependence with padding + scatter">
-      <created>1482057183931</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1482057183931</updated>
     </task>
     <task id="LOCAL-00019" summary="Working development model">
       <created>1482096136228</created>
@@ -803,7 +809,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487273850886</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="added scripts for development and mismatch surgery">
+      <created>1487422365278</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1487422365279</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -890,7 +903,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="added julia code" />
     <MESSAGE value="added concentration plot" />
     <MESSAGE value="field centres algorithm much faster" />
     <MESSAGE value="changed field size measure from area to diameter" />
@@ -915,7 +927,8 @@
     <MESSAGE value="tidied" />
     <MESSAGE value="added expected field centres function, removed 1979 functions" />
     <MESSAGE value="(sort of) working hybrid model, but more work needed to optimise parameters." />
-    <option name="LAST_COMMIT_MESSAGE" value="(sort of) working hybrid model, but more work needed to optimise parameters." />
+    <MESSAGE value="added scripts for development and mismatch surgery" />
+    <option name="LAST_COMMIT_MESSAGE" value="added scripts for development and mismatch surgery" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1086,22 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1979 (2D)/Development.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plots/EphrinPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1130,22 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data Processing/FieldCentres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1282,6 +1263,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979 (2D)/Development.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Processing/FieldCentres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Processing/MapPrecision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding />
         </state>
       </provider>

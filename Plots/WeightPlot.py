@@ -9,11 +9,11 @@ Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 5  # temporal resolution of input file
+TRin = 10  # temporal resolution of input file
 
-Rplotdim = 1  # retina dimension plotted (1 or 2)
+Rplotdim = 2  # retina dimension plotted (1 or 2)
 Rplotslice = (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
-Tplotdim = 1
+Tplotdim = 2
 Tplotslice = (len(Weightmatrix[0, 0, :, 0, 0]) - 2) // 2
 
 ######################## TABLE #########################
