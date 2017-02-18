@@ -1,5 +1,3 @@
-# 2006/1979 hybrid model
-
 import numpy as np
 import time
 import sys
@@ -7,14 +5,19 @@ import Functions as f
 
 start = time.time()
 
+################## IMPORT DATA ###################
+Cta = np.load('../Temporary Data/EphrinA.npy')
+f.Cta[0, :, :] = Cta[-1, :, :]
+Ctb = np.load('../Temporary Data/EphrinB.npy')
+f.Ctb[0, :, :] = Ctb[-1, :, :]
+
 ######################## ALGORITM #######################
 
 # Model Type
-f.typestandard()
+f.typemismatchsurgery()
 
 # Set Gradients
 f.setRetinalGradients()
-f.setTectalGradients()
 f.updateNct()
 
 # Initial Connections
@@ -40,10 +43,10 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/EphrinA', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/EphrinB', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/Weightmatrix2', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
+np.save('../Temporary Data/EphrinA2', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/EphrinB2', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
 

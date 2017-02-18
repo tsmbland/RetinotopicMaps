@@ -1,5 +1,3 @@
-# Fixed tectal gradients, flexible relationship (work in progress...)
-
 import numpy as np
 import time
 import sys
@@ -9,21 +7,29 @@ start = time.time()
 
 ######################## ALGORITM #######################
 
+# Model Type
+f.typestandard()
 
 # Set Gradients
 f.setRetinalGradients()
 f.setTectalGradients()
+f.updateNct()
 
 # Initial Connections
+f.setWtot()
 f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
     f.Currentiteration += 1
 
-    f.updateDpt()
-    f.updateSpt()
+    f.updateI()
+    f.updateCta()
+    f.updateCtb()
+
     f.updateWpt()
+    f.removesynapses()
+    f.addsynapses()
 
     f.updatexFieldcentres()
 

@@ -1,4 +1,4 @@
-# Fixed tectal gradients
+# 2006/1979 hybrid model
 
 import numpy as np
 import time
@@ -9,21 +9,28 @@ start = time.time()
 
 ######################## ALGORITM #######################
 
+# Model Type
+f.typestandard()
 
 # Set Gradients
 f.setRetinalGradients()
 f.setTectalGradients()
+f.updateNct()
 
 # Initial Connections
-f.initialconnections()
+f.setWtot()
+f.initialconnections2()
 
 # Iterations
 for iteration in range(f.Iterations):
     f.Currentiteration += 1
 
-    f.updateDpt()
-    f.updateSpt()
-    f.updateWpt()
+    f.updateI()
+    f.updateCta()
+
+    f.updateWpt2()
+    f.removesynapses()
+    f.addsynapses()
 
     f.updatexFieldcentres()
 
@@ -34,7 +41,6 @@ for iteration in range(f.Iterations):
 
 np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
 np.save('../Temporary Data/EphrinA', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/EphrinB', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
 np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
