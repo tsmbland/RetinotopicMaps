@@ -5,7 +5,6 @@ import sys
 import time
 import Functions as f
 
-
 start = time.time()
 
 ######################## ALGORITM #######################
