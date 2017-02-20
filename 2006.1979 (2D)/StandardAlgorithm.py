@@ -8,7 +8,7 @@ start = time.time()
 ######################## ALGORITM #######################
 
 # Model Type
-f.typedevelopment()
+f.typestandard()
 
 # Set Gradients
 f.setRetinalGradients()
@@ -21,20 +21,15 @@ f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
-    f.Currentiteration += 1
+    f.updatetimepoint()
 
-    f.updateI()
-    f.updateCta()
-    f.updateCtb()
-
-    f.updateWtot()
     f.updateWpt()
     f.removesynapses()
     f.addsynapses()
 
-    f.growtectum()
-    f.growretina()
-    f.updateNc()
+    f.updateI()
+    f.updateCta()
+    f.updateCtb()
 
     f.updatexFieldcentres()
 
@@ -43,10 +38,10 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/EphrinA', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/EphrinB', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/Weightmatrix', f.Wpt)
+np.save('../Temporary Data/EphrinA', f.Cta)
+np.save('../Temporary Data/EphrinB', f.Ctb)
+np.save('../Temporary Data/xFieldcentres', f.xFieldcentres)
 
 ###################### END ########################
 

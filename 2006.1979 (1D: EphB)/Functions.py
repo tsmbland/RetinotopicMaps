@@ -4,35 +4,50 @@ import random
 #################### PARAMETERS #####################
 
 # General
-Iterations = 500  # number of weight iterations
+Iterations = 2000  # number of weight iterations
 NRdim2 = 80  # initial number of retinal cells
 NTdim2 = 80  # initial number of tectal cells
 
 # Establishment of initial contacts
 n0 = 7  # number of initial random contact
-NLdim2 = 80  # sets initial bias
+NLdim2 = 60  # sets initial bias
 
 # Retinal Gradients
-
 y0Rdim2 = 0.1
 ymRdim2 = 0.5
 ynRdim2 = 1.0
+stochR = 0.1
 
 # Tectal Gradients
-
-y0Tdim2 = 0.1
+y0Tdim2 = 0.0
 ymTdim2 = 0.5
-ynTdim2 = 1
+ynTdim2 = 1.0
+yLT = 0
+stochT = 0.1
+
+# Mismatch surgery
+sRmindim2 = 1
+sRmaxdim2 = NRdim2
+sTmindim2 = 1
+sTmaxdim2 = NTdim2 // 2
+
+# Development
+dRmindim2 = NRdim2 // 4
+dRmaxdim2 = 3 * NRdim2 // 4
+dTmindim2 = 1
+dTmaxdim2 = NTdim2 // 2
+dstep = 30  # time between growth iterations
+td = 300  # time taken for new fibres to gain full strength
 
 # Tectal concentrations
-alpha = 0.0
-beta = 0.
+alpha = 0.002
+beta = 0.1
 deltatc = 1  # deltaC time step
-tc = 3  # concentration iterations per iteration
+tc = 5  # concentration iterations per iteration
 
 # Synaptic modification
 Wmax = 1.  # total strength available to each presynaptic fibre
-gamma = 0.1
+gamma = 0.05
 kappa = 1
 k = 0.001
 elim = 0.005  # elimination threshold
@@ -48,28 +63,28 @@ TRout = 10  # temporal resoultion of output files
 NRdim1 = 1
 NTdim1 = 1
 NLdim1 = 1
+sRmindim1 = 1
+sRmaxdim1 = 1
+sTmindim1 = 1
+sTmaxdim1 = 1
+dRmindim1 = 1
+dRmaxdim1 = 1
+dTmindim1 = 1
+dTmaxdim1 = 1
 
-Rmindim1 = 1
-Rmaxdim1 = NRdim1
-Rmindim2 = 1
-Rmaxdim2 = NRdim2
-Tmindim1 = 1
-Tmaxdim1 = NTdim1
-Tmindim2 = 1
-Tmaxdim2 = NTdim2
-
-Wpt = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # synaptic strength matrix
+Wpt = np.zeros([Iterations / TRout + 1, NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # synaptic strength matrix
 Wtot = np.zeros([NRdim1 + 1, NRdim2 + 1])  # total strength available to a fibre
 Spt = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # similarity
 Dpt = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])  # distance
 Crb = np.zeros([NRdim1 + 2, NRdim2 + 2])  # concentration of EphrinA/B in a retinal cell
-Ctb = np.zeros([Iterations + 1, NTdim1 + 2, NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
+Ctb = np.zeros([Iterations / TRout + 1, NTdim1 + 2, NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
 Itb = np.zeros([NTdim1 + 2, NTdim2 + 2])  # induced label in a tectal cell
 Nct = np.zeros([NTdim1 + 2, NTdim2 + 2])  # neighbour count for a tectal cell
 
 xFieldcentres = np.zeros([2, Iterations + 1, NTdim1 + 1, NTdim2 + 1])  # expected field centres for tectal cells
 
 Currentiteration = 0
+Timepoint = 0
 
 
 ####################### FUNCTIONS ###################
@@ -86,11 +101,43 @@ def typestandard():
     Tmaxdim2 = NTdim2
 
 
+def typemismatchsurgery():
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    Rmindim1 = sRmindim1
+    Rmaxdim1 = sRmaxdim1
+    Rmindim2 = sRmindim2
+    Rmaxdim2 = sRmaxdim2
+    Tmindim1 = sTmindim1
+    Tmaxdim1 = sTmaxdim1
+    Tmindim2 = sTmindim2
+    Tmaxdim2 = sTmaxdim2
+
+
+def typedevelopment():
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    Rmindim1 = dRmindim1
+    Rmaxdim1 = dRmaxdim1
+    Rmindim2 = dRmindim2
+    Rmaxdim2 = dRmaxdim2
+    Tmindim1 = dTmindim1
+    Tmaxdim1 = dTmaxdim1
+    Tmindim2 = dTmindim2
+    Tmaxdim2 = dTmaxdim2
+
+
 def setWtot():
+    Wtot[1:NRdim1 + 1, 1:NRdim2 + 1] = Wmax / td
     Wtot[Rmindim1:Rmaxdim1 + 1, Rmindim2:Rmaxdim2 + 1] = Wmax
 
 
-def connections2(rdim1, rdim2):
+def updateWtot():
+    for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
+        for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
+            if Wtot[rdim1, rdim2] < Wmax:
+                Wtot[rdim1, rdim2] += Wmax / td
+
+
+def connections(rdim1, rdim2):
     initialstrength = Wtot[rdim1, rdim2] / n0
     if int(rdim1 * ((NTdim1 - NLdim1) / NRdim1) + NLdim1) <= Tmaxdim1 - Tmindim1 + 1:
         if int(rdim2 * ((NTdim2 - NLdim2) / NRdim2) + NLdim2) <= Tmaxdim2 - Tmindim2 + 1:
@@ -99,7 +146,7 @@ def connections2(rdim1, rdim2):
             arrangement[0:n0] = initialstrength
             random.shuffle(arrangement)
             arrangement = np.reshape(arrangement, (NLdim1, NLdim2))
-            Wpt[Currentiteration, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: int(
+            Wpt[Timepoint, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: int(
                 rdim1 * ((NTdim1 - NLdim1) / NRdim1) + NLdim1) + 1,
             int(rdim2 * ((NTdim2 - NLdim2) / NRdim2)) + 1: int(
                 rdim2 * ((NTdim2 - NLdim2) / NRdim2) + NLdim2) + 1, rdim1,
@@ -110,7 +157,7 @@ def connections2(rdim1, rdim2):
             arrangement[0:n0] = initialstrength
             random.shuffle(arrangement)
             arrangement = np.reshape(arrangement, (NLdim1, Tmaxdim2 - int(rdim2 * ((NTdim2 - NLdim2) / NRdim2))))
-            Wpt[Currentiteration, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: int(
+            Wpt[Timepoint, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: int(
                 rdim1 * ((NTdim1 - NLdim1) / NRdim1) + NLdim1) + 1,
             int(rdim2 * ((NTdim2 - NLdim2) / NRdim2)) + 1: Tmaxdim2 + 1, rdim1,
             rdim2] = arrangement
@@ -120,7 +167,7 @@ def connections2(rdim1, rdim2):
         arrangement[0:n0] = initialstrength
         random.shuffle(arrangement)
         arrangement = np.reshape(arrangement, (Tmaxdim1 - int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)), NLdim2))
-        Wpt[Currentiteration, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: Tmaxdim1 + 1,
+        Wpt[Timepoint, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: Tmaxdim1 + 1,
         int(rdim2 * ((NTdim2 - NLdim2) / NRdim2)) + 1: int(rdim2 * ((NTdim2 - NLdim2) / NRdim2) + NLdim2) + 1,
         rdim1,
         rdim2] = arrangement
@@ -133,16 +180,16 @@ def connections2(rdim1, rdim2):
         arrangement = np.reshape(arrangement, (
             Tmaxdim1 - int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)),
             Tmaxdim2 - int(rdim2 * ((NTdim2 - NLdim2) / NRdim2))))
-        Wpt[Currentiteration, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: Tmaxdim1 + 1,
+        Wpt[Timepoint, int(rdim1 * ((NTdim1 - NLdim1) / NRdim1)) + 1: Tmaxdim1 + 1,
         int(rdim2 * ((NTdim2 - NLdim2) / NRdim2)) + 1: Tmaxdim2 + 1,
         rdim1,
         rdim2] = arrangement
 
 
-def initialconnections2():
+def initialconnections():
     for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
-            connections2(rdim1, rdim2)
+            connections(rdim1, rdim2)
 
 
 def setRetinalGradients():
@@ -156,6 +203,12 @@ def setRetinalGradients():
             Crb[1:NTdim1 + 1, rdim2] = aRdim2 * np.exp(bRdim2 * rdim2) + cRdim2
 
 
+    # Add stochasticity
+    for rdim1 in range(1, NRdim1 + 1):
+        for rdim2 in range(1, NRdim2 + 1):
+            Crb[rdim1, rdim2] = Crb[rdim1, rdim2] * (1 + np.random.uniform(-stochR, stochR))
+
+
 def setTectalGradients():
     # Dim2
     if ynTdim2 != 0:
@@ -165,6 +218,14 @@ def setTectalGradients():
 
         for tdim2 in range(1, NTdim2 + 1):
             Ctb[0, 1:NTdim1 + 1, tdim2] = aTdim2 * np.exp(bTdim2 * tdim2) + cTdim2
+
+    # Change gradient strength
+    Ctb[0, :, :] *= yLT
+
+    # Add stochasticity
+    for rdim1 in range(1, NRdim1 + 1):
+        for rdim2 in range(1, NRdim2 + 1):
+            Ctb[0, rdim1, rdim2] = Ctb[0, rdim1, rdim2] * (1 + np.random.uniform(-stochT, stochT))
 
 
 def updateNct():
@@ -182,31 +243,37 @@ def updateI():
     Itb[:, :] = 0
     for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
         for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-            wtotal = sum(sum(Wpt[Currentiteration - 1, tdim1, tdim2, :, :]))
-            Itb[tdim1, tdim2] = sum(sum(Wpt[Currentiteration - 1, tdim1, tdim2, :, :] * Crb[:, :])) / wtotal
+            wtotal = sum(sum(Wpt[Timepoint - 1, tdim1, tdim2, :, :]))
+            Itb[tdim1, tdim2] = sum(sum(Wpt[Timepoint - 1, tdim1, tdim2, :, :] * Crb[:, :])) / wtotal
 
     Itb[:, :] = np.nan_to_num(Itb[:, :])
 
 
+def updatetimepoint():
+    global Timepoint, Currentiteration
+    Currentiteration += 1
+    if (Currentiteration - 1) % TRout == 0:
+        Timepoint += 1
+        Ctb[Timepoint, :, :] = Ctb[Timepoint - 1, :, :]
+        Wpt[Timepoint, :, :, :, :] = Wpt[Timepoint - 1, :, :, :, :]
+
+
 def updateCtb():
-    Ctb[Currentiteration, :, :] = Ctb[Currentiteration - 1, :, :]
     for t in range(tc):
         for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
             for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
                 neighbourmean = (
-                    (Ctb[Currentiteration, tdim1 + 1, tdim2] + Ctb[Currentiteration, tdim1 - 1, tdim2] + Ctb[
-                        Currentiteration, tdim1, tdim2 + 1] + Ctb[Currentiteration, tdim1, tdim2 - 1]) / Nct[
+                    (Ctb[Timepoint, tdim1 + 1, tdim2] + Ctb[Timepoint, tdim1 - 1, tdim2] + Ctb[
+                        Timepoint, tdim1, tdim2 + 1] + Ctb[Timepoint, tdim1, tdim2 - 1]) / Nct[
                         tdim1, tdim2])
 
-                Ctb[Currentiteration, tdim1, tdim2] += (alpha * (
-                    Itb[tdim1, tdim2] - Ctb[Currentiteration, tdim1, tdim2]) + beta * (
-                                                            neighbourmean - Ctb[
-                                                                Currentiteration, tdim1, tdim2])) * deltatc
+                Ctb[Timepoint, tdim1, tdim2] += (alpha * (
+                    Itb[tdim1, tdim2] - Ctb[Timepoint, tdim1, tdim2]) + beta * (
+                                                     neighbourmean - Ctb[
+                                                         Timepoint, tdim1, tdim2])) * deltatc
 
 
-def updateWpt2():
-    Wpt[Currentiteration, :, :, :, :] = Wpt[Currentiteration - 1, :, :, :, :]
-
+def updateWpt():
     deltaWpt = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])
     deltaWsum = np.zeros([NRdim1 + 2, NRdim2 + 2])
     dist = np.zeros([NTdim1 + 2, NTdim2 + 2, NRdim1 + 2, NRdim2 + 2])
@@ -220,14 +287,14 @@ def updateWpt2():
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
 
             # Count connections
-            synapses = np.array(np.nonzero(Wpt[Currentiteration, :, :, rdim1, rdim2]))
+            synapses = np.array(np.nonzero(Wpt[Timepoint, :, :, rdim1, rdim2]))
             connections[rdim1, rdim2] = len(synapses[0, :])
 
             # Calculate similarity
             for synapse in range(int(len(synapses[0, :]))):
                 tdim1 = synapses[0, synapse]
                 tdim2 = synapses[1, synapse]
-                dist[tdim1, tdim2, rdim1, rdim2] = (Crb[rdim1, rdim2] - Ctb[Currentiteration, tdim1, tdim2]) ** 2
+                dist[tdim1, tdim2, rdim1, rdim2] = (Crb[rdim1, rdim2] - Ctb[Timepoint, tdim1, tdim2]) ** 2
                 sim[tdim1, tdim2, rdim1, rdim2] = np.exp(-dist[tdim1, tdim2, rdim1, rdim2] / (2 * kappa ** 2))
 
             # Calculate mean similarity
@@ -244,7 +311,7 @@ def updateWpt2():
                     sim[Tmindim1:Tmaxdim1 + 1, Tmindim2:Tmaxdim2 + 1, rdim1, rdim2] - meansim[rdim1, rdim2])
 
                 # Calculate deltaWsum
-                synapses = np.array(np.nonzero(Wpt[Currentiteration, :, :, rdim1, rdim2]))
+                synapses = np.array(np.nonzero(Wpt[Timepoint, :, :, rdim1, rdim2]))
                 for synapse in range(int(len(synapses[0, :]))):
                     deltaWsum[rdim1, rdim2] += deltaWpt[synapses[0, synapse], synapses[1, synapse], rdim1, rdim2]
 
@@ -252,49 +319,87 @@ def updateWpt2():
                 for synapse in range(int(len(synapses[0, :]))):
                     tdim1 = synapses[0, synapse]
                     tdim2 = synapses[1, synapse]
-                    Wpt[Currentiteration, tdim1, tdim2, rdim1, rdim2] = (Wpt[
-                                                                             Currentiteration, tdim1, tdim2, rdim1, rdim2] +
-                                                                         deltaWpt[tdim1, tdim2, rdim1, rdim2]) * Wtot[
-                                                                            rdim1, rdim2] / (
-                                                                        Wtot[rdim1, rdim2] + deltaWsum[rdim1, rdim2])
+                    Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] = (Wpt[
+                                                                      Timepoint, tdim1, tdim2, rdim1, rdim2] +
+                                                                  deltaWpt[tdim1, tdim2, rdim1, rdim2]) * Wtot[
+                                                                     rdim1, rdim2] / (
+                                                                     Wtot[rdim1, rdim2] + deltaWsum[
+                                                                         rdim1, rdim2])
 
 
 def removesynapses():
-    synapses = np.array(np.nonzero(Wpt[Currentiteration, :, :, :, :]))
+    synapses = np.array(np.nonzero(Wpt[Timepoint, :, :, :, :]))
     for synapse in range(int(len(synapses[0, :]))):
         tdim1 = synapses[0, synapse]
         tdim2 = synapses[1, synapse]
         rdim1 = synapses[2, synapse]
         rdim2 = synapses[3, synapse]
-        if Wpt[Currentiteration, tdim1, tdim2, rdim1, rdim2] < elim * Wtot[rdim1, rdim2]:
-            Wpt[Currentiteration, tdim1, tdim2, rdim1, rdim2] = 0.
+        if Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] < elim * Wtot[rdim1, rdim2]:
+            Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] = 0.
 
 
 def addsynapses():
     synapses = np.array(
-        np.nonzero(Wpt[Currentiteration, :, :, :, :]))
+        np.nonzero(Wpt[Timepoint, :, :, :, :]))
 
     for synapse in range(int(len(synapses[0, :]))):
         tdim1 = synapses[0, synapse]
         tdim2 = synapses[1, synapse]
         rdim1 = synapses[2, synapse]
         rdim2 = synapses[3, synapse]
-        if Wpt[Currentiteration, tdim1, tdim2, rdim1, rdim2] > sprout * Wtot[rdim1, rdim2]:
+        if Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] > sprout * Wtot[rdim1, rdim2]:
 
-            if Wpt[Currentiteration, tdim1 + 1, tdim2, rdim1, rdim2] == 0 and tdim1 + 1 <= Tmaxdim1:
-                Wpt[Currentiteration, tdim1 + 1, tdim2, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
-            if Wpt[Currentiteration, tdim1 - 1, tdim2, rdim1, rdim2] == 0 and tdim1 - 1 >= Tmindim1:
-                Wpt[Currentiteration, tdim1 - 1, tdim2, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
-            if Wpt[Currentiteration, tdim1, tdim2 + 1, rdim1, rdim2] == 0 and tdim2 + 1 <= Tmaxdim2:
-                Wpt[Currentiteration, tdim1, tdim2 + 1, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
-            if Wpt[Currentiteration, tdim1, tdim2 - 1, rdim1, rdim2] == 0 and tdim2 - 1 >= Tmindim2:
-                Wpt[Currentiteration, tdim1, tdim2 - 1, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
+            if Wpt[Timepoint, tdim1 + 1, tdim2, rdim1, rdim2] == 0 and tdim1 + 1 <= Tmaxdim1:
+                Wpt[Timepoint, tdim1 + 1, tdim2, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
+            if Wpt[Timepoint, tdim1 - 1, tdim2, rdim1, rdim2] == 0 and tdim1 - 1 >= Tmindim1:
+                Wpt[Timepoint, tdim1 - 1, tdim2, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
+            if Wpt[Timepoint, tdim1, tdim2 + 1, rdim1, rdim2] == 0 and tdim2 + 1 <= Tmaxdim2:
+                Wpt[Timepoint, tdim1, tdim2 + 1, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
+            if Wpt[Timepoint, tdim1, tdim2 - 1, rdim1, rdim2] == 0 and tdim2 - 1 >= Tmindim2:
+                Wpt[Timepoint, tdim1, tdim2 - 1, rdim1, rdim2] = newW * Wtot[rdim1, rdim2]
 
 
 def updatexFieldcentres():
     for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
         for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-            xFieldcentres[0, Currentiteration, tdim1, tdim2] = (Rmaxdim1 - Rmindim1 + 1) * tdim1 / (
+            xFieldcentres[0, Timepoint, tdim1, tdim2] = (Rmaxdim1 - Rmindim1 + 1) * tdim1 / (
                 Tmaxdim1 - Tmindim1 + 1)
-            xFieldcentres[1, Currentiteration, tdim1, tdim2] = (Rmaxdim2 - Rmindim2 + 1) * tdim2 / (
+            xFieldcentres[1, Timepoint, tdim1, tdim2] = (Rmaxdim2 - Rmindim2 + 1) * tdim2 / (
                 Tmaxdim2 - Tmindim2 + 1)
+
+
+def growretina():
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    if Currentiteration % dstep == 0 and Currentiteration != 0:
+        # Old map
+        oldmap = np.zeros([NRdim1 + 1, NRdim2 + 1])
+        oldmap[Rmindim1:Rmaxdim1 + 1, Rmindim2:Rmaxdim2 + 1] = 1
+
+        # Grow retina
+        if Rmindim1 > 1:
+            Rmindim1 -= 1
+        if Rmaxdim1 < NRdim1:
+            Rmaxdim1 += 1
+        if Rmindim2 > 1:
+            Rmindim2 -= 1
+        if Rmaxdim2 < NRdim2:
+            Rmaxdim2 += 1
+
+        # New map
+        newmap = np.zeros([NRdim1 + 1, NRdim2 + 1])
+        newmap[Rmindim1:Rmaxdim1 + 1, Rmindim2:Rmaxdim2 + 1] = 1
+
+        # New connections
+        for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
+            for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
+                if newmap[rdim1, rdim2] - oldmap[rdim1, rdim2] > 0:
+                    connections(rdim1, rdim2)
+
+
+def growtectum():
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    if Currentiteration % dstep == 0 and Currentiteration != 0:
+        if Tmaxdim1 < NTdim1 - 1:
+            Tmaxdim1 += 2
+        if Tmaxdim2 < NTdim2 - 1:
+            Tmaxdim2 += 2

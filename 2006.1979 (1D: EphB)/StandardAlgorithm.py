@@ -19,19 +19,18 @@ f.updateNct()
 
 # Initial Connections
 f.setWtot()
-f.initialconnections2()
+f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
-    f.Currentiteration += 1
+    f.updatetimepoint()
 
-    f.updateI()
-
-    f.updateCtb()
-
-    f.updateWpt2()
+    f.updateWpt()
     f.removesynapses()
     f.addsynapses()
+
+    f.updateI()
+    f.updateCtb()
 
     f.updatexFieldcentres()
 
@@ -40,9 +39,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/EphrinB', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/Weightmatrix', f.Wpt)
+np.save('../Temporary Data/EphrinB', f.Ctb)
+np.save('../Temporary Data/xFieldcentres', f.xFieldcentres)
 
 ###################### END ########################
 

@@ -8,26 +8,21 @@ start = time.time()
 ######################## ALGORITHM ##########################
 
 # MODEL TYPE
-
 f.typedevelopment()
 
 # MARKER LOCATIONS
-
 f.setmarkerlocations()
 
 # PRESYNAPTIC CONCENTRATIONS
-
 f.updateNc()
 f.setretinalconcs()
 f.normaliseCpm()
 
 # INITIAL CONNECTIONS
-
 f.setWtot()
 f.initialconnections()
 
 # INITIAL CONCENTRATIONS
-
 f.updateQtm()
 f.updatetectalconcs()
 f.normaliseCtm()

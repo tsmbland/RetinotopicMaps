@@ -22,14 +22,14 @@ f.setWtot()
 
 # Iterations
 for iteration in range(f.Iterations):
-    f.Currentiteration += 1
-
-    f.updateI()
-    f.updateCtb()
+    f.updatetimepoint()
 
     f.updateWpt()
     f.removesynapses()
     f.addsynapses()
+
+    f.updateI()
+    f.updateCtb()
 
     f.updatexFieldcentres()
 
@@ -38,9 +38,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix2', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/EphrinB2', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/Weightmatrix2', f.Wpt)
+np.save('../Temporary Data/EphrinB2', f.Ctb)
+np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres)
 
 ###################### END ########################
 

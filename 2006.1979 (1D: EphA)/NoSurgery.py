@@ -22,7 +22,7 @@ f.setWtot()
 
 # Iterations
 for iteration in range(f.Iterations):
-    f.Currentiteration += 1
+    f.updatetimepoint()
 
     f.updateI()
     f.updateCta()
@@ -38,9 +38,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix2', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/EphrinA2', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/Weightmatrix2', f.Wpt)
+np.save('../Temporary Data/EphrinA2', f.Cta)
+np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres)
 
 ###################### END ########################
 

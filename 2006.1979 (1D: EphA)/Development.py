@@ -21,10 +21,7 @@ f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
-    f.Currentiteration += 1
-
-    f.updateI()
-    f.updateCta()
+    f.updatetimepoint()
 
     f.updateWtot()
     f.updateWpt()
@@ -33,7 +30,10 @@ for iteration in range(f.Iterations):
 
     f.growtectum()
     f.growretina()
-    f.updateNc()
+    f.updateNct()
+
+    f.updateI()
+    f.updateCta()
 
     f.updatexFieldcentres()
 
@@ -42,9 +42,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/EphrinA', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../Temporary Data/Weightmatrix', f.Wpt)
+np.save('../Temporary Data/EphrinA', f.Cta)
+np.save('../Temporary Data/xFieldcentres', f.xFieldcentres)
 
 ###################### END ########################
 
