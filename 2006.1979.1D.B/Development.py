@@ -1,5 +1,3 @@
-# 2006/1979 hybrid model
-
 import numpy as np
 import time
 import sys
@@ -10,7 +8,7 @@ start = time.time()
 ######################## ALGORITM #######################
 
 # Model Type
-f.typestandard()
+f.typedevelopment()
 
 # Set Gradients
 f.setRetinalGradients()
@@ -25,9 +23,14 @@ f.initialconnections()
 for iteration in range(f.Iterations):
     f.updatetimepoint()
 
+    f.updateWtot()
     f.updateWpt()
     f.removesynapses()
     f.addsynapses()
+
+    f.growtectum()
+    f.growretina()
+    f.updateNct()
 
     f.updateI()
     f.updateCtb()
@@ -39,9 +42,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt)
-np.save('../Temporary Data/EphrinB', f.Ctb)
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres)
+np.save('../TemporaryData/Weightmatrix', f.Wpt)
+np.save('../TemporaryData/EphrinB', f.Ctb)
+np.save('../TemporaryData/xFieldcentres', f.xFieldcentres)
 
 ###################### END ########################
 

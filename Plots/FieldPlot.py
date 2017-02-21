@@ -7,8 +7,8 @@ start = time.time()
 
 ##################### IMPORT DATA ########################
 
-Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
-Fieldcentres = np.load('../Temporary Data/Fieldcentres.npy')
+Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
+Fieldcentres = np.load('../TemporaryData/FieldCentres.npy')
 
 
 ######################## PLOT OPTIONS #####################

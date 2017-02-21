@@ -5,11 +5,11 @@ import Functions as f
 
 start = time.time()
 
+
 ################## IMPORT DATA ###################
-Cta = np.load('../Temporary Data/EphrinA.npy')
-f.Cta[0, :, :] = Cta[-1, :, :]
-Ctb = np.load('../Temporary Data/EphrinB.npy')
+Ctb = np.load('../TemporaryData/EphrinB.npy')
 f.Ctb[0, :, :] = Ctb[-1, :, :]
+
 
 ######################## ALGORITM #######################
 
@@ -28,13 +28,12 @@ f.initialconnections()
 for iteration in range(f.Iterations):
     f.updatetimepoint()
 
+    f.updateI()
+    f.updateCtb()
+
     f.updateWpt()
     f.removesynapses()
     f.addsynapses()
-
-    f.updateI()
-    f.updateCta()
-    f.updateCtb()
 
     f.updatexFieldcentres()
 
@@ -43,10 +42,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix2', f.Wpt)
-np.save('../Temporary Data/EphrinA2', f.Cta)
-np.save('../Temporary Data/EphrinB2', f.Ctb)
-np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres)
+np.save('../TemporaryData/Weightmatrix2', f.Wpt)
+np.save('../TemporaryData/EphrinB2', f.Ctb)
+np.save('../TemporaryData/xFieldcentres2', f.xFieldcentres)
 
 ###################### END ########################
 

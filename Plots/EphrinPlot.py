@@ -4,15 +4,15 @@ from matplotlib.widgets import Slider
 
 ####################### IMPORT DATA ######################
 
-Cta = np.load('../Temporary Data/EphrinA.npy')
-Ctb = np.load('../Temporary Data/EphrinB.npy')
+Cta = np.load('../TemporaryData/EphrinA.npy')
+Ctb = np.load('../TemporaryData/EphrinB.npy')
 
 ######################## PLOT OPTIONS #####################
 
 TRin = 10  # temporal resolution of input files
 
-EphAslice = 1 #(len(Cta[0, 0, :]) - 2) // 2
-EphBslice = 1 #(len(Ctb[0, :, 0]) - 2) // 2
+EphAslice = (len(Cta[0, 0, :]) - 2) // 2
+EphBslice = (len(Ctb[0, :, 0]) - 2) // 2
 
 ######################### PLOT ############################
 ymax = max(Cta.max(), Ctb.max())

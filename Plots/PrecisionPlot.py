@@ -3,9 +3,9 @@ import numpy as np
 
 ##################### IMPORT DATA #####################
 
-Fieldsize = np.load('../Temporary Data/Fieldsize.npy')
-Fieldseparation = np.load('../Temporary Data/Fieldseparation.npy')
-Systemsmatch = np.load('../Temporary Data/Systemsmatch.npy')
+Fieldsize = np.load('../TemporaryData/FieldSize.npy')
+Fieldseparation = np.load('../TemporaryData/FieldSeparation.npy')
+Systemsmatch = np.load('../TemporaryData/SystemsMatch.npy')
 
 ###################### OPTIONS #######################
 

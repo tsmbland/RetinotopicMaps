@@ -5,15 +5,15 @@ import sys
 
 ####################### IMPORT DATA ######################
 
-Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
+Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
 
 ######################## PLOT OPTIONS #####################
 
 TRin = 10  # temporal resolution of input file
 
-Rplotdim = 2  # retina dimension plotted (1 or 2)
+Rplotdim = 1  # retina dimension plotted (1 or 2)
 Rplotslice = (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
-Tplotdim = 2
+Tplotdim = 1
 Tplotslice = (len(Weightmatrix[0, 0, :, 0, 0]) - 2) // 2
 
 ######################## TABLE #########################
@@ -75,7 +75,7 @@ sframe = Slider(axframe, 'Iteration', 0, (len(Weightmatrix[:, 0, 0, 0, 0])) * TR
 
 
 def weightplot(i):
-    wplot = ax.scatter(table[i, :, Tplotdim - 1], table[i, :, Rplotdim + 1], s=(table[i, :, 4]) * 100, marker='s',
+    wplot = ax.scatter(table[i, :, Tplotdim - 1], table[i, :, Rplotdim + 1], s=(table[i, :, 4]) * 50, marker='s',
                        c=(table[i, :, 5]),
                        cmap='Greys', edgecolors='k')
     wplot.set_clim(0, 1)
@@ -93,7 +93,7 @@ def weightplot(i):
 
 def update(val):
     ax.clear()
-    it = np.floor(sframe.val)//TRin
+    it = np.floor(sframe.val) // TRin
     weightplot(it)
 
 

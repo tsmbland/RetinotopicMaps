@@ -4,7 +4,7 @@ from matplotlib.widgets import Slider
 
 ####################### IMPORT DATA ######################
 
-Concmatrix = np.load('../Temporary Data/Tectal Concentrations.npy')
+Concmatrix = np.load('../TemporaryData/TectalConcentrations.npy')
 
 ######################## PLOT OPTIONS #####################
 

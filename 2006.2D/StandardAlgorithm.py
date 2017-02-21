@@ -1,39 +1,34 @@
+# Standard model
+
 import numpy as np
-import time
 import sys
+import time
 import Functions as f
 
 start = time.time()
 
-
-################## IMPORT DATA ###################
-Ctb = np.load('../Temporary Data/EphrinB.npy')
-f.Ctb[0, :, :] = Ctb[-1, :, :]
-
-
 ######################## ALGORITM #######################
 
-# Model Type
-f.typemismatchsurgery()
 
 # Set Gradients
 f.setRetinalGradients()
+f.setTectalGradients()
 f.updateNct()
 
 # Initial Connections
-f.setWtot()
 f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
-    f.updatetimepoint()
+    f.Currentiteration += 1
 
     f.updateI()
+    f.updateCta()
     f.updateCtb()
 
+    f.updateDpt()
+    f.updateSpt()
     f.updateWpt()
-    f.removesynapses()
-    f.addsynapses()
 
     f.updatexFieldcentres()
 
@@ -42,9 +37,10 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix2', f.Wpt)
-np.save('../Temporary Data/EphrinB2', f.Ctb)
-np.save('../Temporary Data/xFieldcentres2', f.xFieldcentres)
+np.save('../TemporaryData/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
+np.save('../TemporaryData/EphrinA', f.Cta[0:f.Iterations + 2:f.TRout, :, :])
+np.save('../TemporaryData/EphrinB', f.Ctb[0:f.Iterations + 2:f.TRout, :, :])
+np.save('../TemporaryData/xFieldCentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
 

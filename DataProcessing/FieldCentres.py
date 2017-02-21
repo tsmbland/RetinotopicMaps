@@ -6,7 +6,7 @@ start = time.time()
 
 ##################### IMPORT DATA ########################
 
-Weightmatrix = np.load('../Temporary Data/Weightmatrix.npy')
+Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
 
 
 ###################### OPTIONS #########################
@@ -50,7 +50,7 @@ for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout//TRin):
 
 ##################### EXPORT DATA ###################
 
-np.save('../Temporary Data/Fieldcentres', Fieldcentres)
+np.save('../TemporaryData/FieldCentres', Fieldcentres)
 
 ###################### END ########################
 sys.stdout.write('\rComplete!')

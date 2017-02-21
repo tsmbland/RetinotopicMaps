@@ -1,5 +1,3 @@
-# 2006/1979 hybrid model
-
 import numpy as np
 import time
 import sys
@@ -7,30 +5,31 @@ import Functions as f
 
 start = time.time()
 
+################## IMPORT DATA ###################
+Wpt = np.load('../TemporaryData/Weightmatrix.npy')
+f.Wpt[0, :, :, :, :] = Wpt[-1, :, :, :, :]
+Cta = np.load('../TemporaryData/EphrinA.npy')
+f.Cta[0, :, :] = Cta[-1, :, :]
+
 ######################## ALGORITM #######################
 
 # Model Type
 f.typestandard()
 
-# Set Gradients
 f.setRetinalGradients()
-f.setTectalGradients()
 f.updateNct()
-
-# Initial Connections
 f.setWtot()
-f.initialconnections()
 
 # Iterations
 for iteration in range(f.Iterations):
     f.updatetimepoint()
 
+    f.updateI()
+    f.updateCta()
+
     f.updateWpt()
     f.removesynapses()
     f.addsynapses()
-
-    f.updateI()
-    f.updateCta()
 
     f.updatexFieldcentres()
 
@@ -39,9 +38,9 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt)
-np.save('../Temporary Data/EphrinA', f.Cta)
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres)
+np.save('../TemporaryData/Weightmatrix2', f.Wpt)
+np.save('../TemporaryData/EphrinA2', f.Cta)
+np.save('../TemporaryData/xFieldCentres2', f.xFieldcentres)
 
 ###################### END ########################
 

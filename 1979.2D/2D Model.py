@@ -352,9 +352,9 @@ for iteration in range(1, Iterations + 1):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', Wpt[0:Iterations + 2:TRout, :, :, :, :])
-np.save('../Temporary Data/Retinal Concentrations', Cpm)
-np.save('../Temporary Data/Tectal Concentrations', Ctm[:, 0:Iterations + 2:TRout, :, :])
+np.save('../TemporaryData/Weightmatrix', Wpt[0:Iterations + 2:TRout, :, :, :, :])
+np.save('../TemporaryData/RetinalConcentrations', Cpm)
+np.save('../TemporaryData/TectalConcentrations', Ctm[:, 0:Iterations + 2:TRout, :, :])
 
 ###################### END ########################
 

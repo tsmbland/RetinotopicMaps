@@ -8,26 +8,21 @@ start = time.time()
 ######################## ALGORITHM ##########################
 
 # MODEL TYPE
-
-f.typestandard()
+f.typedevelopment()
 
 # MARKER LOCATIONS
-
 f.setmarkerlocations()
 
 # PRESYNAPTIC CONCENTRATIONS
-
 f.updateNc()
 f.setretinalconcs()
 f.normaliseCpm()
 
 # INITIAL CONNECTIONS
-
 f.setWtot()
 f.initialconnections()
 
 # INITIAL CONCENTRATIONS
-
 f.updateQtm()
 f.updatetectalconcs()
 f.normaliseCtm()
@@ -36,9 +31,18 @@ f.normaliseCtm()
 
 for iteration in range(1, f.Iterations + 1):
     f.Currentiteration += 1
+
+    f.updateWtot()
     f.updateWeight()
     f.removesynapses()
     f.addsynapses()
+
+    f.growtectum()
+    f.growretina()
+    f.updateNc()
+
+    f.updateretinalconcs()
+    f.normaliseCpm()
 
     f.updateQtm()
     f.updatetectalconcs()
@@ -51,10 +55,10 @@ for iteration in range(1, f.Iterations + 1):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/Retinal Concentrations', f.Cpm)
-np.save('../Temporary Data/Tectal Concentrations', f.Ctm[:, 0:f.Iterations + 2:f.TRout, :, :])
-np.save('../Temporary Data/xFieldcentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../TemporaryData/Weightmatrix', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
+np.save('../TemporaryData/RetinalConcentrations', f.Cpm)
+np.save('../TemporaryData/TectalConcentrations', f.Ctm[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../TemporaryData/xFieldCentres', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
 

@@ -6,10 +6,10 @@ import Functions as f
 start = time.time()
 
 ################## IMPORT DATA ###################
-Wpt = np.load('../Temporary Data/Weightmatrix.npy')
+Wpt = np.load('../TemporaryData/Weightmatrix.npy')
 f.Wpt[0, :, :, :, :] = Wpt[-1, :, :, :, :]
-f.Cpm = np.load('../Temporary Data/Retinal Concentrations.npy')
-Ctm = np.load('../Temporary Data/Tectal Concentrations.npy')
+f.Cpm = np.load('../TemporaryData/RetinalConcentrations.npy')
+Ctm = np.load('../TemporaryData/TectalConcentrations.npy')
 f.Ctm[:, 0, :, :] = Ctm[:, -1, :, :]
 
 ################## ALGORITHM ######################
@@ -40,9 +40,10 @@ for iteration in range(1, f.Iterations + 1):
 
 #################### EXPORT DATA #################
 
-np.save('../Temporary Data/Weightmatrix2', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
-np.save('../Temporary Data/Retinal Concentrations2', f.Cpm)
-np.save('../Temporary Data/Tectal Concentrations2', f.Ctm[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../TemporaryData/Weightmatrix2', f.Wpt[0:f.Iterations + 2:f.TRout, :, :, :, :])
+np.save('../TemporaryData/RetinalConcentrations2', f.Cpm)
+np.save('../TemporaryData/TectalConcentrations2', f.Ctm[:, 0:f.Iterations + 2:f.TRout, :, :])
+np.save('../TemporaryData/xFieldCentres2', f.xFieldcentres[:, 0:f.Iterations + 2:f.TRout, :, :])
 
 ###################### END ########################
 
