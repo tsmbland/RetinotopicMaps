@@ -2,41 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/1D Model.jl" afterPath="$PROJECT_DIR$/1979.1D/1D Model.jl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/1D Model.py" afterPath="$PROJECT_DIR$/1979.1D/1D Model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/DEVELOPMENT.py" afterPath="$PROJECT_DIR$/1979.1D/DEVELOPMENT.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/MAP PRECISION.py" afterPath="$PROJECT_DIR$/1979.1D/MAP PRECISION.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/MISMATCH SURGERY.py" afterPath="$PROJECT_DIR$/1979.1D/MISMATCH SURGERY.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/Map duplication.py" afterPath="$PROJECT_DIR$/1979.1D/Map duplication.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/TECTAL ROTATION.py" afterPath="$PROJECT_DIR$/1979.1D/TECTAL ROTATION.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (1D)/TIMING.py" afterPath="$PROJECT_DIR$/1979.1D/TIMING.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model.jl" afterPath="$PROJECT_DIR$/1979.2D/2D Model.jl" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/2D Model.py" afterPath="$PROJECT_DIR$/1979.2D/2D Model.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/Development.py" afterPath="$PROJECT_DIR$/1979.2D/Development.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/Functions.py" afterPath="$PROJECT_DIR$/1979.2D/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/MismatchSurgery.py" afterPath="$PROJECT_DIR$/1979.2D/MismatchSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/NoSurgery.py" afterPath="$PROJECT_DIR$/1979.2D/NoSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/1979 (2D)/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/1979.2D/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006 (2D)/Functions.py" afterPath="$PROJECT_DIR$/2006.2D/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006 (2D)/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/2006.2D/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphA)/Development.py" afterPath="$PROJECT_DIR$/2006.1979.1D.A/Development.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphA)/Functions.py" afterPath="$PROJECT_DIR$/2006.1979.1D.A/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphA)/MismatchSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.1D.A/MismatchSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphA)/NoSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.1D.A/NoSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphA)/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/2006.1979.1D.A/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphB)/Development.py" afterPath="$PROJECT_DIR$/2006.1979.1D.B/Development.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphB)/Functions.py" afterPath="$PROJECT_DIR$/2006.1979.1D.B/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphB)/MismatchSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.1D.B/MismatchSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphB)/NoSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.1D.B/NoSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (1D: EphB)/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/2006.1979.1D.B/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (2D)/Development.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Development.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (2D)/Functions.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (2D)/MismatchSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (2D)/NoSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.2D/NoSurgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979 (2D)/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Data Processing/FieldCentres.py" afterPath="$PROJECT_DIR$/DataProcessing/FieldCentres.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Data Processing/MapPrecision.py" afterPath="$PROJECT_DIR$/DataProcessing/MapPrecision.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Retinotopic Maps.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/Development.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Development.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/Functions.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/NoSurgery.py" afterPath="$PROJECT_DIR$/2006.1979.2D/NoSurgery.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/FieldCentres.py" afterPath="$PROJECT_DIR$/DataProcessing/FieldCentres.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/MapPrecision.py" afterPath="$PROJECT_DIR$/DataProcessing/MapPrecision.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/ConcPlot.py" afterPath="$PROJECT_DIR$/Plots/ConcPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/EphrinPlot.py" afterPath="$PROJECT_DIR$/Plots/EphrinPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/FieldPlot.py" afterPath="$PROJECT_DIR$/Plots/FieldPlot.py" />
@@ -77,57 +53,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphB)/Mismatch Surgery.py" />
-        <option value="$PROJECT_DIR$/2006/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006/Functions.py" />
-        <option value="$PROJECT_DIR$/2006.1979/Development.py" />
-        <option value="$PROJECT_DIR$/2006.1979/Functions.py" />
-        <option value="$PROJECT_DIR$/2006.1979/Mismatch Surgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006.1979/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphA)/Mismatch Surgery.py" />
-        <option value="$PROJECT_DIR$/2006 (2D)/Functions.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphB)/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphA)/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/Development.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/MismatchSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphA)/Development.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphA)/MismatchSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphA)/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphB)/Development.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphB)/MismatchSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphB)/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
-        <option value="$PROJECT_DIR$/Plots/WeightPlot.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/rough.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphA)/Functions.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (1D: EphB)/Functions.py" />
-        <option value="$PROJECT_DIR$/Data Processing/rough.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/Functions.py" />
-        <option value="$PROJECT_DIR$/2006.1979 (2D)/setup.py" />
-        <option value="$PROJECT_DIR$/rough/rough.py" />
-        <option value="$PROJECT_DIR$/DataProcessing/MapPrecision.py" />
-        <option value="$PROJECT_DIR$/Plots/ConcPlot.py" />
-        <option value="$PROJECT_DIR$/DataProcessing/FieldCentres.py" />
-        <option value="$PROJECT_DIR$/Plots/FieldPlot.py" />
-        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
-        <option value="$PROJECT_DIR$/2006.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphB)/NoSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/Plots/EphrinPlot.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/Plots/WeightPlot.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/rough.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphA)/Functions.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphB)/Functions.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/Data Processing/rough.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/Functions.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/setup.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/rough/rough.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/DataProcessing/MapPrecision.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/Plots/ConcPlot.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/DataProcessing/FieldCentres.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/Plots/FieldPlot.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/Plots/PrecisionPlot.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.2D/NoSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.2D/MismatchSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.2D/Development.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.1D.A/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.1D.A/NoSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.1D.A/MismatchSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.1D.A/Development.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/1979.2D/2D Model.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/1979.2D/Development.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/1979.2D/MismatchSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/1979.2D/NoSurgery.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/1979.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979.1D.A/Functions.py" />
+        <option value="$PROJECT_DIR$/1979.2D/Functions.py" />
+        <option value="$PROJECT_DIR$/1979.1D/MAP PRECISION.py" />
+        <option value="$PROJECT_DIR$/1979.2D/Development.py" />
+        <option value="$PROJECT_DIR$/2006.1979.2D/rough.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/Functions.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/Options.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/NoSurgery.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/Development.py" />
-        <option value="$PROJECT_DIR$/2006.1979.1D.A/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006.1979.1D.A/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979.1D.A/MismatchSurgery.py" />
-        <option value="$PROJECT_DIR$/2006.1979.1D.A/Development.py" />
-        <option value="$PROJECT_DIR$/1979.2D/2D Model.py" />
-        <option value="$PROJECT_DIR$/1979.2D/Development.py" />
-        <option value="$PROJECT_DIR$/1979.2D/MismatchSurgery.py" />
-        <option value="$PROJECT_DIR$/1979.2D/NoSurgery.py" />
-        <option value="$PROJECT_DIR$/1979.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
+        <option value="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
+        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/FieldPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/ConcPlot.py" />
+        <option value="$PROJECT_DIR$/Plots/WeightPlot.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/MapPrecision.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/FieldCentres.py" />
+        <option value="$PROJECT_DIR$/2006.1979.1D.A/Functions.py" />
       </list>
     </option>
   </component>
@@ -175,7 +151,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
+              <option name="myItemId" value="RetinotopicMaps" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -186,92 +162,24 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Old code/2D MODEL (original, with plots).py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2006.1979 (1D: EphB)" />
-      <recent name="$PROJECT_DIR$/2006.1979 (1D: EphA)" />
+      <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphB)" />
+      <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphA)" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2006" />
+      <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006" />
       <recent name="$PROJECT_DIR$/../Old Code" />
-      <recent name="$PROJECT_DIR$/2D Model" />
-      <recent name="$PROJECT_DIR$/Data Processing" />
+      <recent name="$PROJECT_DIR$/../Retinotopic Maps/2D Model" />
+      <recent name="$PROJECT_DIR$/../Retinotopic Maps/Data Processing" />
       <recent name="$PROJECT_DIR$/../.." />
     </key>
   </component>
-  <component name="RunManager" selected="Python.PrecisionPlot">
-    <configuration default="false" name="FieldCentres" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Processing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Processing/FieldCentres.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MapPrecision" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data Processing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data Processing/MapPrecision.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="StandardAlgorithm (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2006.1979 (2D)" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2006.1979 (2D)/StandardAlgorithm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="FieldPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Retinotopic Maps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/FieldPlot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.MapPrecision">
     <configuration default="false" name="PrecisionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,8 +191,76 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Retinotopic Maps" />
+      <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EphrinPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="StandardAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2006.1979.2D" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FieldCentres" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataProcessing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataProcessing/FieldCentres.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MapPrecision" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataProcessing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataProcessing/MapPrecision.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -442,19 +418,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.FieldCentres" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MapPrecision" />
-      <item index="3" class="java.lang.String" itemvalue="Python.StandardAlgorithm (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.FieldPlot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+      <item index="1" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.EphrinPlot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
+      <item index="4" class="java.lang.String" itemvalue="Python.FieldCentres" />
+      <item index="5" class="java.lang.String" itemvalue="Python.MapPrecision" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MapPrecision" />
-        <item index="2" class="java.lang.String" itemvalue="Python.FieldPlot" />
-        <item index="3" class="java.lang.String" itemvalue="Python.FieldCentres" />
-        <item index="4" class="java.lang.String" itemvalue="Python.StandardAlgorithm (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.MapPrecision" />
+        <item index="1" class="java.lang.String" itemvalue="Python.FieldCentres" />
+        <item index="2" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
+        <item index="4" class="java.lang.String" itemvalue="Python.EphrinPlot" />
       </list>
     </recent_temporary>
   </component>
@@ -474,13 +450,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Changes to plot layout">
-      <created>1482428652347</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1482428652347</updated>
     </task>
     <task id="LOCAL-00024" summary="Initial connections and normalisation working">
       <created>1482428685948</created>
@@ -818,7 +787,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487629919286</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="renamed folders, changed data file names">
+      <created>1487697489204</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1487697489205</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView">
@@ -836,11 +812,10 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.20492454" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.8824464" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
@@ -851,6 +826,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -859,10 +835,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.20492454" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.8824464" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -905,7 +881,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="tidier code" />
     <MESSAGE value="tidier code + various fixes" />
     <MESSAGE value="set up preliminary version of hybrid model, many changes still needed..." />
     <MESSAGE value="fixed issue with new synapses function and tectal concs function" />
@@ -930,7 +905,8 @@
     <MESSAGE value="renamed folder" />
     <MESSAGE value="added stochasticity to initial tectal and retinal gradients, and changed method of storing data time-dependence" />
     <MESSAGE value="removed t=0 data from plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed t=0 data from plots" />
+    <MESSAGE value="renamed folders, changed data file names" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed folders, changed data file names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -946,50 +922,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Old code/2D Model (Tidy)/NoSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Old code/2D Model (Tidy)/__parameters__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2D Model/2D Model (Fast).py" />
-    <entry file="file://$PROJECT_DIR$/../Old code/2D Model (Tidy)/__functions__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="228" column="27" selection-start-line="228" selection-start-column="27" selection-end-line="228" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Old code/2D Model (Tidy)/StandardAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Old code/2D Model (Tidy)/rough.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979.2D/2D Model.jl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979 (2D)/2D Model (Gradients).py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/1979 (2D)/2D Model (Gradients).py" />
     <entry file="file://$PROJECT_DIR$/1979.1D/MISMATCH SURGERY.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1557">
@@ -1004,7 +937,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1979 (2D)/rough.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/1979 (2D)/rough.py" />
     <entry file="file://$PROJECT_DIR$/1979.1D/DEVELOPMENT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="258">
@@ -1013,15 +946,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006/Model 2.py" />
-    <entry file="file://$PROJECT_DIR$/2006.1979/Model2.py" />
-    <entry file="file://$PROJECT_DIR$/2006/Model 2.py" />
-    <entry file="file://$PROJECT_DIR$/2006/Model 3.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/2006/Model 2.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/2006.1979/Model2.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/2006/Model 2.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/2006/Model 3.py" />
     <entry file="file://$PROJECT_DIR$/2006.1979.1D.B/Development.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1029,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,11 +975,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979 (2D)/rough.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/rough.py" />
     <entry file="file://$PROJECT_DIR$/2006.1979.1D.B/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1057,107 +986,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data Processing/rough.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="132" column="13" selection-start-line="132" selection-start-column="13" selection-end-line="132" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979 (2D)/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rough/rough.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rough/Functions.cpython-35m-darwin.so">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42480">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979.2D/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/FieldCentres.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/MapPrecision.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="140" column="34" selection-start-line="140" selection-start-column="34" selection-end-line="140" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/EphrinPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/FieldPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/WeightPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/Data Processing/rough.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/setup.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/rough/rough.py" />
+    <entry file="file://$PROJECT_DIR$/../Retinotopic Maps/rough/Functions.cpython-35m-darwin.so" />
     <entry file="file://$PROJECT_DIR$/2006.2D/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1165,47 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/NoSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5748">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Development.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,7 +1008,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1221,23 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.1D.A/MismatchSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.1D.A/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
-          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1245,7 +1022,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1253,15 +1029,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
           <caret line="356" column="32" selection-start-line="356" selection-start-column="32" selection-end-line="356" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1979.2D/Development.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1269,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,6 +1050,175 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
           <caret line="45" column="96" selection-start-line="45" selection-start-column="96" selection-end-line="45" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979.2D/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979.1D/MAP PRECISION.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1979.2D/Development.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessing/Options.py" />
+    <entry file="file://$PROJECT_DIR$/DataProcessing/Functions.py" />
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/rough.py" />
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/NoSurgery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Development.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/rough.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/0000">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="e#58#69#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="394" column="87" selection-start-line="394" selection-start-column="4" selection-end-line="394" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/EphrinPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/ConcPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="89" selection-start-line="13" selection-start-column="89" selection-end-line="13" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/FieldPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessing/FieldCentres.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/WeightPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessing/MapPrecision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.1D.A/MismatchSurgery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.1D.A/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding />
         </state>
       </provider>

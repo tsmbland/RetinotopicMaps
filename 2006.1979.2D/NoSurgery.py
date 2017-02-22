@@ -41,10 +41,7 @@ for iteration in range(f.Iterations):
 
 #################### EXPORT DATA #################
 
-np.save('../TemporaryData/Weightmatrix2', f.Wpt)
-np.save('../TemporaryData/EphrinA2', f.Cta)
-np.save('../TemporaryData/EphrinB2', f.Ctb)
-np.save('../TemporaryData/xFieldCentres2', f.xFieldcentres)
+f.savedata()
 
 ###################### END ########################
 

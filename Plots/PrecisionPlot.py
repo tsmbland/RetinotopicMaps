@@ -3,13 +3,15 @@ import numpy as np
 
 ##################### IMPORT DATA #####################
 
-Fieldsize = np.load('../TemporaryData/FieldSize.npy')
-Fieldseparation = np.load('../TemporaryData/FieldSeparation.npy')
-Systemsmatch = np.load('../TemporaryData/SystemsMatch.npy')
+JobID = int(input('JobID: '))
+
+Fieldsize = np.load('../../RetinotopicMapsData/%s/FieldSize.npy' % ('{0:04}'.format(JobID)))
+Fieldseparation = np.load('../../RetinotopicMapsData/%s/FieldSeparation.npy' % ('{0:04}'.format(JobID)))
+Systemsmatch = np.load('../../RetinotopicMapsData/%s/SystemsMatch.npy' % ('{0:04}'.format(JobID)))
 
 ###################### OPTIONS #######################
 
-TRin = 10  # Temporal resolution of input files
+TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOTS #######################
 plt.subplot(1, 3, 1)
@@ -33,7 +35,4 @@ plt.ylabel('Mean Distance Between Field Centre and Expected Field Centre')
 plt.xlabel('Time')
 plt.xlim(0, len(Systemsmatch) * TRin)
 
-###################### END ########################
-params = {'font.size': '10'}
-plt.rcParams.update(params)
 plt.show()

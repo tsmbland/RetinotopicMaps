@@ -4,16 +4,15 @@ import time
 
 start = time.time()
 
-##################### IMPORT DATA ########################
-
-Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
-
-
 ###################### OPTIONS #########################
 
-TRin = 10  # temporal resolution of input file
+JobID = int(input('JobID: '))
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))  # temporal resolution of input file
 TRout = TRin  # temporal resolution of output file
 
+##################### IMPORT DATA ########################
+
+Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 
 ###################### FIELD CENTRES ######################
 Fieldcentres = np.zeros(
@@ -43,14 +42,15 @@ def field_centre(i):
     Fieldcentres[:, i, :, :] = np.nan_to_num(Fieldcentres[:, i, :, :])
 
 
-for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout//TRin):
+for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout // TRin):
     field_centre(i)
     sys.stdout.write('\r%i percent' % (i * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
     sys.stdout.flush()
 
 ##################### EXPORT DATA ###################
 
-np.save('../TemporaryData/FieldCentres', Fieldcentres)
+np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), Fieldcentres)
+np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), TRout)
 
 ###################### END ########################
 sys.stdout.write('\rComplete!')

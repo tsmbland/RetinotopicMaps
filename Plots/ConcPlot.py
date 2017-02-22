@@ -4,11 +4,13 @@ from matplotlib.widgets import Slider
 
 ####################### IMPORT DATA ######################
 
-Concmatrix = np.load('../TemporaryData/TectalConcentrations.npy')
+JobID = int(input('JobID: '))
+
+Concmatrix = np.load('../../RetinotopicMapsData/%s/TectalConcentrations.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 10  # temporal resolution of input file
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
 
 Tplotdim = 1
 Tplotslice = 1  # (len(Concmatrix[0, 0, 0, :]) - 2) // 2
@@ -58,8 +60,5 @@ def update(val):
 
 concplot(0)
 
-###################### END ########################
-params = {'font.size': '10'}
-plt.rcParams.update(params)
 sframe.on_changed(update)
 plt.show()

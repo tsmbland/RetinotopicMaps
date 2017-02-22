@@ -5,11 +5,12 @@ import sys
 
 ####################### IMPORT DATA ######################
 
-Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
+JobID = int(input('JobID: '))
+Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 10  # temporal resolution of input file
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
 
 Rplotdim = 1  # retina dimension plotted (1 or 2)
 Rplotslice = (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
@@ -102,7 +103,5 @@ weightplot(0)
 ####################### END ########################
 sys.stdout.write('\rComplete!')
 sys.stdout.flush()
-params = {'font.size': '10'}
-plt.rcParams.update(params)
 sframe.on_changed(update)
 plt.show()

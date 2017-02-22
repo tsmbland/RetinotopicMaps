@@ -2,19 +2,19 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 import time
-start = time.time()
 
+start = time.time()
 
 ##################### IMPORT DATA ########################
 
-Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
-Fieldcentres = np.load('../TemporaryData/FieldCentres.npy')
+JobID = int(input('JobID: '))
 
+Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
+Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 10  # temporal resolution of input files
-
+TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
 ####################### PLOT ##########################
 
@@ -26,7 +26,7 @@ ax.set_xlabel('Retinal Cell Number (Dimension 1)')
 ax.set_ylabel('Retinal Cell Number (Dimension 2)')
 plt.subplots_adjust(left=0.25, bottom=0.25)
 axframe = plt.axes([0.25, 0.1, 0.65, 0.03])
-sframe = Slider(axframe, 'Iteration', 0, len(Fieldcentres[0, :, 0, 0])*TRin - TRin, valinit=0, valfmt='%d')
+sframe = Slider(axframe, 'Iteration', 0, len(Fieldcentres[0, :, 0, 0]) * TRin - TRin, valinit=0, valfmt='%d')
 
 
 def fieldplot(i):
@@ -52,7 +52,7 @@ def fieldplot(i):
 
 
 def update(val):
-    it = np.floor(sframe.val)//TRin
+    it = np.floor(sframe.val) // TRin
     ax.clear()
     fieldplot(it)
     ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
@@ -61,8 +61,5 @@ def update(val):
 
 fieldplot(0)
 
-###################### END ########################
-params = {'font.size': '10'}
-plt.rcParams.update(params)
 sframe.on_changed(update)
 plt.show()

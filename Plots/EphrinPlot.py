@@ -4,12 +4,14 @@ from matplotlib.widgets import Slider
 
 ####################### IMPORT DATA ######################
 
-Cta = np.load('../TemporaryData/EphrinA.npy')
-Ctb = np.load('../TemporaryData/EphrinB.npy')
+JobID = int(input('JobID: '))
+
+Cta = np.load('../../RetinotopicMapsData/%s/EphrinA.npy' % ('{0:04}'.format(JobID)))
+Ctb = np.load('../../RetinotopicMapsData/%s/EphrinB.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
 
-TRin = 10  # temporal resolution of input files
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
 
 EphAslice = (len(Cta[0, 0, :]) - 2) // 2
 EphBslice = (len(Ctb[0, :, 0]) - 2) // 2
@@ -43,8 +45,5 @@ def update(val):
 
 ephrinplot(0)
 
-###################### END ########################
-params = {'font.size': '10'}
-plt.rcParams.update(params)
 sframe.on_changed(update)
 plt.show()

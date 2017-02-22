@@ -4,16 +4,17 @@ import time
 
 start = time.time()
 
-###################### IMPORT DATA #####################
-
-Weightmatrix = np.load('../TemporaryData/Weightmatrix.npy')
-Fieldcentres = np.load('../TemporaryData/Fieldcentres.npy')
-xFieldcentres = np.load('../TemporaryData/xFieldcentres.npy')
-
 ###################### OPTIONS #########################
 
-TRin = 10  # temporal resolution of input file
-TRout = TRin  # temporal resolution of output files
+JobID = int(input('JobID: '))
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))  # temporal resolution of input file
+TRout = TRin  # temporal resolution of output file
+
+###################### IMPORT DATA #####################
+
+Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
+Fieldcentres = np.load('../../RetinotopicMapsData/%s/Fieldcentres.npy' % ('{0:04}'.format(JobID)))
+xFieldcentres = np.load('../../RetinotopicMapsData/%s/xFieldcentres.npy' % ('{0:04}'.format(JobID)))
 
 ###################### PRECISION MEASURES #####################
 
@@ -136,9 +137,10 @@ for i in range(0, len(Weightmatrix[:, 0, 0, 0, 0]), TRout // TRin):
 
 ##################### EXPORT DATA #####################
 
-np.save('../TemporaryData/FieldSize', Fieldsize)
-np.save('../TemporaryData/FieldSeparation', Fieldseparation)
-np.save('../TemporaryData/SystemsMatch', Systemsmatch)
+np.save('../../RetinotopicMapsData/%s/FieldSize' % ('{0:04}'.format(JobID)), Fieldsize)
+np.save('../../RetinotopicMapsData/%s/FieldSeparation' % ('{0:04}'.format(JobID)), Fieldseparation)
+np.save('../../RetinotopicMapsData/%s/SystemsMatch' % ('{0:04}'.format(JobID)), Systemsmatch)
+np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), TRout)
 
 ###################### END ########################
 sys.stdout.write('\rComplete!')
