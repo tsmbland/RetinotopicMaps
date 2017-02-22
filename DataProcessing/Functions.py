@@ -1,34 +1,29 @@
 import numpy as np
 
-###################### OPTIONS #########################
-
-JobID = int(input('JobID: '))
-Timecompression = int(input('Time Compression (1 = No Compression): '))
-TRin = np.load(
-    '../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))  # temporal resolution of input file
-TRout = TRin * Timecompression  # temporal resolution of output file
-
-#################### VARIABLES ##################
-
-Wpt = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
-xFieldCentres = np.load('../../RetinotopicMapsData/%s/xFieldCentres.npy' % ('{0:04}'.format(JobID)))
-
-FieldCentres = np.zeros([2, int(len(Wpt[:, 0, 0, 0, 0]) * (TRin / TRout)), len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
-FieldSeparation = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) * (TRin / TRout)))
-FieldSize = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) * (TRin / TRout)))
-SystemsMatch = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) * (TRin / TRout)))
-
-Currentiteration = -1
-Weightiteration = -1
-
 
 ####################### FUNCTIONS #####################
 
+def importdata(jobid, timecompression):
+    global Wpt, xFieldCentres, FieldCentres, FieldSeparation, FieldSize, SystemsMatch, TRin, Currentiteration, Weightiteration
+    Wpt = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(jobid)))
+    xFieldCentres = np.load('../../RetinotopicMapsData/%s/xFieldCentres.npy' % ('{0:04}'.format(jobid)))
+    TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(jobid)))
 
-def updatetimepoint():
+    FieldCentres = np.zeros(
+        [2, int(len(Wpt[:, 0, 0, 0, 0]) / timecompression), len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
+    FieldSeparation = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
+    FieldSize = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
+    SystemsMatch = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
+
+    Currentiteration = -1
+    Weightiteration = -1
+
+
+
+def updatetimepoint(timecompression):
     global Currentiteration, Weightiteration
     Currentiteration += 1
-    Weightiteration += TRout // TRin
+    Weightiteration += timecompression
 
 
 def field_centre():
