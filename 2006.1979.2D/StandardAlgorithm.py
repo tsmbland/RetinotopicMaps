@@ -5,8 +5,8 @@ import Parameters as p
 
 #################### OPTIONS ####################
 
-nJobs = 4
-Cores = 2
+nJobs = 1
+Cores = 1
 
 
 ##################### ALGORITHM #################
@@ -15,7 +15,7 @@ def job(JobID):
     start = time.time()
     import Functions as f
 
-    # Set Job Parameters
+    # Set Job Parameter(s)
 
     # Model Type
     f.typestandard()
