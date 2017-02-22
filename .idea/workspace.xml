@@ -4,7 +4,6 @@
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/Algorithm.py" afterPath="$PROJECT_DIR$/DataProcessing/Algorithm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/Functions.py" afterPath="$PROJECT_DIR$/DataProcessing/Functions.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="Algorithm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataProcessing/Algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state relative-caret-position="423">
+              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -112,8 +111,8 @@
         <option value="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Algorithm2.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Functions.py" />
-        <option value="$PROJECT_DIR$/DataProcessing/Algorithm.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/Algorithm.py" />
       </list>
     </option>
   </component>
@@ -232,7 +231,7 @@
       <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphA)" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.PrecisionPlot">
+  <component name="RunManager" selected="Python.Algorithm">
     <configuration default="false" name="Algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -479,8 +478,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="1" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
         <item index="2" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
         <item index="3" class="java.lang.String" itemvalue="Python.Algorithm2" />
         <item index="4" class="java.lang.String" itemvalue="Python.Functions" />
@@ -503,13 +502,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00030" summary="field separation function improved">
-      <created>1483218549579</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1483218549580</updated>
     </task>
     <task id="LOCAL-00031" summary="field size measure added, colour coded field centre plot">
       <created>1483383501261</created>
@@ -847,7 +839,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487792381458</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="can now process many jobs">
+      <created>1487795719170</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1487795719170</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TodoView">
@@ -863,13 +862,13 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
@@ -934,7 +933,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changed file structure" />
     <MESSAGE value="adapted plots to be compatible with data with different temporal resolutions" />
     <MESSAGE value="adapted data processing scripts to be compatible with data with different temporal resolutions" />
     <MESSAGE value="can now output data with specified temporal resolution" />
@@ -959,7 +957,8 @@
     <MESSAGE value="combined field centres and map precision scripts into single file" />
     <MESSAGE value="tidied functions code" />
     <MESSAGE value="fixed problem with time compression, now accepts user input" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed problem with time compression, now accepts user input" />
+    <MESSAGE value="can now process many jobs" />
+    <option name="LAST_COMMIT_MESSAGE" value="can now process many jobs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1346,8 +1345,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessing/Algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="423">
+          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

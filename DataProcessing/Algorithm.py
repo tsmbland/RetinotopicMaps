@@ -1,12 +1,14 @@
 import numpy as np
 import sys
 import time
+from joblib import Parallel, delayed
 
 minJobID = int(input('Minimum JobID: '))
 maxJobID = int(input('Maximum JobID: '))
 Timecompression = int(input('Time Compression (1 = No Compression): '))
+Cores = int(input('Cores: '))
 
-for JobID in range(minJobID, maxJobID + 1):
+def job(JobID):
     start = time.time()
     import Functions as f
 
@@ -40,3 +42,5 @@ for JobID in range(minJobID, maxJobID + 1):
     end = time.time()
     elapsed = end - start
     print('\nTime elapsed: ', elapsed, 'seconds')
+
+Parallel(n_jobs=Cores)(delayed(job)(JobID) for JobID in range(minJobID, maxJobID + 1))
