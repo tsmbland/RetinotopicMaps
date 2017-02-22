@@ -1,6 +1,7 @@
 ######################### START #########################
 import time
 import sys
+import Parameters as p
 import Functions as f
 
 start = time.time()
@@ -20,7 +21,7 @@ f.setWtot()
 f.initialconnections()
 
 # Iterations
-for iteration in range(f.Iterations):
+for iteration in range(p.Iterations):
     f.updatetimepoint()
 
     f.updateWpt()
@@ -33,7 +34,7 @@ for iteration in range(f.Iterations):
 
     f.updatexFieldcentres()
 
-    sys.stdout.write('\r%i percent' % (iteration * 100 / f.Iterations))
+    sys.stdout.write('\r%i percent' % (iteration * 100 / p.Iterations))
     sys.stdout.flush()
 
 #################### EXPORT DATA #################
