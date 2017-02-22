@@ -269,7 +269,8 @@ def updateWpt():
             for synapse in range(int(len(synapses[0, :]))):
                 tdim1 = synapses[0, synapse]
                 tdim2 = synapses[1, synapse]
-                dist[tdim1, tdim2, rdim1, rdim2] = ((Crb[rdim1, rdim2] - Ctb[Timepoint, tdim1, tdim2]) ** 2) + (
+                dist[tdim1, tdim2, rdim1, rdim2] = p.distA * (
+                (Crb[rdim1, rdim2] - Ctb[Timepoint, tdim1, tdim2]) ** 2) + p.distB * (
                     (Cra[rdim1, rdim2] * Cta[Timepoint, tdim1, tdim2] - 1) ** 2)
                 sim[tdim1, tdim2, rdim1, rdim2] = np.exp(-dist[tdim1, tdim2, rdim1, rdim2] / (2 * p.kappa ** 2))
 

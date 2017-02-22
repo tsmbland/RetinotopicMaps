@@ -50,6 +50,8 @@ newW = 0.01  # weight of new synapses
 sprout = 0.02  # sprouting threshold
 deltatw = 1  # deltaW time step
 tw = 1  # weight iterations per iteration
+distA = 1  # the contribution made by EphA system to distance
+distB = 1
 
 # Mismatch surgery
 sRmindim1 = 1
