@@ -6,12 +6,14 @@ start = time.time()
 
 
 ##################### ALGORITHM #######################
-for i in range(0, len(f.Weightmatrix[:, 0, 0, 0, 0]), f.TRout // f.TRin):
-    f.field_centre(i)
-    f.field_separation(i)
-    f.field_size(i)
-    f.systems_match(i)
-    sys.stdout.write('\r%i percent' % (i * 100 / len(f.Weightmatrix[:, 0, 0, 0, 0])))
+
+for i in range(0, len(f.Wpt[:, 0, 0, 0, 0]) * f.TRin // f.TRout):
+    f.updatetimepoint()
+    f.field_centre()
+    f.field_separation()
+    f.field_size()
+    f.systems_match()
+    sys.stdout.write('\r%i percent' % ((f.Currentiteration + 1) * 100 / len(f.Wpt[:, 0, 0, 0, 0]) * f.TRout // f.TRin))
     sys.stdout.flush()
 
 ##################### EXPORT DATA #####################
