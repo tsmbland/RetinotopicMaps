@@ -20,14 +20,11 @@ Nct = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])  # neighbour count for a tectal cel
 
 xFieldcentres = np.zeros([2, p.Iterations + 1, p.NTdim1 + 1, p.NTdim2 + 1])  # expected field centres for tectal cells
 
-Currentiteration = 0
-Timepoint = 0
-
 
 #################### MODEL TYPE ####################
 
 def typestandard():
-    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2, Currentiteration, Timepoint
     Rmindim1 = 1
     Rmaxdim1 = p.NRdim1
     Rmindim2 = 1
@@ -36,10 +33,12 @@ def typestandard():
     Tmaxdim1 = p.NTdim1
     Tmindim2 = 1
     Tmaxdim2 = p.NTdim2
+    Currentiteration = 0
+    Timepoint = 0
 
 
 def typemismatchsurgery():
-    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2, Currentiteration, Timepoint
     Rmindim1 = p.sRmindim1
     Rmaxdim1 = p.sRmaxdim1
     Rmindim2 = p.sRmindim2
@@ -48,10 +47,12 @@ def typemismatchsurgery():
     Tmaxdim1 = p.sTmaxdim1
     Tmindim2 = p.sTmindim2
     Tmaxdim2 = p.sTmaxdim2
+    Currentiteration = 0
+    Timepoint = 0
 
 
 def typedevelopment():
-    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2
+    global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2, Currentiteration, Timepoint
     Rmindim1 = p.dRmindim1
     Rmaxdim1 = p.dRmaxdim1
     Rmindim2 = p.dRmindim2
@@ -60,6 +61,8 @@ def typedevelopment():
     Tmaxdim1 = p.dTmaxdim1
     Tmindim2 = p.dTmindim2
     Tmaxdim2 = p.dTmaxdim2
+    Currentiteration = 0
+    Timepoint = 0
 
 
 ################### CONCENTRATIONS ###################
@@ -270,7 +273,7 @@ def updateWpt():
                 tdim1 = synapses[0, synapse]
                 tdim2 = synapses[1, synapse]
                 dist[tdim1, tdim2, rdim1, rdim2] = p.distA * (
-                (Crb[rdim1, rdim2] - Ctb[Timepoint, tdim1, tdim2]) ** 2) + p.distB * (
+                    (Crb[rdim1, rdim2] - Ctb[Timepoint, tdim1, tdim2]) ** 2) + p.distB * (
                     (Cra[rdim1, rdim2] * Cta[Timepoint, tdim1, tdim2] - 1) ** 2)
                 sim[tdim1, tdim2, rdim1, rdim2] = np.exp(-dist[tdim1, tdim2, rdim1, rdim2] / (2 * p.kappa ** 2))
 
@@ -396,11 +399,11 @@ def updatexFieldcentres():
                 Tmaxdim2 - Tmindim2 + 1)
 
 
-def savedata():
-    if not os.path.isdir('../../RetinotopicMapsData/%s' % ('{0:04}'.format(p.JobID))):
-        os.makedirs('../../RetinotopicMapsData/%s' % ('{0:04}'.format(p.JobID)))
-    np.save('../../RetinotopicMapsData/%s/Weightmatrix' % ('{0:04}'.format(p.JobID)), Wpt)
-    np.save('../../RetinotopicMapsData/%s/EphrinA' % ('{0:04}'.format(p.JobID)), Cta)
-    np.save('../../RetinotopicMapsData/%s/EphrinB' % ('{0:04}'.format(p.JobID)), Ctb)
-    np.save('../../RetinotopicMapsData/%s/xFieldCentres' % ('{0:04}'.format(p.JobID)), xFieldcentres)
-    np.save('../../RetinotopicMapsData/%s/PrimaryTR' % ('{0:04}'.format(p.JobID)), p.TRout)
+def savedata(JobID):
+    if not os.path.isdir('../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID))):
+        os.makedirs('../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID)))
+    np.save('../../RetinotopicMapsData/%s/Weightmatrix' % ('{0:04}'.format(JobID)), Wpt)
+    np.save('../../RetinotopicMapsData/%s/EphrinA' % ('{0:04}'.format(JobID)), Cta)
+    np.save('../../RetinotopicMapsData/%s/EphrinB' % ('{0:04}'.format(JobID)), Ctb)
+    np.save('../../RetinotopicMapsData/%s/xFieldCentres' % ('{0:04}'.format(JobID)), xFieldcentres)
+    np.save('../../RetinotopicMapsData/%s/PrimaryTR' % ('{0:04}'.format(JobID)), p.TRout)

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/Algorithm.py" afterPath="$PROJECT_DIR$/DataProcessing/Algorithm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/Functions.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/Parameters.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,23 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Algorithm.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataProcessing/Algorithm.py">
+      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2006.1979.2D/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataProcessing/Functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="6090">
+              <caret line="409" column="0" selection-start-line="409" selection-start-column="0" selection-end-line="409" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,12 +97,12 @@
         <option value="$PROJECT_DIR$/DataProcessing/functions.py" />
         <option value="$PROJECT_DIR$/DataProcessing/MapPrecision.py" />
         <option value="$PROJECT_DIR$/DataProcessing/FieldCentres.py" />
-        <option value="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Algorithm2.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Functions.py" />
-        <option value="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Algorithm.py" />
+        <option value="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
+        <option value="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
+        <option value="$PROJECT_DIR$/2006.1979.2D/Functions.py" />
       </list>
     </option>
   </component>
@@ -231,7 +221,7 @@
       <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphA)" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Algorithm">
+  <component name="RunManager" selected="Python.EphrinPlot">
     <configuration default="false" name="Algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -300,19 +290,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="EphrinPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataProcessing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataProcessing/Functions.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -474,15 +464,15 @@
       <item index="2" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
       <item index="3" class="java.lang.String" itemvalue="Python.Algorithm2" />
       <item index="4" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.Functions" />
+      <item index="5" class="java.lang.String" itemvalue="Python.EphrinPlot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="0" class="java.lang.String" itemvalue="Python.EphrinPlot" />
         <item index="1" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
-        <item index="3" class="java.lang.String" itemvalue="Python.Algorithm2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Functions" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="3" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Algorithm2" />
       </list>
     </recent_temporary>
   </component>
@@ -502,20 +492,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00031" summary="field size measure added, colour coded field centre plot">
-      <created>1483383501261</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1483383501261</updated>
-    </task>
-    <task id="LOCAL-00032" summary="added orientation measure">
-      <created>1483988812759</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1483988812759</updated>
     </task>
     <task id="LOCAL-00033" summary="sort of version of the 2006 model. Many similarities with 1979 model (eg. sprouting and synapse removal, biased initial connections). Not working properly though, probably a problem with some of the parameters as many were not given in the paper and have had to be guessed, or carried through from the 1979 model">
       <created>1484411706351</created>
@@ -846,7 +822,21 @@
       <option name="project" value="LOCAL" />
       <updated>1487795719170</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="now allows multiprocessing">
+      <created>1487796337389</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1487796337389</updated>
+    </task>
+    <task id="LOCAL-00081" summary="can now state relative contributions made by EphA and EphB systems to distance. Allows 1D simulations with one Eph system to be carried out with same code">
+      <created>1487796671720</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1487796671720</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TodoView">
@@ -860,7 +850,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -868,7 +858,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
@@ -933,8 +923,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="adapted plots to be compatible with data with different temporal resolutions" />
-    <MESSAGE value="adapted data processing scripts to be compatible with data with different temporal resolutions" />
     <MESSAGE value="can now output data with specified temporal resolution" />
     <MESSAGE value="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though..." />
     <MESSAGE value="tectal concetrations now dependent on neighbours, some changes to parameters etc.." />
@@ -958,7 +946,9 @@
     <MESSAGE value="tidied functions code" />
     <MESSAGE value="fixed problem with time compression, now accepts user input" />
     <MESSAGE value="can now process many jobs" />
-    <option name="LAST_COMMIT_MESSAGE" value="can now process many jobs" />
+    <MESSAGE value="now allows multiprocessing" />
+    <MESSAGE value="can now state relative contributions made by EphA and EphB systems to distance. Allows 1D simulations with one Eph system to be carried out with same code" />
+    <option name="LAST_COMMIT_MESSAGE" value="can now state relative contributions made by EphA and EphB systems to distance. Allows 1D simulations with one Eph system to be carried out with same code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1228,79 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="376" column="46" selection-start-line="376" selection-start-column="46" selection-end-line="376" selection-end-column="46" />
-          <folding>
-            <element signature="e#1282#1531#0" expanded="false" />
-            <element signature="e#1565#1866#0" expanded="false" />
-            <element signature="e#1896#2197#0" expanded="false" />
-            <element signature="e#2287#3310#0" expanded="false" />
-            <element signature="e#2325#2649#0" expanded="false" />
-            <element signature="e#2687#3011#0" expanded="false" />
-            <element signature="e#3080#3310#0" expanded="false" />
-            <element signature="e#3129#3310#0" expanded="false" />
-            <element signature="e#3343#4468#0" expanded="false" />
-            <element signature="e#3381#3708#0" expanded="false" />
-            <element signature="e#3746#4073#0" expanded="false" />
-            <element signature="e#4226#4468#0" expanded="false" />
-            <element signature="e#4275#4468#0" expanded="false" />
-            <element signature="e#4492#4842#0" expanded="false" />
-            <element signature="e#4688#4842#0" expanded="false" />
-            <element signature="e#4864#5468#0" expanded="false" />
-            <element signature="e#5005#5386#0" expanded="false" />
-            <element signature="e#5061#5386#0" expanded="false" />
-            <element signature="e#5492#6205#0" expanded="false" />
-            <element signature="e#5522#6205#0" expanded="false" />
-            <element signature="e#5578#6205#0" expanded="false" />
-            <element signature="e#5638#6205#0" expanded="false" />
-            <element signature="e#6229#6941#0" expanded="false" />
-            <element signature="e#6259#6941#0" expanded="false" />
-            <element signature="e#6315#6941#0" expanded="false" />
-            <element signature="e#6375#6938#0" expanded="false" />
-            <element signature="e#7037#10004#0" expanded="false" />
-            <element signature="e#7183#8570#0" expanded="false" />
-            <element signature="e#7285#7877#0" expanded="false" />
-            <element signature="e#7904#8570#0" expanded="false" />
-            <element signature="e#8675#9295#0" expanded="false" />
-            <element signature="e#9314#10004#0" expanded="false" />
-            <element signature="e#9381#9519#0" expanded="false" />
-            <element signature="e#9663#9793#0" expanded="false" />
-            <element signature="e#10037#10170#0" expanded="false" />
-            <element signature="e#10089#10170#0" expanded="false" />
-            <element signature="e#10192#10308#0" expanded="false" />
-            <element signature="e#10333#10524#0" expanded="false" />
-            <element signature="e#10385#10524#0" expanded="false" />
-            <element signature="e#10441#10524#0" expanded="false" />
-            <element signature="e#10548#13467#0" expanded="false" />
-            <element signature="e#11074#11996#0" expanded="false" />
-            <element signature="e#11131#11990#0" expanded="false" />
-            <element signature="e#11403#11783#0" expanded="false" />
-            <element signature="e#12046#13467#0" expanded="false" />
-            <element signature="e#12102#13467#0" expanded="false" />
-            <element signature="e#12163#13467#0" expanded="false" />
-            <element signature="e#12820#13467#0" expanded="false" />
-            <element signature="e#13496#13900#0" expanded="false" />
-            <element signature="e#13616#13900#0" expanded="false" />
-            <element signature="e#13926#15034#0" expanded="false" />
-            <element signature="e#14056#15034#0" expanded="false" />
-            <element signature="e#14296#15034#0" expanded="false" />
-            <element signature="e#15115#16035#0" expanded="false" />
-            <element signature="e#15275#16035#0" expanded="false" />
-            <element signature="e#15878#16035#0" expanded="false" />
-            <element signature="e#15938#16035#0" expanded="false" />
-            <element signature="e#16060#16338#0" expanded="false" />
-            <element signature="e#16220#16338#0" expanded="false" />
-            <element signature="e#16425#16734#0" expanded="false" />
-            <element signature="e#16768#17133#0" expanded="false" />
-            <element signature="e#16820#17133#0" expanded="false" />
-            <element signature="e#16876#17133#0" expanded="false" />
-            <element signature="e#17156#17776#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessing/Functions2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1309,19 +1226,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py">
+    <entry file="file://$PROJECT_DIR$/DataProcessing/Algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
-          <folding>
-            <element signature="e#58#69#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessing/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="-597">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
@@ -1338,18 +1253,26 @@
     <entry file="file://$PROJECT_DIR$/2006.1979.2D/Parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/Algorithm.py">
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="-177">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2006.1979.2D/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6090">
+          <caret line="409" column="0" selection-start-line="409" selection-start-column="0" selection-end-line="409" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

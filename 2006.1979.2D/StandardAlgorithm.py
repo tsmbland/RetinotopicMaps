@@ -1,50 +1,60 @@
-######################### START #########################
 import time
 import sys
+from joblib import Parallel, delayed
 import Parameters as p
-import Functions as f
 
-start = time.time()
+#################### OPTIONS ####################
 
-######################## ALGORITM #######################
+nJobs = 4
+Cores = 2
 
-# Model Type
-f.typestandard()
 
-# Set Gradients
-f.setRetinalGradients()
-f.setTectalGradients()
-f.updateNct()
+##################### ALGORITHM #################
 
-# Initial Connections
-f.setWtot()
-f.initialconnections()
+def job(JobID):
+    start = time.time()
+    import Functions as f
 
-# Iterations
-for iteration in range(p.Iterations):
-    f.updatetimepoint()
+    # Set Job Parameters
 
-    f.updateWpt()
-    f.removesynapses()
-    f.addsynapses()
+    # Model Type
+    f.typestandard()
 
-    f.updateI()
-    f.updateCta()
-    f.updateCtb()
+    # Set Gradients
+    f.setRetinalGradients()
+    f.setTectalGradients()
+    f.updateNct()
 
-    f.updatexFieldcentres()
+    # Initial Connections
+    f.setWtot()
+    f.initialconnections()
 
-    sys.stdout.write('\r%i percent' % (iteration * 100 / p.Iterations))
+    # Iterations
+    for iteration in range(p.Iterations):
+        f.updatetimepoint()
+
+        f.updateWpt()
+        f.removesynapses()
+        f.addsynapses()
+
+        f.updateI()
+        f.updateCta()
+        f.updateCtb()
+
+        f.updatexFieldcentres()
+
+        sys.stdout.write('\rJob %s: %i percent' % ('{0:04}'.format(JobID), iteration * 100 / p.Iterations))
+        sys.stdout.flush()
+
+    # Export Data
+    f.savedata(JobID)
+
+    # End
+    sys.stdout.write('\rJob %s: Complete!' % ('{0:04}'.format(JobID)))
     sys.stdout.flush()
+    end = time.time()
+    elapsed = end - start
+    print('\nTime elapsed: ', elapsed, 'seconds')
 
-#################### EXPORT DATA #################
 
-f.savedata()
-
-###################### END ########################
-
-sys.stdout.write('\rComplete!')
-sys.stdout.flush()
-end = time.time()
-elapsed = end - start
-print('\nTime elapsed: ', elapsed, 'seconds')
+Parallel(n_jobs=Cores)(delayed(job)(JobID) for JobID in range(p.JobID, p.JobID + nJobs))

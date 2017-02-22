@@ -1,7 +1,7 @@
-JobID = 0000
+JobID = 0000  # JobID (or starting ID if multiple jobs)
 
-# General
-Iterations = 50  # number of weight iterations
+# Iterations
+Iterations = 100  # number of weight iterations
 TRout = 10  # temporal resoultion of output files
 
 # Layer sizes
