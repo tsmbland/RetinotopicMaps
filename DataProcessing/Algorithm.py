@@ -34,7 +34,7 @@ def job(JobID):
     np.save('../../RetinotopicMapsData/%s/FieldSize' % ('{0:04}'.format(JobID)), f.FieldSize)
     np.save('../../RetinotopicMapsData/%s/FieldSeparation' % ('{0:04}'.format(JobID)), f.FieldSeparation)
     np.save('../../RetinotopicMapsData/%s/SystemsMatch' % ('{0:04}'.format(JobID)), f.SystemsMatch)
-    np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), f.Currentiteration)
+    np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), f.TRin * Timecompression)
 
     ###################### END ########################
     sys.stdout.write('\rJob %s Complete!' % ('{0:04}'.format(JobID)))
