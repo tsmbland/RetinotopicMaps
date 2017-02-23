@@ -157,3 +157,11 @@ def systems_match():
 
     meandistance = totaldistance / count
     SystemsMatch[Currentiteration] = meandistance
+
+
+def savedata(JobID, Timecompression):
+    np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), FieldCentres)
+    np.save('../../RetinotopicMapsData/%s/FieldSize' % ('{0:04}'.format(JobID)), FieldSize)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparation' % ('{0:04}'.format(JobID)), FieldSeparation)
+    np.save('../../RetinotopicMapsData/%s/SystemsMatch' % ('{0:04}'.format(JobID)), SystemsMatch)
+    np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), TRin * Timecompression)
