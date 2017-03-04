@@ -1,7 +1,7 @@
-JobID = 0000  # JobID (or starting ID if multiple jobs)
+JobID = 1  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 100  # number of weight iterations
+Iterations = 500  # number of weight iterations
 TRout = 10  # temporal resoultion of output files
 
 # Layer sizes
@@ -25,33 +25,33 @@ ynRdim2 = 1.0
 stochR = 0.
 
 # Tectal Gradients
-y0Tdim1 = 1 / y0Rdim1  # conc in cell 0 (before multiplication by yLT)
-ymTdim1 = 1 / ymRdim1  # conc in cell NTdim1/2
-ynTdim1 = 1 / ynRdim1  # conc in cell NTdim1
+y0Tdim1 = 1. / y0Rdim1  # conc in cell 0 (before multiplication by yLT)
+ymTdim1 = 1. / ymRdim1  # conc in cell NTdim1/2
+ynTdim1 = 1. / ynRdim1  # conc in cell NTdim1
 y0Tdim2 = 0.1
 ymTdim2 = 0.5
 ynTdim2 = 1.0
-yLT = 0.3
+yLT = 1.0
 stochT = 0.
 
 # Tectal concentrations
-alpha = 0.002
+alpha = 0.05
 beta = 0.1
 deltatc = 1  # deltaC time step
-tc = 5  # concentration iterations per iteration
+tc = 1  # concentration iterations per iteration
 
 # Synaptic modification
 Wmax = 1.  # total strength available to each presynaptic fibre
 gamma = 0.01
-kappa = 1
-k = 0.001
+kappa = 0.7
+k = 0.0
 elim = 0.005  # elimination threshold
 newW = 0.01  # weight of new synapses
 sprout = 0.02  # sprouting threshold
 deltatw = 1  # deltaW time step
 tw = 1  # weight iterations per iteration
-distA = 1  # the contribution made by EphA system to distance
-distB = 1
+distA = 1.  # the contribution made by EphA system to distance
+distB = 1.
 
 # Mismatch surgery
 sRmindim1 = 1

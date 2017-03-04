@@ -4,7 +4,7 @@ import numpy as np
 ####################### FUNCTIONS #####################
 
 def importdata(jobid, timecompression):
-    global Wpt, xFieldCentres, FieldCentres, FieldSeparation, FieldSize, SystemsMatch, TRin, Currentiteration, Weightiteration
+    global Wpt, xFieldCentres, FieldCentres, FieldSeparation, FieldSize, SystemsMatch, MeanChange, TRin, Currentiteration, Weightiteration
     Wpt = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(jobid)))
     xFieldCentres = np.load('../../RetinotopicMapsData/%s/xFieldCentres.npy' % ('{0:04}'.format(jobid)))
     TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(jobid)))
@@ -14,10 +14,10 @@ def importdata(jobid, timecompression):
     FieldSeparation = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
     FieldSize = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
     SystemsMatch = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
+    MeanChange = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
 
     Currentiteration = -1
     Weightiteration = -1
-
 
 
 def updatetimepoint(timecompression):
@@ -159,9 +159,23 @@ def systems_match():
     SystemsMatch[Currentiteration] = meandistance
 
 
+def mean_change():
+    global testing
+    if Currentiteration < len(Wpt[:, 0, 0, 0, 0]) - 1:
+        change = abs(Wpt[Weightiteration + 1, 1:-1, 1:-1, 1:-1, 1:-1] - Wpt[Weightiteration, 1:-1, 1:-1, 1:-1,
+                                                                        1:-1])
+
+        meanchange = np.mean(change) / TRin
+        MeanChange[Currentiteration] = meanchange
+
+
 def savedata(JobID, Timecompression):
     np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), FieldCentres)
     np.save('../../RetinotopicMapsData/%s/FieldSize' % ('{0:04}'.format(JobID)), FieldSize)
     np.save('../../RetinotopicMapsData/%s/FieldSeparation' % ('{0:04}'.format(JobID)), FieldSeparation)
     np.save('../../RetinotopicMapsData/%s/SystemsMatch' % ('{0:04}'.format(JobID)), SystemsMatch)
     np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), TRin * Timecompression)
+
+
+def savedata2(JobID, Timecompression):
+    np.save('../../RetinotopicMapsData/%s/MeanChange' % ('{0:04}'.format(JobID)), MeanChange)
