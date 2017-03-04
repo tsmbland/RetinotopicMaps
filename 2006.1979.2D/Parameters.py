@@ -1,14 +1,14 @@
 JobID = 1  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 500  # number of weight iterations
+Iterations = 5000  # number of weight iterations
 TRout = 10  # temporal resoultion of output files
 
 # Layer sizes
-NRdim1 = 20  # initial number of retinal cells
-NRdim2 = 20
-NTdim1 = 20  # initial number of tectal cells
-NTdim2 = 20
+NRdim1 = 50  # initial number of retinal cells
+NRdim2 = 50
+NTdim1 = 50  # initial number of tectal cells
+NTdim2 = 50
 
 # Establishment of initial contacts
 n0 = 10  # number of initial random contact
@@ -35,10 +35,10 @@ yLT = 1.0
 stochT = 0.
 
 # Tectal concentrations
-alpha = 0.05
-beta = 0.1
+alpha = 0.
+beta = 0.
 deltatc = 1  # deltaC time step
-tc = 1  # concentration iterations per iteration
+tc = 0  # concentration iterations per iteration
 
 # Synaptic modification
 Wmax = 1.  # total strength available to each presynaptic fibre
