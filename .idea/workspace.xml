@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="added scripts to measure and view rate of change in the system over time. Not yet fully tested">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataProcessing/change.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/Algorithm.py" afterPath="$PROJECT_DIR$/DataProcessing/Precision.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/Functions.py" afterPath="$PROJECT_DIR$/DataProcessing/Functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py" afterPath="$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +35,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrecisionChangeMeasures.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PrecisionChange.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChange.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrecisionChangeMeasures.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StablePrecisionMeasures.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plots/StablePrecisionMeasures.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -53,18 +70,8 @@
       <file leaf-file-name="PrecisionMeasures.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Plots/PrecisionMeasures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrecisionChangePlot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Plots/PrecisionChangePlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -85,8 +92,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (2D)/setup.py" />
-        <option value="$PROJECT_DIR$/../Retinotopic Maps/rough/rough.py" />
         <option value="$PROJECT_DIR$/../Retinotopic Maps/DataProcessing/MapPrecision.py" />
         <option value="$PROJECT_DIR$/../Retinotopic Maps/Plots/ConcPlot.py" />
         <option value="$PROJECT_DIR$/../Retinotopic Maps/DataProcessing/FieldCentres.py" />
@@ -136,6 +141,8 @@
         <option value="$PROJECT_DIR$/DataProcessing/precisionchange.py" />
         <option value="$PROJECT_DIR$/Plots/precisionchangemeasures.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Functions.py" />
+        <option value="$PROJECT_DIR$/Plots/StablePrecisionMeasures.py" />
+        <option value="$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py" />
       </list>
     </option>
   </component>
@@ -254,24 +261,7 @@
       <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphA)" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.precisionchangemeasures">
-    <configuration default="false" name="change" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DataProcessing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataProcessing/change.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.StablePrecisionMeasures">
     <configuration default="false" name="changeplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,6 +326,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="StablePrecisionMeasures" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/StablePrecisionMeasures.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -493,19 +500,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.change" />
-      <item index="2" class="java.lang.String" itemvalue="Python.changeplot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.precisionchange" />
-      <item index="4" class="java.lang.String" itemvalue="Python.precisionchangeplot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.precisionchangemeasures" />
+      <item index="1" class="java.lang.String" itemvalue="Python.changeplot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.precisionchange" />
+      <item index="3" class="java.lang.String" itemvalue="Python.precisionchangeplot" />
+      <item index="4" class="java.lang.String" itemvalue="Python.precisionchangemeasures" />
+      <item index="5" class="java.lang.String" itemvalue="Python.StablePrecisionMeasures" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.precisionchangemeasures" />
-        <item index="1" class="java.lang.String" itemvalue="Python.precisionchangeplot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.precisionchange" />
-        <item index="3" class="java.lang.String" itemvalue="Python.changeplot" />
-        <item index="4" class="java.lang.String" itemvalue="Python.change" />
+        <item index="0" class="java.lang.String" itemvalue="Python.StablePrecisionMeasures" />
+        <item index="1" class="java.lang.String" itemvalue="Python.precisionchangemeasures" />
+        <item index="2" class="java.lang.String" itemvalue="Python.precisionchangeplot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.precisionchange" />
+        <item index="4" class="java.lang.String" itemvalue="Python.changeplot" />
       </list>
     </recent_temporary>
   </component>
@@ -525,13 +532,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00039" summary=".">
-      <created>1485810887230</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1485810887230</updated>
     </task>
     <task id="LOCAL-00040" summary="added julia code">
       <created>1486051643111</created>
@@ -869,7 +869,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488639189224</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="added scripts to measure and view rate of change in the system over time. Not yet fully tested">
+      <created>1488646956879</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1488646956880</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TodoView">
@@ -883,14 +890,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17077045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2589041" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
@@ -997,13 +1004,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2006.1979.1D.B/Development.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2006.1979.1D.B/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -1221,14 +1221,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/PrecisionMeasures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessing/Precision.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -1253,6 +1245,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessing/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="156" column="8" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/PrecisionChangePlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChange.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -1263,26 +1271,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/Functions.py">
+    <entry file="file://$PROJECT_DIR$/Plots/PrecisionMeasures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="156" column="8" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="8" />
+        <state relative-caret-position="90">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/StablePrecisionMeasures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Plots/PrecisionChangeMeasures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/PrecisionChangePlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
           <folding />
         </state>
       </provider>
