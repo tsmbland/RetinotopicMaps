@@ -10,7 +10,7 @@ border = 5
 
 def job(JobID):
     start = time.time()
-    import Functions2 as f
+    import FunctionsBoundaryExclusion as f
     f.importdata(JobID, Timecompression)
 
     # Iterations

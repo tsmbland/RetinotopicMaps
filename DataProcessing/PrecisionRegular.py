@@ -9,7 +9,7 @@ Cores = int(input('Cores: '))
 
 def job(JobID):
     start = time.time()
-    import Functions as f
+    import FunctionsRegular as f
     f.importdata(JobID, Timecompression)
 
     # Iterations
