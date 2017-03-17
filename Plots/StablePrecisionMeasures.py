@@ -25,7 +25,7 @@ TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format
 fieldsizechange = 1
 systemsmatchchange = 1
 iteration = 0
-while (fieldsizechange > sizechangethresh or fieldsizechange < -sizechangethresh) and (
+while (fieldsizechange > sizechangethresh or fieldsizechange < -sizechangethresh or
                 systemsmatchchange > smthresh or systemsmatchchange < -smthresh) and iteration < len(Fieldsizechange):
     fieldsizechange = Fieldsizechange[iteration]
     systemsmatchchange = Systemsmatchchange[iteration]
@@ -34,6 +34,6 @@ while (fieldsizechange > sizechangethresh or fieldsizechange < -sizechangethresh
 ##################### PRINT DATA ##########################
 
 print('Stability Time: ', iteration * TRin)
-print('Field Separation: ', Fieldseparation[int(iteration / TRin)])
-print('Field Size: ', Fieldsize[int(iteration / TRin)])
-print('Systems Match: ', Systemsmatch[int(iteration / TRin)])
+print('Field Separation: ', Fieldseparation[int(iteration)])
+print('Field Size: ', Fieldsize[int(iteration)])
+print('Systems Match: ', Systemsmatch[int(iteration)])
