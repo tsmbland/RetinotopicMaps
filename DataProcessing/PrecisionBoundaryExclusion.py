@@ -6,20 +6,20 @@ minJobID = int(input('Minimum JobID: '))
 maxJobID = int(input('Maximum JobID: '))
 Timecompression = int(input('Time Compression (1 = No Compression): '))
 Cores = int(input('Cores: '))
+border = 5
 
 def job(JobID):
     start = time.time()
-    import Functions as f
+    import Functions2 as f
     f.importdata(JobID, Timecompression)
-    TRout = f.TRin * Timecompression
 
     # Iterations
     for i in range(0, len(f.Wpt[:, 0, 0, 0, 0]) // Timecompression):
         f.updatetimepoint(Timecompression)
-        f.field_centre()
-        f.field_separation()
-        f.field_size()
-        f.systems_match()
+        f.field_centre(border)
+        f.field_separation(border)
+        f.field_size(border)
+        f.systems_match(border)
         sys.stdout.write(
             '\rJob %s: %i percent' % (
             '{0:04}'.format(JobID), ((f.Currentiteration + 1) * 100 / len(f.Wpt[:, 0, 0, 0, 0]) * Timecompression)))
