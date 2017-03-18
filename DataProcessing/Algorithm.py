@@ -9,16 +9,14 @@ Cores = int(input('Cores: '))
 
 def job(JobID):
     start = time.time()
-    import FunctionsRegular as f
+    import Functions as f
     f.importdata(JobID, Timecompression)
 
     # Iterations
     for i in range(0, len(f.Wpt[:, 0, 0, 0, 0]) // Timecompression):
         f.updatetimepoint(Timecompression)
-        f.field_centre()
-        f.field_separation()
-        f.field_size()
-        f.systems_match()
+        #f.UpdateFieldCentres()
+        f.UpdateFieldSizes()
         sys.stdout.write(
             '\rJob %s: %i percent' % (
             '{0:04}'.format(JobID), ((f.Currentiteration + 1) * 100 / len(f.Wpt[:, 0, 0, 0, 0]) * Timecompression)))

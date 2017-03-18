@@ -4,28 +4,26 @@ from joblib import Parallel, delayed
 
 minJobID = int(input('Minimum JobID: '))
 maxJobID = int(input('Maximum JobID: '))
-Timecompression = int(input('Time Compression (1 = No Compression): '))
 Cores = int(input('Cores: '))
-border = 5
 
 def job(JobID):
     start = time.time()
-    import FunctionsBoundaryExclusion as f
-    f.importdata(JobID, Timecompression)
+    import Functions as f
+    f.importdata(JobID, 1)
 
     # Iterations
-    for i in range(0, len(f.Wpt[:, 0, 0, 0, 0]) // Timecompression):
-        f.updatetimepoint(Timecompression)
-        f.field_separation(border)
-        f.field_size(border)
-        f.systems_match(border)
+    for i in range(0, len(f.FieldCentres[0, :, 0, 0]) // 1):
+        f.updatetimepoint(1)
+        f.MeanFieldSeparation(0)
+        f.MeanFieldSize(0)
+        f.MeanSystemsMatch(0)
         sys.stdout.write(
             '\rJob %s: %i percent' % (
-            '{0:04}'.format(JobID), ((f.Currentiteration + 1) * 100 / len(f.Wpt[:, 0, 0, 0, 0]) * Timecompression)))
+            '{0:04}'.format(JobID), ((f.Currentiteration + 1) * 100 / len(f.FieldCentres[0, :, 0, 0]) * 1)))
         sys.stdout.flush()
 
     # Export Data
-    f.savedata(JobID, Timecompression)
+    f.savedata(JobID, 1)
 
     # End
     sys.stdout.write('\rJob %s Complete!' % ('{0:04}'.format(JobID)))
