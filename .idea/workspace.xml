@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="changed back to %">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MapPrecision/Functions.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MapPrecision/PrecisionRegular.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Plots/AreaPlot.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/DataProcessing/FunctionsEB.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/FunctionsRegular.py" afterPath="$PROJECT_DIR$/DataProcessing/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" afterPath="$PROJECT_DIR$/MapPrecision/PrecisionChange.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py" afterPath="$PROJECT_DIR$/MapPrecision/PrecisionChangeEB.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionEB.py" afterPath="$PROJECT_DIR$/MapPrecision/PrecisionEB.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionRegular.py" afterPath="$PROJECT_DIR$/DataProcessing/Algorithm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
@@ -528,13 +520,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00051" summary="tidier process bar">
-      <created>1486854706547</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1486854706547</updated>
-    </task>
     <task id="LOCAL-00052" summary="many changes, including more efficient weight change function">
       <created>1486854852785</created>
       <option name="number" value="00052" />
@@ -871,7 +856,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489844766016</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="seperated DataProcessing and MapPrecision scripts">
+      <created>1489853897586</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1489853897586</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TodoView">
@@ -958,7 +950,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="renamed folders, changed data file names" />
     <MESSAGE value="new file structure for saved data, and easy referencing using 4-digit JobID. Separated parameters from functions in model code" />
     <MESSAGE value="separate file for functions" />
     <MESSAGE value="combined field centres and map precision scripts into single file" />
@@ -983,7 +974,8 @@
     <MESSAGE value="options for displaying data with/without boundary exclusion" />
     <MESSAGE value="changed file names, changed precision change measures from looking at % change to absolute change" />
     <MESSAGE value="changed back to %" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed back to %" />
+    <MESSAGE value="seperated DataProcessing and MapPrecision scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="seperated DataProcessing and MapPrecision scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
