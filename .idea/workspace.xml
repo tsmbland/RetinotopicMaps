@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="fixed issue with systems match measure">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/FunctionsBoundaryExclusion.py" afterPath="$PROJECT_DIR$/DataProcessing/FunctionsEB.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionBoundaryExclusion.py" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionEB.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +26,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FunctionsEB.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataProcessing/FunctionsEB.py">
+      <file leaf-file-name="PrecisionChangeMeasures.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Results/PrecisionChangeMeasures.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
-              <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrecisionChange.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChange.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrecisionChangeEB.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,13 +115,13 @@
         <option value="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
         <option value="$PROJECT_DIR$/DataProcessing/PrecisionBoundaryExclusion.py" />
         <option value="$PROJECT_DIR$/rough.py" />
-        <option value="$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py" />
-        <option value="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" />
         <option value="$PROJECT_DIR$/Results/PrecisionChangeMeasures.py" />
         <option value="$PROJECT_DIR$/Results/PrecisionMeasures.py" />
         <option value="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" />
         <option value="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" />
         <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" />
+        <option value="$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py" />
       </list>
     </option>
   </component>
@@ -508,13 +526,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00049" summary="set up preliminary version of hybrid model, many changes still needed...">
-      <created>1486854581144</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1486854581144</updated>
-    </task>
     <task id="LOCAL-00050" summary="fixed issue with new synapses function and tectal concs function">
       <created>1486854659496</created>
       <option name="number" value="00050" />
@@ -851,7 +862,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489843834241</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="changed file names, changed precision change measures from looking at % change to absolute change">
+      <created>1489843896189</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1489843896189</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TodoView">
@@ -865,12 +883,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -938,7 +956,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="added stochasticity to initial tectal and retinal gradients, and changed method of storing data time-dependence" />
     <MESSAGE value="removed t=0 data from plots" />
     <MESSAGE value="renamed folders, changed data file names" />
     <MESSAGE value="new file structure for saved data, and easy referencing using 4-digit JobID. Separated parameters from functions in model code" />
@@ -963,7 +980,8 @@
     <MESSAGE value="new folder for tidiness" />
     <MESSAGE value="fixed issue with systems match measure" />
     <MESSAGE value="options for displaying data with/without boundary exclusion" />
-    <option name="LAST_COMMIT_MESSAGE" value="options for displaying data with/without boundary exclusion" />
+    <MESSAGE value="changed file names, changed precision change measures from looking at % change to absolute change" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed file names, changed precision change measures from looking at % change to absolute change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1184,14 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Results/StablePrecisionMeasures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1204,14 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="40" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Results/PrecisionChangeMeasures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1240,26 +1242,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChange.py">
+    <entry file="file://$PROJECT_DIR$/DataProcessing/FunctionsEB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="2115">
+          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessing/FunctionsRegular.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="1785">
           <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessing/FunctionsEB.py">
+    <entry file="file://$PROJECT_DIR$/Results/PrecisionChangeMeasures.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="141" column="0" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessing/PrecisionChangeEB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>

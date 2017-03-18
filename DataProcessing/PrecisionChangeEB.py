@@ -19,9 +19,12 @@ def job(JobID):
 
     # Iterations
     for iteration in range(len(Fieldsize) - 1):
-        Fieldsizechange[iteration] = (Fieldsize[iteration + 1] - Fieldsize[iteration]) / TRin
-        Fieldseparationchange[iteration] = (Fieldseparation[iteration + 1] - Fieldseparation[iteration]) / TRin
-        Systemsmatchchange[iteration] = (Systemsmatch[iteration + 1] - Systemsmatch[iteration]) / TRin
+        Fieldsizechange[iteration] = 100 * (Fieldsize[iteration + 1] - Fieldsize[iteration]) / (
+            Fieldsize[iteration] * TRin)
+        Fieldseparationchange[iteration] = 100 * (Fieldseparation[iteration + 1] - Fieldseparation[iteration]) / (
+            Fieldseparation[iteration] * TRin)
+        Systemsmatchchange[iteration] = 100 * (Systemsmatch[iteration + 1] - Systemsmatch[iteration]) / (
+            Systemsmatch[iteration] * TRin)
 
     # Export Data
     np.save('../../RetinotopicMapsData/%s/FieldSizeChangeEB' % ('{0:04}'.format(JobID)), Fieldsizechange)
