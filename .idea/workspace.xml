@@ -7,11 +7,6 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionBoundaryExclusion.py" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionEB.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" afterPath="$PROJECT_DIR$/DataProcessing/PrecisionChange.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionPlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/PrecisionChangeMeasures.py" afterPath="$PROJECT_DIR$/Results/PrecisionChangeMeasures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/PrecisionMeasures.py" afterPath="$PROJECT_DIR$/Results/PrecisionMeasures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" afterPath="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -513,13 +508,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00048" summary="tidier code + various fixes">
-      <created>1486854417270</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1486854417270</updated>
-    </task>
     <task id="LOCAL-00049" summary="set up preliminary version of hybrid model, many changes still needed...">
       <created>1486854581144</created>
       <option name="number" value="00049" />
@@ -856,7 +844,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489830734583</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="options for displaying data with/without boundary exclusion">
+      <created>1489843834241</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1489843834241</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TodoView">
@@ -870,9 +865,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -943,7 +938,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="renamed folder" />
     <MESSAGE value="added stochasticity to initial tectal and retinal gradients, and changed method of storing data time-dependence" />
     <MESSAGE value="removed t=0 data from plots" />
     <MESSAGE value="renamed folders, changed data file names" />
@@ -968,7 +962,8 @@
     <MESSAGE value="changed default parameters" />
     <MESSAGE value="new folder for tidiness" />
     <MESSAGE value="fixed issue with systems match measure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with systems match measure" />
+    <MESSAGE value="options for displaying data with/without boundary exclusion" />
+    <option name="LAST_COMMIT_MESSAGE" value="options for displaying data with/without boundary exclusion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

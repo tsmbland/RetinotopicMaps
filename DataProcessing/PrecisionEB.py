@@ -16,7 +16,6 @@ def job(JobID):
     # Iterations
     for i in range(0, len(f.Wpt[:, 0, 0, 0, 0]) // Timecompression):
         f.updatetimepoint(Timecompression)
-        f.field_centre(border)
         f.field_separation(border)
         f.field_size(border)
         f.systems_match(border)

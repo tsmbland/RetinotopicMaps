@@ -8,10 +8,10 @@ Cores = int(input('Cores: '))
 
 
 def job(JobID):
-    Fieldsize = np.load('../../RetinotopicMapsData/%s/FieldSize.npy' % ('{0:04}'.format(JobID)))
-    Fieldseparation = np.load('../../RetinotopicMapsData/%s/FieldSeparation.npy' % ('{0:04}'.format(JobID)))
-    Systemsmatch = np.load('../../RetinotopicMapsData/%s/SystemsMatch.npy' % ('{0:04}'.format(JobID)))
-    TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
+    Fieldsize = np.load('../../RetinotopicMapsData/%s/FieldSizeEB.npy' % ('{0:04}'.format(JobID)))
+    Fieldseparation = np.load('../../RetinotopicMapsData/%s/FieldSeparationEB.npy' % ('{0:04}'.format(JobID)))
+    Systemsmatch = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(JobID)))
+    TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTREB.npy' % ('{0:04}'.format(JobID)))
 
     Fieldsizechange = np.zeros([len(Fieldsize) - 1])
     Fieldseparationchange = np.zeros([len(Fieldseparation) - 1])
@@ -24,9 +24,9 @@ def job(JobID):
         Systemsmatchchange[iteration] = (Systemsmatch[iteration + 1] - Systemsmatch[iteration]) / TRin
 
     # Export Data
-    np.save('../../RetinotopicMapsData/%s/FieldSizeChange' % ('{0:04}'.format(JobID)), Fieldsizechange)
-    np.save('../../RetinotopicMapsData/%s/FieldSeparationChange' % ('{0:04}'.format(JobID)), Fieldseparationchange)
-    np.save('../../RetinotopicMapsData/%s/SystemsMatchChange' % ('{0:04}'.format(JobID)), Systemsmatchchange)
+    np.save('../../RetinotopicMapsData/%s/FieldSizeChangeEB' % ('{0:04}'.format(JobID)), Fieldsizechange)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparationChangeEB' % ('{0:04}'.format(JobID)), Fieldseparationchange)
+    np.save('../../RetinotopicMapsData/%s/SystemsMatchChangeEB' % ('{0:04}'.format(JobID)), Systemsmatchchange)
 
 
 Parallel(n_jobs=Cores)(delayed(job)(JobID) for JobID in range(minJobID, maxJobID + 1))
