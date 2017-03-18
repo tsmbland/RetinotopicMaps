@@ -7,7 +7,6 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/Plots/PrecisionMeasures.py" afterPath="$PROJECT_DIR$/Results/PrecisionMeasures.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/Plots/StablePrecisionMeasures.py" afterPath="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2006.1979.2D/Parameters.py" afterPath="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataProcessing/FunctionsBoundaryExclusion.py" afterPath="$PROJECT_DIR$/DataProcessing/FunctionsBoundaryExclusion.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
@@ -520,13 +519,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00045" summary="tidier code">
-      <created>1486831319424</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1486831319424</updated>
-    </task>
     <task id="LOCAL-00046" summary="tidier code">
       <created>1486831421913</created>
       <option name="number" value="00046" />
@@ -863,7 +855,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489773021759</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="changed default parameters">
+      <created>1489830619390</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1489830619391</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TodoView">
@@ -950,7 +949,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="(sort of) working hybrid model, but more work needed to optimise parameters." />
     <MESSAGE value="added scripts for development and mismatch surgery" />
     <MESSAGE value="changed temporal resolution" />
     <MESSAGE value="renamed folder" />
@@ -975,7 +973,8 @@
     <MESSAGE value="added script to measure precision, excluding boundary regions of the tectum" />
     <MESSAGE value="fixed stability condition argument" />
     <MESSAGE value="fixed link to functions files" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed link to functions files" />
+    <MESSAGE value="changed default parameters" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed default parameters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
