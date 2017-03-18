@@ -8,9 +8,8 @@ def importdata(jobid, timecompression):
     Wpt = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(jobid)))
     xFieldCentres = np.load('../../RetinotopicMapsData/%s/xFieldCentres.npy' % ('{0:04}'.format(jobid)))
     TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(jobid)))
+    FieldCentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(jobid)))
 
-    FieldCentres = np.zeros(
-        [2, int(len(Wpt[:, 0, 0, 0, 0]) / timecompression), len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
     FieldSeparation = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
     FieldSize = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
     SystemsMatch = np.zeros(int(len(Wpt[:, 0, 0, 0, 0]) / timecompression))
@@ -23,29 +22,6 @@ def updatetimepoint(timecompression):
     global Currentiteration, Weightiteration
     Currentiteration += 1
     Weightiteration += timecompression
-
-
-def field_centre(border):
-    synapses = np.array(np.nonzero(Wpt[Weightiteration, border:-border, border:-border, :, :]))
-
-    totaldim1 = np.zeros([len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
-    totaldim2 = np.zeros([len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
-    weightsumdim1 = np.zeros([len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
-    weightsumdim2 = np.zeros([len(Wpt[0, :, 0, 0, 0]), len(Wpt[0, 0, :, 0, 0])])
-
-    for synapse in range(int(len(synapses[0, :]))):
-        tdim1 = synapses[0, synapse]
-        tdim2 = synapses[1, synapse]
-        rdim1 = synapses[2, synapse]
-        rdim2 = synapses[3, synapse]
-        weightsumdim1[tdim1, tdim2] += Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-        weightsumdim2[tdim1, tdim2] += Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-        totaldim1[tdim1, tdim2] += rdim1 * Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-        totaldim2[tdim1, tdim2] += rdim2 * Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-
-    FieldCentres[0, Currentiteration, :, :] = totaldim1 / weightsumdim1
-    FieldCentres[1, Currentiteration, :, :] = totaldim2 / weightsumdim2
-    FieldCentres[:, Currentiteration, :, :] = np.nan_to_num(FieldCentres[:, Currentiteration, :, :])
 
 
 def field_separation(border):
@@ -159,8 +135,7 @@ def systems_match(border):
 
 
 def savedata(JobID, Timecompression):
-    np.save('../../RetinotopicMapsData/%s/FieldCentresExcludedBoundaries' % ('{0:04}'.format(JobID)), FieldCentres)
-    np.save('../../RetinotopicMapsData/%s/FieldSizeExcludedBoundaries' % ('{0:04}'.format(JobID)), FieldSize)
-    np.save('../../RetinotopicMapsData/%s/FieldSeparationExcludedBoundaries' % ('{0:04}'.format(JobID)), FieldSeparation)
-    np.save('../../RetinotopicMapsData/%s/SystemsMatchExcludedBoundaries' % ('{0:04}'.format(JobID)), SystemsMatch)
-    np.save('../../RetinotopicMapsData/%s/SecondaryTRExcludedBoundaries' % ('{0:04}'.format(JobID)), TRin * Timecompression)
+    np.save('../../RetinotopicMapsData/%s/FieldSizeEB' % ('{0:04}'.format(JobID)), FieldSize)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparationEB' % ('{0:04}'.format(JobID)), FieldSeparation)
+    np.save('../../RetinotopicMapsData/%s/SystemsMatchEB' % ('{0:04}'.format(JobID)), SystemsMatch)
+    np.save('../../RetinotopicMapsData/%s/SecondaryTREB' % ('{0:04}'.format(JobID)), TRin * Timecompression)
