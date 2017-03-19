@@ -8,6 +8,7 @@ import sys
 JobID = int(input('JobID: '))
 Tdim1 = int(input('Tectal Cell (Dimension 1): '))
 Tdim2 = int(input('Tectal Cell (Dimension 2): '))
+print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))
 Fieldsizes = np.load('../../RetinotopicMapsData/%s/FieldSizes.npy' % ('{0:04}'.format(JobID)))
@@ -34,6 +35,9 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
                 else:
                     table[iteration, row, 3] = 0
                 row += 1
+
+    sys.stdout.write('\rProcessing data... %i percent' % (iteration * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
+    sys.stdout.flush()
 
 ########################## PLOT ##########################
 
