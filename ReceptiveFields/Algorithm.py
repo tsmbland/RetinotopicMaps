@@ -15,7 +15,7 @@ def job(JobID):
     # Iterations
     for i in range(0, len(f.Wpt[:, 0, 0, 0, 0]) // Timecompression):
         f.updatetimepoint(Timecompression)
-        #f.UpdateFieldCentres()
+        f.UpdateFieldCentres()
         f.UpdateFieldSizes()
         sys.stdout.write(
             '\rJob %s: %i percent' % (

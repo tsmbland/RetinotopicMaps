@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="sped field size algorithm">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/Algorithm.py" afterPath="$PROJECT_DIR$/ReceptiveFields/Algorithm.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/Functions.py" afterPath="$PROJECT_DIR$/ReceptiveFields/Functions.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/AreaPlot.py" afterPath="$PROJECT_DIR$/Plots/AreaPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionPlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/PrecisionChangeMeasures.py" afterPath="$PROJECT_DIR$/Results/PrecisionChangeMeasures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/PrecisionMeasures.py" afterPath="$PROJECT_DIR$/Results/PrecisionMeasures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" afterPath="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReceptiveFields/Algorithm.py" afterPath="$PROJECT_DIR$/ReceptiveFields/Algorithm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReceptiveFields/Functions.py" afterPath="$PROJECT_DIR$/ReceptiveFields/Functions.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +26,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Precision.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MapPrecision/Precision.py">
+      <file leaf-file-name="Algorithm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReceptiveFields/Algorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="225">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReceptiveFields/Functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="975">
+              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,8 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/2006.1979.2D/rough.py" />
-        <option value="$PROJECT_DIR$/DataProcessing/Options.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/NoSurgery.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/Development.py" />
@@ -110,6 +110,8 @@
         <option value="$PROJECT_DIR$/Results/PrecisionMeasures.py" />
         <option value="$PROJECT_DIR$/Results/PrecisionChangeMeasures.py" />
         <option value="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" />
+        <option value="$PROJECT_DIR$/ReceptiveFields/Algorithm.py" />
+        <option value="$PROJECT_DIR$/ReceptiveFields/Functions.py" />
       </list>
     </option>
   </component>
@@ -171,49 +173,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Results" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RetinotopicMaps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ReceptiveFields" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RetinotopicMaps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Plots" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Retinotopic Maps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RetinotopicMaps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MapPrecision" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -528,20 +488,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00055" summary="adapted data processing scripts to be compatible with data with different temporal resolutions">
-      <created>1487013622160</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1487013622160</updated>
-    </task>
-    <task id="LOCAL-00056" summary="can now output data with specified temporal resolution">
-      <created>1487013696651</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1487013696651</updated>
     </task>
     <task id="LOCAL-00057" summary="tectal concetrations now dependent on neighbours, changed some parameters, tectal conc. outputs and specified temporal resolution. Still not working as expected though...">
       <created>1487013999330</created>
@@ -872,7 +818,21 @@
       <option name="project" value="LOCAL" />
       <updated>1489923373828</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="changed directory name">
+      <created>1489923399088</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1489923399089</updated>
+    </task>
+    <task id="LOCAL-00105" summary="fixed incorrect file links">
+      <created>1489923430039</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1489923430039</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TodoView">
@@ -886,9 +846,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -959,8 +919,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="tidied functions code" />
-    <MESSAGE value="fixed problem with time compression, now accepts user input" />
     <MESSAGE value="can now process many jobs" />
     <MESSAGE value="now allows multiprocessing" />
     <MESSAGE value="can now state relative contributions made by EphA and EphB systems to distance. Allows 1D simulations with one Eph system to be carried out with same code" />
@@ -984,7 +942,9 @@
     <MESSAGE value="new plot for displaying area of a receptive field" />
     <MESSAGE value="sped field size algorithm" />
     <MESSAGE value="grouped precision measures into single script" />
-    <option name="LAST_COMMIT_MESSAGE" value="grouped precision measures into single script" />
+    <MESSAGE value="changed directory name" />
+    <MESSAGE value="fixed incorrect file links" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed incorrect file links" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1156,32 +1116,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReceptiveFields/Algorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReceptiveFields/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Plots/WeightPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-450">
           <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/AreaPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="90" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,6 +1203,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/AreaPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="90" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MapPrecision/Precision.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -1272,6 +1218,22 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReceptiveFields/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReceptiveFields/Algorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

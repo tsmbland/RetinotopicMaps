@@ -63,6 +63,6 @@ def UpdateFieldSizes():
 
 
 def savedata(JobID, Timecompression):
-    # np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), FieldCentres)
+    np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), FieldCentres)
     np.save('../../RetinotopicMapsData/%s/FieldSizes' % ('{0:04}'.format(JobID)), FieldSizes)
     np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), TRin * Timecompression)
