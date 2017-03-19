@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/MapPrecision/Precision.py" afterPath="$PROJECT_DIR$/MapPrecision/Algorithm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/AreaPlot.py" afterPath="$PROJECT_DIR$/Plots/AreaPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/WeightPlot.py" afterPath="$PROJECT_DIR$/Plots/WeightPlot.py" />
@@ -518,13 +517,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00058" summary="tectal concetrations now dependent on neighbours, some changes to parameters etc..">
-      <created>1487014144214</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1487014144214</updated>
-    </task>
     <task id="LOCAL-00059" summary="removed file">
       <created>1487014163192</created>
       <option name="number" value="00059" />
@@ -861,7 +853,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489923694797</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="renamed file">
+      <created>1489926947427</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1489926947428</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TodoView">
@@ -948,7 +947,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="now allows multiprocessing" />
     <MESSAGE value="can now state relative contributions made by EphA and EphB systems to distance. Allows 1D simulations with one Eph system to be carried out with same code" />
     <MESSAGE value="can now run multiple jobs in parallel" />
     <MESSAGE value="fixed problem with 1D simulations" />
@@ -973,7 +971,8 @@
     <MESSAGE value="changed directory name" />
     <MESSAGE value="fixed incorrect file links" />
     <MESSAGE value="uncommented some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="uncommented some stuff" />
+    <MESSAGE value="renamed file" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

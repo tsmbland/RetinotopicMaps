@@ -25,14 +25,15 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
     deltaw = Weightmatrix[iteration + 1, :, :, :, :] - Weightmatrix[iteration, :, :, :, :]
     for rdim1 in range(1, len(Weightmatrix[0, 0, 0, :, 0]) - 1):
         for rdim2 in range(1, len(Weightmatrix[0, 0, 0, 0, :]) - 1):
-            table[iteration, row, 0] = rdim1
-            table[iteration, row, 1] = rdim2
-            table[iteration, row, 2] = Weightmatrix[iteration, Tdim1, Tdim2, rdim1, rdim2]
-            if deltaw[Tdim1, Tdim2, rdim1, rdim2] >= 0:
-                table[iteration, row, 3] = 1
-            else:
-                table[iteration, row, 3] = 0
-            row += 1
+            if Weightmatrix[iteration, Tdim1, Tdim2, rdim1, rdim2] != 0.:
+                table[iteration, row, 0] = rdim1
+                table[iteration, row, 1] = rdim2
+                table[iteration, row, 2] = Weightmatrix[iteration, Tdim1, Tdim2, rdim1, rdim2]
+                if deltaw[Tdim1, Tdim2, rdim1, rdim2] >= 0:
+                    table[iteration, row, 3] = 1
+                else:
+                    table[iteration, row, 3] = 0
+                row += 1
 
 ########################## PLOT ##########################
 

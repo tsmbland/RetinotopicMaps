@@ -48,16 +48,17 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
         for rdim2 in range(rplotmindim2, rplotmaxdim2 + 1):
             for tdim1 in range(tplotmindim1, tplotmaxdim1 + 1):
                 for tdim2 in range(tplotmindim2, tplotmaxdim2 + 1):
-                    table[iteration, row, 0] = tdim1
-                    table[iteration, row, 1] = tdim2
-                    table[iteration, row, 2] = rdim1
-                    table[iteration, row, 3] = rdim2
-                    table[iteration, row, 4] = Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2]
-                    if deltaw[tdim1, tdim2, rdim1, rdim2] >= 0:
-                        table[iteration, row, 5] = 1
-                    else:
-                        table[iteration, row, 5] = 0
-                    row += 1
+                    if Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2] != 0.:
+                        table[iteration, row, 0] = tdim1
+                        table[iteration, row, 1] = tdim2
+                        table[iteration, row, 2] = rdim1
+                        table[iteration, row, 3] = rdim2
+                        table[iteration, row, 4] = Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2]
+                        if deltaw[tdim1, tdim2, rdim1, rdim2] >= 0:
+                            table[iteration, row, 5] = 1
+                        else:
+                            table[iteration, row, 5] = 0
+                        row += 1
 
     sys.stdout.write('\rProcessing data... %i percent' % (iteration * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
     sys.stdout.flush()
