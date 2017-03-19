@@ -17,7 +17,7 @@ elif EB == 'y':
     Fieldseparationchange = np.load(
         '../../RetinotopicMapsData/%s/FieldSeparationChangeEB.npy' % ('{0:04}'.format(JobID)))
     Systemsmatchchange = np.load('../../RetinotopicMapsData/%s/SystemsMatchChangeEB.npy' % ('{0:04}'.format(JobID)))
-    TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTREB.npy' % ('{0:04}'.format(JobID)))
+    TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
 Iteration = int(input('Iteration: '))
 
