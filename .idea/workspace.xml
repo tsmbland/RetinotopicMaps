@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="sped field size algorithm">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MapPrecision/Precision.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MapPrecision/PrecisionChange.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MapPrecision/PrecisionChangeEB.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MapPrecision/PrecisionEB.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MapPrecision/PrecisionRegular.py" afterPath="" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/Algorithm.py" afterPath="$PROJECT_DIR$/ReceptiveFields/Algorithm.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/DataProcessing/Functions.py" afterPath="$PROJECT_DIR$/ReceptiveFields/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MapPrecision/Functions.py" afterPath="$PROJECT_DIR$/MapPrecision/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/AreaPlot.py" afterPath="$PROJECT_DIR$/Plots/AreaPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionPlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
@@ -535,13 +529,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00054" summary="adapted plots to be compatible with data with different temporal resolutions">
-      <created>1487013590443</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1487013590445</updated>
-    </task>
     <task id="LOCAL-00055" summary="adapted data processing scripts to be compatible with data with different temporal resolutions">
       <created>1487013622160</created>
       <option name="number" value="00055" />
@@ -878,7 +865,14 @@
       <option name="project" value="LOCAL" />
       <updated>1489888450610</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="grouped precision measures into single script">
+      <created>1489923373827</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1489923373828</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">
@@ -965,7 +959,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="combined field centres and map precision scripts into single file" />
     <MESSAGE value="tidied functions code" />
     <MESSAGE value="fixed problem with time compression, now accepts user input" />
     <MESSAGE value="can now process many jobs" />
@@ -990,7 +983,8 @@
     <MESSAGE value="seperated DataProcessing and MapPrecision scripts" />
     <MESSAGE value="new plot for displaying area of a receptive field" />
     <MESSAGE value="sped field size algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="sped field size algorithm" />
+    <MESSAGE value="grouped precision measures into single script" />
+    <option name="LAST_COMMIT_MESSAGE" value="grouped precision measures into single script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
