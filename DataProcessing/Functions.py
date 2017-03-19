@@ -47,55 +47,22 @@ def UpdateFieldCentres():
     FieldCentres[:, Currentiteration, :, :] = np.nan_to_num(FieldCentres[:, Currentiteration, :, :])
 
 
-
 def UpdateFieldSizes():
     for tdim1 in range(len(Wpt[0, :, 0, 0, 0])):
         for tdim2 in range(len(Wpt[0, 0, :, 0, 0])):
-
             area = 0
-            # Scanning in dim1
-            for rdim2 in range(len(Wpt[0, 0, 0, 0, :])):
-                width = 0
-                rdim1 = 0
-                weight = 0
-                while weight == 0 and rdim1 < len(Wpt[0, 0, 0, :, 0]):
-                    weight = Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-                    rdim1 += 1
-                min = rdim1 - 1
-                if weight != 0:
-                    rdim1 = len(Wpt[0, 0, 0, :, 0]) - 1
-                    weight = 0
-                    while weight == 0:
-                        weight = Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-                        rdim1 -= 1
-                    max = rdim1 + 1
-                    width = max - min
-                area += width
+            synapses = np.array(np.nonzero(Wpt[Weightiteration, tdim1, tdim2, :, :]))
+            for dim1 in np.unique(synapses[0, :]):
+                area += max(synapses[1, synapses[0, :] == dim1]) - min(synapses[1, synapses[0, :] == dim1])
 
-            # Scanning in dim2
-            for rdim1 in range(len(Wpt[0, 0, 0, :, 0])):
-                width = 0
-                rdim2 = 0
-                weight = 0
-                while weight == 0 and rdim2 < len(Wpt[0, 0, 0, 0, :]):
-                    weight = Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-                    rdim2 += 1
-                min = rdim2 - 1
-                if weight != 0:
-                    rdim2 = len(Wpt[0, 0, 0, 0, :]) - 1
-                    weight = 0
-                    while weight == 0:
-                        weight = Wpt[Weightiteration, tdim1, tdim2, rdim1, rdim2]
-                        rdim2 -= 1
-                    max = rdim2 + 1
-                    width = max - min
-                area += width
+            for dim2 in np.unique(synapses[1, :]):
+                area += max(synapses[0, synapses[1, :] == dim2]) - min(synapses[0, synapses[1, :] == dim2])
 
             diameter = 2 * np.sqrt(area / (2 * np.pi))
             FieldSizes[Currentiteration, tdim1, tdim2] = diameter
 
 
 def savedata(JobID, Timecompression):
-    #np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), FieldCentres)
+    # np.save('../../RetinotopicMapsData/%s/FieldCentres' % ('{0:04}'.format(JobID)), FieldCentres)
     np.save('../../RetinotopicMapsData/%s/FieldSizes' % ('{0:04}'.format(JobID)), FieldSizes)
     np.save('../../RetinotopicMapsData/%s/SecondaryTR' % ('{0:04}'.format(JobID)), TRin * Timecompression)
