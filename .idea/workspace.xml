@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="yLTvsBeta.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="yLTvsBeta.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SuperPlots/yLTvsBeta.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="585">
-              <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
+              <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KvsKappa.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="KvsKappa.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SuperPlots/KvsKappa.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -124,8 +124,8 @@
         <option value="$PROJECT_DIR$/Superplots/rough.py" />
         <option value="$PROJECT_DIR$/Superplots/yLTvsBeta.py" />
         <option value="$PROJECT_DIR$/Superplots/KvsKappa.py" />
-        <option value="$PROJECT_DIR$/SuperPlots/KvsKappa.py" />
         <option value="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" />
+        <option value="$PROJECT_DIR$/SuperPlots/KvsKappa.py" />
       </list>
     </option>
   </component>
@@ -559,13 +559,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00068" summary="changed temporal resolution">
-      <created>1487422436518</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1487422436518</updated>
-    </task>
     <task id="LOCAL-00069" summary="renamed folder">
       <created>1487629766362</created>
       <option name="number" value="00069" />
@@ -902,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490126605914</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="fixed problem with importing files">
+      <created>1490126719447</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1490126719447</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1269,20 +1269,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperPlots/KvsKappa.py">
+    <entry file="file://$PROJECT_DIR$/SuperPlots/yLTvsBeta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+        <state relative-caret-position="585">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperPlots/yLTvsBeta.py">
+    <entry file="file://$PROJECT_DIR$/SuperPlots/KvsKappa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="60" column="73" selection-start-line="60" selection-start-column="73" selection-end-line="60" selection-end-column="73" />
+        <state relative-caret-position="510">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
