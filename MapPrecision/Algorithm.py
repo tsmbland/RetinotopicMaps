@@ -81,12 +81,12 @@ def PrecisionChange(JobID):
             systemsmatchEB[iteration] * TRin)
 
     # Export Data
-    np.save('../../RetinotopicMapsData/%s/FieldSizeChange' % ('{0:04}'.format(JobID)), fieldsizechange)
-    np.save('../../RetinotopicMapsData/%s/FieldSeparationChange' % ('{0:04}'.format(JobID)), fieldseparationchange)
-    np.save('../../RetinotopicMapsData/%s/SystemsMatchChange' % ('{0:04}'.format(JobID)), systemsmatchchange)
+    np.save('../../RetinotopicMapsData/%s/FieldSizeChange.npy' % ('{0:04}'.format(JobID)), fieldsizechange)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparationChange.npy' % ('{0:04}'.format(JobID)), fieldseparationchange)
+    np.save('../../RetinotopicMapsData/%s/SystemsMatchChange.npy' % ('{0:04}'.format(JobID)), systemsmatchchange)
 
-    np.save('../../RetinotopicMapsData/%s/FieldSizeChangeEB' % ('{0:04}'.format(JobID)), fieldsizechangeEB)
-    np.save('../../RetinotopicMapsData/%s/FieldSeparationChangeEB' % ('{0:04}'.format(JobID)), fieldseparationchangeEB)
-    np.save('../../RetinotopicMapsData/%s/SystemsMatchChangeEB' % ('{0:04}'.format(JobID)), systemsmatchchangeEB)
+    np.save('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(JobID)), fieldsizechangeEB)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparationChangeEB.npy' % ('{0:04}'.format(JobID)), fieldseparationchangeEB)
+    np.save('../../RetinotopicMapsData/%s/SystemsMatchChangeEB.npy' % ('{0:04}'.format(JobID)), systemsmatchchangeEB)
 
 Parallel(n_jobs=Cores)(delayed(PrecisionChange)(JobID) for JobID in range(minJobID, maxJobID + 1))

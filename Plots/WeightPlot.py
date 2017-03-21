@@ -102,7 +102,7 @@ def update(val):
 weightplot(0)
 
 ####################### END ########################
-sys.stdout.write('\rComplete!')
+print('Complete!')
 sys.stdout.flush()
 sframe.on_changed(update)
 plt.show()
