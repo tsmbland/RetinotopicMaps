@@ -93,107 +93,57 @@ STAB = input('Stable Measures? (y/n) ')
 ##################### PLOT ###################
 fig = plt.figure()
 
+# Field Separation Plot
+ax1 = fig.add_subplot(131)
+ax1.set_xlabel('Strength of Initial Tectal Gradient')
+ax1.set_ylabel('Receptive Field Separation')
+ax1.set_xlim(0, 1)
+
+# Field Size Plot
+ax2 = fig.add_subplot(132)
+ax2.set_xlabel('Strength of Initial Tectal Gradient')
+ax2.set_ylabel('Receptive Field Size')
+ax2.set_xlim(0, 1)
+
+# Systems Match Plot
+ax3 = fig.add_subplot(133)
+ax3.set_xlabel('Strength of Initial Tectal Gradient')
+ax3.set_ylabel('Systems Match')
+ax3.set_xlim(0, 1)
+
 if EB == 'y':
     if STAB == 'n':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SepEB[kval, :], c=colours[kval], label=k[kval])
-
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SizeEB[kval, :], c=colours[kval], label=k[kval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SMEB[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax1.plot(kappa, SepEB[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax2.plot(kappa, SizeEB[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax3.plot(kappa, SMEB[kval, :], c=colours[kval], label=k[kval])
 
     elif STAB == 'y':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SepStabEB[kval, :], c=colours[kval], label=k[kval])
-
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SizeStabEB[kval, :], c=colours[kval], label=k[kval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SMStabEB[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax1.plot(kappa, SepStabEB[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax2.plot(kappa, SizeStabEB[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax3.plot(kappa, SMStabEB[kval, :], c=colours[kval], label=k[kval])
 
 elif EB == 'n':
     if STAB == 'n':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, Sep[kval, :], c=colours[kval], label=k[kval])
-
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, Size[kval, :], c=colours[kval], label=k[kval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SM[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax1.plot(kappa, Sep[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax2.plot(kappa, Size[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax3.plot(kappa, SM[kval, :], c=colours[kval], label=k[kval])
 
     elif STAB == 'y':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SepStab[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax1.plot(kappa, SepStab[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax2.plot(kappa, SizeStab[kval, :], c=colours[kval], label=k[kval])
+        for kval in range(len(k)):
+            ax3.plot(kappa, SMStab[kval, :], c=colours[kval], label=k[kval])
 
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SizeStab[kval, :], c=colours[kval], label=k[kval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for kval in range(1, 5):
-            ax.plot(kappa, SMStab[kval, :], c=colours[kval], label=k[kval])
-
-# plt.legend()
+plt.legend()
 plt.show()

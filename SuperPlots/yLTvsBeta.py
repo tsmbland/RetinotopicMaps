@@ -91,114 +91,64 @@ for row in range(len(yLT)):
             SMStabEB[row, column] = SystemsmatchEB[iteration]
 
 ################## PLOT OPTIONS ###############
-colours = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
+colours = ['b', 'g', 'r', 'c', 'm', 'y', 'beta']
 EB = input('Exclude Boundaries? (y/n) ')
 STAB = input('Stable Measures? (y/n) ')
 
 ##################### PLOT ###################
 fig = plt.figure()
 
+# Field Separation Plot
+ax1 = fig.add_subplot(131)
+ax1.set_xlabel('Strength of Initial Tectal Gradient')
+ax1.set_ylabel('Receptive Field Separation')
+ax1.set_xlim(0, 1)
+
+# Field Size Plot
+ax2 = fig.add_subplot(132)
+ax2.set_xlabel('Strength of Initial Tectal Gradient')
+ax2.set_ylabel('Receptive Field Size')
+ax2.set_xlim(0, 1)
+
+# Systems Match Plot
+ax3 = fig.add_subplot(133)
+ax3.set_xlabel('Strength of Initial Tectal Gradient')
+ax3.set_ylabel('Systems Match')
+ax3.set_xlim(0, 1)
+
 if EB == 'y':
     if STAB == 'n':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SepEB[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SizeEB[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SMEB[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax1.plot(yLT, SepEB[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax2.plot(yLT, SizeEB[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax3.plot(yLT, SMEB[betaval, :], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SepStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SizeStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SMStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax1.plot(yLT, SepStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax2.plot(yLT, SizeStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax3.plot(yLT, SMStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
 
 elif EB == 'n':
     if STAB == 'n':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, Sep[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, Size[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SM[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax1.plot(yLT, Sep[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax2.plot(yLT, Size[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax3.plot(yLT, SM[betaval, :], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        # Field Separation Plot
-        ax = fig.add_subplot(131)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Separation')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SepStab[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax1.plot(yLT, SepStab[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax2.plot(yLT, SizeStab[betaval, :], c=colours[betaval], label=beta[betaval])
+        for betaval in range(len(beta)):
+            ax3.plot(yLT, SMStab[betaval, :], c=colours[betaval], label=beta[betaval])
 
-        # Field Size Plot
-        ax = fig.add_subplot(132)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Receptive Field Size')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SizeStab[betaval, :], c=colours[betaval], label=beta[betaval])
-
-        # Systems Match Plot
-        ax = fig.add_subplot(133)
-        ax.set_xlabel('Strength of Initial Tectal Gradient')
-        ax.set_ylabel('Systems Match')
-        ax.set_xlim(0, 1)
-        for betaval in range(1, 5):
-            ax.plot(yLT, SMStab[betaval, :], c=colours[betaval], label=beta[betaval])
-
-#plt.legend()
+plt.legend()
 plt.show()
