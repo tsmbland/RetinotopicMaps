@@ -52,13 +52,13 @@ for row in range(len(yLT)):
             FieldseparationEB = np.load('../../RetinotopicMapsData/%s/FieldSeparationEB.npy' % ('{0:04}'.format(ID)))
             SystemsmatchEB = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(ID)))
 
-            Fieldsizechange = np.load('../../FieldSizeChange.npy' % ('{0:04}'.format(ID)))
-            Fieldseparationchange = np.load('../../FieldSeparationChange.npy' % ('{0:04}'.format(ID)))
-            Systemsmatchchange = np.load('../../SystemsMatchChange.npy' % ('{0:04}'.format(ID)))
+            Fieldsizechange = np.load('../../RetinotopicMapsData/%s/FieldSizeChange.npy' % ('{0:04}'.format(ID)))
+            Fieldseparationchange = np.load('../../RetinotopicMapsData/%s/FieldSeparationChange.npy' % ('{0:04}'.format(ID)))
+            Systemsmatchchange = np.load('../../RetinotopicMapsData/%s/SystemsMatchChange.npy' % ('{0:04}'.format(ID)))
 
-            FieldsizechangeEB = np.load('../../FieldSizeChangeEB.npy' % ('{0:04}'.format(JobID)))
-            FieldseparationchangeEB = np.load('../../FieldSeparationChangeEB.npy' % ('{0:04}'.format(ID)))
-            SystemsmatchchangeEB = np.load('../../SystemsMatchChangeEB.npy' % ('{0:04}'.format(ID)))
+            FieldsizechangeEB = np.load('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(JobID)))
+            FieldseparationchangeEB = np.load('../../RetinotopicMapsData/%s/FieldSeparationChangeEB.npy' % ('{0:04}'.format(ID)))
+            SystemsmatchchangeEB = np.load('../../RetinotopicMapsData/%s/SystemsMatchChangeEB.npy' % ('{0:04}'.format(ID)))
 
             # Find stable time
             sizechangethresh = 0.005
