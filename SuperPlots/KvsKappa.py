@@ -98,19 +98,19 @@ fig = plt.figure()
 
 # Field Separation Plot
 ax1 = fig.add_subplot(131)
-ax1.set_xlabel('Strength of Initial Tectal Gradient')
+ax1.set_xlabel('Strength of Receptor-Ligand Interaction')
 ax1.set_ylabel('Receptive Field Separation')
 ax1.set_xlim(0, 1)
 
 # Field Size Plot
 ax2 = fig.add_subplot(132)
-ax2.set_xlabel('Strength of Initial Tectal Gradient')
+ax2.set_xlabel('Strength of Receptor-Ligand Interaction')
 ax2.set_ylabel('Receptive Field Size')
 ax2.set_xlim(0, 1)
 
 # Systems Match Plot
 ax3 = fig.add_subplot(133)
-ax3.set_xlabel('Strength of Initial Tectal Gradient')
+ax3.set_xlabel('Strength of Receptor-Ligand Interaction')
 ax3.set_ylabel('Systems Match')
 ax3.set_xlim(0, 1)
 
