@@ -43,8 +43,8 @@ tc = 0  # concentration iterations per iteration
 # Synaptic modification
 Wmax = 1.  # total strength available to each presynaptic fibre
 gamma = 0.01
-kappa = 0.7
-k = 0.0
+kappa = 0.5
+k = 0.005
 elim = 0.005  # elimination threshold
 newW = 0.01  # weight of new synapses
 sprout = 0.02  # sprouting threshold
