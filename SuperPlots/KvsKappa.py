@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 kappa = [0.0504, 0.1, 0.3, 0.5, 0.7, 1]
 k = [0, 0.001, 0.005, 0.03]
 
-JobID = np.zeros([len(kappa), len(k)])
+JobID = np.zeros([len(kappa), len(k)], dtype=np.int8)
 JobID[0, :] = [33, 59, 26, 46]
 JobID[1, :] = [34, 60, 50, 47]
 JobID[2, :] = [35, 61, 51, 48]

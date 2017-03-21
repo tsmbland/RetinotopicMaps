@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 yLT = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 beta = [0, 0.001, 0.01, 0.1, 0.2, 0.5, 1.]
 
-JobID = np.zeros([len(yLT), len(beta)])
+JobID = np.zeros([len(yLT), len(beta)], dtype=np.int8)
 JobID[0, :] = [0, 126, 99, 108, 117, 0, 0]
 JobID[1, :] = [0, 125, 98, 107, 116, 0, 0]
 JobID[2, :] = [0, 124, 97, 106, 115, 0, 0]
