@@ -52,7 +52,7 @@ for row in range(len(kappa)):
                 '../../RetinotopicMapsData/%s/FieldSeparationChange.npy' % ('{0:04}'.format(ID)))
             Systemsmatchchange = np.load('../../RetinotopicMapsData/%s/SystemsMatchChange.npy' % ('{0:04}'.format(ID)))
 
-            FieldsizechangeEB = np.load('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(JobID)))
+            FieldsizechangeEB = np.load('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(ID)))
             FieldseparationchangeEB = np.load(
                 '../../RetinotopicMapsData/%s/FieldSeparationChangeEB.npy' % ('{0:04}'.format(ID)))
             SystemsmatchchangeEB = np.load(
@@ -117,36 +117,36 @@ ax3.set_xlim(0, 1)
 if EB == 'y':
     if STAB == 'n':
         for kval in range(len(k)):
-            ax1.plot(kappa, SepEB[kval, :], c=colours[kval], label=k[kval])
+            ax1.plot(kappa, SepEB[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax2.plot(kappa, SizeEB[kval, :], c=colours[kval], label=k[kval])
+            ax2.plot(kappa, SizeEB[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax3.plot(kappa, SMEB[kval, :], c=colours[kval], label=k[kval])
+            ax3.plot(kappa, SMEB[:, kval], c=colours[kval], label=k[kval])
 
     elif STAB == 'y':
         for kval in range(len(k)):
-            ax1.plot(kappa, SepStabEB[kval, :], c=colours[kval], label=k[kval])
+            ax1.plot(kappa, SepStabEB[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax2.plot(kappa, SizeStabEB[kval, :], c=colours[kval], label=k[kval])
+            ax2.plot(kappa, SizeStabEB[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax3.plot(kappa, SMStabEB[kval, :], c=colours[kval], label=k[kval])
+            ax3.plot(kappa, SMStabEB[:, kval], c=colours[kval], label=k[kval])
 
 elif EB == 'n':
     if STAB == 'n':
         for kval in range(len(k)):
-            ax1.plot(kappa, Sep[kval, :], c=colours[kval], label=k[kval])
+            ax1.plot(kappa, Sep[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax2.plot(kappa, Size[kval, :], c=colours[kval], label=k[kval])
+            ax2.plot(kappa, Size[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax3.plot(kappa, SM[kval, :], c=colours[kval], label=k[kval])
+            ax3.plot(kappa, SM[:, kval], c=colours[kval], label=k[kval])
 
     elif STAB == 'y':
         for kval in range(len(k)):
-            ax1.plot(kappa, SepStab[kval, :], c=colours[kval], label=k[kval])
+            ax1.plot(kappa, SepStab[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax2.plot(kappa, SizeStab[kval, :], c=colours[kval], label=k[kval])
+            ax2.plot(kappa, SizeStab[:, kval], c=colours[kval], label=k[kval])
         for kval in range(len(k)):
-            ax3.plot(kappa, SMStab[kval, :], c=colours[kval], label=k[kval])
+            ax3.plot(kappa, SMStab[:, kval], c=colours[kval], label=k[kval])
 
 plt.legend()
 plt.show()

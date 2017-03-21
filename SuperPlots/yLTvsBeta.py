@@ -57,7 +57,7 @@ for row in range(len(yLT)):
                 '../../RetinotopicMapsData/%s/FieldSeparationChange.npy' % ('{0:04}'.format(ID)))
             Systemsmatchchange = np.load('../../RetinotopicMapsData/%s/SystemsMatchChange.npy' % ('{0:04}'.format(ID)))
 
-            FieldsizechangeEB = np.load('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(JobID)))
+            FieldsizechangeEB = np.load('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(ID)))
             FieldseparationchangeEB = np.load(
                 '../../RetinotopicMapsData/%s/FieldSeparationChangeEB.npy' % ('{0:04}'.format(ID)))
             SystemsmatchchangeEB = np.load(
@@ -122,36 +122,36 @@ ax3.set_xlim(0, 1)
 if EB == 'y':
     if STAB == 'n':
         for betaval in range(len(beta)):
-            ax1.plot(yLT, SepEB[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax1.plot(yLT, SepEB[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax2.plot(yLT, SizeEB[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax2.plot(yLT, SizeEB[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax3.plot(yLT, SMEB[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax3.plot(yLT, SMEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
         for betaval in range(len(beta)):
-            ax1.plot(yLT, SepStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax1.plot(yLT, SepStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax2.plot(yLT, SizeStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax2.plot(yLT, SizeStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax3.plot(yLT, SMStabEB[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax3.plot(yLT, SMStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
 elif EB == 'n':
     if STAB == 'n':
         for betaval in range(len(beta)):
-            ax1.plot(yLT, Sep[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax1.plot(yLT, Sep[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax2.plot(yLT, Size[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax2.plot(yLT, Size[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax3.plot(yLT, SM[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax3.plot(yLT, SM[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
         for betaval in range(len(beta)):
-            ax1.plot(yLT, SepStab[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax1.plot(yLT, SepStab[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax2.plot(yLT, SizeStab[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax2.plot(yLT, SizeStab[:, betaval], c=colours[betaval], label=beta[betaval])
         for betaval in range(len(beta)):
-            ax3.plot(yLT, SMStab[betaval, :], c=colours[betaval], label=beta[betaval])
+            ax3.plot(yLT, SMStab[:, betaval], c=colours[betaval], label=beta[betaval])
 
 plt.legend()
 plt.show()
