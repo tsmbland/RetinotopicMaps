@@ -40,7 +40,7 @@ SMStabEB = np.zeros([len(yLT), len(beta)])
 ################### IMPORT DATA ################
 
 for row in range(len(yLT)):
-    for column in range(len(beta)):
+    for column in range(2, 5):
         ID = JobID[row, column]
         if ID != 0:
             # Import Data

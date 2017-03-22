@@ -19,7 +19,7 @@ TRin2 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.forma
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [0, 1000, 2000, 3000, 4000, 4999]
+Iterations = [0, 100, 200, 300, 400, 499]
 
 ######################## TABLE #########################
 
@@ -47,23 +47,25 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
 
 ####################### PLOT ##########################
 fig = plt.figure()
-
+figs = fig.add_subplot(111, frameon=False)
+figs.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
+figs.set_ylabel('Retinal Cell Number (Dimension 2)')
+figs.set_xlabel('Retinal Cell Number (Dimension 1)')
 
 def areaplot(plotn):
     i = Iterations[plotn]
 
     ax = fig.add_subplot(2, 3, plotn + 1)
-    ax.set_ylabel('Retinal Cell Number (Dimension 2)')
-    ax.set_xlabel('Retinal Cell Number (Dimension 1)')
     ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     ax.set_ylim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+    ax.set_title('%d iterations' % i)
 
     wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 50, marker='s',
                        c=(table[i // TRin1, :, 3]),
                        cmap='Greys', edgecolors='k')
     wplot.set_clim(0, 1)
 
-    circle = plt.Circle((Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[0, i // TRin2, Tdim1, Tdim2]),
+    circle = plt.Circle((Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[1, i // TRin2, Tdim1, Tdim2]),
                         Fieldsizes[i // TRin2, Tdim1, Tdim2] / 2,
                         fill=False)
     ax.add_artist(circle)
