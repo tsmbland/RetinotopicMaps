@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
 import sys
+import seaborn as sns
 
 ####################### IMPORT DATA ######################
 
