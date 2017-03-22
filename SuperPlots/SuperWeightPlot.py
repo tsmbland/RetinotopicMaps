@@ -96,6 +96,14 @@ def areaplot(plotn):
     elif Tplotdim == 2:
         ax.set_xlim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
 
+    if (plotn+1) == 1:
+        ax.set_xticklabels([])
+    if (plotn+1) == 2 or (plotn+1) == 3:
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+    if (plotn+1) == 5 or (plotn+1) == 6:
+        ax.set_yticklabels([])
+
 
 for plotn in range(len(Iterations)):
     areaplot(plotn)

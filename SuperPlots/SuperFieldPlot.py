@@ -40,7 +40,6 @@ def fieldplot(plotn):
             if Fieldcentres[0, i // TRin, tdim1, tdim2] != 0 and Fieldcentres[1, i // TRin, tdim1, tdim2] != 0:
                 fieldlistdim1.append(Fieldcentres[0, i // TRin, tdim1, tdim2])
                 fieldlistdim2.append(Fieldcentres[1, i // TRin, tdim1, tdim2])
-
         ax.plot(fieldlistdim1, fieldlistdim2, c='0.5')
 
     for tdim2 in range(len(Fieldcentres[0, i // TRin, 0, :])):
@@ -50,7 +49,6 @@ def fieldplot(plotn):
             if Fieldcentres[0, i // TRin, tdim1, tdim2] != 0 and Fieldcentres[1, i // TRin, tdim1, tdim2] != 0:
                 fieldlistdim1.append(Fieldcentres[0, i // TRin, tdim1, tdim2])
                 fieldlistdim2.append(Fieldcentres[1, i // TRin, tdim1, tdim2])
-
         ax.plot(fieldlistdim1, fieldlistdim2, c='0.5')
 
     for tdim1 in range(5, len(Fieldcentres[0, i // TRin, :, 0]) - 5):
@@ -60,7 +58,6 @@ def fieldplot(plotn):
             if Fieldcentres[0, i // TRin, tdim1, tdim2] != 0 and Fieldcentres[1, i // TRin, tdim1, tdim2] != 0:
                 fieldlistdim1.append(Fieldcentres[0, i // TRin, tdim1, tdim2])
                 fieldlistdim2.append(Fieldcentres[1, i // TRin, tdim1, tdim2])
-
         ax.plot(fieldlistdim1, fieldlistdim2, c='k')
 
     for tdim2 in range(5, len(Fieldcentres[0, i // TRin, 0, :]) - 5):
@@ -70,9 +67,15 @@ def fieldplot(plotn):
             if Fieldcentres[0, i // TRin, tdim1, tdim2] != 0 and Fieldcentres[1, i // TRin, tdim1, tdim2] != 0:
                 fieldlistdim1.append(Fieldcentres[0, i // TRin, tdim1, tdim2])
                 fieldlistdim2.append(Fieldcentres[1, i // TRin, tdim1, tdim2])
-
         ax.plot(fieldlistdim1, fieldlistdim2, c='k')
 
+    if (plotn+1) == 1:
+        ax.set_xticklabels([])
+    if (plotn+1) == 2 or (plotn+1) == 3:
+        ax.set_xticklabels([])
+        ax.set_yticklabels([])
+    if (plotn+1) == 5 or (plotn+1) == 6:
+        ax.set_yticklabels([])
 
 for plotn in range(len(Iterations)):
     fieldplot(plotn)
