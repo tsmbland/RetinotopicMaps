@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="added new plots">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SuperPlots/SuperWeightPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/AreaPlot.py" afterPath="$PROJECT_DIR$/Plots/AreaPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/FieldPlot.py" afterPath="$PROJECT_DIR$/Plots/FieldPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/WeightPlot.py" afterPath="$PROJECT_DIR$/Plots/WeightPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperFieldPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperFieldPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" afterPath="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -580,13 +576,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00074" summary="new file structure for saved data, and easy referencing using 4-digit JobID. Separated parameters from functions in model code">
-      <created>1487786816975</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1487786816975</updated>
-    </task>
     <task id="LOCAL-00075" summary="separate file for functions">
       <created>1487786854024</created>
       <option name="number" value="00075" />
@@ -923,7 +912,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490189625961</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="added new plots">
+      <created>1490198341712</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1490198341712</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TodoView">

@@ -77,8 +77,9 @@ sframe = Slider(axframe, 'Iteration', 0, (len(Weightmatrix[:, 0, 0, 0, 0])) * TR
 
 
 def weightplot(i):
-    wplot = ax.scatter(table[i, :, Tplotdim - 1], table[i, :, Rplotdim + 1], s=(table[i, :, 4]) * 50, marker='s',
-                       c=(table[i, :, 5]),
+    wplot = ax.scatter(table[i // TRin, :, Tplotdim - 1], table[i // TRin, :, Rplotdim + 1],
+                       s=(table[i // TRin, :, 4]) * 50, marker='s',
+                       c=(table[i // TRin, :, 5]),
                        cmap='Greys', edgecolors='k')
     wplot.set_clim(0, 1)
     if Rplotdim == 1:
@@ -95,8 +96,8 @@ def weightplot(i):
 
 def update(val):
     ax.clear()
-    it = np.floor(sframe.val) // TRin
-    weightplot(it)
+    i = np.floor(sframe.val)
+    weightplot(i)
 
 
 weightplot(0)

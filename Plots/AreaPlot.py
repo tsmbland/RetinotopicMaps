@@ -63,7 +63,7 @@ def weightplot(i):
     ax.set_ylabel('Retinal Cell Number (Dimension 2)')
     ax.set_xlabel('Retinal Cell Number (Dimension 1)')
 
-    circle = plt.Circle((Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[0, i // TRin2, Tdim1, Tdim2]),
+    circle = plt.Circle((Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[1, i // TRin2, Tdim1, Tdim2]),
                         Fieldsizes[i // TRin2, Tdim1, Tdim2] / 2,
                         fill=False)
     ax.add_artist(circle)
