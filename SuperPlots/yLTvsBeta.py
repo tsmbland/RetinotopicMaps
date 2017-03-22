@@ -123,34 +123,26 @@ if EB == 'y':
     if STAB == 'n':
         for betaval in range(2, 5):
             ax1.plot(yLT, SepEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(yLT, SizeEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(yLT, SMEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
         for betaval in range(2, 5):
             ax1.plot(yLT, SepStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(yLT, SizeStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(yLT, SMStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
 elif EB == 'n':
     if STAB == 'n':
         for betaval in range(2, 5):
             ax1.plot(yLT, Sep[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(yLT, Size[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(yLT, SM[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
         for betaval in range(2, 5):
             ax1.plot(yLT, SepStab[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(yLT, SizeStab[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(yLT, SMStab[:, betaval], c=colours[betaval], label=beta[betaval])
 
 plt.legend()

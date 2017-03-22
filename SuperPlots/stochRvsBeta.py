@@ -35,7 +35,7 @@ SMStabEB = np.zeros([len(stochR), len(beta)])
 ################### IMPORT DATA ################
 
 for row in range(len(stochR)):
-    for column in range(2, 5):
+    for column in range(2, 6):
         ID = JobID[row, column]
         if ID != 0:
             # Import Data
@@ -116,36 +116,28 @@ ax3.set_xlim(0, 1)
 
 if EB == 'y':
     if STAB == 'n':
-        for betaval in range(2, 5):
+        for betaval in range(2, 6):
             ax1.plot(stochR, SepEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(stochR, SizeEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(stochR, SMEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        for betaval in range(2, 5):
+        for betaval in range(2, 6):
             ax1.plot(stochR, SepStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(stochR, SizeStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(stochR, SMStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
 elif EB == 'n':
     if STAB == 'n':
-        for betaval in range(2, 5):
+        for betaval in range(2, 6):
             ax1.plot(stochR, Sep[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(stochR, Size[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(stochR, SM[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        for betaval in range(2, 5):
+        for betaval in range(2, 6):
             ax1.plot(stochR, SepStab[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax2.plot(stochR, SizeStab[:, betaval], c=colours[betaval], label=beta[betaval])
-        for betaval in range(2, 5):
             ax3.plot(stochR, SMStab[:, betaval], c=colours[betaval], label=beta[betaval])
 
 plt.legend()
