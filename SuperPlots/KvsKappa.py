@@ -108,16 +108,16 @@ for row in range(len(kappa)):
             iteration = 0
             while (fieldsizechange > sizechangethresh or fieldsizechange < -sizechangethresh or
                            systemsmatchchange > smthresh or systemsmatchchange < -smthresh) and iteration < len(
-                Fieldsizechange):
+                FieldsizechangeEB):
                 fieldsizechange = FieldsizechangeEB[iteration]
                 systemsmatchchange = SystemsmatchchangeEB[iteration]
                 iteration += 1
 
-            TStab[row, column] = iteration * TRin
-            SepStab[row, column] = Fieldseparation[iteration]
-            SepStdevStab[row, column] = FieldseparationStdev[iteration]
-            SizeStab[row, column] = Fieldsize[iteration]
-            SMStab[row, column] = Systemsmatch[iteration]
+            TStabEB[row, column] = iteration * TRin
+            SepStabEB[row, column] = Fieldseparation[iteration]
+            SepStdevStabEB[row, column] = FieldseparationStdev[iteration]
+            SizeStabEB[row, column] = Fieldsize[iteration]
+            SMStabEB[row, column] = Systemsmatch[iteration]
 
 ################## PLOT OPTIONS ###############
 colours = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
