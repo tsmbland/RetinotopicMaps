@@ -1,44 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/2006.1979/Development.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/2006.1979/NoSurgery.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="added parameters script">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/2006/Functions.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/2006/Parameters.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/1D Model.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/1D Model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/DEVELOPMENT.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/MAP PRECISION.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/MISMATCH SURGERY.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/Map duplication.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/TECTAL ROTATION.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.1D/TIMING.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/2D Model.jl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/2D Model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/Development.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/Functions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/MismatchSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/NoSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/1979.2D/StandardAlgorithm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.A/Development.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.A/Functions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.A/MismatchSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.A/NoSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.A/StandardAlgorithm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.B/Development.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.B/Functions.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.B/MismatchSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.B/NoSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.1D.B/StandardAlgorithm.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.2D/Development.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.2D/MismatchSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.1979.2D/NoSurgery.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/2006.2D/Functions.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979.2D/Functions.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979.2D/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/2006.2D/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/Models/2006/StandardAlgorithm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -62,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
+      <file leaf-file-name="StandardAlgorithm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/2006/StandardAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="398" column="0" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+            <state relative-caret-position="840">
+              <caret line="59" column="88" selection-start-line="59" selection-start-column="88" selection-end-line="59" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Parameters.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
+      <file leaf-file-name="StandardAlgorithm.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="29" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DataProcessing/Functions2.py" />
         <option value="$PROJECT_DIR$/DataProcessing/Precision.py" />
         <option value="$PROJECT_DIR$/DataProcessing/PrecisionRegular.py" />
         <option value="$PROJECT_DIR$/DataProcessing/FunctionsBoundaryExclusion.py" />
@@ -148,6 +112,7 @@
         <option value="$PROJECT_DIR$/Models/2006/Parameters.py" />
         <option value="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
         <option value="$PROJECT_DIR$/Models/2006/Functions.py" />
+        <option value="$PROJECT_DIR$/Models/2006/StandardAlgorithm.py" />
       </list>
     </option>
   </component>
@@ -607,20 +572,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00086" summary="added script to print precision measures">
-      <created>1488483788309</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1488483788310</updated>
-    </task>
-    <task id="LOCAL-00087" summary="added scripts to measure and view rate of change in the system over time. Not yet fully tested">
-      <created>1488639189222</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1488639189224</updated>
-    </task>
     <task id="LOCAL-00088" summary="added scripts to measure and view rate of change in the system over time. Not yet fully tested">
       <created>1488646956879</created>
       <option name="number" value="00088" />
@@ -950,7 +901,21 @@
       <option name="project" value="LOCAL" />
       <updated>1490273600030</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="changed repository structure">
+      <created>1490296643822</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1490296643823</updated>
+    </task>
+    <task id="LOCAL-00136" summary="(hopefully) got non-standard algorithms working">
+      <created>1490296688433</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1490296688433</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1017,8 +982,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="grouped precision measures into single script" />
-    <MESSAGE value="changed directory name" />
     <MESSAGE value="fixed incorrect file links" />
     <MESSAGE value="uncommented some stuff" />
     <MESSAGE value="renamed file" />
@@ -1042,7 +1005,9 @@
     <MESSAGE value="added field separation stdev measure" />
     <MESSAGE value="added field separation stdev plot and line to indicate stability time" />
     <MESSAGE value="fixed copy-paste error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed copy-paste error" />
+    <MESSAGE value="changed repository structure" />
+    <MESSAGE value="(hopefully) got non-standard algorithms working" />
+    <option name="LAST_COMMIT_MESSAGE" value="(hopefully) got non-standard algorithms working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1265,14 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006/StandardAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-131">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="585">
@@ -1293,32 +1250,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/Development.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3330">
-          <caret line="222" column="26" selection-start-line="222" selection-start-column="26" selection-end-line="222" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1331,6 +1268,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -1339,10 +1302,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
+    <entry file="file://$PROJECT_DIR$/Models/2006/StandardAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="840">
+          <caret line="59" column="88" selection-start-line="59" selection-start-column="88" selection-end-line="59" selection-end-column="88" />
           <folding />
         </state>
       </provider>
