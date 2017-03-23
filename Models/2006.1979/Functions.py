@@ -8,8 +8,6 @@ import Parameters as p
 Wpt = np.zeros(
     [p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # synaptic strength matrix
 Wtot = np.zeros([p.NRdim1 + 1, p.NRdim2 + 1])  # total strength available to a fibre
-Spt = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # similarity
-Dpt = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # distance
 Cra = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])
 Crb = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])  # concentration of EphrinA/B in a retinal cell
 Cta = np.zeros([p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])
@@ -400,10 +398,10 @@ def updatexFieldcentres():
 
 
 def savedata(JobID):
-    if not os.path.isdir('../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID))):
-        os.makedirs('../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID)))
-    np.save('../../RetinotopicMapsData/%s/Weightmatrix' % ('{0:04}'.format(JobID)), Wpt)
-    np.save('../../RetinotopicMapsData/%s/EphrinA' % ('{0:04}'.format(JobID)), Cta)
-    np.save('../../RetinotopicMapsData/%s/EphrinB' % ('{0:04}'.format(JobID)), Ctb)
-    np.save('../../RetinotopicMapsData/%s/xFieldCentres' % ('{0:04}'.format(JobID)), xFieldcentres)
-    np.save('../../RetinotopicMapsData/%s/PrimaryTR' % ('{0:04}'.format(JobID)), p.TRout)
+    if not os.path.isdir('../../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID))):
+        os.makedirs('../../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID)))
+    np.save('../../../RetinotopicMapsData/%s/Weightmatrix' % ('{0:04}'.format(JobID)), Wpt)
+    np.save('../../../RetinotopicMapsData/%s/EphrinA' % ('{0:04}'.format(JobID)), Cta)
+    np.save('../../../RetinotopicMapsData/%s/EphrinB' % ('{0:04}'.format(JobID)), Ctb)
+    np.save('../../../RetinotopicMapsData/%s/xFieldCentres' % ('{0:04}'.format(JobID)), xFieldcentres)
+    np.save('../../../RetinotopicMapsData/%s/PrimaryTR' % ('{0:04}'.format(JobID)), p.TRout)
