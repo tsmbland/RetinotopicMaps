@@ -159,7 +159,7 @@ ax5.set_xlim(0, 1)
 
 if EB == 'y':
     if STAB == 'n':
-        for kval in range(1, 6):
+        for kval in range(4):
             ax1.plot(kappa, SepEB[:, kval], c=colours[kval], label=k[kval])
             ax2.plot(kappa, SepStdevEB[:, kval], c=colours[kval], label=k[kval])
             ax3.plot(kappa, SizeEB[:, kval], c=colours[kval], label=k[kval])
@@ -167,7 +167,7 @@ if EB == 'y':
             ax5.plot(kappa, TStabEB[:, kval], c=colours[kval], label=k[kval])
 
     elif STAB == 'y':
-        for kval in range(1, 6):
+        for kval in range(4):
             ax1.plot(kappa, SepStabEB[:, kval], c=colours[kval], label=k[kval])
             ax2.plot(kappa, SepStdevStabEB[:, kval], c=colours[kval], label=k[kval])
             ax3.plot(kappa, SizeStabEB[:, kval], c=colours[kval], label=k[kval])
@@ -176,7 +176,7 @@ if EB == 'y':
 
 elif EB == 'n':
     if STAB == 'n':
-        for kval in range(1, 6):
+        for kval in range(4):
             ax1.plot(kappa, Sep[:, kval], c=colours[kval], label=k[kval])
             ax2.plot(kappa, SepStdev[:, kval], c=colours[kval], label=k[kval])
             ax3.plot(kappa, Size[:, kval], c=colours[kval], label=k[kval])
@@ -184,7 +184,7 @@ elif EB == 'n':
             ax5.plot(kappa, TStab[:, kval], c=colours[kval], label=k[kval])
 
     elif STAB == 'y':
-        for kval in range(1, 6):
+        for kval in range(4):
             ax1.plot(kappa, SepStab[:, kval], c=colours[kval], label=k[kval])
             ax2.plot(kappa, SepStdevStab[:, kval], c=colours[kval], label=k[kval])
             ax3.plot(kappa, SizeStab[:, kval], c=colours[kval], label=k[kval])

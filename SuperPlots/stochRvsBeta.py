@@ -165,7 +165,7 @@ ax5.set_xlim(0, 0.5)
 
 if EB == 'y':
     if STAB == 'n':
-        for betaval in range(1, 6):
+        for betaval in range(2, 6):
             ax1.plot(stochR, SepEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(stochR, SepStdevEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(stochR, SizeEB[:, betaval], c=colours[betaval], label=beta[betaval])
@@ -173,7 +173,7 @@ if EB == 'y':
             ax5.plot(stochR, TStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        for betaval in range(1, 6):
+        for betaval in range(2, 6):
             ax1.plot(stochR, SepStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(stochR, SepStdevStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(stochR, SizeStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
@@ -182,7 +182,7 @@ if EB == 'y':
 
 elif EB == 'n':
     if STAB == 'n':
-        for betaval in range(1, 6):
+        for betaval in range(2, 6):
             ax1.plot(stochR, Sep[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(stochR, SepStdev[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(stochR, Size[:, betaval], c=colours[betaval], label=beta[betaval])
@@ -190,7 +190,7 @@ elif EB == 'n':
             ax5.plot(stochR, TStab[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        for betaval in range(1, 6):
+        for betaval in range(2, 6):
             ax1.plot(stochR, SepStab[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(stochR, SepStdevStab[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(stochR, SizeStab[:, betaval], c=colours[betaval], label=beta[betaval])
