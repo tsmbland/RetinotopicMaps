@@ -194,11 +194,9 @@ def updateDpt():
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
             for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
                 for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-                    Dpt[tdim1, tdim2, rdim1, rdim2] = ((Cra[rdim1, rdim2] * Cta[
-                        Currentiteration, tdim1, tdim2] - 1) ** 2) + (
-                                                          (
-                                                              Crb[rdim1, rdim2] - Ctb[
-                                                                  Currentiteration, tdim1, tdim2]) ** 2)
+                    Dpt[tdim1, tdim2, rdim1, rdim2] = p.distA(
+                        (Cra[rdim1, rdim2] * Cta[Currentiteration, tdim1, tdim2] - 1) ** 2) + p.distB(
+                        (Crb[rdim1, rdim2] - Ctb[Currentiteration, tdim1, tdim2]) ** 2)
 
 
 def updateSpt():
@@ -217,9 +215,9 @@ def updateWpt():
             for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
                 denominator[rdim1, rdim2] = sum(
                     sum((Wpt[Timepoint, :, :, rdim1, rdim2] + p.deltatw * p.gamma * Spt[
-                                                                                           :, :,
-                                                                                           rdim1,
-                                                                                           rdim2])))
+                                                                                    :, :,
+                                                                                    rdim1,
+                                                                                    rdim2])))
                 Wpt[Timepoint, :, :, rdim1, rdim2] = numerator[:, :, rdim1, rdim2] / denominator[rdim1, rdim2]
 
 
