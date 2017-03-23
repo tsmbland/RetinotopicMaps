@@ -7,7 +7,7 @@ import seaborn as sns
 yLT = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 beta = [0, 0.001, 0.01, 0.1, 0.2, 0.5, 1.]
 
-JobID = np.zeros([len(yLT), len(beta)], dtype=np.int8)
+JobID = np.zeros([len(yLT), len(beta)], dtype=np.int32)
 JobID[0, :] = [0, 126, 99, 108, 117, 135, 0]
 JobID[1, :] = [0, 125, 98, 107, 116, 134, 0]
 JobID[2, :] = [0, 124, 97, 106, 115, 133, 0]
@@ -41,7 +41,7 @@ SMStabEB = np.zeros([len(yLT), len(beta)])
 ################### IMPORT DATA ################
 
 for row in range(len(yLT)):
-    for column in range(2, 5):
+    for column in range(1, 6):
         ID = JobID[row, column]
         if ID != 0:
             # Import Data
@@ -122,26 +122,26 @@ ax3.set_xlim(0, 1)
 
 if EB == 'y':
     if STAB == 'n':
-        for betaval in range(2, 5):
+        for betaval in range(1, 6):
             ax1.plot(yLT, SepEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(yLT, SizeEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(yLT, SMEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        for betaval in range(2, 5):
+        for betaval in range(1, 6):
             ax1.plot(yLT, SepStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(yLT, SizeStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(yLT, SMStabEB[:, betaval], c=colours[betaval], label=beta[betaval])
 
 elif EB == 'n':
     if STAB == 'n':
-        for betaval in range(2, 5):
+        for betaval in range(1, 6):
             ax1.plot(yLT, Sep[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(yLT, Size[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(yLT, SM[:, betaval], c=colours[betaval], label=beta[betaval])
 
     elif STAB == 'y':
-        for betaval in range(2, 5):
+        for betaval in range(1, 6):
             ax1.plot(yLT, SepStab[:, betaval], c=colours[betaval], label=beta[betaval])
             ax2.plot(yLT, SizeStab[:, betaval], c=colours[betaval], label=beta[betaval])
             ax3.plot(yLT, SMStab[:, betaval], c=colours[betaval], label=beta[betaval])

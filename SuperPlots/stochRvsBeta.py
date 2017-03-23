@@ -7,7 +7,7 @@ import seaborn as sns
 stochR = [0, 0.1, 0.2, 0.3, 0.4, 0.5]
 beta = [0, 0.001, 0.01, 0.1, 0.2, 0.5, 1.]
 
-JobID = np.zeros([len(stochR), len(beta)], dtype=np.int8)
+JobID = np.zeros([len(stochR), len(beta)], dtype=np.int32)
 JobID[0, :] = [0, 0, 79, 80, 81, 82, 83]
 JobID[1, :] = [0, 0, 136, 141, 146, 151, 0]
 JobID[2, :] = [0, 0, 137, 142, 147, 152, 0]
