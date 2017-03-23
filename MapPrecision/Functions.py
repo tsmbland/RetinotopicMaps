@@ -5,7 +5,7 @@ import numpy as np
 
 def importdata(jobid):
     global xFieldCentres, TRin, FieldCentres, FieldSizes
-    global FieldSeparation, FieldSize, SystemsMatch, FieldSeparationEB, FieldSizeEB, SystemsMatchEB
+    global FieldSeparation, FieldSeparationStdev, FieldSize, SystemsMatch, FieldSeparationEB, FieldSeparationStdevEB, FieldSizeEB, SystemsMatchEB
     global FieldSeparationChange, FieldSizeChange, SystemsMatchChange, FieldSeparationChangeEB, FieldSizeChangeEB, SystemsMatchChangeEB
     global Currentiteration, Weightiteration
 
@@ -15,10 +15,12 @@ def importdata(jobid):
     FieldSizes = np.load('../../RetinotopicMapsData/%s/FieldSizes.npy' % ('{0:04}'.format(jobid)))
 
     FieldSeparation = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
+    FieldSeparationStdev = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
     FieldSize = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
     SystemsMatch = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
 
     FieldSeparationEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
+    FieldSeparationStdevEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
     FieldSizeEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
     SystemsMatchEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
 
@@ -41,8 +43,7 @@ def updatetimepoint():
 
 
 def MeanFieldSeparation():
-    totaldistance = 0
-    count = 0
+    fieldseparations = []
 
     # Field distance with closest neighbours in dim2
     for tdim1 in range(len(FieldCentres[0, 0, :, 0])):
@@ -54,9 +55,8 @@ def MeanFieldSeparation():
                 fieldlistdim1.append(FieldCentres[0, Currentiteration, tdim1, tdim2])
                 fieldlistdim2.append(FieldCentres[1, Currentiteration, tdim1, tdim2])
         for fieldcell in range(len(fieldlistdim1) - 1):
-            totaldistance += np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
-                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
-            count += 1
+            fieldseparations.append(np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
+                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2))
 
     # Field distance with closest neighbours in dim1
     for tdim2 in range(len(FieldCentres[0, 0, 0, :])):
@@ -68,12 +68,13 @@ def MeanFieldSeparation():
                 fieldlistdim1.append(FieldCentres[0, Currentiteration, tdim1, tdim2])
                 fieldlistdim2.append(FieldCentres[1, Currentiteration, tdim1, tdim2])
         for fieldcell in range(len(fieldlistdim1) - 1):
-            totaldistance += np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
-                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
-            count += 1
+            fieldseparations.append(np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
+                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2))
 
-    meanseparation = totaldistance / count
+    meanseparation = np.mean(fieldseparations)
+    standarddeviation = np.std(fieldseparations)
     FieldSeparation[Currentiteration] = meanseparation
+    FieldSeparationStdev[Currentiteration] = standarddeviation
 
 
 def MeanFieldSize():
@@ -100,8 +101,7 @@ def MeanSystemsMatch():
 
 
 def MeanFieldSeparationEB(border):
-    totaldistance = 0
-    count = 0
+    fieldseparations = []
 
     # Field distance with closest neighbours in dim2
     for tdim1 in range(border, len(FieldCentres[0, 0, :, 0]) - border):
@@ -113,9 +113,8 @@ def MeanFieldSeparationEB(border):
                 fieldlistdim1.append(FieldCentres[0, Currentiteration, tdim1, tdim2])
                 fieldlistdim2.append(FieldCentres[1, Currentiteration, tdim1, tdim2])
         for fieldcell in range(len(fieldlistdim1) - 1):
-            totaldistance += np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
-                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
-            count += 1
+            fieldseparations.append(np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
+                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2))
 
     # Field distance with closest neighbours in dim1
     for tdim2 in range(border, len(FieldCentres[0, 0, 0, :]) - border):
@@ -127,12 +126,15 @@ def MeanFieldSeparationEB(border):
                 fieldlistdim1.append(FieldCentres[0, Currentiteration, tdim1, tdim2])
                 fieldlistdim2.append(FieldCentres[1, Currentiteration, tdim1, tdim2])
         for fieldcell in range(len(fieldlistdim1) - 1):
-            totaldistance += np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
-                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2)
-            count += 1
+            fieldseparations.append(np.sqrt((fieldlistdim1[fieldcell] - fieldlistdim1[fieldcell + 1]) ** 2 + (
+                fieldlistdim2[fieldcell] - fieldlistdim2[fieldcell + 1]) ** 2))
 
-    meanseparation = totaldistance / count
+    meanseparation = np.mean(fieldseparations)
+    standarddeviation = np.std(fieldseparations)
     FieldSeparationEB[Currentiteration] = meanseparation
+    FieldSeparationStdevEB[Currentiteration] = standarddeviation
+
+
 
 
 def MeanFieldSizeEB(border):
@@ -178,10 +180,12 @@ def PrecisionChange():
 def savedata(JobID):
     np.save('../../RetinotopicMapsData/%s/FieldSize' % ('{0:04}'.format(JobID)), FieldSize)
     np.save('../../RetinotopicMapsData/%s/FieldSeparation' % ('{0:04}'.format(JobID)), FieldSeparation)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparationStdev' % ('{0:04}'.format(JobID)), FieldSeparationStdev)
     np.save('../../RetinotopicMapsData/%s/SystemsMatch' % ('{0:04}'.format(JobID)), SystemsMatch)
 
     np.save('../../RetinotopicMapsData/%s/FieldSizeEB' % ('{0:04}'.format(JobID)), FieldSizeEB)
     np.save('../../RetinotopicMapsData/%s/FieldSeparationEB' % ('{0:04}'.format(JobID)), FieldSeparationEB)
+    np.save('../../RetinotopicMapsData/%s/FieldSeparationStdevEB' % ('{0:04}'.format(JobID)), FieldSeparationStdevEB)
     np.save('../../RetinotopicMapsData/%s/SystemsMatchEB' % ('{0:04}'.format(JobID)), SystemsMatchEB)
 
     np.save('../../RetinotopicMapsData/%s/FieldSizeChange.npy' % ('{0:04}'.format(JobID)), FieldSizeChange)

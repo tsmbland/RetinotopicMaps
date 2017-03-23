@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MapPrecision/Functions.py" afterPath="$PROJECT_DIR$/MapPrecision/Functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Plots/PrecisionPlot.py" afterPath="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/KvsKappa.py" afterPath="$PROJECT_DIR$/SuperPlots/KvsKappa.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/stochRvsBeta.py" afterPath="$PROJECT_DIR$/SuperPlots/stochRvsBeta.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/yLT.py" afterPath="$PROJECT_DIR$/SuperPlots/yLT.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" afterPath="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
@@ -26,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="yLTvsBeta.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SuperPlots/yLTvsBeta.py">
+      <file leaf-file-name="stochRvsBeta.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SuperPlots/stochRvsBeta.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="619">
+              <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -38,14 +42,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stochRvsBeta.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SuperPlots/stochRvsBeta.py">
+      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="739">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MapPrecision/Functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="176" column="45" selection-start-line="176" selection-start-column="45" selection-end-line="176" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,26 +107,26 @@
         <option value="$PROJECT_DIR$/ReceptiveFields/Functions.py" />
         <option value="$PROJECT_DIR$/Results/StablePrecisionMeasures.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/StandardAlgorithm.py" />
-        <option value="$PROJECT_DIR$/MapPrecision/Functions.py" />
         <option value="$PROJECT_DIR$/MapPrecision/Algorithm.py" />
         <option value="$PROJECT_DIR$/rough.py" />
         <option value="$PROJECT_DIR$/2006.1979.2D/Parameters.py" />
         <option value="$PROJECT_DIR$/Superplots/rough.py" />
         <option value="$PROJECT_DIR$/Superplots/yLTvsBeta.py" />
         <option value="$PROJECT_DIR$/Superplots/KvsKappa.py" />
-        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
         <option value="$PROJECT_DIR$/Plots/WeightPlot.py" />
         <option value="$PROJECT_DIR$/Plots/PrecisionChangePlot.py" />
         <option value="$PROJECT_DIR$/Plots/FieldPlot.py" />
         <option value="$PROJECT_DIR$/Plots/EphrinPlot.py" />
         <option value="$PROJECT_DIR$/Plots/ConcPlot.py" />
         <option value="$PROJECT_DIR$/Plots/AreaPlot.py" />
-        <option value="$PROJECT_DIR$/SuperPlots/KvsKappa.py" />
         <option value="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" />
         <option value="$PROJECT_DIR$/SuperPlots/SuperFieldPlot.py" />
         <option value="$PROJECT_DIR$/SuperPlots/SuperWeightPlot.py" />
-        <option value="$PROJECT_DIR$/SuperPlots/yLT.py" />
+        <option value="$PROJECT_DIR$/MapPrecision/Functions.py" />
+        <option value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
         <option value="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" />
+        <option value="$PROJECT_DIR$/SuperPlots/yLT.py" />
+        <option value="$PROJECT_DIR$/SuperPlots/KvsKappa.py" />
         <option value="$PROJECT_DIR$/SuperPlots/stochRvsBeta.py" />
       </list>
     </option>
@@ -291,41 +303,7 @@
       <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006.1979 (1D: EphA)" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.yLTvsBeta">
-    <configuration default="false" name="PrecisionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="WeightPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/WeightPlot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.PrecisionPlot">
     <configuration default="false" name="FieldPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -373,6 +351,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MapPrecision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MapPrecision/Algorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PrecisionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -530,19 +542,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
-      <item index="2" class="java.lang.String" itemvalue="Python.WeightPlot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.FieldPlot" />
-      <item index="4" class="java.lang.String" itemvalue="Python.AreaPlot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.yLTvsBeta" />
+      <item index="1" class="java.lang.String" itemvalue="Python.FieldPlot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.AreaPlot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.yLTvsBeta" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Algorithm" />
+      <item index="5" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.yLTvsBeta" />
-        <item index="1" class="java.lang.String" itemvalue="Python.AreaPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.FieldPlot" />
-        <item index="3" class="java.lang.String" itemvalue="Python.WeightPlot" />
-        <item index="4" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+        <item index="0" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="2" class="java.lang.String" itemvalue="Python.yLTvsBeta" />
+        <item index="3" class="java.lang.String" itemvalue="Python.AreaPlot" />
+        <item index="4" class="java.lang.String" itemvalue="Python.FieldPlot" />
       </list>
     </recent_temporary>
   </component>
@@ -562,13 +574,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00081" summary="can now state relative contributions made by EphA and EphB systems to distance. Allows 1D simulations with one Eph system to be carried out with same code">
-      <created>1487796671720</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1487796671720</updated>
     </task>
     <task id="LOCAL-00082" summary="can now run multiple jobs in parallel">
       <created>1487802187838</created>
@@ -906,7 +911,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490206552859</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="fixed importing error, added data">
+      <created>1490264150896</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1490264150897</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView">
@@ -919,7 +931,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -927,19 +939,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.7426529" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24816446" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22716442" sideWeight="0.5776805" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.42231947" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39863014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24931507" sideWeight="0.7950755" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39863014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -973,7 +985,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changed back to %" />
     <MESSAGE value="seperated DataProcessing and MapPrecision scripts" />
     <MESSAGE value="new plot for displaying area of a receptive field" />
     <MESSAGE value="sped field size algorithm" />
@@ -998,7 +1009,8 @@
     <MESSAGE value="new plot" />
     <MESSAGE value="tidied" />
     <MESSAGE value="changed appearance of plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed appearance of plots" />
+    <MESSAGE value="fixed importing error, added data" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed importing error, added data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1116,24 +1128,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Results/StablePrecisionMeasures.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MapPrecision/Algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MapPrecision/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1162,13 +1160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3880">
           <caret line="333" column="87" selection-start-line="333" selection-start-column="86" selection-end-line="333" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1214,13 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperPlots/KvsKappa.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1242,17 +1226,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Results/StablePrecisionMeasures.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="42" column="18" selection-start-line="35" selection-start-column="0" selection-end-line="42" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/yLT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="-71">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperPlots/KvsKappa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-491">
+          <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/yLTvsBeta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        <state relative-caret-position="-191">
+          <caret line="160" column="25" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="25" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -1261,11 +1262,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/stochRvsBeta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="619">
+          <caret line="201" column="0" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MapPrecision/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="176" column="45" selection-start-line="176" selection-start-column="45" selection-end-line="176" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
