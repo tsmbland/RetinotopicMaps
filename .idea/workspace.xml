@@ -9,7 +9,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/1979/Parameters.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/1979/StandardAlgorithm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Functions.py" afterPath="$PROJECT_DIR$/Models/2006/Functions.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,6 +31,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Functions.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/1979/Functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/2006/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1887">
@@ -566,13 +577,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00090" summary="added script to show stable precision measures with options for stability consditions">
-      <created>1488650456998</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1488650456998</updated>
-    </task>
     <task id="LOCAL-00091" summary="added script to measure precision, excluding boundary regions of the tectum">
       <created>1489772220410</created>
       <option name="number" value="00091" />
@@ -909,7 +913,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490297080344</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery">
+      <created>1490351039994</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1490351039996</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1229,16 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/1979/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1533">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/1979/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -1312,6 +1313,16 @@
         <state relative-caret-position="1887">
           <caret line="297" column="46" selection-start-line="297" selection-start-column="46" selection-end-line="297" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/1979/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
