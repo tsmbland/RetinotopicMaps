@@ -189,6 +189,18 @@ def initialconnections():
                     Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] = np.random.uniform(0, 0.0001)
 
 
+def setWtot():
+    Wtot[1:p.NRdim1 + 1, 1:p.NRdim2 + 1] = p.Wmax / p.td
+    Wtot[Rmindim1:Rmaxdim1 + 1, Rmindim2:Rmaxdim2 + 1] = p.Wmax
+
+
+def updateWtot():
+    for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
+        for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
+            if Wtot[rdim1, rdim2] < p.Wmax:
+                Wtot[rdim1, rdim2] += p.Wmax / p.td
+
+
 def updateDpt():
     for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
