@@ -1,3 +1,5 @@
+JobID = 0
+
 # Iterations
 Iterations = 500  # number of weight iterations
 TRout = 5  # temporal resoultion of output files

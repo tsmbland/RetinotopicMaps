@@ -33,6 +33,7 @@ def job(JobID):
     for iteration in range(p.Iterations):
         f.updatetimepoint()
 
+        f.updateWtot()
         f.updateWpt()
         f.removesynapses()
         f.addsynapses()

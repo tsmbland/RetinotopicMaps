@@ -83,20 +83,18 @@ def MeanFieldSize():
 
 
 def MeanSystemsMatch():
-    totaldistance = 0
-    count = 0
+    separation = []
 
     for tdim1 in range(len(FieldCentres[0, 0, :, 0])):
         for tdim2 in range(len(FieldCentres[0, 0, 0, :])):
             if FieldCentres[0, Currentiteration, tdim1, tdim2] != 0 and FieldCentres[
                 1, Currentiteration, tdim1, tdim2] != 0:
-                totaldistance += np.sqrt((FieldCentres[0, Currentiteration, tdim1, tdim2] - xFieldCentres[
+                separation.append(np.sqrt((FieldCentres[0, Currentiteration, tdim1, tdim2] - xFieldCentres[
                     0, Weightiteration, tdim1, tdim2]) ** 2 + (
                                              FieldCentres[1, Currentiteration, tdim1, tdim2] - xFieldCentres[
-                                                 1, Weightiteration, tdim1, tdim2]) ** 2)
-                count += 1
+                                                 1, Weightiteration, tdim1, tdim2]) ** 2))
 
-    meandistance = totaldistance / count
+    meandistance = np.mean(separation)
     SystemsMatch[Currentiteration] = meandistance
 
 
@@ -143,20 +141,19 @@ def MeanFieldSizeEB(border):
 
 
 def MeanSystemsMatchEB(border):
-    totaldistance = 0
-    count = 0
+    separation = []
 
     for tdim1 in range(border, len(FieldCentres[0, 0, :, 0]) - border):
         for tdim2 in range(border, len(FieldCentres[0, 0, 0, :]) - border):
             if FieldCentres[0, Currentiteration, tdim1, tdim2] != 0 and FieldCentres[
                 1, Currentiteration, tdim1, tdim2] != 0:
-                totaldistance += np.sqrt((FieldCentres[0, Currentiteration, tdim1, tdim2] - xFieldCentres[
+                separation.append(np.sqrt((FieldCentres[0, Currentiteration, tdim1, tdim2] - xFieldCentres[
                     0, Weightiteration, tdim1, tdim2]) ** 2 + (
                                              FieldCentres[1, Currentiteration, tdim1, tdim2] - xFieldCentres[
-                                                 1, Weightiteration, tdim1, tdim2]) ** 2)
-                count += 1
+                                                 1, Weightiteration, tdim1, tdim2]) ** 2))
 
-    meandistance = totaldistance / count
+
+    meandistance = np.mean(separation)
     SystemsMatchEB[Currentiteration] = meandistance
 
 

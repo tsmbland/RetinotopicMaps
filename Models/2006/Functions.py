@@ -6,7 +6,6 @@ import os
 
 Wpt = np.zeros(
     [p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # synaptic strength matrix
-Wtot = np.zeros([p.NRdim1 + 1, p.NRdim2 + 1])  # total strength available to a fibre
 Spt = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # similarity
 Dpt = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # distance
 Cra = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])
@@ -181,24 +180,16 @@ def updateCtb():
 
 ####################### SYNAPTIC MODIFICATION ###################
 
+def connections(rdim1, rdim2):
+    for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
+        for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
+            Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] = np.random.uniform(0, 0.0001)
+
+
 def initialconnections():
     for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
-            for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
-                for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-                    Wpt[Timepoint, tdim1, tdim2, rdim1, rdim2] = np.random.uniform(0, 0.0001)
-
-
-def setWtot():
-    Wtot[1:p.NRdim1 + 1, 1:p.NRdim2 + 1] = p.Wmax / p.td
-    Wtot[Rmindim1:Rmaxdim1 + 1, Rmindim2:Rmaxdim2 + 1] = p.Wmax
-
-
-def updateWtot():
-    for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
-        for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
-            if Wtot[rdim1, rdim2] < p.Wmax:
-                Wtot[rdim1, rdim2] += p.Wmax / p.td
+            connections(rdim1, rdim2)
 
 
 def updateDpt():
@@ -206,9 +197,9 @@ def updateDpt():
         for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
             for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
                 for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-                    Dpt[tdim1, tdim2, rdim1, rdim2] = p.distA(
-                        (Cra[rdim1, rdim2] * Cta[Currentiteration, tdim1, tdim2] - 1) ** 2) + p.distB(
-                        (Crb[rdim1, rdim2] - Ctb[Currentiteration, tdim1, tdim2]) ** 2)
+                    Dpt[tdim1, tdim2, rdim1, rdim2] = p.distA * (
+                        (Cra[rdim1, rdim2] * Cta[Timepoint, tdim1, tdim2] - 1) ** 2) + p.distB * (
+                        (Crb[rdim1, rdim2] - Ctb[Timepoint, tdim1, tdim2]) ** 2)
 
 
 def updateSpt():
@@ -221,7 +212,7 @@ def updateSpt():
 
 def updateWpt():
     for t in range(p.tw):
-        numerator = Wpt[Currentiteration - 1, :, :, :, :] + p.deltatw * p.gamma * Spt
+        numerator = Wpt[Timepoint, :, :, :, :] + p.deltatw * p.gamma * Spt
         denominator = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])
         for rdim1 in range(Rmindim1, Rmaxdim1 + 1):
             for rdim2 in range(Rmindim2, Rmaxdim2 + 1):
@@ -233,13 +224,8 @@ def updateWpt():
                 Wpt[Timepoint, :, :, rdim1, rdim2] = numerator[:, :, rdim1, rdim2] / denominator[rdim1, rdim2]
 
 
-def updatexFieldcentres():
-    for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
-        for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-            xFieldcentres[0, Currentiteration, tdim1, tdim2] = (Rmaxdim1 - Rmindim1 + 1) * tdim1 / (
-                Tmaxdim1 - Tmindim1 + 1)
-            xFieldcentres[1, Currentiteration, tdim1, tdim2] = (Rmaxdim2 - Rmindim2 + 1) * tdim2 / (
-                Tmaxdim2 - Tmindim2 + 1)
+def removesynapses():
+    Wpt[Wpt < 0.001] = 0
 
 
 ######################### GROWTH ########################

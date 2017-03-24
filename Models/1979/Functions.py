@@ -85,19 +85,19 @@ def setmarkerlocations():
     locationdim2 = 1
     for mdim2 in range(p.Mdim2 - 1):
         for mdim1 in range(p.Mdim1 - 1):
-            Qpm[m, locationdim1, locationdim2] = Q
+            Qpm[m, locationdim1, locationdim2] = p.Q
             locationdim1 += markerspacingdim1
             m += 1
-        Qpm[m, p.NRdim1, locationdim2] = Q
+        Qpm[m, p.NRdim1, locationdim2] = p.Q
         locationdim1 = 1
         locationdim2 += markerspacingdim2
         m += 1
 
     for mdim1 in range(p.Mdim1 - 1):
-        Qpm[m, locationdim1, p.NRdim2] = Q
+        Qpm[m, locationdim1, p.NRdim2] = p.Q
         locationdim1 += markerspacingdim1
         m += 1
-    Qpm[m, p.NRdim1, p.NRdim2] = Q
+    Qpm[m, p.NRdim1, p.NRdim2] = p.Q
 
 
 def updateNc():
@@ -290,7 +290,7 @@ def updateWeight():
 
             # Calculate mean similarity
             totalSp[rdim1, rdim2] = sum(sum(Spt[:, :, rdim1, rdim2]))
-            meanSp[rdim1, rdim2] = (totalSp[rdim1, rdim2] / connections[rdim1, rdim2]) - k
+            meanSp[rdim1, rdim2] = (totalSp[rdim1, rdim2] / connections[rdim1, rdim2]) - p.k
 
             # Calculate deltaW
             deltaWpt[Tmindim1:Tmaxdim1 + 1, Tmindim2:Tmaxdim2 + 1, rdim1, rdim2] = p.h * (

@@ -1,5 +1,4 @@
 import time
-import numpy as np
 import sys
 from joblib import Parallel, delayed
 import Parameters as p
@@ -18,37 +17,40 @@ def job(JobID):
 
     # Set Job Parameter(s)
 
-    # Import Data
-    Wpt = np.load('../../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
-    f.Wpt[0, :, :, :, :] = Wpt[-1, :, :, :, :]
-    f.Cpm = np.load('../../../RetinotopicMapsData/%s/RetinalConcentrations.npy' % ('{0:04}'.format(JobID)))
-    Ctm = np.load('../../../RetinotopicMapsData/%s/TectalConcentrations.npy' % ('{0:04}'.format(JobID)))
-    f.Ctm[:, 0, :, :] = Ctm[:, -1, :, :]
-
     # Model Type
-    f.typestandard()
+    f.typedevelopment()
 
-    f.setWtot()
-    f.updateNc()
-    f.normaliseCpm()
-    f.normaliseCtm()
+    # Set Gradients
+    f.setRetinalGradients()
+    f.setTectalGradients()
+    f.updateNct()
+
+    # Initial Connections
+    f.initialconnections()
 
     # Iterations
     for iteration in range(p.Iterations):
         f.updatetimepoint()
 
-        f.updateWeight()
-        f.removesynapses()
-        f.addsynapses()
+        f.updateDpt()
+        f.updateSpt()
+        f.updateWpt()
 
-        f.updateQtm()
-        f.updatetectalconcs()
-        f.normaliseCtm()
+        f.growtectum()
+        f.growretina()
+        f.updateNc()
+
+        f.updateI()
+        f.updateCta()
+        f.updateCtb()
 
         f.updatexFieldcentres()
 
         sys.stdout.write('\rJob %s: %i percent' % ('{0:04}'.format(JobID), iteration * 100 / p.Iterations))
         sys.stdout.flush()
+
+    # Remove synapses
+    f.removesynapses()
 
     # Export Data
     f.savedata(JobID)
@@ -62,5 +64,3 @@ def job(JobID):
 
 
 Parallel(n_jobs=Cores)(delayed(job)(JobID) for JobID in range(p.JobID, p.JobID + nJobs))
-
-

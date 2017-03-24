@@ -26,14 +26,13 @@ def job(JobID):
     f.updateNct()
 
     # Initial Connections
-    f.setWtot()
     f.initialconnections()
 
     # Iterations
     for iteration in range(p.Iterations):
         f.updatetimepoint()
 
-        f.f.updateDpt()
+        f.updateDpt()
         f.updateSpt()
         f.updateWpt()
 
@@ -45,6 +44,9 @@ def job(JobID):
 
         sys.stdout.write('\rJob %s: %i percent' % ('{0:04}'.format(JobID), iteration * 100 / p.Iterations))
         sys.stdout.flush()
+
+    # Remove synapses
+    f.removesynapses()
 
     # Export Data
     f.savedata(JobID)

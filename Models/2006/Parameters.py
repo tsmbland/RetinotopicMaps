@@ -1,8 +1,8 @@
-JobID = 0  # JobID (or starting ID if multiple jobs)
+JobID = 2  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 100  # number of weight iterations
-TRout = 5  # temporal resoultion of output files
+Iterations = 500  # number of weight iterations
+TRout = 1  # temporal resoultion of output files
 
 # Layer sizes
 NRdim1 = 20  # initial number of retinal cells
@@ -17,18 +17,21 @@ ynRdim1 = 3.5  # conc in cell NRdim1
 y0Rdim2 = 0.1
 ymRdim2 = 0.5
 ynRdim2 = 1.0
+stochR = 0.
 
 # Tectal Gradients
-y0Tdim1 = 1.0  # conc in cell 0
-ymTdim1 = 0.5  # conc in cell NTdim1/2
-ynTdim1 = 0.3  # conc in cell NTdim1
+y0Tdim1 = 1. / y0Rdim1  # conc in cell 0 (before multiplication by yLT)
+ymTdim1 = 1. / ymRdim1  # conc in cell NTdim1/2
+ynTdim1 = 1. / ynRdim1  # conc in cell NTdim1
 y0Tdim2 = 0.1
 ymTdim2 = 0.5
 ynTdim2 = 1.0
+yLT = 0.9
+stochT = 0.
 
 # Tectal concentrations
 alpha = 0.05
-beta = 0.05
+beta = 0.1
 deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration
 

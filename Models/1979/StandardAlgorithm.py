@@ -39,8 +39,9 @@ def job(JobID):
     f.normaliseCtm()
 
     # Iterations
-    for iteration in range(1, f.Iterations + 1):
-        f.Currentiteration += 1
+    for iteration in range(p.Iterations):
+        f.updatetimepoint()
+
         f.updateWeight()
         f.removesynapses()
         f.addsynapses()
@@ -51,7 +52,7 @@ def job(JobID):
 
         f.updatexFieldcentres()
 
-        sys.stdout.write('\r%i percent' % (iteration * 100 / f.Iterations))
+        sys.stdout.write('\rJob %s: %i percent' % ('{0:04}'.format(JobID), iteration * 100 / p.Iterations))
         sys.stdout.flush()
 
     # Export Data
