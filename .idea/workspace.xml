@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="added support for parallelisation, and tidied code">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Models/2006/Development.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MapPrecision/Functions.py" afterPath="$PROJECT_DIR$/MapPrecision/Functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/1979/Development.py" afterPath="$PROJECT_DIR$/Models/1979/Development.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/1979/Functions.py" afterPath="$PROJECT_DIR$/Models/1979/Functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/1979/MismatchSurgery.py" afterPath="$PROJECT_DIR$/Models/1979/MismatchSurgery.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/1979/NoSurgery.py" afterPath="$PROJECT_DIR$/Models/1979/NoSurgery.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/1979/Parameters.py" afterPath="$PROJECT_DIR$/Models/1979/Parameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/1979/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/Models/1979/StandardAlgorithm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Development.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Development.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Functions.py" afterPath="$PROJECT_DIR$/Models/2006/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006/Parameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/StandardAlgorithm.py" afterPath="$PROJECT_DIR$/Models/2006/StandardAlgorithm.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,43 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/1979/Functions.py">
+      <file leaf-file-name="Parameters.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Models/2006/Parameters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="290" column="39" selection-start-line="290" selection-start-column="39" selection-end-line="290" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Models/2006/Functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3375">
-              <caret line="227" column="24" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Development.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/1979/Development.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Development.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Development.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,9 +98,9 @@
         <option value="$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py" />
         <option value="$PROJECT_DIR$/Models/2006/StandardAlgorithm.py" />
         <option value="$PROJECT_DIR$/MapPrecision/Functions.py" />
-        <option value="$PROJECT_DIR$/Models/2006/Parameters.py" />
         <option value="$PROJECT_DIR$/Models/2006/Development.py" />
         <option value="$PROJECT_DIR$/Models/2006.1979/Development.py" />
+        <option value="$PROJECT_DIR$/Models/2006/Parameters.py" />
       </list>
     </option>
   </component>
@@ -335,24 +292,7 @@
       <recent name="$PROJECT_DIR$/../Old Code" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.StandardAlgorithm (1)">
-    <configuration default="false" name="FieldPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/FieldPlot.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.FieldPlot">
     <configuration default="false" name="StandardAlgorithm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -387,23 +327,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="Algorithm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MapPrecision" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MapPrecision/Algorithm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="PrecisionPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -417,6 +340,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/PrecisionPlot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WeightPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/WeightPlot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FieldPlot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/FieldPlot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -574,19 +531,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.FieldPlot" />
-      <item index="2" class="java.lang.String" itemvalue="Python.StandardAlgorithm (1)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Algorithm" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Algorithm (1)" />
-      <item index="5" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+      <item index="1" class="java.lang.String" itemvalue="Python.StandardAlgorithm (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Algorithm" />
+      <item index="3" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
+      <item index="4" class="java.lang.String" itemvalue="Python.WeightPlot" />
+      <item index="5" class="java.lang.String" itemvalue="Python.FieldPlot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.StandardAlgorithm (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Algorithm (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.FieldPlot" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="0" class="java.lang.String" itemvalue="Python.FieldPlot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.WeightPlot" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="3" class="java.lang.String" itemvalue="Python.StandardAlgorithm (1)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.PrecisionPlot" />
       </list>
     </recent_temporary>
   </component>
@@ -606,13 +563,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00092" summary="fixed stability condition argument">
-      <created>1489772300979</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1489772300979</updated>
     </task>
     <task id="LOCAL-00093" summary="fixed link to functions files">
       <created>1489773021759</created>
@@ -950,7 +900,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490351104438</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="debugged">
+      <created>1490355215307</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1490355215307</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1017,7 +974,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="renamed file" />
     <MESSAGE value="(hopefully) sped up plot animations" />
     <MESSAGE value="added progress messages" />
     <MESSAGE value="minor changes" />
@@ -1042,7 +998,8 @@
     <MESSAGE value="(hopefully) got non-standard algorithms working" />
     <MESSAGE value="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery" />
     <MESSAGE value="added support for parallelisation, and tidied code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added support for parallelisation, and tidied code" />
+    <MESSAGE value="debugged" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugged" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1272,26 +1229,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1436">
-          <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="396" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="491">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/1979/Parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1320,14 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006/Parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006/Development.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1335,6 +1268,24 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/1979/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="290" column="39" selection-start-line="290" selection-start-column="39" selection-end-line="290" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3375">
+          <caret line="227" column="24" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1354,20 +1305,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/1979/Functions.py">
+    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="290" column="39" selection-start-line="290" selection-start-column="39" selection-end-line="290" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="491">
+          <caret line="390" column="0" selection-start-line="390" selection-start-column="0" selection-end-line="396" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006/Functions.py">
+    <entry file="file://$PROJECT_DIR$/Models/1979/Parameters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3375">
-          <caret line="227" column="24" selection-start-line="227" selection-start-column="24" selection-end-line="227" selection-end-column="24" />
+        <state relative-caret-position="315">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006/Parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

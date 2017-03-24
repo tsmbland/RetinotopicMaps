@@ -1,8 +1,8 @@
-JobID = 2  # JobID (or starting ID if multiple jobs)
+JobID = 0  # JobID (or starting ID if multiple jobs)
 
 # Iterations
 Iterations = 500  # number of weight iterations
-TRout = 1  # temporal resoultion of output files
+TRout = 5  # temporal resoultion of output files
 
 # Layer sizes
 NRdim1 = 20  # initial number of retinal cells
@@ -31,7 +31,7 @@ stochT = 0.
 
 # Tectal concentrations
 alpha = 0.05
-beta = 0.1
+beta = 0.05
 deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration
 
