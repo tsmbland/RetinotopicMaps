@@ -67,65 +67,42 @@ def typedevelopment():
 
 def setRetinalGradients():
     # Dim1
-    if p.ynRdim1 != 0:
-        aRdim1 = ((p.ymRdim1 - p.y0Rdim1) ** 2) / (p.ynRdim1 - 2 * p.ymRdim1 + p.y0Rdim1)
-        bRdim1 = np.log((p.ynRdim1 - p.y0Rdim1) / aRdim1 + 1) / p.NRdim1
-        cRdim1 = p.y0Rdim1 - aRdim1
-
-        for rdim1 in range(1, p.NRdim1 + 1):
-            Cra[rdim1, 1:p.NTdim2 + 1] = aRdim1 * np.exp(bRdim1 * rdim1) + cRdim1
+    aRdim1 = 0.26
+    bRdim1 = 2.3
+    cRdim1 = 1.05
+    for rdim1 in range(1, p.NRdim1 + 1):
+        x = (rdim1 - 1) / (p.NRdim1 - 1)
+        Cra[rdim1, 1:p.NRdim2 + 1] = aRdim1 * np.exp(bRdim1 * x) + cRdim1
 
     # Dim2
-    if p.ynRdim2 != 0:
-        aRdim2 = ((p.ymRdim2 - p.y0Rdim2) ** 2) / (p.ynRdim2 - 2 * p.ymRdim2 + p.y0Rdim2)
-        bRdim2 = np.log((p.ynRdim2 - p.y0Rdim2) / aRdim2 + 1) / p.NRdim2
-        cRdim2 = p.y0Rdim2 - aRdim2
-
-        for rdim2 in range(1, p.NRdim2 + 1):
-            Crb[1:p.NTdim1 + 1, rdim2] = aRdim2 * np.exp(bRdim2 * rdim2) + cRdim2
-
-    # Add stochasticity
-    for rdim1 in range(1, p.NRdim1 + 1):
-        for rdim2 in range(1, p.NRdim2 + 1):
-            Cra[rdim1, rdim2] = Cra[rdim1, rdim2] * (1 + np.random.uniform(-p.stochR, p.stochR))
-            Crb[rdim1, rdim2] = Crb[rdim1, rdim2] * (1 + np.random.uniform(-p.stochR, p.stochR))
+    for rdim2 in range(1, p.NRdim2 + 1):
+        Crb[1:p.NRdim1 + 1, rdim2] = (rdim2 - 1) / (p.NRdim2 - 1)
 
 
 def setTectalGradients():
     # Dim1
-    if p.ynTdim1 != 0:
-        aTdim1 = ((p.ymTdim1 - p.y0Tdim1) ** 2) / (p.ynTdim1 - 2 * p.ymTdim1 + p.y0Tdim1)
-        bTdim1 = np.log((p.ynTdim1 - p.y0Tdim1) / aTdim1 + 1) / p.NTdim1
-        cTdim1 = p.y0Tdim1 - aTdim1
-
-        for tdim1 in range(1, p.NTdim1 + 1):
-            Cta[0, tdim1, 1:p.NTdim2 + 1] = aTdim1 * np.exp(bTdim1 * tdim1) + cTdim1
+    for tdim1 in range(1, p.NTdim1 + 1):
+        x = 1 - (tdim1 - 1) / (p.NTdim1 - 1)
+        Cta[0, tdim1, 1:p.NTdim2 + 1] = 0.6 * x
 
     # Dim2
-    if p.ynTdim2 != 0:
-        aTdim2 = ((p.ymTdim2 - p.y0Tdim2) ** 2) / (p.ynTdim2 - 2 * p.ymTdim2 + p.y0Tdim2)
-        bTdim2 = np.log((p.ynTdim2 - p.y0Tdim2) / aTdim2 + 1) / p.NTdim2
-        cTdim2 = p.y0Tdim2 - aTdim2
-
-        for tdim2 in range(1, p.NTdim2 + 1):
-            Ctb[0, 1:p.NTdim1 + 1, tdim2] = aTdim2 * np.exp(bTdim2 * tdim2) + cTdim2
-
-    # Change gradient strength
-    Cta[0, :, :] *= p.yLT
-    Ctb[0, :, :] *= p.yLT
+    for tdim2 in range(1, p.NTdim2 + 1):
+        y = (tdim2 - 1) / (p.NTdim2 - 1)
+        Ctb[0, 1:p.NTdim1 + 1, tdim2] = 0.6 * y
 
     # Add stochasticity
-    for rdim1 in range(1, p.NRdim1 + 1):
-        for rdim2 in range(1, p.NRdim2 + 1):
-            Cta[0, rdim1, rdim2] = Cta[0, rdim1, rdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
-            Ctb[0, rdim1, rdim2] = Ctb[0, rdim1, rdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
+    for tdim1 in range(1, p.NTdim1 + 1):
+        for tdim2 in range(1, p.NTdim2 + 1):
+            Cta[0, tdim1, tdim2] = Cta[0, tdim1, tdim2] + 0.5 * np.random.uniform()
+            Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] + 0.5 * np.random.uniform()
 
 
 def EphA3knockin():
     for rdim1 in range(1, p.NRdim1 + 1):
         for rdim2 in range(1, p.NRdim2 + 1):
-            Cra[rdim1, rdim2] *= np.random.randint(1, 3)
-            Crb[rdim1, rdim2] *= np.random.randint(1, 3)
+            roll = np.random.uniform()
+            if roll > 0.5:
+                Cra[0, rdim1, rdim2] += 1.86
 
 
 def updateNct():

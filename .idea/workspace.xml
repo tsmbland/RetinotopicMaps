@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="updated default parameters">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Functions.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Functions.py" afterPath="$PROJECT_DIR$/Models/2006/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006/Parameters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" />
@@ -572,13 +571,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00095" summary="new folder for tidiness">
-      <created>1489830647148</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1489830647148</updated>
-    </task>
     <task id="LOCAL-00096" summary="fixed issue with systems match measure">
       <created>1489830734582</created>
       <option name="number" value="00096" />
@@ -915,7 +907,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490635250024</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="fixed some typos">
+      <created>1491068277095</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1491068277096</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -982,7 +981,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="minor changes" />
     <MESSAGE value="created new function for precision change measures" />
     <MESSAGE value="added superplots" />
     <MESSAGE value="fixed problem with importing files" />
@@ -1007,7 +1005,8 @@
     <MESSAGE value="debugged" />
     <MESSAGE value="updated default parameters" />
     <MESSAGE value="added EphA3 knockin support" />
-    <option name="LAST_COMMIT_MESSAGE" value="added EphA3 knockin support" />
+    <MESSAGE value="fixed some typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed some typos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
