@@ -65,7 +65,9 @@ def typedevelopment():
 
 ################### CONCENTRATIONS ###################
 
-def setRetinalGradients():
+def setRetinalGradientsfordummies():
+    # Automatically sets initial retinal gradients based on concentrations at three locations
+
     # Dim1
     if p.ynRdim1 != 0:
         aRdim1 = ((p.ymRdim1 - p.y0Rdim1) ** 2) / (p.ynRdim1 - 2 * p.ymRdim1 + p.y0Rdim1)
@@ -91,7 +93,9 @@ def setRetinalGradients():
             Crb[rdim1, rdim2] = Crb[rdim1, rdim2] * (1 + np.random.uniform(-p.stochR, p.stochR))
 
 
-def setTectalGradients():
+def setTectalGradientsfordummies():
+    # Automatically sets initial tectal gradients based on concentrations at three locations
+
     # Dim1
     if p.ynTdim1 != 0:
         aTdim1 = ((p.ymTdim1 - p.y0Tdim1) ** 2) / (p.ynTdim1 - 2 * p.ymTdim1 + p.y0Tdim1)
@@ -121,10 +125,44 @@ def setTectalGradients():
             Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
 
 
+def setRetinalGradients():
+    # Dim1
+    aRdim1 = 0.26
+    bRdim1 = 2.3
+    cRdim1 = 1.05
+    for rdim1 in range(1, p.NRdim1 + 1):
+        x = (rdim1 - 1) / (p.NRdim1 - 1)
+        Cra[rdim1, 1:p.NRdim2 + 1] = aRdim1 * np.exp(bRdim1 * x) + cRdim1
+
+    # Dim2
+    for rdim2 in range(1, p.NRdim2 + 1):
+        Crb[1:p.NRdim1 + 1, rdim2] = (rdim2 - 1) / (p.NRdim2 - 1)
+
+
+def setTectalGradients():
+    # Dim1
+    for tdim1 in range(1, p.NTdim1 + 1):
+        x = 1 - (tdim1 - 1) / (p.NTdim1 - 1)
+        Cta[0, tdim1, 1:p.NTdim2 + 1] = 0.6 * x
+
+    # Dim2
+    for tdim2 in range(1, p.NTdim2 + 1):
+        y = (tdim2 - 1) / (p.NTdim2 - 1)
+        Ctb[0, 1:p.NTdim1 + 1, tdim2] = 0.6 * y
+
+    # Add stochasticity
+    for tdim1 in range(1, p.NTdim1 + 1):
+        for tdim2 in range(1, p.NTdim2 + 1):
+            Cta[0, tdim1, tdim2] = Cta[0, tdim1, tdim2] + 0.5 * np.random.uniform()
+            Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] + 0.5 * np.random.uniform()
+
+
 def EphA3knockin():
     for rdim1 in range(1, p.NRdim1 + 1):
         for rdim2 in range(1, p.NRdim2 + 1):
-            Cra[0, rdim1, rdim2] *= np.random.randint(1, 3)
+            roll = np.random.uniform()
+            if roll > 0.5:
+                Cra[0, rdim1, rdim2] += 1.86
 
 
 def updateNct():

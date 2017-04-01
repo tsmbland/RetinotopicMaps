@@ -15,25 +15,6 @@ n0 = 10  # number of initial random contact
 NLdim1 = NTdim1  # sets initial bias
 NLdim2 = NTdim2
 
-# Retinal Gradients
-y0Rdim1 = 1.0  # conc in cell 0
-ymRdim1 = 2.0  # conc in cell NRdim1/2
-ynRdim1 = 3.5  # conc in cell NRdim1
-y0Rdim2 = 0.1
-ymRdim2 = 0.5
-ynRdim2 = 1.0
-stochR = 0.
-
-# Tectal Gradients
-y0Tdim1 = 1. / y0Rdim1  # conc in cell 0 (before multiplication by yLT)
-ymTdim1 = 1. / ymRdim1  # conc in cell NTdim1/2
-ynTdim1 = 1. / ynRdim1  # conc in cell NTdim1
-y0Tdim2 = 0.1
-ymTdim2 = 0.5
-ynTdim2 = 1.0
-yLT = 1.0
-stochT = 0.
-
 # Tectal concentrations
 alpha = 0.
 beta = 0.
@@ -74,3 +55,24 @@ dTmindim2 = 1
 dTmaxdim2 = 1  # NTdim2 // 4
 dstep = 30  # time between growth iterations
 td = 300  # time taken for new fibres to gain full strength
+
+
+
+# # Retinal Gradients
+# y0Rdim1 = 1.0  # conc in cell 0
+# ymRdim1 = 2.0  # conc in cell NRdim1/2
+# ynRdim1 = 3.5  # conc in cell NRdim1
+# y0Rdim2 = 0.1
+# ymRdim2 = 0.5
+# ynRdim2 = 1.0
+# stochR = 0.
+#
+# # Tectal Gradients
+# y0Tdim1 = 1. / y0Rdim1  # conc in cell 0 (before multiplication by yLT)
+# ymTdim1 = 1. / ymRdim1  # conc in cell NTdim1/2
+# ynTdim1 = 1. / ynRdim1  # conc in cell NTdim1
+# y0Tdim2 = 0.1
+# ymTdim2 = 0.5
+# ynTdim2 = 1.0
+# yLT = 1.0
+# stochT = 0.
