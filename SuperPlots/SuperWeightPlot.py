@@ -15,7 +15,7 @@ TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(J
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [0, 100, 200, 300, 400, 499]
+Iterations = [1, 10, 20, 50, 100, 500]
 
 Rplotdim = 1  # retina dimension plotted (1 or 2)
 Rplotslice = (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
@@ -59,10 +59,10 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
                         table[iteration, row, 2] = rdim1
                         table[iteration, row, 3] = rdim2
                         table[iteration, row, 4] = Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2]
-                        if deltaw[tdim1, tdim2, rdim1, rdim2] >= 0:
-                            table[iteration, row, 5] = 1
-                        else:
-                            table[iteration, row, 5] = 0
+                        # if deltaw[tdim1, tdim2, rdim1, rdim2] >= 0:
+                        #     table[iteration, row, 5] = 1
+                        # else:
+                        #     table[iteration, row, 5] = 0
                         row += 1
 
     sys.stdout.write('\rProcessing data... %i percent' % (iteration * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
@@ -85,17 +85,15 @@ def areaplot(plotn):
 
     wplot = ax.scatter(table[i // TRin, :, Tplotdim - 1], table[i // TRin, :, Rplotdim + 1],
                        s=(table[i // TRin, :, 4]) * 50, marker='s',
-                       c=(table[i // TRin, :, 5]),
-                       cmap='Greys', edgecolors='k')
-    wplot.set_clim(0, 1)
+                       c='k', edgecolors='k')
     if Rplotdim == 1:
-        ax.set_ylim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
+        ax.set_ylim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     elif Rplotdim == 2:
-        ax.set_ylim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+        ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
     if Tplotdim == 1:
-        ax.set_xlim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
+        ax.set_xlim(0, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
     elif Tplotdim == 2:
-        ax.set_xlim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
+        ax.set_xlim(0, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
 
     if (plotn+1) == 1:
         ax.set_xticklabels([])

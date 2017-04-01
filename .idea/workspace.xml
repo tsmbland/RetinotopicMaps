@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="updated default parameters">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Functions.py" afterPath="$PROJECT_DIR$/Models/2006/Functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006/Parameters.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperFieldPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperFieldPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperWeightPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperWeightPlot.py" />
@@ -39,11 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="41">
               <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperAreaPlot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -571,13 +579,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00096" summary="fixed issue with systems match measure">
-      <created>1489830734582</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1489830734583</updated>
-    </task>
     <task id="LOCAL-00097" summary="options for displaying data with/without boundary exclusion">
       <created>1489843834241</created>
       <option name="number" value="00097" />
@@ -914,7 +915,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491068277096</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="altered gradient setting system to match with 2006 paper">
+      <created>1491068301732</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1491068301732</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
     <servers />
   </component>
   <component name="TodoView">
@@ -981,7 +989,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="created new function for precision change measures" />
     <MESSAGE value="added superplots" />
     <MESSAGE value="fixed problem with importing files" />
     <MESSAGE value="fixed problem with plot" />
@@ -1006,7 +1013,8 @@
     <MESSAGE value="updated default parameters" />
     <MESSAGE value="added EphA3 knockin support" />
     <MESSAGE value="fixed some typos" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some typos" />
+    <MESSAGE value="altered gradient setting system to match with 2006 paper" />
+    <option name="LAST_COMMIT_MESSAGE" value="altered gradient setting system to match with 2006 paper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1268,14 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1320,6 +1320,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="116" column="23" selection-start-line="116" selection-start-column="23" selection-end-line="116" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
           <folding />
         </state>
       </provider>

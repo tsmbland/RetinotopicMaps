@@ -20,7 +20,7 @@ TRin2 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.forma
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [0, 100, 200, 300, 400, 499]
+Iterations = [1, 10, 20, 50, 100, 500]
 
 ######################## TABLE #########################
 
@@ -37,10 +37,10 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
                 table[iteration, row, 0] = rdim1
                 table[iteration, row, 1] = rdim2
                 table[iteration, row, 2] = Weightmatrix[iteration, Tdim1, Tdim2, rdim1, rdim2]
-                if deltaw[Tdim1, Tdim2, rdim1, rdim2] >= 0:
-                    table[iteration, row, 3] = 1
-                else:
-                    table[iteration, row, 3] = 0
+                # if deltaw[Tdim1, Tdim2, rdim1, rdim2] >= 0:
+                #     table[iteration, row, 3] = 1
+                # else:
+                #     table[iteration, row, 3] = 0
                 row += 1
 
     sys.stdout.write('\rProcessing data... %i percent' % (iteration * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
@@ -57,14 +57,12 @@ def areaplot(plotn):
     i = Iterations[plotn]
 
     ax = fig.add_subplot(2, 3, plotn + 1)
-    ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
-    ax.set_ylim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+    ax.set_xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
+    ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
     ax.set_title('%d iterations' % i)
 
     wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 50, marker='s',
-                       c=(table[i // TRin1, :, 3]),
-                       cmap='Greys', edgecolors='k')
-    wplot.set_clim(0, 1)
+                       c='k', cmap='Greys')
 
     circle = plt.Circle((Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[1, i // TRin2, Tdim1, Tdim2]),
                         Fieldsizes[i // TRin2, Tdim1, Tdim2] / 2,
