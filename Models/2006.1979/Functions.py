@@ -115,17 +115,16 @@ def setTectalGradients():
     Ctb[0, :, :] *= p.yLT
 
     # Add stochasticity
-    for rdim1 in range(1, p.NRdim1 + 1):
-        for rdim2 in range(1, p.NRdim2 + 1):
-            Cta[0, rdim1, rdim2] = Cta[0, rdim1, rdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
-            Ctb[0, rdim1, rdim2] = Ctb[0, rdim1, rdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
+    for tdim1 in range(1, p.NTdim1 + 1):
+        for tdim2 in range(1, p.NTdim2 + 1):
+            Cta[0, tdim1, tdim2] = Cta[0, tdim1, tdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
+            Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] * (1 + np.random.uniform(-p.stochT, p.stochT))
 
 
 def EphA3knockin():
     for rdim1 in range(1, p.NRdim1 + 1):
         for rdim2 in range(1, p.NRdim2 + 1):
-            Cra[rdim1, rdim2] *= np.random.randint(1, 3)
-            Crb[rdim1, rdim2] *= np.random.randint(1, 3)
+            Cra[0, rdim1, rdim2] *= np.random.randint(1, 3)
 
 
 def updateNct():
