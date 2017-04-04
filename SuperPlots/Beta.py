@@ -4,9 +4,9 @@ import seaborn as sns
 
 #################### JOBS ###################
 
-yLT = [0, 0.1, 0.2, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+Beta = [0.001, 0.01, 0.02, 0.05, 0.07, 0.1, 1]
 
-JobID = [78, 77, 76, 74, 73, 72, 71, 70, 69, 68]
+JobID = [306, 307, 308, 309, 310, 311, 312]
 
 ################# OPTIONS ##################
 sizechangethresh = 0.005
@@ -14,31 +14,31 @@ smthresh = 0.01
 
 ################# DATA MATRICES ###############
 
-Sep = np.zeros([len(yLT)])
-SepStdev = np.zeros([len(yLT)])
-Size = np.zeros([len(yLT)])
-SM = np.zeros([len(yLT)])
+Sep = np.zeros([len(Beta)])
+SepStdev = np.zeros([len(Beta)])
+Size = np.zeros([len(Beta)])
+SM = np.zeros([len(Beta)])
 
-SepEB = np.zeros([len(yLT)])
-SepStdevEB = np.zeros([len(yLT)])
-SizeEB = np.zeros([len(yLT)])
-SMEB = np.zeros([len(yLT)])
+SepEB = np.zeros([len(Beta)])
+SepStdevEB = np.zeros([len(Beta)])
+SizeEB = np.zeros([len(Beta)])
+SMEB = np.zeros([len(Beta)])
 
-TStab = np.zeros([len(yLT)])
-SepStab = np.zeros([len(yLT)])
-SepStdevStab = np.zeros([len(yLT)])
-SizeStab = np.zeros([len(yLT)])
-SMStab = np.zeros([len(yLT)])
+TStab = np.zeros([len(Beta)])
+SepStab = np.zeros([len(Beta)])
+SepStdevStab = np.zeros([len(Beta)])
+SizeStab = np.zeros([len(Beta)])
+SMStab = np.zeros([len(Beta)])
 
-TStabEB = np.zeros([len(yLT)])
-SepStabEB = np.zeros([len(yLT)])
-SepStdevStabEB = np.zeros([len(yLT)])
-SizeStabEB = np.zeros([len(yLT)])
-SMStabEB = np.zeros([len(yLT)])
+TStabEB = np.zeros([len(Beta)])
+SepStabEB = np.zeros([len(Beta)])
+SepStdevStabEB = np.zeros([len(Beta)])
+SizeStabEB = np.zeros([len(Beta)])
+SMStabEB = np.zeros([len(Beta)])
 
 ################### IMPORT DATA ################
 
-for column in range(len(yLT)):
+for column in range(len(Beta)):
     ID = JobID[column]
     if ID != 0:
         # Import Data
@@ -49,7 +49,8 @@ for column in range(len(yLT)):
 
         FieldsizeEB = np.load('../../RetinotopicMapsData/%s/FieldSizeEB.npy' % ('{0:04}'.format(ID)))
         FieldseparationEB = np.load('../../RetinotopicMapsData/%s/FieldSeparationEB.npy' % ('{0:04}'.format(ID)))
-        FieldseparationStdevEB = np.load('../../RetinotopicMapsData/%s/FieldSeparationStdevEB.npy' % ('{0:04}'.format(ID)))
+        FieldseparationStdevEB = np.load(
+            '../../RetinotopicMapsData/%s/FieldSeparationStdevEB.npy' % ('{0:04}'.format(ID)))
         SystemsmatchEB = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(ID)))
 
         Fieldsizechange = np.load('../../RetinotopicMapsData/%s/FieldSizeChange.npy' % ('{0:04}'.format(ID)))
@@ -118,62 +119,62 @@ fig = plt.figure()
 
 # Field Separation Plot
 ax1 = fig.add_subplot(321)
-ax1.set_xlabel('Strength of Initial Tectal Gradient')
+ax1.set_xlabel('Beta')
 ax1.set_ylabel('Mean Receptive Field Separation')
 ax1.set_xlim(0, 1)
 
 # Field Separation Stdev Plot
 ax2 = fig.add_subplot(322)
-ax2.set_xlabel('Strength of Initial Tectal Gradient')
+ax2.set_xlabel('Beta')
 ax2.set_ylabel('Receptive Field Separation Standard Deviation')
 ax2.set_xlim(0, 1)
 
 # Field Size Plot
 ax3 = fig.add_subplot(323)
-ax3.set_xlabel('Strength of Initial Tectal Gradient')
+ax3.set_xlabel('Beta')
 ax3.set_ylabel('Mean Receptive Field Size')
 ax3.set_xlim(0, 1)
 
 # Systems Match Plot
 ax4 = fig.add_subplot(324)
-ax4.set_xlabel('Strength of Initial Tectal Gradient')
+ax4.set_xlabel('Beta')
 ax4.set_ylabel('Systems Match')
 ax4.set_xlim(0, 1)
 
 # Speed Plot
 ax5 = fig.add_subplot(325)
-ax5.set_xlabel('Strength of Initial Tectal Gradient')
+ax5.set_xlabel('Beta')
 ax5.set_ylabel('Stability Time')
 ax5.set_xlim(0, 1)
 
 if EB == 'y':
     if STAB == 'n':
-        ax1.plot(yLT, SepEB)
-        ax2.plot(yLT, SepStdevEB)
-        ax3.plot(yLT, SizeEB)
-        ax4.plot(yLT, SMEB)
-        ax5.plot(yLT, TStabEB)
+        ax1.plot(Beta, SepEB)
+        ax2.plot(Beta, SepStdevEB)
+        ax3.plot(Beta, SizeEB)
+        ax4.plot(Beta, SMEB)
+        ax5.plot(Beta, TStabEB)
 
     elif STAB == 'y':
-        ax1.plot(yLT, SepStabEB)
-        ax2.plot(yLT, SepStdevStabEB)
-        ax3.plot(yLT, SizeStabEB)
-        ax4.plot(yLT, SMStabEB)
-        ax5.plot(yLT, TStabEB)
+        ax1.plot(Beta, SepStabEB)
+        ax2.plot(Beta, SepStdevStabEB)
+        ax3.plot(Beta, SizeStabEB)
+        ax4.plot(Beta, SMStabEB)
+        ax5.plot(Beta, TStabEB)
 
 elif EB == 'n':
     if STAB == 'n':
-        ax1.plot(yLT, Sep)
-        ax2.plot(yLT, SepStdev)
-        ax3.plot(yLT, Size)
-        ax4.plot(yLT, SM)
-        ax5.plot(yLT, TStab)
+        ax1.plot(Beta, Sep)
+        ax2.plot(Beta, SepStdev)
+        ax3.plot(Beta, Size)
+        ax4.plot(Beta, SM)
+        ax5.plot(Beta, TStab)
 
     elif STAB == 'y':
-        ax1.plot(yLT, SepStab)
-        ax2.plot(yLT, SepStdevStab)
-        ax3.plot(yLT, SizeStab)
-        ax4.plot(yLT, SMStab)
-        ax5.plot(yLT, TStab)
+        ax1.plot(Beta, SepStab)
+        ax2.plot(Beta, SepStdevStab)
+        ax3.plot(Beta, SizeStab)
+        ax4.plot(Beta, SMStab)
+        ax5.plot(Beta, TStab)
 
 plt.show()
