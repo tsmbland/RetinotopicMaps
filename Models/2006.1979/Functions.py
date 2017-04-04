@@ -126,35 +126,39 @@ def setTectalGradientsfordummies():
 
 
 def setRetinalGradients():
-    # Dim1
-    aRdim1 = 0.26
-    bRdim1 = 2.3
-    cRdim1 = 1.05
-    for rdim1 in range(1, p.NRdim1 + 1):
-        x = (rdim1 - 1) / (p.NRdim1 - 1)
-        Cra[rdim1, 1:p.NRdim2 + 1] = aRdim1 * np.exp(bRdim1 * x) + cRdim1
+    # EphA
+    if p.distA != 0:
+        aRdim1 = 0.26
+        bRdim1 = 2.3
+        cRdim1 = 1.05
+        for rdim1 in range(1, p.NRdim1 + 1):
+            x = (rdim1 - 1) / (p.NRdim1 - 1)
+            Cra[rdim1, 1:p.NRdim2 + 1] = aRdim1 * np.exp(bRdim1 * x) + cRdim1
 
-    # Dim2
-    for rdim2 in range(1, p.NRdim2 + 1):
-        Crb[1:p.NRdim1 + 1, rdim2] = (rdim2 - 1) / (p.NRdim2 - 1)
+    # EphB
+    if p.distB != 0:
+        for rdim2 in range(1, p.NRdim2 + 1):
+            Crb[1:p.NRdim1 + 1, rdim2] = (rdim2 - 1) / (p.NRdim2 - 1)
 
 
 def setTectalGradients():
-    # Dim1
-    for tdim1 in range(1, p.NTdim1 + 1):
-        x = 1 - (tdim1 - 1) / (p.NTdim1 - 1)
-        Cta[0, tdim1, 1:p.NTdim2 + 1] = 0.6 * x
+    # EphrinA
+    if p.distA != 0:
+        for tdim1 in range(1, p.NTdim1 + 1):
+            x = 1 - (tdim1 - 1) / (p.NTdim1 - 1)
+            Cta[0, tdim1, 1:p.NTdim2 + 1] = 0.6 * x
+        for tdim1 in range(1, p.NTdim1 + 1):
+            for tdim2 in range(1, p.NTdim2 + 1):
+                Cta[0, tdim1, tdim2] = Cta[0, tdim1, tdim2] + 0.5 * np.random.uniform()
 
-    # Dim2
-    for tdim2 in range(1, p.NTdim2 + 1):
-        y = (tdim2 - 1) / (p.NTdim2 - 1)
-        Ctb[0, 1:p.NTdim1 + 1, tdim2] = 0.6 * y
-
-    # Add stochasticity
-    for tdim1 in range(1, p.NTdim1 + 1):
+    # EphrinB
+    if p.distB != 0:
         for tdim2 in range(1, p.NTdim2 + 1):
-            Cta[0, tdim1, tdim2] = Cta[0, tdim1, tdim2] + 0.5 * np.random.uniform()
-            Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] + 0.5 * np.random.uniform()
+            y = (tdim2 - 1) / (p.NTdim2 - 1)
+            Ctb[0, 1:p.NTdim1 + 1, tdim2] = 0.6 * y
+        for tdim1 in range(1, p.NTdim1 + 1):
+            for tdim2 in range(1, p.NTdim2 + 1):
+                Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] + 0.5 * np.random.uniform()
 
 
 def EphA3knockin():
