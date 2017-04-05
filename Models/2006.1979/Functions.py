@@ -453,3 +453,5 @@ def savedata(JobID):
     np.save('../../../RetinotopicMapsData/%s/EphrinB' % ('{0:04}'.format(JobID)), Ctb)
     np.save('../../../RetinotopicMapsData/%s/xFieldCentres' % ('{0:04}'.format(JobID)), xFieldcentres)
     np.save('../../../RetinotopicMapsData/%s/PrimaryTR' % ('{0:04}'.format(JobID)), p.TRout)
+    np.save('../../../RetinotopicMapsData/%s/EphA' % ('{0:04}'.format(JobID)), Cra)
+    np.save('../../../RetinotopicMapsData/%s/EphB' % ('{0:04}'.format(JobID)), Crb)
