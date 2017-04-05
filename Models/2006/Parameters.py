@@ -12,7 +12,7 @@ NTdim2 = 10
 
 # Tectal concentrations
 alpha = 0.05
-beta = 0.05
+beta = 0.01
 deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration
 

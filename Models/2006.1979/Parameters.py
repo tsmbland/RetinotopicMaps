@@ -1,8 +1,8 @@
-JobID = 0  # JobID (or starting ID if multiple jobs)
+JobID = 800  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 1000  # number of weight iterations
-TRout = 10  # temporal resoultion of output files
+Iterations = 5000 # number of weight iterations
+TRout = 20  # temporal resoultion of output files
 
 # Layer sizes
 NRdim1 = 10  # initial number of retinal cells
