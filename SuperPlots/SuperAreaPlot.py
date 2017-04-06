@@ -4,6 +4,8 @@ import time
 import sys
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 start = time.time()
 
 ##################### IMPORT DATA ########################

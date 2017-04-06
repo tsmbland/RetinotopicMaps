@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 #################### JOBS ###################
 
 stochR = [0, 0.1, 0.2, 0.3, 0.4, 0.5]

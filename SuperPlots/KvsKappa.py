@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 #################### JOBS ###################
 
 kappa = [0.0504, 0.1, 0.3, 0.5, 0.7, 1]

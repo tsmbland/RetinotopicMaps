@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 #################### JOBS ###################
 
 Beta = [0.001, 0.01, 0.02, 0.05, 0.07, 0.1, 1]

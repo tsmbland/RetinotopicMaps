@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 ################# OPTIONS ##################
 sizechangethresh = 0.005
 smthresh = 0.01

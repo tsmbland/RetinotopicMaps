@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 import time
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 start = time.time()
 
 ##################### IMPORT DATA ########################
