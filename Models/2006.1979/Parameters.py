@@ -1,14 +1,14 @@
 JobID = 0  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 10  # number of weight iterations
+Iterations = 1000  # number of weight iterations
 TRout = 10  # temporal resoultion of output files
 
 # Layer sizes
-NRdim1 = 20  # initial number of retinal cells
-NRdim2 = 20
-NTdim1 = 20  # initial number of tectal cells
-NTdim2 = 20
+NRdim1 = 10  # initial number of retinal cells
+NRdim2 = 10
+NTdim1 = 10  # initial number of tectal cells
+NTdim2 = 10
 
 # Establishment of initial contacts
 n0 = 10  # number of initial random contact

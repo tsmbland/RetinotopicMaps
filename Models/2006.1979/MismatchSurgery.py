@@ -56,7 +56,7 @@ def job(JobID):
     f.savedata(JobID)
 
     # End
-    sys.stdout.write('\rComplete!')
+    sys.stdout.write('\rJob %s: Complete!' % ('{0:04}'.format(JobID)))
     sys.stdout.flush()
     end = time.time()
     elapsed = end - start

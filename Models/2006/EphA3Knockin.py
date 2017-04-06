@@ -23,7 +23,7 @@ def job(JobID):
     # Set Gradients
     f.setRetinalGradients()
     f.setTectalGradients()
-    f.EphA3knockin()
+    f.EphA3knockin(JobID)
     f.updateNct()
 
     # Initial Connections

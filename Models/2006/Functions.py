@@ -101,12 +101,17 @@ def setTectalGradients():
                 Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] + 0.5 * np.random.uniform()
 
 
-def EphA3knockin():
+def EphA3knockin(JobID):
+    EphA3 = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])
     for rdim1 in range(1, p.NRdim1 + 1):
         for rdim2 in range(1, p.NRdim2 + 1):
             roll = np.random.uniform()
             if roll > 0.5:
                 Cra[rdim1, rdim2] += 1.86
+                EphA3[rdim1, rdim2] = 1
+    if not os.path.isdir('../../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID))):
+        os.makedirs('../../../RetinotopicMapsData/%s' % ('{0:04}'.format(JobID)))
+    np.save('../../../RetinotopicMapsData/%s/EphA3' % ('{0:04}'.format(JobID)), EphA3)
 
 
 def updateNct():
