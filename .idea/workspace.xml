@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Functions.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py" afterPath="$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006/Functions.py" afterPath="$PROJECT_DIR$/Models/2006/Functions.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -560,13 +559,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00103" summary="grouped precision measures into single script">
-      <created>1489923373827</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1489923373828</updated>
-    </task>
     <task id="LOCAL-00104" summary="changed directory name">
       <created>1489923399088</created>
       <option name="number" value="00104" />
@@ -903,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491389667786</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="fixed EphA3 ki function">
+      <created>1491475156739</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1491475156740</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TodoView">
@@ -990,7 +989,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="fixed areaplot coordinates problem, added loading data message" />
     <MESSAGE value="tidied plots" />
     <MESSAGE value="added data links" />
     <MESSAGE value="new plot" />
@@ -1015,7 +1013,8 @@
     <MESSAGE value="fixed gradient function" />
     <MESSAGE value="changed default parameters" />
     <MESSAGE value="added ability to plot Eph gradients" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ability to plot Eph gradients" />
+    <MESSAGE value="fixed EphA3 ki function" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed EphA3 ki function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

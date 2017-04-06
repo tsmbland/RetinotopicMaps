@@ -48,6 +48,23 @@ def typemismatchsurgery():
     Currentiteration = 0
     Timepoint = 0
 
+    Cra[:Rmindim1, :] = 0
+    Cra[Rmaxdim1 + 1:, :] = 0
+    Cra[:, :Rmindim2] = 0
+    Cra[:, Rmaxdim2 + 1:] = 0
+    Crb[:Rmindim1, :] = 0
+    Crb[Rmaxdim1 + 1:, :] = 0
+    Crb[:, :Rmindim2] = 0
+    Crb[:, Rmaxdim2 + 1:] = 0
+    Cta[0, :Tmindim1, :] = 0
+    Cta[0, Tmaxdim1 + 1:, :] = 0
+    Cta[0, :, :Tmindim2] = 0
+    Cta[0, :, Tmaxdim2 + 1:] = 0
+    Ctb[0, :Tmindim1, :] = 0
+    Ctb[0, Tmaxdim1 + 1:, :] = 0
+    Ctb[0, :, :Tmindim2] = 0
+    Ctb[0, :, Tmaxdim2 + 1:] = 0
+
 
 def typedevelopment():
     global Rmindim1, Rmaxdim1, Rmindim2, Rmaxdim2, Tmindim1, Tmaxdim1, Tmindim2, Tmaxdim2, Currentiteration, Timepoint
@@ -166,7 +183,7 @@ def EphA3knockin():
         for rdim2 in range(1, p.NRdim2 + 1):
             roll = np.random.uniform()
             if roll > 0.5:
-                Cra[0, rdim1, rdim2] += 1.86
+                Cra[rdim1, rdim2] += 1.86
 
 
 def updateNct():

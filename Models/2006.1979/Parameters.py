@@ -1,14 +1,14 @@
-JobID = 800  # JobID (or starting ID if multiple jobs)
+JobID = 0  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 5000 # number of weight iterations
-TRout = 20  # temporal resoultion of output files
+Iterations = 10  # number of weight iterations
+TRout = 10  # temporal resoultion of output files
 
 # Layer sizes
-NRdim1 = 10  # initial number of retinal cells
-NRdim2 = 10
-NTdim1 = 10  # initial number of tectal cells
-NTdim2 = 10
+NRdim1 = 20  # initial number of retinal cells
+NRdim2 = 20
+NTdim1 = 20  # initial number of tectal cells
+NTdim2 = 20
 
 # Establishment of initial contacts
 n0 = 10  # number of initial random contact
@@ -23,7 +23,7 @@ tc = 1  # concentration iterations per iteration
 
 # Synaptic modification
 Wmax = 1.  # total strength available to each presynaptic fibre
-gamma = 0.01
+gamma = 0.1
 kappa = 0.5
 k = 0.005
 elim = 0.005  # elimination threshold

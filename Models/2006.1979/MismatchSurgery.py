@@ -10,7 +10,7 @@ start = time.time()
 
 nJobs = 1
 Cores = 1
-
+inputJobID = int(input('Input JobID: '))
 
 ##################### ALGORITHM #################
 
@@ -21,21 +21,22 @@ def job(JobID):
     # Set Job Parameter(s)
 
     # Import Data
-    Cta = np.load('../../../RetinotopicMapsData/%s/EphrinA.npy' % ('{0:04}'.format(JobID)))
+    Cta = np.load('../../../RetinotopicMapsData/%s/EphrinA.npy' % ('{0:04}'.format(inputJobID)))
     f.Cta[0, :, :] = Cta[-1, :, :]
-    Ctb = np.load('../../../RetinotopicMapsData/%s/EphrinB.npy' % ('{0:04}'.format(JobID)))
+    Ctb = np.load('../../../RetinotopicMapsData/%s/EphrinB.npy' % ('{0:04}'.format(inputJobID)))
     f.Ctb[0, :, :] = Ctb[-1, :, :]
+    f.Cra = np.load('../../../RetinotopicMapsData/%s/EphA.npy' % ('{0:04}'.format(inputJobID)))
+    f.Crb = np.load('../../../RetinotopicMapsData/%s/EphB.npy' % ('{0:04}'.format(inputJobID)))
 
     # Model Type
     f.typemismatchsurgery()
 
-    f.setRetinalGradients()
     f.updateNct()
     f.setWtot()
     f.initialconnections()
 
     # Iterations
-    for iteration in range(f.Iterations):
+    for iteration in range(p.Iterations):
         f.updatetimepoint()
 
         f.updateWpt()
@@ -48,11 +49,11 @@ def job(JobID):
 
         f.updatexFieldcentres()
 
-        sys.stdout.write('\r%i percent' % (iteration * 100 / f.Iterations))
+        sys.stdout.write('\rJob %s: %i percent' % ('{0:04}'.format(JobID), iteration * 100 / p.Iterations))
         sys.stdout.flush()
 
     # Export Data
-    f.savedata()
+    f.savedata(JobID)
 
     # End
     sys.stdout.write('\rComplete!')
