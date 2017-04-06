@@ -13,6 +13,7 @@ JobID = int(input('JobID: '))
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/ReverseFieldCentres.npy' % ('{0:04}'.format(JobID)))
+EphA3 = np.load('../../RetinotopicMapsData/%s/EphA3.npy' % ('{0:04}'.format(JobID)))
 TRin = np.load('../../RetinotopicMapsData/%s/ReverseSecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
 ####################### PLOT ##########################
@@ -29,25 +30,51 @@ sframe = Slider(axframe, 'Iteration', 0, len(Fieldcentres[0, :, 0, 0]) * TRin - 
 
 
 def fieldplot(i):
+    # Normal Cells
     for rdim1 in range(len(Fieldcentres[0, i, :, 0])):
         fieldlistdim1 = []
         fieldlistdim2 = []
         for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
-            if Fieldcentres[0, i, rdim1, rdim2] != 0 and Fieldcentres[1, i, rdim1, rdim2] != 0:
+            if Fieldcentres[0, i, rdim1, rdim2] != 0 and Fieldcentres[1, i, rdim1, rdim2] != 0 and EphA3[
+                rdim1, rdim2] == 0:
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax.plot(fieldlistdim1, fieldlistdim2, c='k')
+        ax.plot(fieldlistdim1, fieldlistdim2, c='b')
 
     for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
         fieldlistdim1 = []
         fieldlistdim2 = []
         for rdim1 in range(len(Fieldcentres[0, i, :, 0])):
-            if Fieldcentres[0, i, rdim1, rdim2] != 0 and Fieldcentres[1, i, rdim1, rdim2] != 0:
+            if Fieldcentres[0, i, rdim1, rdim2] != 0 and Fieldcentres[1, i, rdim1, rdim2] != 0 and EphA3[
+                rdim1, rdim2] == 0:
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax.plot(fieldlistdim1, fieldlistdim2, c='k')
+        ax.plot(fieldlistdim1, fieldlistdim2, c='b')
+
+    # EphA3 Cells
+    for rdim1 in range(len(Fieldcentres[0, i, :, 0])):
+        fieldlistdim1 = []
+        fieldlistdim2 = []
+        for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
+            if Fieldcentres[0, i, rdim1, rdim2] != 0 and Fieldcentres[1, i, rdim1, rdim2] != 0 and EphA3[
+                rdim1, rdim2] == 1:
+                fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
+                fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
+
+        ax.plot(fieldlistdim1, fieldlistdim2, c='r')
+
+    for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
+        fieldlistdim1 = []
+        fieldlistdim2 = []
+        for rdim1 in range(len(Fieldcentres[0, i, :, 0])):
+            if Fieldcentres[0, i, rdim1, rdim2] != 0 and Fieldcentres[1, i, rdim1, rdim2] != 0 and EphA3[
+                rdim1, rdim2] == 1:
+                fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
+                fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
+
+        ax.plot(fieldlistdim1, fieldlistdim2, c='r')
 
 
 def update(val):
