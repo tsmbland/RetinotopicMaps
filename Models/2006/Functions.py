@@ -106,7 +106,7 @@ def EphA3knockin():
         for rdim2 in range(1, p.NRdim2 + 1):
             roll = np.random.uniform()
             if roll > 0.5:
-                Cra[0, rdim1, rdim2] += 1.86
+                Cra[rdim1, rdim2] += 1.86
 
 
 def updateNct():
