@@ -22,7 +22,7 @@ TRin2 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.forma
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [10, 50, 500, 5000]
+Iterations = [20, 40, 60, 500]
 
 ######################## TABLE #########################
 
@@ -60,7 +60,7 @@ def areaplot(plotn):
     ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
     #ax.set_title('Diameter: %.2f' % Fieldsizes[i // TRin2, Tdim1, Tdim2], x=0.25, y=0.85)
 
-    wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 50, marker='s',
+    wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 100, marker='s',
                        c='k', cmap='Greys')
 
     origin = ax.scatter(Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[1, i // TRin2, Tdim1, Tdim2], c='r')
@@ -73,11 +73,16 @@ def areaplot(plotn):
 
     if (plotn + 1) == 1:
         ax.set_xticklabels([])
+        ax.set_title('A')
     if (plotn + 1) == 2:
         ax.set_xticklabels([])
         ax.set_yticklabels([])
+        ax.set_title('B')
+    if (plotn + 1) == 3:
+        ax.set_title('C')
     if (plotn + 1) == 4:
         ax.set_yticklabels([])
+        ax.set_title('D')
 
 
 for plotn in range(len(Iterations)):
