@@ -78,7 +78,7 @@ figs.set_ylabel('Retinal Cell Number (Dimension %d)' % (Rplotdim))
 figs.set_xlabel('Tectal Cell Number (Dimension %d)' % (Tplotdim))
 
 
-def areaplot(plotn):
+def weightplot(plotn):
     i = Iterations[plotn]
     ax = fig.add_subplot(2, 3, plotn + 1)
     ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
@@ -107,6 +107,6 @@ def areaplot(plotn):
 
 
 for plotn in range(len(Iterations)):
-    areaplot(plotn)
+    weightplot(plotn)
 
 plt.show()
