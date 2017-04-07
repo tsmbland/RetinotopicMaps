@@ -4,6 +4,8 @@ from matplotlib.widgets import Slider
 import sys
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 ####################### IMPORT DATA ######################
 
 JobID = int(input('JobID: '))
@@ -77,6 +79,5 @@ weightplot(1, (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2, 1, (len(Weightmatrix[
 weightplot(1, (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2, 2, (len(Weightmatrix[0, :, 0, 0, 0]) - 2) // 2, 2)
 weightplot(2, (len(Weightmatrix[0, 0, 0, :, 0]) - 2) // 2, 1, (len(Weightmatrix[0, 0, :, 0, 0]) - 2) // 2, 3)
 weightplot(2, (len(Weightmatrix[0, 0, 0, :, 0]) - 2) // 2, 2, (len(Weightmatrix[0, :, 0, 0, 0]) - 2) // 2, 4)
-
 
 plt.show()
