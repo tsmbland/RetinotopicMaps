@@ -29,8 +29,8 @@
       <file leaf-file-name="SuperAreaPlot2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="62" column="105" selection-start-line="62" selection-start-column="105" selection-end-line="62" selection-end-column="105" />
+            <state relative-caret-position="491">
+              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -496,13 +496,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00113" summary="added superplots">
-      <created>1490125715840</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1490125715840</updated>
-    </task>
     <task id="LOCAL-00114" summary="tidied">
       <created>1490126137554</created>
       <option name="number" value="00114" />
@@ -839,7 +832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491584092999</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="added subplot labels">
+      <created>1491584723686</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1491584723686</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TodoView">
@@ -926,7 +926,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changed appearance of plots" />
     <MESSAGE value="fixed importing error, added data" />
     <MESSAGE value="added field separation stdev measure" />
     <MESSAGE value="added field separation stdev plot and line to indicate stability time" />
@@ -951,7 +950,8 @@
     <MESSAGE value="changes axis labels" />
     <MESSAGE value="changed image resolution" />
     <MESSAGE value="added new plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new plot" />
+    <MESSAGE value="added subplot labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="added subplot labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1321,8 +1321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="62" column="105" selection-start-line="62" selection-start-column="105" selection-end-line="62" selection-end-column="105" />
+        <state relative-caret-position="491">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
           <folding />
         </state>
       </provider>

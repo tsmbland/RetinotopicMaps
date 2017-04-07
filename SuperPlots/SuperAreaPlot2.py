@@ -73,16 +73,16 @@ def areaplot(plotn):
 
     if (plotn + 1) == 1:
         ax.set_xticklabels([])
-        ax.set_title('A')
+        ax.set_title('A', x=0)
     if (plotn + 1) == 2:
         ax.set_xticklabels([])
         ax.set_yticklabels([])
-        ax.set_title('B')
+        ax.set_title('B', x=0)
     if (plotn + 1) == 3:
-        ax.set_title('C')
+        ax.set_title('C', x=0)
     if (plotn + 1) == 4:
         ax.set_yticklabels([])
-        ax.set_title('D')
+        ax.set_title('D', x=0)
 
 
 for plotn in range(len(Iterations)):
