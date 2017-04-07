@@ -5,7 +5,7 @@ import seaborn as sns
 
 plt.rcParams['savefig.dpi'] = 600
 
-JobID = np.zeros([4])
+JobID = np.zeros([4], dtype=np.int32)
 JobID[0] = int(input('Surgery 1 JobID: '))
 JobID[1] = int(input('Surgery 2 JobID: '))
 JobID[2] = int(input('Surgery 3 JobID: '))
