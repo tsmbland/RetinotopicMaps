@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SurgeryPlot.py" afterPath="$PROJECT_DIR$/SuperPlots/SurgeryPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py" afterPath="$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +29,18 @@
       <file leaf-file-name="SuperAreaPlot2.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="300">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GradientsPlot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SuperPlots/GradientsPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -215,7 +224,7 @@
       <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ModelSpeedPlot">
+  <component name="RunManager" selected="Python.SuperAreaPlot2">
     <configuration default="false" name="StandardAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,23 +238,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="EphA3Plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Plots" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Plots/EphA3Plot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -297,6 +289,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ModelSpeedPlot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SuperAreaPlot2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SuperPlots" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -455,18 +464,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
       <item index="1" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
-      <item index="2" class="java.lang.String" itemvalue="Python.EphA3Plot" />
-      <item index="3" class="java.lang.String" itemvalue="Python.OrientationPlot" />
-      <item index="4" class="java.lang.String" itemvalue="Python.SurgeryPlot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.ModelSpeedPlot" />
+      <item index="2" class="java.lang.String" itemvalue="Python.OrientationPlot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.SurgeryPlot" />
+      <item index="4" class="java.lang.String" itemvalue="Python.ModelSpeedPlot" />
+      <item index="5" class="java.lang.String" itemvalue="Python.SuperAreaPlot2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ModelSpeedPlot" />
-        <item index="1" class="java.lang.String" itemvalue="Python.SurgeryPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.OrientationPlot" />
-        <item index="3" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
-        <item index="4" class="java.lang.String" itemvalue="Python.EphA3Plot" />
+        <item index="0" class="java.lang.String" itemvalue="Python.SuperAreaPlot2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ModelSpeedPlot" />
+        <item index="2" class="java.lang.String" itemvalue="Python.SurgeryPlot" />
+        <item index="3" class="java.lang.String" itemvalue="Python.OrientationPlot" />
+        <item index="4" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -486,13 +495,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00111" summary="created new function for precision change measures">
-      <created>1490095803163</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1490095803163</updated>
     </task>
     <task id="LOCAL-00112" summary="added superplots">
       <created>1490125695613</created>
@@ -830,7 +832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491563357007</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="added new plot">
+      <created>1491583195024</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1491583195024</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TodoView">
@@ -844,9 +853,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1232,14 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SuperPlots/GradientsPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/Beta.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1310,10 +1311,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SuperPlots/GradientsPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SuperPlots/SuperAreaPlot2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="300">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding />
         </state>
       </provider>

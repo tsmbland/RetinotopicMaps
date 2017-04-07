@@ -22,7 +22,7 @@ TRin2 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.forma
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [1, 10, 20, 50]
+Iterations = [10, 50, 500, 5000]
 
 ######################## TABLE #########################
 
@@ -58,22 +58,25 @@ def areaplot(plotn):
     ax = fig.add_subplot(2, 2, plotn + 1)
     ax.set_xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
-    ax.set_title('Diameter: %d' % (Fieldsizes[i // TRin2, Tdim1, Tdim2] / 2))
+    #ax.set_title('Diameter: %.2f' % Fieldsizes[i // TRin2, Tdim1, Tdim2], x=0.25, y=0.85)
 
     wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 50, marker='s',
                        c='k', cmap='Greys')
 
+    origin = ax.scatter(Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[1, i // TRin2, Tdim1, Tdim2], c='r')
     circle = plt.Circle((Fieldcentres[0, i // TRin2, Tdim1, Tdim2], Fieldcentres[1, i // TRin2, Tdim1, Tdim2]),
                         Fieldsizes[i // TRin2, Tdim1, Tdim2] / 2,
-                        fill=False)
+                        fill=False, color='r')
+
+
     ax.add_artist(circle)
 
     if (plotn + 1) == 1:
         ax.set_xticklabels([])
-    if (plotn + 1) == 2 or (plotn + 1) == 3:
+    if (plotn + 1) == 2:
         ax.set_xticklabels([])
         ax.set_yticklabels([])
-    if (plotn + 1) == 5 or (plotn + 1) == 6:
+    if (plotn + 1) == 4:
         ax.set_yticklabels([])
 
 
