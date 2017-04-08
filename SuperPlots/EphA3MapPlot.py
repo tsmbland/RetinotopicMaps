@@ -74,6 +74,6 @@ def fieldplot(i):
         ax.plot(fieldlistdim1, fieldlistdim2, c='r', lw='0.5')
 
 
-fieldplot(len(Fieldcentres[0, :, 0, 0]))
+fieldplot(len(Fieldcentres[0, :, 0, 0]) - 1)
 
 plt.show()
