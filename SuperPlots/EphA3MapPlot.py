@@ -37,7 +37,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax.plot(fieldlistdim1, fieldlistdim2, c='b')
+        ax.plot(fieldlistdim1, fieldlistdim2, c='b', lw='0.5')
 
     for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
         fieldlistdim1 = []
@@ -48,7 +48,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax.plot(fieldlistdim1, fieldlistdim2, c='b')
+        ax.plot(fieldlistdim1, fieldlistdim2, c='b', lw='0.5')
 
     # EphA3 Cells
     for rdim1 in range(len(Fieldcentres[0, i, :, 0])):
@@ -60,7 +60,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax.plot(fieldlistdim1, fieldlistdim2, c='r')
+        ax.plot(fieldlistdim1, fieldlistdim2, c='r', lw='0.5')
 
     for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
         fieldlistdim1 = []
@@ -71,12 +71,9 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax.plot(fieldlistdim1, fieldlistdim2, c='r')
+        ax.plot(fieldlistdim1, fieldlistdim2, c='r', lw='0.5')
 
 
-
-
-
-fieldplot(5000)
+fieldplot(len(Fieldcentres[0, :, 0, 0]))
 
 plt.show()
