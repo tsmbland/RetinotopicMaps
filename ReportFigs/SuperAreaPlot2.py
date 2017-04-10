@@ -10,9 +10,9 @@ start = time.time()
 
 ##################### IMPORT DATA ########################
 
-JobID = int(input('JobID: '))
-Tdim1 = int(input('Tectal Cell (Dimension 1): '))
-Tdim2 = int(input('Tectal Cell (Dimension 2): '))
+JobID = 813
+Tdim1 = 25
+Tdim2 = 25
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))
@@ -48,8 +48,8 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
 fig = plt.figure()
 figs = fig.add_subplot(111, frameon=False)
 figs.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
-figs.set_ylabel('Retinal Cell Number (Dimension 2)')
-figs.set_xlabel('Retinal Cell Number (Dimension 1)')
+figs.set_ylabel('Dorsal - Ventral (j)')
+figs.set_xlabel('Nasal - Temporal (i)')
 
 
 def areaplot(plotn):
@@ -58,7 +58,6 @@ def areaplot(plotn):
     ax = fig.add_subplot(2, 2, plotn + 1)
     ax.set_xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
-    #ax.set_title('Diameter: %.2f' % Fieldsizes[i // TRin2, Tdim1, Tdim2], x=0.25, y=0.85)
 
     wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 100, marker='s',
                        c='k', cmap='Greys')

@@ -53,6 +53,6 @@ ax3.set_title('C', x=0)
 ax3.plot(range(TRin, len(Systemsmatch) * TRin, TRin), Systemsmatch[1:])
 ax3.set_ylabel('Systems Match')
 ax3.set_xlabel('Iterations')
-ax3.set_xlim(0, 5000)
+ax3.set_xlim(0, 2000)
 
 plt.show()

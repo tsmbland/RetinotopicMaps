@@ -17,8 +17,6 @@
       <change type="MOVED" beforePath="$PROJECT_DIR$/SuperPlots/yLT.py" afterPath="$PROJECT_DIR$/ReportFigs/(yLT).py" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/SuperPlots/yLTvsBeta.py" afterPath="$PROJECT_DIR$/ReportFigs/(yLTvsBeta).py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Functions.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -574,13 +572,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00118" summary="fixed problem with importing files">
-      <created>1490131598332</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1490131598333</updated>
-    </task>
     <task id="LOCAL-00119" summary="fixed problem with plot">
       <created>1490132047319</created>
       <option name="number" value="00119" />
@@ -917,7 +908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491657594046</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="fixed xfieldcentres function to work with surgery models">
+      <created>1491855677537</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1491855677538</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1004,7 +1002,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="fixed importing error, added data" />
     <MESSAGE value="added field separation stdev measure" />
     <MESSAGE value="added field separation stdev plot and line to indicate stability time" />
     <MESSAGE value="fixed copy-paste error" />
@@ -1029,7 +1026,8 @@
     <MESSAGE value="changed image resolution" />
     <MESSAGE value="added subplot labels" />
     <MESSAGE value="added new plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new plot" />
+    <MESSAGE value="fixed xfieldcentres function to work with surgery models" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed xfieldcentres function to work with surgery models" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
