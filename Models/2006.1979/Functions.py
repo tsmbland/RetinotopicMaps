@@ -16,7 +16,7 @@ Ita = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])
 Itb = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])  # induced label in a tectal cell
 Nct = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])  # neighbour count for a tectal cell
 
-xFieldcentres = np.zeros([2, p.Iterations + 1, p.NTdim1 + 1, p.NTdim2 + 1])  # expected field centres for tectal cells
+xFieldcentres = np.zeros([2, p.Iterations + 1, p.NTdim1 + 2, p.NTdim2 + 2])  # expected field centres for tectal cells
 
 
 #################### MODEL TYPE ####################
@@ -461,10 +461,10 @@ def updatetimepoint():
 def updatexFieldcentres():
     for tdim1 in range(Tmindim1, Tmaxdim1 + 1):
         for tdim2 in range(Tmindim2, Tmaxdim2 + 1):
-            xFieldcentres[0, Timepoint, tdim1, tdim2] = (Rmaxdim1 - Rmindim1 + 1) * tdim1 / (
-                Tmaxdim1 - Tmindim1 + 1)
-            xFieldcentres[1, Timepoint, tdim1, tdim2] = (Rmaxdim2 - Rmindim2 + 1) * tdim2 / (
-                Tmaxdim2 - Tmindim2 + 1)
+            xFieldcentres[0, Timepoint, tdim1, tdim2] = (Rmaxdim1 - Rmindim1 + 1) * (tdim1 - Tmindim1) / (
+                Tmaxdim1 - Tmindim1 + 1) + Rmindim1
+            xFieldcentres[1, Timepoint, tdim1, tdim2] = (Rmaxdim2 - Rmindim2 + 1) * (tdim2 - Tmindim2) / (
+                Tmaxdim2 - Tmindim2 + 1) + Rmindim2
 
 
 def savedata(JobID):

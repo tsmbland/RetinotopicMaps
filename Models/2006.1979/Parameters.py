@@ -1,7 +1,7 @@
 JobID = 0  # JobID (or starting ID if multiple jobs)
 
 # Iterations
-Iterations = 1000  # number of weight iterations
+Iterations = 500  # number of weight iterations
 TRout = 10  # temporal resoultion of output files
 
 # Layer sizes
@@ -35,12 +35,12 @@ distA = 1.  # the contribution made by EphA system to distance
 distB = 1.
 
 # Mismatch surgery
-sRmindim1 = 1
+sRmindim1 = NRdim1 // 2
 sRmaxdim1 = NRdim1
 sRmindim2 = 1
 sRmaxdim2 = NRdim2
 sTmindim1 = 1
-sTmaxdim1 = NTdim1 // 2
+sTmaxdim1 = NTdim1
 sTmindim2 = 1
 sTmaxdim2 = NTdim2
 
