@@ -86,8 +86,7 @@ def MeanFieldSize():
                 1, Currentiteration, tdim1, tdim2] != 0:
                 totalsize += FieldSizes[Currentiteration, tdim1, tdim2]
                 count += 1
-    FieldSize[Currentiteration] = totalsize/count
-
+    FieldSize[Currentiteration] = totalsize / count
 
 
 def MeanSystemsMatch():
@@ -99,8 +98,8 @@ def MeanSystemsMatch():
                 1, Currentiteration, tdim1, tdim2] != 0:
                 separation.append(np.sqrt((FieldCentres[0, Currentiteration, tdim1, tdim2] - xFieldCentres[
                     0, Weightiteration, tdim1, tdim2]) ** 2 + (
-                                             FieldCentres[1, Currentiteration, tdim1, tdim2] - xFieldCentres[
-                                                 1, Weightiteration, tdim1, tdim2]) ** 2))
+                                              FieldCentres[1, Currentiteration, tdim1, tdim2] - xFieldCentres[
+                                                  1, Weightiteration, tdim1, tdim2]) ** 2))
 
     meandistance = np.mean(separation)
     SystemsMatch[Currentiteration] = meandistance
@@ -141,8 +140,6 @@ def MeanFieldSeparationEB(border):
     FieldSeparationStdevEB[Currentiteration] = standarddeviation
 
 
-
-
 def MeanFieldSizeEB(border):
     totalsize = 0
     count = 0
@@ -152,7 +149,7 @@ def MeanFieldSizeEB(border):
                 1, Currentiteration, tdim1, tdim2] != 0:
                 totalsize += FieldSizes[Currentiteration, tdim1, tdim2]
                 count += 1
-    FieldSize[Currentiteration] = totalsize/count
+    FieldSizeEB[Currentiteration] = totalsize / count
 
 
 def MeanSystemsMatchEB(border):
@@ -164,9 +161,8 @@ def MeanSystemsMatchEB(border):
                 1, Currentiteration, tdim1, tdim2] != 0:
                 separation.append(np.sqrt((FieldCentres[0, Currentiteration, tdim1, tdim2] - xFieldCentres[
                     0, Weightiteration, tdim1, tdim2]) ** 2 + (
-                                             FieldCentres[1, Currentiteration, tdim1, tdim2] - xFieldCentres[
-                                                 1, Weightiteration, tdim1, tdim2]) ** 2))
-
+                                              FieldCentres[1, Currentiteration, tdim1, tdim2] - xFieldCentres[
+                                                  1, Weightiteration, tdim1, tdim2]) ** 2))
 
     meandistance = np.mean(separation)
     SystemsMatchEB[Currentiteration] = meandistance
