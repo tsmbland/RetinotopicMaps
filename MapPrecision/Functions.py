@@ -78,8 +78,16 @@ def MeanFieldSeparation():
 
 
 def MeanFieldSize():
-    FieldSize[Currentiteration] = np.mean(
-        np.mean(FieldSizes[Currentiteration, 1:-1, 1:-1]))
+    totalsize = 0
+    count = 0
+    for tdim1 in range(len(FieldCentres[0, 0, :, 0])):
+        for tdim2 in range(len(FieldCentres[0, 0, 0, :])):
+            if FieldCentres[0, Currentiteration, tdim1, tdim2] != 0 and FieldCentres[
+                1, Currentiteration, tdim1, tdim2] != 0:
+                totalsize += FieldSizes[tdim1, tdim2]
+                count += 1
+    FieldSize[Currentiteration] = totalsize/count
+
 
 
 def MeanSystemsMatch():
@@ -136,8 +144,15 @@ def MeanFieldSeparationEB(border):
 
 
 def MeanFieldSizeEB(border):
-    FieldSizeEB[Currentiteration] = np.mean(
-        np.mean(FieldSizes[Currentiteration, (border + 1):-(1 + border), (border + 1):- (1 + border)]))
+    totalsize = 0
+    count = 0
+    for tdim1 in range(border, len(FieldCentres[0, 0, :, 0]) - border):
+        for tdim2 in range(border, len(FieldCentres[0, 0, 0, :]) - border):
+            if FieldCentres[0, Currentiteration, tdim1, tdim2] != 0 and FieldCentres[
+                1, Currentiteration, tdim1, tdim2] != 0:
+                totalsize += FieldSizes[tdim1, tdim2]
+                count += 1
+    FieldSize[Currentiteration] = totalsize/count
 
 
 def MeanSystemsMatchEB(border):
