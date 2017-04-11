@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/(SurgeryPlotOld)py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SuperAreaPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/(AreaPlotOld).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SuperAreaPlot2.py" afterPath="$PROJECT_DIR$/ReportFigs/AreaPlot.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SuperFieldPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SuperWeightPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/(WeightPlot).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py" afterPath="$PROJECT_DIR$/ReportFigs/(SurgeryPlotOld2).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot3.py" afterPath="$PROJECT_DIR$/ReportFigs/(SurgeryPlotOld3).py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot4.py" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,61 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="(WeightPlot).py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/(WeightPlot).py">
+      <file leaf-file-name="FieldPlot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/FieldPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1545">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EphA3MapPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3MapPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="76" column="44" selection-start-line="21" selection-start-column="0" selection-end-line="76" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EphA3Plot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parameters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EphA3Plot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plots/EphA3Plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="31" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -108,7 +51,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/1979/Development.py" />
         <option value="$PROJECT_DIR$/Models/1979/StandardAlgorithm.py" />
         <option value="$PROJECT_DIR$/Models/1979/Functions.py" />
         <option value="$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py" />
@@ -159,6 +101,7 @@
         <option value="$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py" />
         <option value="$PROJECT_DIR$/ReportFigs/SurgeryPlot4.py" />
         <option value="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/FieldPlot.py" />
       </list>
     </option>
   </component>
@@ -611,13 +554,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00130" summary="fixed importing error, added data">
-      <created>1490264150896</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1490264150897</updated>
-    </task>
     <task id="LOCAL-00131" summary="added field separation stdev measure">
       <created>1490271574848</created>
       <option name="number" value="00131" />
@@ -954,7 +890,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491944355712</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="altered plots">
+      <created>1491947092051</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1491947092052</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TodoView">
@@ -968,9 +911,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1041,7 +984,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="(hopefully) got non-standard algorithms working" />
     <MESSAGE value="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery" />
     <MESSAGE value="added support for parallelisation, and tidied code" />
     <MESSAGE value="debugged" />
@@ -1066,7 +1008,8 @@
     <MESSAGE value="added new figure" />
     <MESSAGE value="changes to plot" />
     <MESSAGE value="fixed issue with field size measure in surgery simulations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with field size measure in surgery simulations" />
+    <MESSAGE value="altered plots" />
+    <option name="LAST_COMMIT_MESSAGE" value="altered plots" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1376,14 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/FieldPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/(AreaPlotOld).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1416,26 +1351,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Plots/EphA3Plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3MapPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="76" column="44" selection-start-line="21" selection-start-column="0" selection-end-line="76" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1448,10 +1375,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="176">
+          <caret line="36" column="38" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plots/EphA3Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/FieldPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>

@@ -9,7 +9,7 @@ start = time.time()
 
 ##################### IMPORT DATA ########################
 
-JobID = 817  # int(input('JobID: '))
+JobID = 813  # int(input('JobID: '))
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))
@@ -17,7 +17,7 @@ TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [0, 20, 40, 100, 500, 20000]
+Iterations = [0, 20, 40, 100, 500, 5000]
 
 
 ####################### PLOT ##########################
