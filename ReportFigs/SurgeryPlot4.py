@@ -6,10 +6,9 @@ import seaborn as sns
 plt.rcParams['savefig.dpi'] = 600
 
 JobID = np.zeros([4], dtype=np.int32)
-JobID[0] = int(input('Surgery 1 JobID: '))
-JobID[1] = int(input('Surgery 2 JobID: '))
-JobID[2] = int(input('Surgery 3 JobID: '))
-
+JobID[0] = 849  # int(input('Surgery 1 JobID: '))
+JobID[1] = 824  # int(input('Surgery 2 JobID: '))
+JobID[2] = 862  # int(input('Surgery 3 JobID: '))
 
 fig = plt.figure()
 
@@ -26,6 +25,7 @@ def fieldplot(JobID, plotn):
     ax.set_ylabel('Retinal Cell Number (Dimension 2)')
     ax.set_xlabel('Retinal Cell Number (Dimension 1)')
     Titles = ['A', 'B', 'C']
+    Colours = ['b', 'r', 'g']
     ax.set_title(Titles[plotn])
 
     for tdim1 in range(len(Fieldcentres[0, -1, :, 0])):
@@ -35,7 +35,7 @@ def fieldplot(JobID, plotn):
             if Fieldcentres[0, -1, tdim1, tdim2] != 0 and Fieldcentres[1, -1, tdim1, tdim2] != 0:
                 fieldlistdim1.append(Fieldcentres[0, -1, tdim1, tdim2])
                 fieldlistdim2.append(Fieldcentres[1, -1, tdim1, tdim2])
-        ax.plot(fieldlistdim1, fieldlistdim2, c='k', lw='0.5')
+        ax.plot(fieldlistdim1, fieldlistdim2, c=Colours[plotn], lw='0.5')
 
     for tdim2 in range(len(Fieldcentres[0, -1, 0, :])):
         fieldlistdim1 = []
@@ -44,7 +44,7 @@ def fieldplot(JobID, plotn):
             if Fieldcentres[0, -1, tdim1, tdim2] != 0 and Fieldcentres[1, -1, tdim1, tdim2] != 0:
                 fieldlistdim1.append(Fieldcentres[0, -1, tdim1, tdim2])
                 fieldlistdim2.append(Fieldcentres[1, -1, tdim1, tdim2])
-        ax.plot(fieldlistdim1, fieldlistdim2, c='k', lw='0.5')
+        ax.plot(fieldlistdim1, fieldlistdim2, c=Colours[plotn], lw='0.5')
 
 
 for plotn in range(3):
@@ -72,7 +72,10 @@ TRin3 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.forma
 ax = fig.add_subplot(2, 3, 4)
 ax.plot(range(TRin1, len(Fieldseparation1) * TRin1, TRin1), Fieldseparation1[1:],
         range(TRin2, len(Fieldseparation2) * TRin2, TRin2), Fieldseparation2[1:],
-        range(TRin3, len(Fieldseparation3) * TRin3, TRin3), Fieldseparation3[1:])
+        range(TRin3, len(Fieldseparation3) * TRin3, TRin3), Fieldseparation3[1:], c=['b', 'r', 'g'])
+plt.hline(0.75, c='b')
+plt.hline(1.5, c='r')
+plt.hline(1, c='g')
 ax.set_ylabel('Mean Receptive Field Separation')
 ax.set_xlabel('Iterations')
 ax.set_title('D')
