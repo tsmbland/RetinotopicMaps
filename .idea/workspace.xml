@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot3.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,31 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SurgeryPlot2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py">
+      <file leaf-file-name="SurgeryPlot3.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="675">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuperPrecisionPlot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SuperPrecisionPlot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="177">
               <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SurgeryPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="18" column="52" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -72,7 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/2006.1979.2D/Functions.py" />
         <option value="$PROJECT_DIR$/Models/2006.1979/NoSurgery.py" />
         <option value="$PROJECT_DIR$/Models/1979/NoSurgery.py" />
         <option value="$PROJECT_DIR$/Models/1979/MismatchSurgery.py" />
@@ -123,6 +112,7 @@
         <option value="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
         <option value="$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py" />
         <option value="$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/SurgeryPlot3.py" />
       </list>
     </option>
   </component>
@@ -561,13 +551,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00120" summary="changed axis titles">
-      <created>1490132274966</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1490132274966</updated>
-    </task>
     <task id="LOCAL-00121" summary="added new plot">
       <created>1490181107032</created>
       <option name="number" value="00121" />
@@ -904,7 +887,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491855704833</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="added new figure">
+      <created>1491930252283</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1491930252284</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TodoView">
@@ -918,9 +908,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -991,7 +981,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="added field separation stdev plot and line to indicate stability time" />
     <MESSAGE value="fixed copy-paste error" />
     <MESSAGE value="changed repository structure" />
     <MESSAGE value="(hopefully) got non-standard algorithms working" />
@@ -1016,7 +1005,8 @@
     <MESSAGE value="added new plot" />
     <MESSAGE value="fixed xfieldcentres function to work with surgery models" />
     <MESSAGE value="changed directory name, altered axis titles on some plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed directory name, altered axis titles on some plots" />
+    <MESSAGE value="added new figure" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new figure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1032,13 +1022,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Models/1979/NoSurgery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006/Development.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1376,16 +1359,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/SuperPrecisionPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="177">
           <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
           <folding />
         </state>
       </provider>

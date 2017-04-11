@@ -12,16 +12,17 @@ JobID[2] = int(input('Surgery 3 JobID: '))
 
 Titles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
 
+
 ####################### PLOT ##########################
-fig = plt.figure()
 
 
-# Field Plots
+# Field Plot
+
 def fieldplot(JobID, plotn):
     Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
     Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))
 
-    ax = fig.add_subplot(3, 4, 4 * plotn + 1)
+    ax = plt.subplot2grid((9, 6), (3 * plotn, 0), colspan=3, rowspan=3)
     ax.set_xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
     ax.set_ylabel('Retinal Cell Number (Dimension 2)')
@@ -47,11 +48,13 @@ def fieldplot(JobID, plotn):
         ax.plot(fieldlistdim1, fieldlistdim2, c='k', lw='0.5')
 
 
+# Precision Plots
+
 def separationplot(JobID, plotn):
     Fieldseparation = np.load('../../RetinotopicMapsData/%s/FieldSeparationEB.npy' % ('{0:04}'.format(JobID)))
     TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
-    ax = fig.add_subplot(3, 4, 4 * plotn + 2)
+    ax = plt.subplot2grid((9, 6), (3 * plotn, 3), colspan=3)
     ax.plot(range(TRin, len(Fieldseparation) * TRin, TRin), Fieldseparation[1:], c='k')
     ax.set_ylabel('Mean Receptive Field Separation')
     ax.set_xlabel('Iterations')
@@ -62,7 +65,7 @@ def sizeplot(JobID, plotn):
     Fieldsize = np.load('../../RetinotopicMapsData/%s/FieldSizeEB.npy' % ('{0:04}'.format(JobID)))
     TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
-    ax = fig.add_subplot(3, 4, 4 * plotn + 3)
+    ax = plt.subplot2grid((9, 6), (3 * plotn + 1, 3), colspan=3)
     ax.plot(range(TRin, len(Fieldsize) * TRin, TRin), Fieldsize[1:], c='k')
     ax.set_ylabel('Mean Receptive Field Size')
     ax.set_xlabel('Iterations')
@@ -73,7 +76,7 @@ def systemsmatchplot(JobID, plotn):
     Systemsmatch = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(JobID)))
     TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
-    ax = fig.add_subplot(3, 4, 4 * plotn + 4)
+    ax = plt.subplot2grid((9, 6), (3 * plotn + 1, 3), colspan=3)
     ax.plot(range(TRin, len(Systemsmatch) * TRin, TRin), Systemsmatch[1:], c='k')
     ax.set_ylabel('Systems Match Score')
     ax.set_xlabel('Iterations')
