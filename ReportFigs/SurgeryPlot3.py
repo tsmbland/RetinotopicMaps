@@ -76,7 +76,7 @@ def systemsmatchplot(JobID, plotn):
     Systemsmatch = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(JobID)))
     TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID)))
 
-    ax = plt.subplot2grid((9, 6), (3 * plotn + 1, 3), colspan=3)
+    ax = plt.subplot2grid((9, 6), (3 * plotn + 2, 3), colspan=3)
     ax.plot(range(TRin, len(Systemsmatch) * TRin, TRin), Systemsmatch[1:], c='k')
     ax.set_ylabel('Systems Match Score')
     ax.set_xlabel('Iterations')
