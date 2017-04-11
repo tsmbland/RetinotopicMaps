@@ -10,7 +10,6 @@ JobID[0] = int(input('Surgery 1 JobID: '))
 JobID[1] = int(input('Surgery 2 JobID: '))
 JobID[2] = int(input('Surgery 3 JobID: '))
 
-Titles = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
 
 fig = plt.figure()
 
@@ -26,7 +25,8 @@ def fieldplot(JobID, plotn):
     ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
     ax.set_ylabel('Retinal Cell Number (Dimension 2)')
     ax.set_xlabel('Retinal Cell Number (Dimension 1)')
-    ax.set_title(Titles[plotn + 1])
+    Titles = ['A', 'B', 'C']
+    ax.set_title(Titles[plotn])
 
     for tdim1 in range(len(Fieldcentres[0, -1, :, 0])):
         fieldlistdim1 = []
@@ -75,6 +75,7 @@ ax.plot(range(TRin1, len(Fieldseparation1) * TRin1, TRin1), Fieldseparation1[1:]
         range(TRin3, len(Fieldseparation3) * TRin3, TRin3), Fieldseparation3[1:])
 ax.set_ylabel('Mean Receptive Field Separation')
 ax.set_xlabel('Iterations')
+ax.set_title('D')
 
 # Size Plot
 ax = fig.add_subplot(2, 3, 5)
@@ -83,13 +84,15 @@ ax.plot(range(TRin1, len(Fieldsize1) * TRin1, TRin1), Fieldsize1[1:],
         range(TRin3, len(Fieldsize3) * TRin3, TRin3), Fieldsize3[1:])
 ax.set_ylabel('Mean Receptive Field Size')
 ax.set_xlabel('Iterations')
+ax.set_title('E')
 
 # Systems Match Plot
-ax = fig.add_subplot(2, 3, 5)
+ax = fig.add_subplot(2, 3, 6)
 ax.plot(range(TRin1, len(Systemsmatch1) * TRin1, TRin1), Systemsmatch1[1:],
         range(TRin2, len(Systemsmatch2) * TRin2, TRin2), Systemsmatch2[1:],
         range(TRin3, len(Systemsmatch3) * TRin3, TRin3), Systemsmatch3[1:])
 ax.set_ylabel('Systems Match Score')
 ax.set_xlabel('Iterations')
+ax.set_title('F')
 
 plt.show()
