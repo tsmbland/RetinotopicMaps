@@ -38,8 +38,18 @@
       <file leaf-file-name="Functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MapPrecision/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2370">
-              <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
+            <state relative-caret-position="135">
+              <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Parameters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -277,24 +287,7 @@
       <recent name="$PROJECT_DIR$/../Retinotopic Maps/2006" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SurgeryPlot4">
-    <configuration default="false" name="correctxfc" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/correctxfc.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.Algorithm">
     <configuration default="false" name="StandardAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,23 +301,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="MismatchSurgery" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Models/2006.1979" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -359,6 +335,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReportFigs/SurgeryPlot4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MapPrecision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MapPrecision/Algorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Functions" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MapPrecision" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RetinotopicMaps" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MapPrecision/Functions.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -516,19 +526,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Model" />
-      <item index="1" class="java.lang.String" itemvalue="Python.correctxfc" />
-      <item index="2" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
-      <item index="3" class="java.lang.String" itemvalue="Python.MismatchSurgery" />
-      <item index="4" class="java.lang.String" itemvalue="Python.GradientsPlot" />
-      <item index="5" class="java.lang.String" itemvalue="Python.SurgeryPlot4" />
+      <item index="1" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
+      <item index="2" class="java.lang.String" itemvalue="Python.GradientsPlot" />
+      <item index="3" class="java.lang.String" itemvalue="Python.SurgeryPlot4" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Algorithm" />
+      <item index="5" class="java.lang.String" itemvalue="Python.Functions" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.SurgeryPlot4" />
-        <item index="1" class="java.lang.String" itemvalue="Python.GradientsPlot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MismatchSurgery" />
-        <item index="4" class="java.lang.String" itemvalue="Python.correctxfc" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Algorithm" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Functions" />
+        <item index="2" class="java.lang.String" itemvalue="Python.SurgeryPlot4" />
+        <item index="3" class="java.lang.String" itemvalue="Python.GradientsPlot" />
+        <item index="4" class="java.lang.String" itemvalue="Python.StandardAlgorithm" />
       </list>
     </recent_temporary>
   </component>
@@ -548,13 +558,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00127" summary="new plot">
-      <created>1490204710831</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1490204710831</updated>
     </task>
     <task id="LOCAL-00128" summary="tidied">
       <created>1490205246022</created>
@@ -892,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491942770678</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="fixed issue with field size measure in surgery simulations">
+      <created>1491943410709</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1491943410709</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TodoView">
@@ -979,7 +989,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changed repository structure" />
     <MESSAGE value="(hopefully) got non-standard algorithms working" />
     <MESSAGE value="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery" />
     <MESSAGE value="added support for parallelisation, and tidied code" />
@@ -1004,7 +1013,8 @@
     <MESSAGE value="changed directory name, altered axis titles on some plots" />
     <MESSAGE value="added new figure" />
     <MESSAGE value="changes to plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes to plot" />
+    <MESSAGE value="fixed issue with field size measure in surgery simulations" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issue with field size measure in surgery simulations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1283,14 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
@@ -1379,10 +1381,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MapPrecision/Functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="158" column="19" selection-start-line="158" selection-start-column="19" selection-end-line="158" selection-end-column="19" />
+        <state relative-caret-position="135">
+          <caret line="86" column="58" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="58" />
           <folding />
         </state>
       </provider>
