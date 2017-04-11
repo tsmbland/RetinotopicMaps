@@ -9,7 +9,7 @@ start = time.time()
 
 ##################### IMPORT DATA ########################
 
-JobID = int(input('JobID: '))
+JobID = 817  # int(input('JobID: '))
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))
@@ -17,15 +17,15 @@ TRin = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format
 
 ######################## PLOT OPTIONS #####################
 
-Iterations = [1, 10, 20, 50, 100, 500]
+Iterations = [0, 20, 40, 100, 500, 20000]
 
 
 ####################### PLOT ##########################
 fig = plt.figure()
 figs = fig.add_subplot(111, frameon=False)
 figs.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
-figs.set_ylabel('Retinal Cell Number (Dimension 2)')
-figs.set_xlabel('Retinal Cell Number (Dimension 1)')
+figs.set_ylabel('Dorsal - Ventral (j)')
+figs.set_xlabel('Nasal - Temporal (i)')
 
 
 def fieldplot(plotn):

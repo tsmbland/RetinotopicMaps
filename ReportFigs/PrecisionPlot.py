@@ -41,6 +41,7 @@ ax1.set_ylabel('Mean Receptive Field Separation')
 ax1.set_xlabel('Iterations')
 ax1.set_xlim(0, 5000)
 ax1.set_ylim(0, 3)
+plt.axhline(1, c='k', ls='--', lw='0.5')
 
 ax2 = plt.subplot2grid((2, 2), (0, 1))
 ax2.set_title('B', x=0)
