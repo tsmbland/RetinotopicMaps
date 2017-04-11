@@ -63,10 +63,10 @@ Fieldsize2 = np.load('../../RetinotopicMapsData/%s/FieldSizeEB.npy' % ('{0:04}'.
 Systemsmatch2 = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(JobID[1])))
 TRin2 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID[1])))
 
-Fieldseparation3 = np.load('../../RetinotopicMapsData/%s/FieldSeparationEB.npy' % ('{0:04}'.format(JobID[1])))
-Fieldsize3 = np.load('../../RetinotopicMapsData/%s/FieldSizeEB.npy' % ('{0:04}'.format(JobID[1])))
-Systemsmatch3 = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(JobID[1])))
-TRin3 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID[1])))
+Fieldseparation3 = np.load('../../RetinotopicMapsData/%s/FieldSeparationEB.npy' % ('{0:04}'.format(JobID[2])))
+Fieldsize3 = np.load('../../RetinotopicMapsData/%s/FieldSizeEB.npy' % ('{0:04}'.format(JobID[2])))
+Systemsmatch3 = np.load('../../RetinotopicMapsData/%s/SystemsMatchEB.npy' % ('{0:04}'.format(JobID[2])))
+TRin3 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.format(JobID[2])))
 
 # Separation Plot
 ax = fig.add_subplot(2, 3, 4)

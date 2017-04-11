@@ -28,8 +28,8 @@
       <file leaf-file-name="SurgeryPlot4.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state relative-caret-position="372">
+              <caret line="68" column="88" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -549,13 +549,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00123" summary="added new plots">
-      <created>1490198341712</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1490198341712</updated>
-    </task>
     <task id="LOCAL-00124" summary="fixed areaplot coordinates problem, added loading data message">
       <created>1490198374671</created>
       <option name="number" value="00124" />
@@ -892,7 +885,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491932944077</updated>
     </task>
-    <option name="localTasksCounter" value="172" />
+    <task id="LOCAL-00172" summary="added new figure">
+      <created>1491933191323</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1491933191324</updated>
+    </task>
+    <option name="localTasksCounter" value="173" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1375,8 +1375,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state relative-caret-position="372">
+          <caret line="68" column="88" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="89" />
           <folding />
         </state>
       </provider>
