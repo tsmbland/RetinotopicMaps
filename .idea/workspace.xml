@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/EphA3MapPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/(EphA3MapPlot).py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +26,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FieldPlot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FieldPlot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReportFigs/FieldPlot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SurgeryPlot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1470">
+              <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EphA3Plot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -51,7 +81,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/1979/StandardAlgorithm.py" />
         <option value="$PROJECT_DIR$/Models/1979/Functions.py" />
         <option value="$PROJECT_DIR$/Models/2006.1979/StandardAlgorithm.py" />
         <option value="$PROJECT_DIR$/Models/2006/Development.py" />
@@ -102,6 +131,7 @@
         <option value="$PROJECT_DIR$/ReportFigs/SurgeryPlot4.py" />
         <option value="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
         <option value="$PROJECT_DIR$/ReportFigs/FieldPlot.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
       </list>
     </option>
   </component>
@@ -554,13 +584,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00131" summary="added field separation stdev measure">
-      <created>1490271574848</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1490271574848</updated>
-    </task>
     <task id="LOCAL-00132" summary="added field separation stdev plot and line to indicate stability time">
       <created>1490271601183</created>
       <option name="number" value="00132" />
@@ -897,7 +920,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491947092052</updated>
     </task>
-    <option name="localTasksCounter" value="180" />
+    <task id="LOCAL-00180" summary="added new figure">
+      <created>1491947315957</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1491947315957</updated>
+    </task>
+    <option name="localTasksCounter" value="181" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1005,11 +1035,11 @@
     <MESSAGE value="added new plot" />
     <MESSAGE value="fixed xfieldcentres function to work with surgery models" />
     <MESSAGE value="changed directory name, altered axis titles on some plots" />
-    <MESSAGE value="added new figure" />
     <MESSAGE value="changes to plot" />
     <MESSAGE value="fixed issue with field size measure in surgery simulations" />
     <MESSAGE value="altered plots" />
-    <option name="LAST_COMMIT_MESSAGE" value="altered plots" />
+    <MESSAGE value="added new figure" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new figure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1327,14 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/AreaPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -1351,18 +1373,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3MapPlot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/(EphA3MapPlot).py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
           <caret line="76" column="44" selection-start-line="21" selection-start-column="0" selection-end-line="76" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1371,14 +1385,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1395,6 +1401,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
