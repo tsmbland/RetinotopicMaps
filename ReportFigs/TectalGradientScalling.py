@@ -58,12 +58,12 @@ min = SepEB[:, 0]
 med = SepEB[:, 1]
 max = SepEB[:, 2]
 
-ax1.plot(yLT, min, c='0.5')
+ax1.plot(yLT, min, c='0.8')
 ax1.plot(yLT, med, c='k')
-ax1.plot(yLT, max, c='0.5')
+ax1.plot(yLT, max, c='0.8')
 
-ax1.fill_between(yLT, min, med, c='0.5')
-ax1.fill_between(yLT, med, max, c='0.5')
+ax1.fill_between(yLT, min, med, color='0.8')
+ax1.fill_between(yLT, med, max, color='0.8')
 
 ax1.set_xlabel('Scaling Factor')
 ax1.set_ylabel('Mean Receptive Field Separation')
@@ -76,12 +76,12 @@ min = SizeEB[:, 0]
 med = SizeEB[:, 1]
 max = SizeEB[:, 2]
 
-ax2.plot(yLT, min, c='0.5')
+ax2.plot(yLT, min, c='0.8')
 ax2.plot(yLT, med, c='k')
-ax2.plot(yLT, max, c='0.5')
+ax2.plot(yLT, max, c='0.8')
 
-ax2.fill_between(yLT, min, med, c='0.5')
-ax2.fill_between(yLT, med, max, c='0.5')
+ax2.fill_between(yLT, min, med, color='0.8')
+ax2.fill_between(yLT, med, max, color='0.8')
 
 ax2.set_xlabel('Scaling Factor')
 ax2.set_ylabel('Mean Receptive Field Size')
@@ -94,12 +94,12 @@ min = SMEB[:, 0]
 med = SMEB[:, 1]
 max = SMEB[:, 2]
 
-ax3.plot(yLT, min, c='0.5')
+ax3.plot(yLT, min, c='0.8')
 ax3.plot(yLT, med, c='k')
-ax3.plot(yLT, max, c='0.5')
+ax3.plot(yLT, max, c='0.8')
 
-ax3.fill_between(yLT, min, med, c='0.5')
-ax3.fill_between(yLT, med, max, c='0.5')
+ax3.fill_between(yLT, min, med, color='0.8')
+ax3.fill_between(yLT, med, max, color='0.8')
 
 ax3.set_xlabel('Scaling Factor')
 ax3.set_ylabel('Systems Match Score')
