@@ -598,13 +598,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00133" summary="added field separation stdev plot and line to indicate stability time">
-      <created>1490273258248</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1490273258254</updated>
-    </task>
     <task id="LOCAL-00134" summary="fixed copy-paste error">
       <created>1490273600030</created>
       <option name="number" value="00134" />
@@ -941,7 +934,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491948283133</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="fixed problem with xfieldcentre at t=0">
+      <created>1491998303996</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1491998303997</updated>
+    </task>
+    <option name="localTasksCounter" value="183" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1028,7 +1028,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery" />
     <MESSAGE value="added support for parallelisation, and tidied code" />
     <MESSAGE value="debugged" />
     <MESSAGE value="updated default parameters" />
@@ -1053,7 +1052,8 @@
     <MESSAGE value="fixed issue with field size measure in surgery simulations" />
     <MESSAGE value="altered plots" />
     <MESSAGE value="added new figure" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new figure" />
+    <MESSAGE value="fixed problem with xfieldcentre at t=0" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed problem with xfieldcentre at t=0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
