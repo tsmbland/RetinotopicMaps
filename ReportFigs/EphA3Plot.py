@@ -7,7 +7,7 @@ plt.rcParams['savefig.dpi'] = 600
 
 ####################### IMPORT DATA ######################
 
-JobID = int(input('JobID: '))
+JobID = 859  # int(input('JobID: '))
 
 print('Loading Data...')
 Cra = np.load('../../RetinotopicMapsData/%s/EphA.npy' % ('{0:04}'.format(JobID)))
