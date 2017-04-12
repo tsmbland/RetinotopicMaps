@@ -46,7 +46,7 @@ plt.axhline(1, c='k', ls='--', lw='0.5')
 
 ax2 = plt.subplot2grid((2, 2), (0, 1))
 ax2.set_title('B', x=0)
-ax2.plot(range(0, len(Fieldsize) * TRin, TRin), Fieldsize, c='k')
+ax2.plot(range(TRin, len(Fieldsize) * TRin, TRin), Fieldsize[1:], c='k')
 ax2.set_ylabel('Mean Receptive Field Diameter')
 ax2.set_xlabel('Iterations')
 ax2.set_xlim(0, 4000)
