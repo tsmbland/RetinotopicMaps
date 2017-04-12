@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Functions.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" afterPath="$PROJECT_DIR$/Models/2006.1979/Parameters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" afterPath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -587,13 +584,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00137" summary="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery">
-      <created>1490296897783</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1490296897783</updated>
-    </task>
     <task id="LOCAL-00138" summary="added parameters script, added parallelisation support in algorithm, tidied functions script, added support for development and mismatch surgery">
       <created>1490297080343</created>
       <option name="number" value="00138" />
@@ -930,7 +920,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491998455551</updated>
     </task>
-    <option name="localTasksCounter" value="186" />
+    <task id="LOCAL-00186" summary="added plot">
+      <created>1492008792969</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1492008792969</updated>
+    </task>
+    <option name="localTasksCounter" value="187" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1017,7 +1014,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="debugged" />
     <MESSAGE value="updated default parameters" />
     <MESSAGE value="added EphA3 knockin support" />
     <MESSAGE value="fixed some typos" />
@@ -1042,7 +1038,8 @@
     <MESSAGE value="added new figure" />
     <MESSAGE value="fixed problem with xfieldcentre at t=0" />
     <MESSAGE value="axis changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="axis changes" />
+    <MESSAGE value="added plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="added plot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -20,6 +20,7 @@ alpha = 0.05
 beta = 0.05
 deltatc = 1  # deltaC time step
 tc = 1  # concentration iterations per iteration
+yLT = 1
 
 # Synaptic modification
 Wmax = 1.  # total strength available to each presynaptic fibre

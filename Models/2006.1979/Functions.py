@@ -167,6 +167,7 @@ def setTectalGradients():
         for tdim1 in range(1, p.NTdim1 + 1):
             for tdim2 in range(1, p.NTdim2 + 1):
                 Cta[0, tdim1, tdim2] = Cta[0, tdim1, tdim2] + 0.5 * np.random.uniform()
+        Cta[0, :, :] *= p.yLT
 
     # EphrinB
     if p.distB != 0:
@@ -176,6 +177,7 @@ def setTectalGradients():
         for tdim1 in range(1, p.NTdim1 + 1):
             for tdim2 in range(1, p.NTdim2 + 1):
                 Ctb[0, tdim1, tdim2] = Ctb[0, tdim1, tdim2] + 0.5 * np.random.uniform()
+        Ctb[0, :, :] *= p.yLT
 
 
 def EphA3knockin(JobID):
