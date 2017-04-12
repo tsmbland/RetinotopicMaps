@@ -30,6 +30,7 @@ def job(JobID):
 
     # Model Type
     f.typemismatchsurgery()
+    f.updatexFieldcentres()
 
     f.updateNct()
     f.setWtot()

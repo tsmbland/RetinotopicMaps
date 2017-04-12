@@ -29,6 +29,7 @@ def job(JobID):
 
     # Model Type
     f.typestandard()
+    f.updatexFieldcentres()
 
     f.setRetinalGradients()
     f.updateNct()

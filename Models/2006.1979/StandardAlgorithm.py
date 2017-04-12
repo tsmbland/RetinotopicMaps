@@ -19,6 +19,7 @@ def job(JobID):
 
     # Model Type
     f.typestandard()
+    f.updatexFieldcentres()
 
     # Set Gradients
     f.setRetinalGradients()
