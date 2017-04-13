@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="fixed plot">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py" />
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportFigs/PrecisionTotalDisorder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" afterPath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" />
     </list>
@@ -26,41 +26,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ModelSpeedPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TectalGradientScaling.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="103" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+            <state relative-caret-position="237">
+              <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TectalGradientScaling2.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py">
+      <file leaf-file-name="PrecisionTotalDisorder.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionTotalDisorder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="56" column="71" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="71" />
+            <state relative-caret-position="360">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -81,7 +61,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ReverseReceptiveFields/Functions.py" />
         <option value="$PROJECT_DIR$/Models/2006/Functions.py" />
         <option value="$PROJECT_DIR$/Plots/ReverseFieldPlot.py" />
         <option value="$PROJECT_DIR$/Plots/EphPlot.py" />
@@ -130,8 +109,9 @@
         <option value="$PROJECT_DIR$/Models/2006.1979/Functions.py" />
         <option value="$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py" />
         <option value="$PROJECT_DIR$/ReportFigs/TectalGradientScalling.py" />
-        <option value="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" />
         <option value="$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/PrecisionTotalDisorder.py" />
       </list>
     </option>
   </component>
@@ -584,13 +564,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00142" summary="updated default parameters">
-      <created>1490356304597</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1490356304598</updated>
-    </task>
     <task id="LOCAL-00143" summary="added EphA3 knockin support">
       <created>1490635250023</created>
       <option name="number" value="00143" />
@@ -927,7 +900,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492105989714</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="added plot">
+      <created>1492107144547</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1492107144548</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1035,11 +1015,11 @@
     <MESSAGE value="added new figure" />
     <MESSAGE value="fixed problem with xfieldcentre at t=0" />
     <MESSAGE value="axis changes" />
-    <MESSAGE value="added plot" />
     <MESSAGE value="added ability to adjust initial tectal gradients" />
     <MESSAGE value="added new plot" />
     <MESSAGE value="fixed plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed plot" />
+    <MESSAGE value="added plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="added plot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1055,13 +1035,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Models/2006/StandardAlgorithm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReverseReceptiveFields/Algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1378,6 +1351,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="43" column="19" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1388,24 +1377,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="103" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+        <state relative-caret-position="237">
+          <caret line="33" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionTotalDisorder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="56" column="71" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
           <folding />
         </state>
       </provider>

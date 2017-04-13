@@ -70,6 +70,7 @@ ax1.set_ylabel('Mean Receptive Field Separation')
 ax1.set_xlim(0, 1)
 ax1.set_ylim(0, 3.5)
 ax1.set_title('A', x=0)
+plt.axhline(1, c='k', ls='--', lw='0.5')
 
 # Field Size Plot
 ax2 = fig.add_subplot(132)
