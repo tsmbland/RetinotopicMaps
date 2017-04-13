@@ -68,6 +68,8 @@ ax1.fill_between(yLT, med, max, color='0.8')
 ax1.set_xlabel('Scaling Factor')
 ax1.set_ylabel('Mean Receptive Field Separation')
 ax1.set_xlim(0, 1)
+ax1.set_ylim(0, 3.5)
+ax1.set_title('A', x=0)
 
 # Field Size Plot
 ax2 = fig.add_subplot(132)
@@ -86,6 +88,7 @@ ax2.fill_between(yLT, med, max, color='0.8')
 ax2.set_xlabel('Scaling Factor')
 ax2.set_ylabel('Mean Receptive Field Size')
 ax2.set_xlim(0, 1)
+ax2.set_title('B', x=0)
 
 # Systems Match Plot
 ax3 = fig.add_subplot(133)
@@ -104,5 +107,6 @@ ax3.fill_between(yLT, med, max, color='0.8')
 ax3.set_xlabel('Scaling Factor')
 ax3.set_ylabel('Systems Match Score')
 ax3.set_xlim(0, 1)
+ax3.set_title('C', x=0)
 
 plt.show()
