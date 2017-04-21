@@ -36,21 +36,12 @@ for rdim1 in range(1, len(Weightmatrix[0, 0, 0, :, 0]) - 1):
             row += 1
 
 
-####################### FIGURE #########################
-
-fig = plt.figure()
-figs = fig.add_subplot(111, frameon=False)
-figs.tick_params(labelcolor='none', top='off', bottom='off', left='off', right='off')
-figs.set_ylabel('Dorsal - Ventral (j)')
-figs.set_xlabel('Nasal - Temporal (i)')
-
-
 ####################### PLOT 1 ##########################
 
 # Total Field
 plt.subplot(121)
-plt.xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
-plt.ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+plt.xlim(23, 32)
+plt.ylim(23, 32)
 plt.ylabel('Dorsal - Ventral (j)')
 plt.xlabel('Nasal - Temporal (i)')
 plt.scatter(Table[:, 0], Table[:, 1], marker='s', c='k')
@@ -81,8 +72,8 @@ plt.scatter(table[:, 0], table[:, 1], marker='s', c='r')
 
 # Total Field
 plt.subplot(122)
-plt.xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
-plt.ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+plt.xlim(23, 32)
+plt.ylim(23, 32)
 plt.ylabel('Dorsal - Ventral (j)')
 plt.xlabel('Nasal - Temporal (i)')
 plt.scatter(Table[:, 0], Table[:, 1], marker='s', c='k')
