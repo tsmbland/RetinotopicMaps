@@ -42,9 +42,8 @@ elif Tplotdim == 2:
 
 # Tabulate Weight Matrix
 table = np.zeros([len(Weightmatrix[:, 0, 0, 0, 0]), (rplotmax - rplotmin + 1) * (tplotmax - tplotmin + 1), 6])
-for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
+for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) + 1):
     row = 0
-    deltaw = Weightmatrix[iteration + 1, :, :, :, :] - Weightmatrix[iteration, :, :, :, :]
     for rdim1 in range(rplotmindim1, rplotmaxdim1 + 1):
         for rdim2 in range(rplotmindim2, rplotmaxdim2 + 1):
             for tdim1 in range(tplotmindim1, tplotmaxdim1 + 1):
@@ -55,10 +54,6 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
                         table[iteration, row, 2] = rdim1
                         table[iteration, row, 3] = rdim2
                         table[iteration, row, 4] = Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2]
-                        if deltaw[tdim1, tdim2, rdim1, rdim2] >= 0:
-                            table[iteration, row, 5] = 1
-                        else:
-                            table[iteration, row, 5] = 0
                         row += 1
 
     sys.stdout.write('\rProcessing data... %i percent' % (iteration * 100 / len(Weightmatrix[:, 0, 0, 0, 0])))
@@ -68,8 +63,6 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) - 1):
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.set_xlim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
-ax.set_ylim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
 
 
 def weightplot(i):
@@ -77,13 +70,13 @@ def weightplot(i):
                        s=(table[i // TRin, :, 4]) * 100, marker='s', c='k')
 
     if Rplotdim == 1:
-        ax.set_ylim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
+        ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     elif Rplotdim == 2:
-        ax.set_ylim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+        ax.set_xlim(1, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
     if Tplotdim == 1:
-        ax.set_xlim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
+        ax.set_ylim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
     elif Tplotdim == 2:
-        ax.set_xlim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
+        ax.set_ylim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
     ax.set_xlabel('RGC: Nasal - Temporal (i)')
     ax.set_ylabel('Tectal Cell: Posterior - Anterior (m)')
 
