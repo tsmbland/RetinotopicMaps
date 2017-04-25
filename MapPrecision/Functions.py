@@ -6,7 +6,6 @@ import numpy as np
 def importdata(jobid):
     global xFieldCentres, TRin, FieldCentres, FieldSizes
     global FieldSeparation, FieldSeparationStdev, FieldSize, SystemsMatch, FieldSeparationEB, FieldSeparationStdevEB, FieldSizeEB, SystemsMatchEB
-    global FieldSeparationChange, FieldSizeChange, SystemsMatchChange, FieldSeparationChangeEB, FieldSizeChangeEB, SystemsMatchChangeEB
     global Currentiteration, Weightiteration
 
     xFieldCentres = np.load('../../RetinotopicMapsData/%s/xFieldCentres.npy' % ('{0:04}'.format(jobid)))
@@ -23,14 +22,6 @@ def importdata(jobid):
     FieldSeparationStdevEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
     FieldSizeEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
     SystemsMatchEB = np.zeros(int(len(FieldCentres[0, :, 0, 0])))
-
-    FieldSizeChange = np.zeros([len(FieldSize) - 1])
-    FieldSeparationChange = np.zeros([len(FieldSeparation) - 1])
-    SystemsMatchChange = np.zeros([len(SystemsMatch) - 1])
-
-    FieldSizeChangeEB = np.zeros([len(FieldSize) - 1])
-    FieldSeparationChangeEB = np.zeros([len(FieldSeparation) - 1])
-    SystemsMatchChangeEB = np.zeros([len(SystemsMatch) - 1])
 
     Currentiteration = -1
     Weightiteration = -1
@@ -168,22 +159,6 @@ def MeanSystemsMatchEB(border):
     SystemsMatchEB[Currentiteration] = meandistance
 
 
-def PrecisionChange():
-    for iteration in range(len(FieldSize) - 1):
-        FieldSizeChange[iteration] = 100 * (FieldSize[iteration + 1] - FieldSize[iteration]) / (
-            FieldSize[iteration] * TRin)
-        FieldSeparationChange[iteration] = 100 * (FieldSeparation[iteration + 1] - FieldSeparation[iteration]) / (
-            FieldSeparation[iteration] * TRin)
-        SystemsMatchChange[iteration] = 100 * (SystemsMatch[iteration + 1] - SystemsMatch[iteration]) / (
-            SystemsMatch[iteration] * TRin)
-
-        FieldSizeChangeEB[iteration] = 100 * (FieldSizeEB[iteration + 1] - FieldSizeEB[iteration]) / (
-            FieldSizeEB[iteration] * TRin)
-        FieldSeparationChangeEB[iteration] = 100 * (FieldSeparationEB[iteration + 1] - FieldSeparationEB[iteration]) / (
-            FieldSeparationEB[iteration] * TRin)
-        SystemsMatchChangeEB[iteration] = 100 * (SystemsMatchEB[iteration + 1] - SystemsMatchEB[iteration]) / (
-            SystemsMatchEB[iteration] * TRin)
-
 
 def savedata(JobID):
     np.save('../../RetinotopicMapsData/%s/FieldSize' % ('{0:04}'.format(JobID)), FieldSize)
@@ -195,12 +170,3 @@ def savedata(JobID):
     np.save('../../RetinotopicMapsData/%s/FieldSeparationEB' % ('{0:04}'.format(JobID)), FieldSeparationEB)
     np.save('../../RetinotopicMapsData/%s/FieldSeparationStdevEB' % ('{0:04}'.format(JobID)), FieldSeparationStdevEB)
     np.save('../../RetinotopicMapsData/%s/SystemsMatchEB' % ('{0:04}'.format(JobID)), SystemsMatchEB)
-
-    np.save('../../RetinotopicMapsData/%s/FieldSizeChange.npy' % ('{0:04}'.format(JobID)), FieldSizeChange)
-    np.save('../../RetinotopicMapsData/%s/FieldSeparationChange.npy' % ('{0:04}'.format(JobID)), FieldSeparationChange)
-    np.save('../../RetinotopicMapsData/%s/SystemsMatchChange.npy' % ('{0:04}'.format(JobID)), SystemsMatchChange)
-
-    np.save('../../RetinotopicMapsData/%s/FieldSizeChangeEB.npy' % ('{0:04}'.format(JobID)), FieldSizeChangeEB)
-    np.save('../../RetinotopicMapsData/%s/FieldSeparationChangeEB.npy' % ('{0:04}'.format(JobID)),
-            FieldSeparationChangeEB)
-    np.save('../../RetinotopicMapsData/%s/SystemsMatchChangeEB.npy' % ('{0:04}'.format(JobID)), SystemsMatchChangeEB)

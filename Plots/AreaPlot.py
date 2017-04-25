@@ -7,8 +7,8 @@ import seaborn as sns
 ####################### IMPORT DATA ######################
 
 JobID = int(input('JobID: '))
-Tdim1 = int(input('Tectal Cell (Dimension 1): '))
-Tdim2 = int(input('Tectal Cell (Dimension 2): '))
+Tdim1 = int(input('Tectal Cell Number (Posterior - Anterior): '))
+Tdim2 = int(input('Tectal Cell Number (Lateral - Medial): '))
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))

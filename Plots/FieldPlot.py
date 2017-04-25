@@ -9,7 +9,6 @@ start = time.time()
 ##################### IMPORT DATA ########################
 
 JobID = int(input('JobID: '))
-
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
 Fieldcentres = np.load('../../RetinotopicMapsData/%s/FieldCentres.npy' % ('{0:04}'.format(JobID)))

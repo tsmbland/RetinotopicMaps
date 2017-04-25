@@ -9,10 +9,10 @@ import seaborn as sns
 JobID = int(input('JobID: '))
 print('Loading Data...')
 Weightmatrix = np.load('../../RetinotopicMapsData/%s/Weightmatrix.npy' % ('{0:04}'.format(JobID)))
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
 
-TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
 Rplotdim = 1  # retina dimension plotted (1 or 2)
 Rplotslice = (len(Weightmatrix[0, 0, 0, 0, :]) - 2) // 2  # slice location in the other dimension
 Tplotdim = 1

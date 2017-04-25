@@ -6,12 +6,10 @@ import seaborn as sns
 ####################### IMPORT DATA ######################
 
 JobID = int(input('JobID: '))
-
 Cra = np.load('../../RetinotopicMapsData/%s/EphA.npy' % ('{0:04}'.format(JobID)))
 Crb = np.load('../../RetinotopicMapsData/%s/EphB.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
-
 
 EphAslice = (len(Cra[0, :]) - 2) // 2
 EphBslice = (len(Crb[:, 0]) - 2) // 2

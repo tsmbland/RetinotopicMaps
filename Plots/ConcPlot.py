@@ -6,15 +6,13 @@ import seaborn as sns
 ####################### IMPORT DATA ######################
 
 JobID = int(input('JobID: '))
-
 Concmatrix = np.load('../../RetinotopicMapsData/%s/TectalConcentrations.npy' % ('{0:04}'.format(JobID)))
+TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
 
 ######################## PLOT OPTIONS #####################
 
-TRin = np.load('../../RetinotopicMapsData/%s/PrimaryTR.npy' % ('{0:04}'.format(JobID)))
-
 Tplotdim = 1
-Tplotslice = 1  # (len(Concmatrix[0, 0, 0, :]) - 2) // 2
+Tplotslice = (len(Concmatrix[0, 0, 0, :]) - 2) // 2
 
 ####################### PLOT ########################
 ymax = Concmatrix.max()
