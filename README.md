@@ -1,4 +1,4 @@
-## RetinotopicMaps
+# RetinotopicMaps
 
 This repository contains Python code for modelling and analysing the marker induction mechanism of retinotopic map formation. Code is ready to use, and should be run using Python 3.4.0 or later. Data produced from simulations is saved in a separate folder called ‘RetinotopicMapsData’, which will be automatically created if not available.
 
@@ -16,12 +16,12 @@ The repository contains 6 folders containing scripts used to carry out these tas
 
 Contains scripts for simulating three versions of the marker induction model: the original 1979 model, the updated 2006 model, and the hybrid model developed in this project. Each folder contains a number of files:
 
-‘Parameters’: used to set model parameters‘Functions’: contains functions for all calculations in the model
-‘StandardAlgorithm’: normal development with a fixed-size retina and tectum and standard initial gradients
-‘NoSurgery’: imports data generated from a normal simulation (user specified) and continues map development as normal
-‘MismatchSurgery’: concentration profiles must be imported from a fully developed normal map (user specified). Script then simulates surgery operations (as specified in the parameters file) and subsequent map development.
-‘EphA3Knockin’: map development with a retinal EphA3 knockin profile
-‘Development’: development with a growing retina and tectum. NB Not fully tested, and not presented in the project report.
+* ‘Parameters’: used to set model parameters‘Functions’: contains functions for all calculations in the model
+* ‘StandardAlgorithm’: normal development with a fixed-size retina and tectum and standard initial gradients
+* ‘NoSurgery’: imports data generated from a normal simulation (user specified) and continues map development as normal
+* ‘MismatchSurgery’: concentration profiles must be imported from a fully developed normal map (user specified). Script then simulates surgery operations (as specified in the parameters file) and subsequent map development.
+* ‘EphA3Knockin’: map development with a retinal EphA3 knockin profile
+* ‘Development’: development with a growing retina and tectum. NB Not fully tested, and not presented in the project report.
 
 In order to run a simulation choose a model, specify parameters in the ‘Parameters’ file, and then run the necessary algorithm script. Algorithm scripts contain support for multiprocessing (e.g. can run 10 simultaneous simulations with 10 different values of a certain parameter). Matrices of data (synaptic weights, receptor and ligand densities etc.) are saved in the folder ‘RetinotopicMapsData/JOBID’, where JOBID is a unique simulation-identifying code, specified by the user in the Parameters file. Data is saved over the course of the simulation with a time resolution specified in the Parameters file.
 
