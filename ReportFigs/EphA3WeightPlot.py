@@ -4,6 +4,8 @@ from matplotlib.widgets import Slider
 import sys
 import seaborn as sns
 
+plt.rcParams['savefig.dpi'] = 600
+
 ####################### IMPORT DATA ######################
 
 JobID = 859
@@ -42,7 +44,7 @@ elif Tplotdim == 2:
 
 # Tabulate Weight Matrix
 table = np.zeros([len(Weightmatrix[:, 0, 0, 0, 0]), (rplotmax - rplotmin + 1) * (tplotmax - tplotmin + 1), 6])
-for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0]) + 1):
+for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0])):
     row = 0
     for rdim1 in range(rplotmindim1, rplotmaxdim1 + 1):
         for rdim2 in range(rplotmindim2, rplotmaxdim2 + 1):
