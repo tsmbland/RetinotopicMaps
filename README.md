@@ -1,3 +1,5 @@
+## RetinotopicMaps
+
 This repository contains Python code for modelling and analysing the marker induction mechanism of retinotopic map formation. Code is ready to use, and should be run using Python 3.4.0 or later. Data produced from simulations is saved in a separate folder called ‘RetinotopicMapsData’, which will be automatically created if not available.
 
 A typical full simulation will involve the following steps, in order:
