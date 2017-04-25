@@ -16,7 +16,8 @@ The repository contains 6 folders containing scripts used to carry out these tas
 
 Contains scripts for simulating three versions of the marker induction model: the original 1979 model, the updated 2006 model, and the hybrid model developed in this project. Each folder contains a number of files:
 
-* Parameters.py: used to set model parameters‘Functions’: contains functions for all calculations in the model
+* Parameters.py: used to set model parameters
+* Functions: contains functions for all calculations in the model. Function are named to indicate their role.
 * StandardAlgorithm.py: normal development with a fixed-size retina and tectum and standard initial gradients
 * NoSurgery.py: imports data generated from a normal simulation (user specified) and continues map development as normal
 * MismatchSurgery.py: concentration profiles must be imported from a fully developed normal map (user specified). Script then simulates surgery operations (as specified in the parameters file) and subsequent map development.
