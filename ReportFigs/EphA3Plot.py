@@ -27,10 +27,10 @@ ymax1 = Cra.max()
 ax1 = fig.add_subplot(131)
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            s=EphA3[1:len(Cra[:, 0]) * 15, Slicepoint], c='r', label='EphA3+', edgecolors='r')
+            s=EphA3[1:len(Cra[:, 0]), Slicepoint] * 15, c='r', label='EphA3+', edgecolors='r')
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            s=(1 - EphA3[1:len(Cra[:, 0]) * 15, Slicepoint]), c='b', label='EphA3-', edgecolors='b')
+            s=(1 - EphA3[1:len(Cra[:, 0]), Slicepoint]) * 15, c='b', label='EphA3-', edgecolors='b')
 
 ax1.set_xlabel('Nasal - Temporal (i)')
 ax1.set_ylabel('EphA Receptor Density')
