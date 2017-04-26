@@ -70,15 +70,16 @@ TRin3 = np.load('../../RetinotopicMapsData/%s/SecondaryTR.npy' % ('{0:04}'.forma
 
 # Separation Plot
 ax = fig.add_subplot(2, 3, 4)
-ax.plot(range(0, len(Fieldseparation1) * TRin1, TRin1), Fieldseparation1, c='b')
-ax.plot(range(0, len(Fieldseparation2) * TRin2, TRin2), Fieldseparation2, c='r')
-ax.plot(range(0, len(Fieldseparation3) * TRin3, TRin3), Fieldseparation3, c='g')
+ax.plot(range(TRin1, len(Fieldseparation1) * TRin1, TRin1), Fieldseparation1[1:], c='b')
+ax.plot(range(TRin2, len(Fieldseparation2) * TRin2, TRin2), Fieldseparation2[1:], c='r')
+ax.plot(range(TRin3, len(Fieldseparation3) * TRin3, TRin3), Fieldseparation3[1:], c='g')
 plt.axhline(0.75, c='b', ls='--', lw='0.5')
 plt.axhline(1.5, c='r', ls='--', lw='0.5')
 plt.axhline(1, c='g', ls='--', lw='0.5')
 ax.set_ylabel('Mean Receptive Field Separation')
 ax.set_xlabel('Iterations')
 ax.set_title('D', x=0)
+plt.xticks(TRin1, np.arange(1000, 5001, 1000))
 
 # Size Plot
 ax = fig.add_subplot(2, 3, 5)
@@ -88,14 +89,16 @@ ax.plot(range(TRin3, len(Fieldsize3) * TRin3, TRin3), Fieldsize3[1:], c='g')
 ax.set_ylabel('Mean Receptive Field Size')
 ax.set_xlabel('Iterations')
 ax.set_title('E', x=0)
+plt.xticks(TRin1, np.arange(1000, 5001, 1000))
 
 # Systems Match Plot
 ax = fig.add_subplot(2, 3, 6)
-ax.plot(range(0, len(Systemsmatch1) * TRin1, TRin1), Systemsmatch1, c='b')
-ax.plot(range(0, len(Systemsmatch2) * TRin2, TRin2), Systemsmatch2, c='r')
-ax.plot(range(0, len(Systemsmatch3) * TRin3, TRin3), Systemsmatch3, c='g')
+ax.plot(range(TRin1, len(Systemsmatch1) * TRin1, TRin1), Systemsmatch1[1:], c='b')
+ax.plot(range(TRin2, len(Systemsmatch2) * TRin2, TRin2), Systemsmatch2[1:], c='r')
+ax.plot(range(TRin3, len(Systemsmatch3) * TRin3, TRin3), Systemsmatch3[1:], c='g')
 ax.set_ylabel('Systems Match Score')
 ax.set_xlabel('Iterations')
 ax.set_title('F', x=0)
+plt.xticks(TRin1, np.arange(1000, 5001, 1000))
 
 plt.show()
