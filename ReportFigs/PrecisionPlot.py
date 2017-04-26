@@ -50,7 +50,7 @@ ax2.plot(range(TRin, len(Fieldsize) * TRin, TRin), Fieldsize[1:], c='k')
 ax2.set_ylabel('Mean Receptive Field Diameter')
 ax2.set_xlabel('Iterations')
 ax2.set_xlim(TRin, 4000)
-plt.xticks(TRin, np.arange(1000, 4001, 1000))
+plt.xticks([50, 1000, 2000, 3000, 4000])
 
 ax3 = plt.subplot2grid((2, 2), (1, 0), colspan=2)
 ax3.set_title('C', x=0)
