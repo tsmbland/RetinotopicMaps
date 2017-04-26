@@ -76,15 +76,22 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0])):
                         table[iteration, row, 2] = rdim1
                         table[iteration, row, 3] = rdim2
                         table[iteration, row, 4] = Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2]
+                        if EphA3[rdim1,rdim2] == 1:
+                            table[iteration, row, 5] = 1
+                        else:
+                            table[iteration, row, 5] = 0
                         row += 1
 
 # Plot
-ax = fig.add_subplot(112)
-
+ax = fig.add_subplot(132)
+ax.set_title('B', x=0)
 
 def weightplot(i):
     wplot = ax.scatter(table[i // TRin, :, Rplotdim + 1], table[i // TRin, :, Tplotdim - 1],
-                       s=(table[i // TRin, :, 4]) * 100, marker='s', c='k')
+                       s=table[i // TRin, :, 4] * 100 * table[i // TRin, :, 5], marker='s', c='r', label='EphA3⁺')
+
+    wplot = ax.scatter(table[i // TRin, :, Rplotdim + 1], table[i // TRin, :, Tplotdim - 1],
+                       s=table[i // TRin, :, 4] * 100 * (1 - table[i // TRin, :, 5]), marker='s', c='b', label='EphA3⁻')
 
     if Rplotdim == 1:
         ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
@@ -97,6 +104,8 @@ def weightplot(i):
     ax.set_xlabel('RGC: Nasal - Temporal (i)')
     ax.set_ylabel('SC Cell: Posterior - Anterior (m)')
 
+    plt.legend(loc=2)
+
 
 weightplot(10000)
 
@@ -107,7 +116,7 @@ ax2.set_xlim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
 ax2.set_ylim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
 ax2.set_xlabel('Posterior - Anterior (m)')
 ax2.set_ylabel('Lateral - Medial (n)')
-ax2.set_title('B', x=0)
+ax2.set_title('C', x=0)
 
 
 def fieldplot(i):
