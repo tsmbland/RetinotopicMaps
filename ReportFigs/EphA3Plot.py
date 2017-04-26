@@ -118,10 +118,10 @@ weightplot(10000)
 ##################### FIELD PLOT ####################
 
 ax2 = fig.add_subplot(133)
-ax2.set_xlim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
-ax2.set_ylim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
-ax2.set_xlabel('Posterior - Anterior (m)')
-ax2.set_ylabel('Lateral - Medial (n)')
+ax2.set_ylim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)
+ax2.set_xlim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
+ax2.set_ylabel('Posterior - Anterior (m)')
+ax2.set_xlabel('Lateral - Medial (n)')
 ax2.set_title('C', x=0)
 
 
@@ -136,7 +136,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax2.plot(fieldlistdim1, fieldlistdim2, c='b', lw='0.5')
+        ax2.plot(fieldlistdim2, fieldlistdim1, c='b', lw='0.5')
 
     for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
         fieldlistdim1 = []
@@ -147,7 +147,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax2.plot(fieldlistdim1, fieldlistdim2, c='b', lw='0.5')
+        ax2.plot(fieldlistdim2, fieldlistdim1, c='b', lw='0.5')
 
     # EphA3 Cells
     for rdim1 in range(len(Fieldcentres[0, i, :, 0])):
@@ -159,7 +159,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax2.plot(fieldlistdim1, fieldlistdim2, c='r', lw='0.5')
+        ax2.plot(fieldlistdim2, fieldlistdim1, c='r', lw='0.5')
 
     for rdim2 in range(len(Fieldcentres[0, i, 0, :])):
         fieldlistdim1 = []
@@ -170,7 +170,7 @@ def fieldplot(i):
                 fieldlistdim1.append(Fieldcentres[0, i, rdim1, rdim2])
                 fieldlistdim2.append(Fieldcentres[1, i, rdim1, rdim2])
 
-        ax2.plot(fieldlistdim1, fieldlistdim2, c='r', lw='0.5')
+        ax2.plot(fieldlistdim2, fieldlistdim1, c='r', lw='0.5')
 
 
 fieldplot(len(Fieldcentres[0, :, 0, 0]) - 1)
