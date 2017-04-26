@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="106" column="21" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
+              <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="ModelSpeedPlot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -557,13 +557,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00153" summary="fixed mismatch surgery (hopefully)">
-      <created>1491475186675</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1491475186675</updated>
-    </task>
     <task id="LOCAL-00154" summary="added plots for EphA3 knockin">
       <created>1491484318973</created>
       <option name="number" value="00154" />
@@ -900,7 +893,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493201602433</updated>
     </task>
-    <option name="localTasksCounter" value="202" />
+    <task id="LOCAL-00202" summary="added legend">
+      <created>1493203032632</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1493203032633</updated>
+    </task>
+    <option name="localTasksCounter" value="203" />
     <servers />
   </component>
   <component name="TodoView">
@@ -987,7 +987,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changed default parameters" />
     <MESSAGE value="added ability to plot Eph gradients" />
     <MESSAGE value="fixed EphA3 ki function" />
     <MESSAGE value="fixed mismatch surgery (hopefully)" />
@@ -1012,7 +1011,8 @@
     <MESSAGE value="deleted old files" />
     <MESSAGE value="tidied scripts" />
     <MESSAGE value="new EphA3 plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="new EphA3 plot" />
+    <MESSAGE value="added legend" />
+    <option name="LAST_COMMIT_MESSAGE" value="added legend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1298,8 +1298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1307,7 +1307,7 @@
     <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="106" column="21" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
+          <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
           <folding />
         </state>
       </provider>

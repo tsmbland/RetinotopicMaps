@@ -26,12 +26,20 @@ ymax1 = Cra.max()
 
 ax1 = fig.add_subplot(131)
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            c=EphA3[1:len(Cra[:, 0]) - 1, Slicepoint], cmap='bwr')
+            c=EphA3[1:len(Cra[:, 0]) - 1, Slicepoint])
+
+ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
+            s=EphA3[1:len(Cra[:, 0]) - 1, Slicepoint], c='r', label='EphA3+', edgecolors='none')
+
+ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
+            s=(1 - EphA3[1:len(Cra[:, 0]) - 1, Slicepoint]), c='b', label='EphA3-', edgecolors='none')
+
 ax1.set_xlabel('Nasal - Temporal (i)')
 ax1.set_ylabel('EphA Receptor Density')
 ax1.set_ylim(0, ymax1)
 ax1.set_xlim(0, len(Cra[:, 0]) - 2)
 ax1.set_title('A', x=0)
+plt.legend(loc=2)
 
 #################### WEIGHT PLOT ###################
 
@@ -76,7 +84,7 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0])):
                         table[iteration, row, 2] = rdim1
                         table[iteration, row, 3] = rdim2
                         table[iteration, row, 4] = Weightmatrix[iteration, tdim1, tdim2, rdim1, rdim2]
-                        if EphA3[rdim1,rdim2] == 1:
+                        if EphA3[rdim1, rdim2] == 1:
                             table[iteration, row, 5] = 1
                         else:
                             table[iteration, row, 5] = 0
@@ -86,12 +94,14 @@ for iteration in range(len(Weightmatrix[:, 0, 0, 0, 0])):
 ax = fig.add_subplot(132)
 ax.set_title('B', x=0)
 
+
 def weightplot(i):
     wplot = ax.scatter(table[i // TRin, :, Rplotdim + 1], table[i // TRin, :, Tplotdim - 1],
-                       s=table[i // TRin, :, 4] * 100 * table[i // TRin, :, 5], marker='s', c='r', label='EphA3⁺')
+                       s=table[i // TRin, :, 4] * 100 * table[i // TRin, :, 5], marker='s', c='r', edgecolors='none')
 
     wplot = ax.scatter(table[i // TRin, :, Rplotdim + 1], table[i // TRin, :, Tplotdim - 1],
-                       s=table[i // TRin, :, 4] * 100 * (1 - table[i // TRin, :, 5]), marker='s', c='b', label='EphA3⁻')
+                       s=table[i // TRin, :, 4] * 100 * (1 - table[i // TRin, :, 5]), marker='s', c='b',
+                       edgecolors='none')
 
     if Rplotdim == 1:
         ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
@@ -103,8 +113,6 @@ def weightplot(i):
         ax.set_ylim(1, len(Weightmatrix[0, 0, :, 0, 0]) - 2)
     ax.set_xlabel('RGC: Nasal - Temporal (i)')
     ax.set_ylabel('SC Cell: Posterior - Anterior (m)')
-
-    plt.legend(loc=2)
 
 
 weightplot(10000)
