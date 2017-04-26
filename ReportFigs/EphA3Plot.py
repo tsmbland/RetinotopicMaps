@@ -25,8 +25,6 @@ Slicepoint = (len(Crb[:, 0]) - 2) // 2
 ymax1 = Cra.max()
 
 ax1 = fig.add_subplot(131)
-ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            c=EphA3[1:len(Cra[:, 0]) - 1, Slicepoint])
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
             s=EphA3[1:len(Cra[:, 0]), Slicepoint], c='r', label='EphA3+', edgecolors='r')

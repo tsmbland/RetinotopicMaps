@@ -58,6 +58,7 @@ def areaplot(plotn):
     ax = fig.add_subplot(2, 2, plotn + 1)
     ax.set_xlim(0, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
     ax.set_ylim(0, len(Weightmatrix[0, 0, 0, 0, :]) - 2)
+    ax.set_title('%d iterations' % i)
 
     wplot = ax.scatter(table[i // TRin1, :, 0], table[i // TRin1, :, 1], s=(table[i // TRin1, :, 2]) * 100, marker='s',
                        c='k', cmap='Greys')
@@ -67,21 +68,15 @@ def areaplot(plotn):
                         Fieldsizes[i // TRin2, Tdim1, Tdim2] / 2,
                         fill=False, color='r')
 
-
     ax.add_artist(circle)
 
     if (plotn + 1) == 1:
         ax.set_xticklabels([])
-        ax.set_title('A', x=0)
     if (plotn + 1) == 2:
         ax.set_xticklabels([])
         ax.set_yticklabels([])
-        ax.set_title('B', x=0)
-    if (plotn + 1) == 3:
-        ax.set_title('C', x=0)
     if (plotn + 1) == 4:
         ax.set_yticklabels([])
-        ax.set_title('D', x=0)
 
 
 for plotn in range(len(Iterations)):
