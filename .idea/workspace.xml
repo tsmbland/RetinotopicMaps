@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+    <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="rotated plot c">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" afterPath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="EphA3Plot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="172" column="45" selection-start-line="172" selection-start-column="45" selection-end-line="172" selection-end-column="45" />
+            <state relative-caret-position="372">
+              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -567,13 +567,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00157" summary="changed image resolution">
-      <created>1491498178696</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1491498178696</updated>
-    </task>
     <task id="LOCAL-00158" summary="added new plot">
       <created>1491561614449</created>
       <option name="number" value="00158" />
@@ -910,7 +903,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493225561803</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="rotated plot c">
+      <created>1493228368972</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1493228368972</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="TodoView">
@@ -997,7 +997,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="fixed EphA3 ki function" />
     <MESSAGE value="fixed mismatch surgery (hopefully)" />
     <MESSAGE value="added plots for EphA3 knockin" />
     <MESSAGE value="changes axis labels" />
@@ -1022,7 +1021,8 @@
     <MESSAGE value="new EphA3 plot" />
     <MESSAGE value="added legend" />
     <MESSAGE value="changes titles" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes titles" />
+    <MESSAGE value="rotated plot c" />
+    <option name="LAST_COMMIT_MESSAGE" value="rotated plot c" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1315,8 +1315,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="172" column="45" selection-start-line="172" selection-start-column="45" selection-end-line="172" selection-end-column="45" />
+        <state relative-caret-position="372">
+          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
           <folding />
         </state>
       </provider>

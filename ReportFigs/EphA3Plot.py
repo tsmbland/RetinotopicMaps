@@ -27,17 +27,19 @@ ymax1 = Cra.max()
 ax1 = fig.add_subplot(131)
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            s=EphA3[1:len(Cra[:, 0]), Slicepoint], c='r', label='EphA3+', edgecolors='r')
+            s=EphA3[1:len(Cra[:, 0]) * 15, Slicepoint], c='r', label='EphA3+', edgecolors='r')
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            s=(1 - EphA3[1:len(Cra[:, 0]), Slicepoint]), c='b', label='EphA3-', edgecolors='b')
+            s=(1 - EphA3[1:len(Cra[:, 0]) * 15, Slicepoint]), c='b', label='EphA3-', edgecolors='b')
 
 ax1.set_xlabel('Nasal - Temporal (i)')
 ax1.set_ylabel('EphA Receptor Density')
 ax1.set_ylim(0, ymax1)
 ax1.set_xlim(0, len(Cra[:, 0]) - 2)
 ax1.set_title('A', x=0)
-plt.legend(loc=2)
+lgnd = plt.legend(loc=2)
+lgnd.legendHandles[0]._sizes = [15]
+lgnd.legendHandles[1]._sizes = [15]
 
 #################### WEIGHT PLOT ###################
 
