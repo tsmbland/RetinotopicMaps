@@ -29,10 +29,10 @@ ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
             c=EphA3[1:len(Cra[:, 0]) - 1, Slicepoint])
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            s=EphA3[1:len(Cra[:, 0]) - 1, Slicepoint], c='r', label='EphA3+', edgecolors='none')
+            s=EphA3[1:len(Cra[:, 0]), Slicepoint], c='r', label='EphA3+', edgecolors='r')
 
 ax1.scatter(range(1, len(Cra[:, 0]) - 1), Cra[1:len(Cra[:, 0]) - 1, Slicepoint],
-            s=(1 - EphA3[1:len(Cra[:, 0]) - 1, Slicepoint]), c='b', label='EphA3-', edgecolors='none')
+            s=(1 - EphA3[1:len(Cra[:, 0]), Slicepoint]), c='b', label='EphA3-', edgecolors='b')
 
 ax1.set_xlabel('Nasal - Temporal (i)')
 ax1.set_ylabel('EphA Receptor Density')
@@ -97,11 +97,11 @@ ax.set_title('B', x=0)
 
 def weightplot(i):
     wplot = ax.scatter(table[i // TRin, :, Rplotdim + 1], table[i // TRin, :, Tplotdim - 1],
-                       s=table[i // TRin, :, 4] * 100 * table[i // TRin, :, 5], marker='s', c='r', edgecolors='none')
+                       s=table[i // TRin, :, 4] * 100 * table[i // TRin, :, 5], marker='s', c='r', edgecolors='r')
 
     wplot = ax.scatter(table[i // TRin, :, Rplotdim + 1], table[i // TRin, :, Tplotdim - 1],
                        s=table[i // TRin, :, 4] * 100 * (1 - table[i // TRin, :, 5]), marker='s', c='b',
-                       edgecolors='none')
+                       edgecolors='b')
 
     if Rplotdim == 1:
         ax.set_xlim(1, len(Weightmatrix[0, 0, 0, :, 0]) - 2)
