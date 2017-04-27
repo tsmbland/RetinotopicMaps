@@ -29,9 +29,6 @@ def job(JobID):
                 '{0:04}'.format(JobID), ((f.Currentiteration + 1) * 100 / len(f.FieldCentres[0, :, 0, 0]) * 1)))
         sys.stdout.flush()
 
-    # Precision Change
-    f.PrecisionChange()
-
     # Export Data
     f.savedata(JobID)
 
