@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/(AreaMethodPlot).py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/(EphA3Plot).py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/(EphA3WeightPlot).py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/AreaPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/7_ReceptiveFieldsEgs.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" afterPath="$PROJECT_DIR$/ReportFigs/12_EphA3Knockin.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/8_LatticePlots.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/GradientsPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/5_Gradients.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/14_ModelSpeed.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/9_MapPrecision.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/10_Surgery.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" afterPath="$PROJECT_DIR$/ReportFigs/13_TectalGradientScaling.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +35,8 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TectalGradientScaling.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py">
+      <file leaf-file-name="13_TectalGradientScaling.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/13_TectalGradientScaling.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
               <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
@@ -46,8 +55,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+      <file leaf-file-name="9_MapPrecision.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/9_MapPrecision.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
               <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
@@ -56,11 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SurgeryPlot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
+      <file leaf-file-name="10_Surgery.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/10_Surgery.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
               <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="8_LatticePlots.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/8_LatticePlots.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -319,7 +338,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReportFigs/14_ModelSpeed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -387,7 +406,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RetinotopicMaps" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReportFigs/AreaMethodPlot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReportFigs/(AreaMethodPlot).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -577,13 +596,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00164" summary="added new plot">
-      <created>1491649398637</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1491649398638</updated>
     </task>
     <task id="LOCAL-00165" summary="added new plot">
       <created>1491649576455</created>
@@ -921,7 +933,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493384987270</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="improved plot">
+      <created>1493474832680</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1493474832681</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="TodoView">
@@ -935,9 +954,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.2573471" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2931507" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1110,13 +1129,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py" />
-    <entry file="file://$PROJECT_DIR$/ReportFigs/AreaMethodPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -1265,31 +1277,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/14_ModelSpeed.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/EphA3Plot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/12_EphA3Knockin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="32" column="60" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/AreaPlot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/7_ReceptiveFieldsEgs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
           <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/FieldPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1300,7 +1305,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/13_TectalGradientScaling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
@@ -1316,7 +1321,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/9_MapPrecision.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
@@ -1324,10 +1329,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
+    <entry file="file://$PROJECT_DIR$/ReportFigs/(AreaMethodPlot).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/10_Surgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/8_LatticePlots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
           <folding />
         </state>
       </provider>
