@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" afterPath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +26,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TectalGradientScaling.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TectalGradientScaling.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
               <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrecisionPlot.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SurgeryPlot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -97,10 +128,10 @@
         <option value="$PROJECT_DIR$/ReportFigs/rough.py" />
         <option value="$PROJECT_DIR$/ReportFigs/AreaPlot.py" />
         <option value="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" />
-        <option value="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
-        <option value="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" />
         <option value="$PROJECT_DIR$/MapPrecision/Algorithm.py" />
         <option value="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" />
+        <option value="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" />
       </list>
     </option>
   </component>
@@ -133,8 +164,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -251,6 +280,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -546,13 +577,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
-    </task>
-    <task id="LOCAL-00163" summary="added subplot labels">
-      <created>1491584784713</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1491584784713</updated>
     </task>
     <task id="LOCAL-00164" summary="added new plot">
       <created>1491649398637</created>
@@ -890,7 +914,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493287201864</updated>
     </task>
-    <option name="localTasksCounter" value="212" />
+    <task id="LOCAL-00212" summary="improved plot">
+      <created>1493384987270</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1493384987270</updated>
+    </task>
+    <option name="localTasksCounter" value="213" />
     <servers />
   </component>
   <component name="TodoView">
@@ -977,7 +1008,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changes axis labels" />
     <MESSAGE value="changed image resolution" />
     <MESSAGE value="added subplot labels" />
     <MESSAGE value="fixed xfieldcentres function to work with surgery models" />
@@ -1002,7 +1032,8 @@
     <MESSAGE value="rotated plot c" />
     <MESSAGE value="changed x axis range" />
     <MESSAGE value="fixed algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed algorithm" />
+    <MESSAGE value="improved plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved plot" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1083,13 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
           <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3903">
-          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1269,27 +1293,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="52" column="38" selection-start-line="52" selection-start-column="38" selection-end-line="52" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MapPrecision/Algorithm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1297,6 +1304,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/SurgeryPlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
           <folding />
         </state>
       </provider>

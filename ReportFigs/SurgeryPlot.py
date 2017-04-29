@@ -79,7 +79,7 @@ plt.axhline(1, c='g', ls='--', lw='0.5')
 ax.set_ylabel('Mean Receptive Field Separation')
 ax.set_xlabel('Iterations')
 ax.set_title('D', x=0)
-plt.xticks([20, 1000, 2000, 3000, 4000, 5000])
+plt.xticks([TRin1, 1000, 2000, 3000, 4000, 5000])
 
 # Size Plot
 ax = fig.add_subplot(2, 3, 5)
@@ -89,7 +89,7 @@ ax.plot(range(TRin3, len(Fieldsize3) * TRin3, TRin3), Fieldsize3[1:], c='g')
 ax.set_ylabel('Mean Receptive Field Size')
 ax.set_xlabel('Iterations')
 ax.set_title('E', x=0)
-plt.xticks([20, 1000, 2000, 3000, 4000, 5000])
+plt.xticks([TRin1, 1000, 2000, 3000, 4000, 5000])
 
 # Systems Match Plot
 ax = fig.add_subplot(2, 3, 6)
@@ -99,6 +99,6 @@ ax.plot(range(TRin3, len(Systemsmatch3) * TRin3, TRin3), Systemsmatch3[1:], c='g
 ax.set_ylabel('Systems Match Score')
 ax.set_xlabel('Iterations')
 ax.set_title('F', x=0)
-plt.xticks([20, 1000, 2000, 3000, 4000, 5000])
+plt.xticks([TRin1, 1000, 2000, 3000, 4000, 5000])
 
 plt.show()
