@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274a3531-4c1e-4bfe-b4b7-421ce9e1232f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/(AreaMethodPlot).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/(EphA3Plot).py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/(EphA3WeightPlot).py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/AreaPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/7_ReceptiveFieldsEgs.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/EphA3Plot.py" afterPath="$PROJECT_DIR$/ReportFigs/12_EphA3Knockin.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/FieldPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/8_LatticePlots.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/GradientsPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/5_Gradients.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/ModelSpeedPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/14_ModelSpeed.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/PrecisionPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/9_MapPrecision.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/SurgeryPlot.py" afterPath="$PROJECT_DIR$/ReportFigs/10_Surgery.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ReportFigs/TectalGradientScaling.py" afterPath="$PROJECT_DIR$/ReportFigs/13_TectalGradientScaling.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ReportFigs/AreaMethodPlot.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Willshaw:von_der_Walsburg_1979.iws" />
@@ -34,58 +24,7 @@
     <favorites_list name="Willshaw:von_der_Walsburg_1979" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="13_TectalGradientScaling.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/13_TectalGradientScaling.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Functions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Models/2006.1979/Functions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="9_MapPrecision.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/9_MapPrecision.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="10_Surgery.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/10_Surgery.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="8_LatticePlots.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ReportFigs/8_LatticePlots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -597,13 +536,6 @@
       <option name="presentableId" value="Default" />
       <updated>1479333796707</updated>
     </task>
-    <task id="LOCAL-00165" summary="added new plot">
-      <created>1491649576455</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1491649576455</updated>
-    </task>
     <task id="LOCAL-00166" summary="added new plot">
       <created>1491657594045</created>
       <option name="number" value="00166" />
@@ -940,7 +872,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493474832681</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="renamed scripts">
+      <created>1493477936152</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1493477936153</updated>
+    </task>
+    <option name="localTasksCounter" value="215" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1027,7 +966,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="changed image resolution" />
     <MESSAGE value="added subplot labels" />
     <MESSAGE value="fixed xfieldcentres function to work with surgery models" />
     <MESSAGE value="changed directory name, altered axis titles on some plots" />
@@ -1052,7 +990,8 @@
     <MESSAGE value="changed x axis range" />
     <MESSAGE value="fixed algorithm" />
     <MESSAGE value="improved plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved plot" />
+    <MESSAGE value="renamed scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1068,7 +1007,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ReportFigs/(SurgeryPlotOld2).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/(stochRvsBeta).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/(AreaPlotOld).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/(WeightPlot).py" />
@@ -1101,33 +1039,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/correctxfc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="72" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/correctxfc2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/correctxfc.py" />
+    <entry file="file://$PROJECT_DIR$/correctxfc2.py" />
     <entry file="file://$PROJECT_DIR$/ModelSpeedLogPlot.py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/(Beta).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/(KvsKappa).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/(yLT).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/PrecisionTotalDisorder.py" />
     <entry file="file://$PROJECT_DIR$/retina.py" />
-    <entry file="file://$PROJECT_DIR$/rough.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rough.py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/TectalGradientScaling2.py" />
     <entry file="file://$PROJECT_DIR$/Models/2006.1979/MismatchSurgery.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1256,20 +1176,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/(EphA3Plot).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/(EphA3WeightPlot).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="85" column="17" selection-start-line="22" selection-start-column="0" selection-end-line="85" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/(EphA3Plot).py" />
+    <entry file="file://$PROJECT_DIR$/ReportFigs/(EphA3WeightPlot).py" />
     <entry file="file://$PROJECT_DIR$/Plots/WeightPlot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1309,7 +1217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,7 +1224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,23 +1231,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportFigs/(AreaMethodPlot).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportFigs/(AreaMethodPlot).py" />
     <entry file="file://$PROJECT_DIR$/ReportFigs/10_Surgery.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="101" column="17" selection-start-line="101" selection-start-column="17" selection-end-line="101" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1349,7 +1246,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
         </state>
       </provider>
     </entry>
