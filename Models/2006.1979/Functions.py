@@ -6,12 +6,12 @@ import Parameters as p
 ################### VARIABLES ###################
 
 Wpt = np.zeros(
-    [p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # synaptic strength matrix
+    [p.Iterations // p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])  # synaptic strength matrix
 Wtot = np.zeros([p.NRdim1 + 1, p.NRdim2 + 1])  # total strength available to a fibre
 Cra = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])
 Crb = np.zeros([p.NRdim1 + 2, p.NRdim2 + 2])  # concentration of EphrinA/B in a retinal cell
-Cta = np.zeros([p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])
-Ctb = np.zeros([p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
+Cta = np.zeros([p.Iterations // p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])
+Ctb = np.zeros([p.Iterations // p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])  # concentration of EphrinA/B in a tectal cell
 Ita = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])
 Itb = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])  # induced label in a tectal cell
 Nct = np.zeros([p.NTdim1 + 2, p.NTdim2 + 2])  # neighbour count for a tectal cell

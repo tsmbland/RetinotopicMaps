@@ -77,7 +77,7 @@ def fieldplot(i):
 
 
 def update(val):
-    it = np.floor(sframe.val) // TRin
+    it = int(np.floor(sframe.val) // TRin)
     ax.clear()
     fieldplot(it)
     ax.set_xlim(1, len(Weightmatrix[0, :, 0, 0, 0]) - 2)

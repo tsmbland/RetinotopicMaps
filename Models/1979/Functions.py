@@ -7,14 +7,14 @@ import os
 
 M = p.Mdim1 * p.Mdim2
 
-Wpt = np.zeros([p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])
+Wpt = np.zeros([p.Iterations // p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2, p.NRdim1 + 2, p.NRdim2 + 2])
 Wtot = np.zeros([p.NRdim1 + 1, p.NRdim2 + 1])
 
 Qpm = np.zeros([M, p.NRdim1 + 2, p.NRdim2 + 2])
 Qtm = np.zeros([M, p.NTdim1 + 2, p.NTdim2 + 2])
 
 Cpm = np.zeros([M, p.NRdim1 + 2, p.NRdim2 + 2])
-Ctm = np.zeros([M, p.Iterations / p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])
+Ctm = np.zeros([M, p.Iterations // p.TRout + 1, p.NTdim1 + 2, p.NTdim2 + 2])
 NormalisedCpm = np.zeros([M, p.NRdim1 + 2, p.NRdim2 + 2])
 NormalisedCtm = np.zeros([M, p.NTdim1 + 2, p.NTdim2 + 2])
 

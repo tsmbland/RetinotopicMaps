@@ -97,7 +97,7 @@ def weightplot(i):
 
 def update(val):
     ax.clear()
-    i = np.floor(sframe.val)
+    i = int(np.floor(sframe.val))
     weightplot(i)
 
 

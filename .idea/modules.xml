@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Retinotopic Maps.iml" filepath="$PROJECT_DIR$/.idea/Retinotopic Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RetinotopicMaps.iml" filepath="$PROJECT_DIR$/.idea/RetinotopicMaps.iml" />
     </modules>
   </component>

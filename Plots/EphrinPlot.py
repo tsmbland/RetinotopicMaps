@@ -39,7 +39,7 @@ def ephrinplot(i):
 def update(val):
     ax1.clear()
     ax2.clear()
-    it = np.floor(sframe.val)//TRin
+    it = int(np.floor(sframe.val)//TRin)
     ephrinplot(it)
 
 ephrinplot(0)

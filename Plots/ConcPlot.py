@@ -53,7 +53,7 @@ def concplot(i):
 
 def update(val):
     ax.clear()
-    it = np.floor(sframe.val) // TRin
+    it = int(np.floor(sframe.val) // TRin)
     concplot(it)
 
 
