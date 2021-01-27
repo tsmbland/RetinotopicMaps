@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Methods}{7}
+\contentsline {subsection}{\numberline {2.1}Model}{7}
+\contentsline {subsection}{\numberline {2.2}Data Analysis}{15}
+\contentsline {subsection}{\numberline {2.3}Programming}{19}
+\contentsline {section}{\numberline {3}Results}{20}
+\contentsline {subsection}{\numberline {3.1}Normal Map Progression}{20}
+\contentsline {subsection}{\numberline {3.2}Mismatch Surgery}{22}
+\contentsline {subsection}{\numberline {3.3}Manipulation of Retinal Gradients}{24}
+\contentsline {subsection}{\numberline {3.4}Manipulation of Tectal Gradients}{26}
+\contentsline {subsection}{\numberline {3.5}Model Performance Comparison}{27}
+\contentsline {section}{\numberline {4}Discussion}{28}
+\contentsline {section}{\numberline {5}Acknowledgements}{32}
+\contentsline {section}{\numberline {6}Bibliography}{33}
